@@ -98,24 +98,90 @@ function generatePage(targetPath, title, desc, img, url, langCode, langId) {
 
   const dir = path.dirname(targetPath);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+
+  // Injetar H1 e conteúdo básico no root para crawlers que não executam JS
+  const staticContent = `
+    <div id="root">
+      <header>
+        <img src="${baseUrl}/logo.avif" alt="Terra Ventos" />
+        <nav>
+          <a href="${baseUrl}/">Início</a>
+          <a href="${baseUrl}/propriedades">Oportunidades</a>
+        </nav>
+      </header>
+      <main>
+        <h1>${displayTitle}</h1>
+        <p>${desc}</p>
+        <img src="${fullImageUrl}" alt="${displayTitle}" />
+        
+        <section>
+          <h2>Sobre a Terra Ventos</h2>
+          <p>A Terra Ventos é especialista em curadoria de imóveis de luxo e investimentos exclusivos no litoral do Ceará. Com foco em destinos de alto padrão como Preá, Tatajuba e Bitupitá, oferecemos oportunidades únicas para quem busca sofisticação, conforto e rentabilidade no paraíso do kitesurf.</p>
+          <p>Nossa assessoria completa garante segurança jurídica e as melhores taxas de valorização para investidores nacionais e internacionais. Explore nossas casas de design, terrenos pé na areia e projetos exclusivos integrados à natureza.</p>
+        </section>
+
+        <section>
+          <h2>Destinos em Destaque</h2>
+          <ul>
+            <li><strong>Preá:</strong> O epicentro do luxo rústico e do kitesurf mundial.</li>
+            <li><strong>Tatajuba:</strong> Beleza intocada e valorização acelerada.</li>
+            <li><strong>Bitupitá:</strong> A nova fronteira do investimento pé na areia.</li>
+          </ul>
+        </section>
+      </main>
+      <footer>
+        <p>Terra Ventos | Imóveis de Luxo no Ceará</p>
+        <p>Contatos: +55 (85) 9 8557-2807 | info@terraventos.com.br</p>
+        <p>Endereço: Rua Monsenhor Bruno, nº 1153, sala 608, Aldeota, Fortaleza - CE</p>
+      </footer>
+    </div>
+  `;
+  
+  html = html.replace('<div id="root"></div>', staticContent);
+
   fs.writeFileSync(targetPath, html);
 }
 
-// Gerar para cada idioma
+// Gerar Sitemap.xml
+let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">`;
+
 Object.entries(locales).forEach(([langId, data]) => {
   const langPrefix = langId === 'pt' ? '' : `/${langId}`;
   
-  // Home Page do idioma
+  // Home Page
   const homePath = langId === 'pt' ? templatePath : path.resolve(distPath, langId, 'index.html');
   generatePage(homePath, data.homeTitle, data.homeDesc, '/banners/2.png', `${baseUrl}${langPrefix}/`, data.code, langId);
   console.log(`Página Home gerada para: ${langId}`);
 
-  // Propriedades do idioma
+  sitemap += `
+  <url>
+    <loc>${baseUrl}${langPrefix}/</loc>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="${baseUrl}/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="${baseUrl}/es/"/>
+  </url>`;
+
+  // Propriedades
   data.properties.forEach(prop => {
     const propPath = path.resolve(distPath, langId === 'pt' ? '' : langId, 'propriedade', prop.slug, 'index.html');
     generatePage(propPath, prop.title, prop.description, prop.image, `${baseUrl}${langPrefix}/propriedade/${prop.slug}`, data.code, langId);
     console.log(`Página Propriedade gerada: ${langId} - ${prop.slug}`);
+
+    sitemap += `
+  <url>
+    <loc>${baseUrl}${langPrefix}/propriedade/${prop.slug}</loc>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="${baseUrl}/propriedade/${prop.slug}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}/en/propriedade/${prop.slug}"/>
+    <xhtml:link rel="alternate" hreflang="es" href="${baseUrl}/es/propriedade/${prop.slug}"/>
+  </url>`;
   });
 });
+
+sitemap += `\n</urlset>`;
+fs.writeFileSync(path.resolve(distPath, 'sitemap.xml'), sitemap);
+console.log('Sitemap.xml gerado com sucesso.');
 
 console.log('Finalizado: Todas as páginas individuais e localizadas foram criadas.');

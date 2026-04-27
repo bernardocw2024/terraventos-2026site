@@ -15,6 +15,19 @@ body {
   font-family: 'Manrope', system-ui, -apple-system, sans-serif;
   color: #111827;
 }
+ 
+/* Utility class for SEO hidden headings */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
 
 #root {
   display: block;
@@ -489,8 +502,8 @@ button.header-back-button {
   }
   
   .language-selector-trigger {
-    padding: 4px 10px;
-    font-size: 0.75rem;
+    padding: 6px 12px;
+    font-size: 0.85rem;
   }
 
   .lang-flag {
@@ -499,9 +512,9 @@ button.header-back-button {
 
   /* Compact contact button */
   .header-contact-button {
-    height: 38px;
-    padding: 0 10px;
-    font-size: 0.75rem;
+    height: 40px;
+    padding: 0 14px;
+    font-size: 0.85rem;
     gap: 6px;
     white-space: nowrap;
     flex-shrink: 0;

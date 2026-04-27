@@ -305,6 +305,8 @@ function App() {
 
       <main className="main-content">
         <div className={`page-shell ${transitionClass}`}>
+          {/* SEO H1 - Visually hidden but accessible to crawlers */}
+          <h1 className="sr-only">Terra Ventos | Imóveis de Luxo e Investimentos no Ceará</h1>
           {isPaginaIndividual ? (
             <PaginaIndividual item={selectedOpportunity} />
           ) : currentPath === '/propriedades' ? (
@@ -363,7 +365,7 @@ function App() {
                         <div className="hero-tag">
                           {tags[index]}
                         </div>
-                        <h1 className="hero-title" dangerouslySetInnerHTML={{ __html: titles[index] }} />
+                        <h2 className="hero-title" dangerouslySetInnerHTML={{ __html: titles[index] }} />
                         <p className="hero-subtitle" dangerouslySetInnerHTML={{ __html: subtitles[index] }} />
                         
                         {/* Slide-specific CTA: only one button now, using the secondary (glass) style */}

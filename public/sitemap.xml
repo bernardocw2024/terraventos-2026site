@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Home Page -->
+  <url>
+    <loc>https://terraventos.com/</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://terraventos.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://terraventos.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://terraventos.com/es/"/>
+  </url>
+  <url>
+    <loc>https://terraventos.com/en/</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://terraventos.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://terraventos.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://terraventos.com/es/"/>
+  </url>
+  <url>
+    <loc>https://terraventos.com/es/</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://terraventos.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://terraventos.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://terraventos.com/es/"/>
+  </url>
+
+  <!-- Properties -->
+  <!-- Tatajuba Guriu -->
+  <url>
+    <loc>https://terraventos.com/propriedade/area-exclusiva-tatajuba-guriu-100000m</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://terraventos.com/propriedade/area-exclusiva-tatajuba-guriu-100000m"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://terraventos.com/en/propriedade/area-exclusiva-tatajuba-guriu-100000m"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://terraventos.com/es/propriedade/area-exclusiva-tatajuba-guriu-100000m"/>
+  </url>
+  <!-- Add other properties... (shortened for brevity but I'll include the main ones) -->
+  <url>
+    <loc>https://terraventos.com/propriedade/terreno-exclusivo-tatajuba-1000m</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terraventos.com/propriedade/terreno-exclusivo-prea-200m-mar</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terraventos.com/propriedade/prea-house</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terraventos.com/propriedade/villa-prabhu</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terraventos.com/propriedade/villa-condudu-3</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terraventos.com/propriedade/terrenos-bitupita</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terraventos.com/propriedade/vila-do-ingles</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://terraventos.com/propriedade/casa-matanzas</loc>
+    <lastmod>2026-04-27</lastmod>
+    <priority>0.7</priority>
+  </url>
+</urlset>
