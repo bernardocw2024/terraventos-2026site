@@ -284,18 +284,20 @@
 
 @media (max-width: 768px) {
   .pd-section {
-    padding: 40px 16px;
+    padding: 40px 0px 40px 16px;
   }
 
   .pd-header-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+    padding: 0 16px;
   }
 
   .pd-nav-controls {
     width: 100%;
     justify-content: flex-end;
+    padding: 0 16px;
   }
 
   .pd-title {
@@ -308,6 +310,27 @@
 
   .pd-card-title {
     font-size: 1.1rem;
+  }
+
+  /* Fade lateral: revela os cards gradualmente nas bordas */
+  .pd-slider-viewport {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 8%,
+      black 85%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 8%,
+      black 85%,
+      transparent 100%
+    );
+    margin: 0;
+    padding-left: 0;
+    padding-right: 32px;
   }
 }
 

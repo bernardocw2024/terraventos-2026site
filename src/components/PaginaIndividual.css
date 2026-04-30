@@ -427,6 +427,11 @@
     margin-bottom: 42px;
   }
 
+  /* Oculta o badge/pill na galeria em mobile — ocupa espaço desnecessário */
+  .pi-pill {
+    display: none;
+  }
+
   .pi-back-button {
     position: sticky;
     top: 71px; /* Just below mobile header */
