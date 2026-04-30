@@ -53,6 +53,19 @@ function App() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Anti-FOUC: marca o root como pronto assim que o React monta e os estilos estão aplicados
+  useEffect(() => {
+    const root = document.getElementById('root');
+    if (root) {
+      // rAF garante que o browser já pintou o primeiro frame com os estilos corretos
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          root.classList.add('app-ready');
+        });
+      });
+    }
+  }, []);
+
   const handleLanguageChangeDirectly = (newLang: string) => {
     i18n.changeLanguage(newLang);
     // Update the displayed individual page data when language switches

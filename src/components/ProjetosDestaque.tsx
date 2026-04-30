@@ -95,7 +95,7 @@ const projetos = [
   },
   {
     id: "05",
-    image: '/Matanzas/3b77d98c-5cd0-4f51-816a-6e42748720d2.avif',
+    image: '/Matanzas/WhatsApp Image 2026-04-30 at 17.39.11 (3).jpeg',
     tag: 'TEMPORADA',
     location: 'Navidad, Chile',
     title: 'Casa Matanzas',

@@ -35,6 +35,13 @@ body {
   height: auto;
   margin: 0 !important;
   padding: 0 !important;
+  /* Anti-FOUC: começa invisível (definido inline no HTML), revelado pelo JS */
+  transition: opacity 280ms ease;
+}
+
+#root.app-ready {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .app-container {

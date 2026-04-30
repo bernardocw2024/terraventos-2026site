@@ -128,17 +128,6 @@ export default function PaginaIndividual({ slug, item: propItem }: PaginaIndivid
           )}
         </div>
 
-        {(item.gallery.sideTop || (item.gallery.extra?.length ?? 0) > 0) && (
-          <button className="pi-view-all-btn" onClick={openAlbum}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/>
-              <path d="M3 9V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4"/>
-              <path d="M11 13h2"/>
-              <path d="M12 11v4"/>
-            </svg>
-            {t('oportunidades.viewAllPhotos')}
-          </button>
-        )}
 
         {item.gallery.extra && item.gallery.extra.length > 0 && (
           <div className="pi-gallery-secondary">
@@ -194,6 +183,33 @@ export default function PaginaIndividual({ slug, item: propItem }: PaginaIndivid
           </button>
         </div>
         <p className="pi-exclusive">{item.exclusiveText}</p>
+
+        {/* ── GALLERY STRIP BUTTON ── */}
+        {allPhotos.length > 1 && (
+          <button className="pi-gallery-strip" onClick={openAlbum} aria-label="Abrir galeria de fotos">
+            <div className="pi-gallery-strip-previews">
+              {allPhotos.slice(0, 5).map((src, idx) => (
+                <div key={idx} className="pi-gallery-strip-thumb">
+                  <img src={src} alt={`Preview ${idx + 1}`} />
+                  {idx === 4 && allPhotos.length > 5 && (
+                    <div className="pi-gallery-strip-more">
+                      <span>+{allPhotos.length - 5}</span>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="pi-gallery-strip-cta">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+              <span className="pi-gallery-strip-label">{t('oportunidades.viewAllPhotos')}</span>
+              <span className="pi-gallery-strip-count">{allPhotos.length} fotos</span>
+            </div>
+          </button>
+        )}
 
         <div className="pi-content-grid">
           <div className="pi-content-main">
