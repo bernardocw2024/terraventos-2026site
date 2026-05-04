@@ -89,7 +89,7 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     id: '08',
     slug: 'terreno-exclusivo-tatajuba-1000m',
     title: 'VENDA',
-    image: '/TATAJUBA/WhatsApp Image 2026-04-23 at 18.35.22.jpeg',
+    image: '/TATAJUBA/Image_from_Image.png (4).png',
     badge: 'Exclusividade',
     propertyTitle: 'TERRENO EXCLUSIVO EM TATAJUBA — 1.000 m²',
     location: 'Tatajuba, Ceará, Brasil',
@@ -109,13 +109,10 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     ],
     facilities: ['1.000 m²', 'Matrícula Pronta', 'Kitesurf Paradise', 'Exclusividade'],
     gallery: {
-      main: '/TATAJUBA/WhatsApp Image 2026-04-23 at 18.35.22.jpeg',
-      sideTop: '/TATAJUBA/WhatsApp Image 2026-04-23 at 18.35.22 (1).jpeg',
-      sideBottom: '/TATAJUBA/WhatsApp Image 2026-04-23 at 18.35.23.jpeg',
-      extra: [
-        '/TATAJUBA/WhatsApp Image 2026-04-23 at 18.35.23 (1).jpeg',
-        '/TATAJUBA/WhatsApp Image 2026-04-23 at 18.35.23 (2).jpeg'
-      ]
+      main: '/TATAJUBA/Image_from_Image.png (4).png',
+      sideTop: '/TATAJUBA/Image_from_Image.png (5).png',
+      sideBottom: '/TATAJUBA/Image_from_Image.png (7).png',
+      extra: []
     },
     mapImage: '/mapa.avif',
     mapUrl: 'https://maps.google.com/maps?q=-2.854046,-40.696586&hl=pt-BR&z=15&output=embed',
@@ -181,7 +178,7 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     id: '06',
     slug: 'prea-house',
     title: 'VENDA',
-    image: '/Prea House/WhatsApp Image 2026-04-20 at 09.12.53.jpeg',
+    image: '/Prea House/Image_from_Image.png (14).png',
     badge: 'Venda',
     propertyTitle: 'PREÁ HOUSE',
     location: 'Preá, Ceará, Brasil',
@@ -204,9 +201,9 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     ],
     facilities: ['3 Suítes', 'Piscina de 68 m²', 'Área Gourmet', 'Rooftop', 'Segurança CCTV', 'Portão Eletrônico'],
     gallery: {
-      main: '/Prea House/WhatsApp Image 2026-04-20 at 09.13.04.jpeg',
-      sideTop: '/Prea House/WhatsApp Image 2026-04-20 at 09.12.55.jpeg',
-      sideBottom: '/Prea House/WhatsApp Image 2026-04-20 at 09.13.06.jpeg',
+      main: '/Prea House/Image_from_Image.png (14).png',
+      sideTop: '/Prea House/Image_from_Image.png (15).png',
+      sideBottom: '/Prea House/Image_from_Image.png (16).png',
       extra: [
         '/Prea House/1.jpeg',
         '/Prea House/2.jpeg',
@@ -214,21 +211,7 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
         '/Prea House/4.jpeg',
         '/Prea House/5.jpeg',
         '/Prea House/6.jpeg',
-        '/Prea House/7.jpeg',
-        '/Prea House/WhatsApp Image 2026-04-20 at 09.12.52 (1).jpeg',
-        '/Prea House/WhatsApp Image 2026-04-20 at 09.12.53 (1).jpeg',
-        '/Prea House/WhatsApp Image 2026-04-20 at 09.12.54 (1).jpeg',
-        '/Prea House/WhatsApp Image 2026-04-20 at 09.12.54.jpeg',
-        '/Prea House/WhatsApp Image 2026-04-20 at 09.12.56.jpeg',
-        '/Prea House/WhatsApp Image 2026-04-20 at 09.12.56 (1).jpeg',
-        '/Prea House/WhatsApp Image 2026-04-20 at 09.12.56 (2).jpeg',
-        '/Prea House/WhatsApp Image 2026-04-20 at 09.12.57.jpeg',
-        '/Prea House/WhatsApp Image 2026-04-20 at 09.12.58.jpeg',
-        '/Prea House/WhatsApp Image 2026-04-20 at 09.12.58 (1).jpeg',
-        '/Prea House/WhatsApp Image 2026-04-20 at 09.12.59.jpeg',
-        '/Prea House/WhatsApp Image 2026-04-20 at 09.13.01.jpeg',
-        '/Prea House/WhatsApp Image 2026-04-20 at 09.13.03.jpeg',
-        '/Prea House/WhatsApp Image 2026-04-20 at 09.13.11.jpeg'
+        '/Prea House/7.jpeg'
       ]
     },
     mapImage: '/mapa.avif',
@@ -242,7 +225,7 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     id: '04',
     slug: 'villa-prabhu',
     title: 'LANÇAMENTO',
-    image: '/VILLA_PRABHU/WhatsApp Image 2026-04-01 at 14.58.56 (3).jpeg',
+    image: '/VILLA_PRABHU/PERSPECTIVAS-3D-VILLA-PRABHU-2.webp',
     badge: 'LANÇAMENTO',
     propertyTitle: 'VILLA PRABHU — PARACURU-CE',
     location: 'Paracuru, Ceará, Brasil',
@@ -263,16 +246,22 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     ],
     facilities: ['Projeto Urbanístico', 'Parcelamento em 120x', 'Áreas Verdes', 'Pronto para Construir'],
     gallery: {
-      main: '/VILLA_PRABHU/WhatsApp Image 2026-04-01 at 14.58.56 (3).jpeg',
-      sideTop: '/VILLA_PRABHU/WhatsApp Image 2026-04-01 at 14.58.56.jpeg',
-      sideBottom: '/VILLA_PRABHU/WhatsApp Image 2026-04-01 at 14.58.56 (2).jpeg',
+      main: '/VILLA_PRABHU/PERSPECTIVAS-3D-VILLA-PRABHU-2.webp',
+      sideTop: '/VILLA_PRABHU/Drone-47-1-1.webp',
+      sideBottom: '/VILLA_PRABHU/PRABHU01.png',
       extra: [
-        '/VILLA_PRABHU/WhatsApp Image 2026-04-01 at 14.58.56 (1).jpeg'
+        '/VILLA_PRABHU/PRABHU03.png',
+        '/VILLA_PRABHU/PRABHU07.png',
+        '/VILLA_PRABHU/image-1.webp',
+        '/VILLA_PRABHU/pha.png',
+        '/VILLA_PRABHU/prabhu22.png',
+        '/VILLA_PRABHU/prabhu23.png'
       ]
     },
     mapImage: '/mapa.avif',
     mapUrl: 'https://maps.google.com/maps?q=-3.4146184,-39.046461&z=15&output=embed',
     videoSources: [
+      'https://player.vimeo.com/video/1189032118',
       'https://player.vimeo.com/video/1179327775?h=c94b7f80f1',
       'https://player.vimeo.com/video/1179327749?h=9d3c5f80f1',
       'https://player.vimeo.com/video/1179327705?h=7a1b5f80f1',
@@ -299,7 +288,7 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     id: '01',
     slug: 'villa-condudu-3',
     title: 'TEMPORADA',
-    image: '/VillaCondutuPaginaInicial/FINAL 14.png',
+    image: '/VillaCondutuPaginaInicial/Image_from_Image.png (29).png',
     badge: 'Temporada',
     propertyTitle: 'CASA ALTO PADRÃO 3 SUÍTES',
     location: 'FRENTE À PRAIA DO PREÁ',
@@ -327,9 +316,9 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     ],
     facilities: ['3 Suítes', 'Beira-mar', 'Pé na areia', 'Piscina', 'Cozinha Completa', 'Ar-condicionado', 'Lavabo', 'Estacionamento', 'Segurança 24h'],
     gallery: {
-      main: '/VillaCondutuPaginaInicial/Final 01 (2).png',
-      sideTop: '/VillaCondutuPaginaInicial/FINAL 02 (1).png',
-      sideBottom: '/VillaCondutuPaginaInicial/Final 02 (2).png',
+      main: '/VillaCondutuPaginaInicial/Image_from_Image.png (29).png',
+      sideTop: '/VillaCondutuPaginaInicial/Image_from_Image.png (31).png',
+      sideBottom: '/VillaCondutuPaginaInicial/Final 01 (2).png',
       extra: [
         '/VillaCondutuPaginaInicial/FINAL 01 (1).png',
         '/VillaCondutuPaginaInicial/Final 01 (Wc).png',
