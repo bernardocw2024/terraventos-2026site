@@ -17,18 +17,18 @@ const BlogSection: React.FC = () => {
   const posts: Record<string, BlogPost[]> = {
     pt: [
       {
+        title: "Festival GKC Chega a Flecheiras: Por Que a Costa de Pipa do Ceará É o Próximo Hotspot",
+        summary: "A edição 2026 do maior festival de esportes aquáticos de tábua do Brasil retorna à Praia do Guajiru em meados de junho — o sinal econômico mais confiável que temos para a costa de kite do Ceará.",
+        url: "https://blog.terraventos.com/p/gkc-festival-is-coming-to-flecheiras",
+        image: "/blog/gkc_festival.png",
+        date: "7 Mai 2026"
+      },
+      {
         title: "Tatajuba Kite Real Estate: O Jogo das Lagoas do Ceará em 2026",
         summary: "Tatajuba, a 25 km de Jeri, combina 99% de confiabilidade de vento com preços de terra de fronteira. A realidade jurídica, ecológica e de investimento para compradores de kite em 2026.",
         url: "https://blog.terraventos.com/p/tatajuba-kite-real-estate-cearas",
         image: "/TATAJUBA/Image_from_Image.png (4).png",
         date: "6 Mai 2026"
-      },
-      {
-        title: "TikTok, Huawei e a onda de Data Centers no Ceará",
-        summary: "O complexo do Pecém garantiu cinco grandes projetos de data centers, incluindo o site hiperescala do TikTok. Investimento de R$ 450B até 2035 redefinindo o mercado.",
-        url: "https://blog.terraventos.com/p/tiktok-huawei-and-the-ceara-data",
-        image: "/blog/datacenter.png",
-        date: "25 Abr 2026"
       },
       {
         title: "Terreno de Marinha Explicado: A linha dos 33 metros",
@@ -38,27 +38,27 @@ const BlogSection: React.FC = () => {
         date: "26 Abr 2026"
       },
       {
-        title: "O Playbook do Comprador Estrangeiro no Ceará",
-        summary: "Guia estratégico para investidores internacionais. Saiba por que o CPF é o principal requisito e conheça o 'Visto Gold' via investimento imobiliário.",
-        url: "https://blog.terraventos.com/p/the-foreign-buyer-playbook-in-ceara",
-        image: "/blog/foreign_buyer.png",
-        date: "27 Abr 2026"
+        title: "TikTok, Huawei e a onda de Data Centers no Ceará",
+        summary: "O complexo do Pecém garantiu cinco grandes projetos de data centers, incluindo o site hiperescala do TikTok. Investimento de R$ 450B até 2035 redefinindo o mercado.",
+        url: "https://blog.terraventos.com/p/tiktok-huawei-and-the-ceara-data",
+        image: "/blog/datacenter.png",
+        date: "25 Abr 2026"
       }
     ],
     en: [
+      {
+        title: "GKC Festival is Coming to Flecheiras: Why Trairi's Kite Coast Is Ceará's Next Hotspot",
+        summary: "The 2026 edition of Brazil's largest water-board sports festival returns to Praia do Guajiru in mid-to-late June — the most reliable economic signal we have for the Ceará kite coast.",
+        url: "https://blog.terraventos.com/p/gkc-festival-is-coming-to-flecheiras",
+        image: "/blog/gkc_festival.png",
+        date: "May 7, 2026"
+      },
       {
         title: "Tatajuba Kite Real Estate: Ceará's 2026 Lagoon Play",
         summary: "Tatajuba, 25 km from Jeri, blends 99% wind reliability with frontier land prices. Inside the legal, ecological and investment reality for kite buyers in 2026.",
         url: "https://blog.terraventos.com/p/tatajuba-kite-real-estate-cearas",
         image: "/TATAJUBA/Image_from_Image.png (4).png",
         date: "May 6, 2026"
-      },
-      {
-        title: "TikTok, Huawei, and the Ceará Data Center Wave",
-        summary: "Pecém secured five major data center projects, including TikTok's hyperscale site. R$450B investment by 2035 is rapidly repricing real estate.",
-        url: "https://blog.terraventos.com/p/tiktok-huawei-and-the-ceara-data",
-        image: "/blog/datacenter.png",
-        date: "Apr 25, 2026"
       },
       {
         title: "Terreno de Marinha Explained: The 33-Meter Federal Line",
@@ -68,27 +68,27 @@ const BlogSection: React.FC = () => {
         date: "Apr 26, 2026"
       },
       {
-        title: "The Foreign Buyer Playbook in Ceará",
-        summary: "Strategic guide for international investors. Learn why CPF is the primary requirement and explore the 'Golden Visa' path through Northeast real estate.",
-        url: "https://blog.terraventos.com/p/the-foreign-buyer-playbook-in-ceara",
-        image: "/blog/foreign_buyer.png",
-        date: "Apr 27, 2026"
+        title: "TikTok, Huawei, and the Ceará Data Center Wave",
+        summary: "Pecém secured five major data center projects, including TikTok's hyperscale site. R$450B investment by 2035 is rapidly repricing real estate.",
+        url: "https://blog.terraventos.com/p/tiktok-huawei-and-the-ceara-data",
+        image: "/blog/datacenter.png",
+        date: "Apr 25, 2026"
       }
     ],
     es: [
+      {
+        title: "El Festival GKC Llega a Flecheiras: Por Qué la Costa Kite de Trairi Es el Próximo Hotspot de Ceará",
+        summary: "La edición 2026 del mayor festival de deportes acuáticos de tabla de Brasil regresa a Praia do Guajiru a mediados de junio — la señal económica más confiable para la costa de kite de Ceará.",
+        url: "https://blog.terraventos.com/p/gkc-festival-is-coming-to-flecheiras",
+        image: "/blog/gkc_festival.png",
+        date: "7 May 2026"
+      },
       {
         title: "Tatajuba Kite Real Estate: El Juego de las Lagunas de Ceará 2026",
         summary: "Tatajuba, a 25 km de Jeri, combina 99% de confiabilidad de viento con precios de tierra de frontera. La realidad jurídica, ecológica e inversora para compradores de kite en 2026.",
         url: "https://blog.terraventos.com/p/tatajuba-kite-real-estate-cearas",
         image: "/TATAJUBA/Image_from_Image.png (4).png",
         date: "6 May 2026"
-      },
-      {
-        title: "TikTok, Huawei y la ola de Data Centers en Ceará",
-        summary: "Pecém aseguró cinco grandes proyectos de centros de datos, incluido el sitio de TikTok. La inversión de R$ 450B para 2035 revaloriza el mercado.",
-        url: "https://blog.terraventos.com/p/tiktok-huawei-and-the-ceara-data",
-        image: "/blog/datacenter.png",
-        date: "25 Abr 2026"
       },
       {
         title: "Terreno de Marinha Explicado: La línea federal de 33 metros",
@@ -98,11 +98,11 @@ const BlogSection: React.FC = () => {
         date: "26 Abr 2026"
       },
       {
-        title: "El Playbook del Comprador Extranjero en Ceará",
-        summary: "Guía estratégica para inversores internacionales. Sepa por qué el CPF es el requisito principal y conozca la 'Visa Gold' vía inversión inmobiliaria.",
-        url: "https://blog.terraventos.com/p/the-foreign-buyer-playbook-in-ceara",
-        image: "/blog/foreign_buyer.png",
-        date: "27 Abr 2026"
+        title: "TikTok, Huawei y la ola de Data Centers en Ceará",
+        summary: "Pecém aseguró cinco grandes proyectos de centros de datos, incluido el sitio de TikTok. La inversión de R$ 450B para 2035 revaloriza el mercado.",
+        url: "https://blog.terraventos.com/p/tiktok-huawei-and-the-ceara-data",
+        image: "/blog/datacenter.png",
+        date: "25 Abr 2026"
       }
     ]
   };
