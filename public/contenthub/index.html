@@ -547,7 +547,7 @@ body {
 <nav class="sidebar" id="sidebar">
   <div class="sidebar-header">
     <a href="https://terraventos.com" target="_blank" class="sidebar-logo">
-      <div class="logo-icon">🌿</div>
+      <div class="logo-icon">ð¿</div>
       <div>
         <h1>TerraVentos</h1>
         <span>Content Hub</span>
@@ -557,39 +557,39 @@ body {
   <div class="sidebar-links">
     <div class="sidebar-section">Principal</div>
     <a href="#" class="active" onclick="navigate('dashboard', this)" data-page="dashboard">
-      <span class="icon">📊</span> Dashboard
+      <span class="icon">ð</span> Dashboard
     </a>
     <a href="#" onclick="navigate('pendentes', this)" data-page="pendentes">
-      <span class="icon">⏳</span> Pendentes
+      <span class="icon">â³</span> Pendentes
       <span class="badge" id="sidebarPendingBadge">0</span>
     </a>
     <a href="#" onclick="navigate('todos', this)" data-page="todos">
-      <span class="icon">📋</span> Todos os Conteúdos
+      <span class="icon">ð</span> Todos os ConteÃºdos
     </a>
     <a href="#" onclick="navigate('aprovados', this)" data-page="aprovados">
-      <span class="icon">✅</span> Aprovados
+      <span class="icon">â</span> Aprovados
     </a>
     <a href="#" onclick="navigate('publicados', this)" data-page="publicados">
-      <span class="icon">🚀</span> Publicados
+      <span class="icon">ð</span> Publicados
     </a>
     <div class="sidebar-section">Equipe</div>
     <a href="#" onclick="navigate('agentes', this)" data-page="agentes">
-      <span class="icon">🤖</span> Agentes
+      <span class="icon">ð¤</span> Agentes
     </a>
     <div class="sidebar-section">Links</div>
     <a href="https://terraventos.com" target="_blank">
-      <span class="icon">🌐</span> terraventos.com
+      <span class="icon">ð</span> terraventos.com
     </a>
     <a href="https://blog.terraventos.com" target="_blank">
-      <span class="icon">📝</span> blog.terraventos.com
+      <span class="icon">ð</span> blog.terraventos.com
     </a>
     <a href="https://drive.google.com" target="_blank">
-      <span class="icon">📁</span> Google Drive
+      <span class="icon">ð</span> Google Drive
     </a>
   </div>
   <div class="sidebar-footer">
     <a href="https://wa.me/5585985572807" target="_blank">
-      💬 WhatsApp (85) 98557-2807
+      ð¬ WhatsApp (85) 98557-2807
     </a>
   </div>
 </nav>
@@ -599,15 +599,15 @@ body {
 
   <!-- Top Bar -->
   <div class="topbar">
-    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+    <button class="hamburger" onclick="toggleSidebar()">â°</button>
     <div class="topbar-title" id="pageTitle">Dashboard</div>
     <div class="topbar-actions">
       <div class="search-box">
-        <span>🔍</span>
-        <input type="text" placeholder="Buscar conteúdo..." id="searchInput" oninput="handleSearch()">
+        <span>ð</span>
+        <input type="text" placeholder="Buscar conteÃºdo..." id="searchInput" oninput="handleSearch()">
       </div>
       <a href="https://wa.me/5585985572807" target="_blank" class="whatsapp-btn">
-        💬 <span class="wa-text">WhatsApp</span>
+        ð¬ <span class="wa-text">WhatsApp</span>
       </a>
     </div>
   </div>
@@ -616,29 +616,29 @@ body {
   <div class="page active" id="page-dashboard">
     <div class="stats-grid">
       <div class="stat-card pending" onclick="navigate('pendentes', document.querySelector('[data-page=pendentes]'))">
-        <div class="stat-icon">⏳</div>
+        <div class="stat-icon">â³</div>
         <div class="stat-value" id="statPending">0</div>
         <div class="stat-label">Pendentes</div>
       </div>
       <div class="stat-card approved" onclick="navigate('aprovados', document.querySelector('[data-page=aprovados]'))">
-        <div class="stat-icon">✅</div>
+        <div class="stat-icon">â</div>
         <div class="stat-value" id="statApproved">0</div>
         <div class="stat-label">Aprovados</div>
       </div>
       <div class="stat-card published" onclick="navigate('publicados', document.querySelector('[data-page=publicados]'))">
-        <div class="stat-icon">🚀</div>
+        <div class="stat-icon">ð</div>
         <div class="stat-value" id="statPublished">0</div>
         <div class="stat-label">Publicados</div>
       </div>
       <div class="stat-card rejected">
-        <div class="stat-icon">🚫</div>
+        <div class="stat-icon">ð«</div>
         <div class="stat-value" id="statRejected">0</div>
         <div class="stat-label">Rejeitados</div>
       </div>
     </div>
 
     <div class="section-header">
-      <h2>📌 Revisão Pendente</h2>
+      <h2>ð RevisÃ£o Pendente</h2>
     </div>
     <div class="filter-bar" id="dashFilterBar"></div>
     <div class="cards-grid" id="dashCards"></div>
@@ -649,8 +649,8 @@ body {
     <div class="filter-bar" id="pendFilterBar"></div>
     <div class="cards-grid" id="pendCards"></div>
     <div class="empty-state" id="pendEmpty" style="display:none;">
-      <div class="empty-icon">🎉</div>
-      <p>Nenhum conteúdo pendente! Tudo revisado.</p>
+      <div class="empty-icon">ð</div>
+      <p>Nenhum conteÃºdo pendente! Tudo revisado.</p>
     </div>
   </div>
 
@@ -664,8 +664,8 @@ body {
   <div class="page" id="page-aprovados">
     <div class="cards-grid" id="aprovadosCards"></div>
     <div class="empty-state" id="aprovadosEmpty" style="display:none;">
-      <div class="empty-icon">📭</div>
-      <p>Nenhum conteúdo aprovado ainda.</p>
+      <div class="empty-icon">ð­</div>
+      <p>Nenhum conteÃºdo aprovado ainda.</p>
     </div>
   </div>
 
@@ -673,8 +673,8 @@ body {
   <div class="page" id="page-publicados">
     <div class="cards-grid" id="publicadosCards"></div>
     <div class="empty-state" id="publicadosEmpty" style="display:none;">
-      <div class="empty-icon">📭</div>
-      <p>Nenhum conteúdo publicado ainda.</p>
+      <div class="empty-icon">ð­</div>
+      <p>Nenhum conteÃºdo publicado ainda.</p>
     </div>
   </div>
 
@@ -688,20 +688,20 @@ body {
 <div class="bottom-nav">
   <div class="bottom-nav-inner">
     <a href="#" class="active" onclick="navigate('dashboard', this); setBottomNav(this)" data-bnav="dashboard">
-      <span class="nav-icon">📊</span>
+      <span class="nav-icon">ð</span>
       Dashboard
     </a>
     <a href="#" onclick="navigate('pendentes', this); setBottomNav(this)" data-bnav="pendentes">
-      <span class="nav-icon">⏳</span>
+      <span class="nav-icon">â³</span>
       Pendentes
       <span class="nav-badge" id="bottomPendingBadge">0</span>
     </a>
     <a href="#" onclick="navigate('agentes', this); setBottomNav(this)" data-bnav="agentes">
-      <span class="nav-icon">🤖</span>
+      <span class="nav-icon">ð¤</span>
       Agentes
     </a>
     <a href="#" onclick="navigate('todos', this); setBottomNav(this)" data-bnav="todos">
-      <span class="nav-icon">📋</span>
+      <span class="nav-icon">ð</span>
       Mais
     </a>
   </div>
@@ -712,7 +712,7 @@ body {
   <div class="modal" id="modal" onclick="event.stopPropagation()">
     <div class="modal-handle"></div>
     <div class="modal-content">
-      <button class="modal-close" onclick="closeModal()">✕</button>
+      <button class="modal-close" onclick="closeModal()">â</button>
       <div id="modalBody"></div>
     </div>
   </div>
@@ -724,80 +724,72 @@ body {
 <script>
 // ========== DATA ==========
 const CATEGORIES = {
-  'entrevistas': { label: 'Entrevistas', icon: '🎙️', color: '#8E44AD', bg: '#F5EEF8' },
-  'seo-blog': { label: 'SEO & Blog', icon: '📝', color: '#2E86AB', bg: '#E8F4F8' },
-  'social': { label: 'Social Media', icon: '📱', color: '#E8563A', bg: '#FDECEB' },
-  'market': { label: 'Market Reports', icon: '📊', color: '#1A6B5C', bg: '#E8F5F0' },
-  'crm': { label: 'CRM & Leads', icon: '👥', color: '#F4A261', bg: '#FEF3E8' },
-  'terreno': { label: 'Terreno', icon: '🏞️', color: '#6C5B3C', bg: '#FAF3E8' },
-  'legal': { label: 'Legal', icon: '⚖️', color: '#34495E', bg: '#EBF0F5' },
-  'construir': { label: 'Construir', icon: '🏗️', color: '#D4AC0D', bg: '#FEF9E7' },
-  'mercado': { label: 'Mercado', icon: '📈', color: '#1A6B5C', bg: '#E8F5F0' },
-  'projetos': { label: 'Projetos', icon: '🏡', color: '#2E86AB', bg: '#E8F4F8' },
-  'founder': { label: 'Founder', icon: '💡', color: '#8E44AD', bg: '#F5EEF8' },
+  'entrevistas': { label: 'Entrevistas', icon: 'ðï¸', color: '#8E44AD', bg: '#F5EEF8' },
+  'seo-blog': { label: 'SEO & Blog', icon: 'ð', color: '#2E86AB', bg: '#E8F4F8' },
+  'social': { label: 'Social Media', icon: 'ð±', color: '#E8563A', bg: '#FDECEB' },
+  'market': { label: 'Market Reports', icon: 'ð', color: '#1A6B5C', bg: '#E8F5F0' },
+  'crm': { label: 'CRM & Leads', icon: 'ð¥', color: '#F4A261', bg: '#FEF3E8' },
+  'terreno': { label: 'Terreno', icon: 'ðï¸', color: '#6C5B3C', bg: '#FAF3E8' },
+  'legal': { label: 'Legal', icon: 'âï¸', color: '#34495E', bg: '#EBF0F5' },
+  'construir': { label: 'Construir', icon: 'ðï¸', color: '#D4AC0D', bg: '#FEF9E7' },
+  'mercado': { label: 'Mercado', icon: 'ð', color: '#1A6B5C', bg: '#E8F5F0' },
+  'projetos': { label: 'Projetos', icon: 'ð¡', color: '#2E86AB', bg: '#E8F4F8' },
+  'founder': { label: 'Founder', icon: 'ð¡', color: '#8E44AD', bg: '#F5EEF8' },
 };
 
 const AGENTS = [
-  { id: 'content-strategist', name: 'Content Strategist', emoji: '🧠', color: '#2E86AB', desc: 'Planejamento editorial, calendário de conteúdo e estratégia de SEO para o blog TerraVentos.', tasks: 12, active: true },
-  { id: 'seo-writer', name: 'SEO Writer', emoji: '✍️', color: '#1A6B5C', desc: 'Redação de artigos otimizados para SEO, landing pages e conteúdo técnico sobre energia eólica e terrenos.', tasks: 18, active: true },
-  { id: 'social-media', name: 'Social Media Manager', emoji: '📱', color: '#E8563A', desc: 'Criação de posts para Instagram, LinkedIn e Facebook com foco em engajamento e brand awareness.', tasks: 24, active: true },
-  { id: 'market-analyst', name: 'Market Analyst', emoji: '📊', color: '#F4A261', desc: 'Análise de dados do mercado imobiliário, relatórios de tendências e insights para investidores.', tasks: 8, active: true },
-  { id: 'crm-agent', name: 'CRM & Leads Agent', emoji: '👥', color: '#8E44AD', desc: 'Gestão de leads, automação de follow-ups e organização do pipeline de vendas.', tasks: 15, active: true },
-  { id: 'legal-content', name: 'Legal Content Agent', emoji: '⚖️', color: '#34495E', desc: 'Produção de guias legais, checklists de documentação e conteúdo educativo sobre compra de terrenos.', tasks: 6, active: true },
-  { id: 'project-showcase', name: 'Project Showcase Agent', emoji: '🏡', color: '#6C5B3C', desc: 'Criação de materiais de apresentação para projetos específicos e propriedades disponíveis.', tasks: 10, active: true },
+  { id: 'content-strategist', name: 'Content Strategist', emoji: 'ð§ ', color: '#2E86AB', desc: 'Planejamento editorial, calendÃ¡rio de conteÃºdo e estratÃ©gia de SEO para o blog TerraVentos.', tasks: 12, active: true },
+  { id: 'seo-writer', name: 'SEO Writer', emoji: 'âï¸', color: '#1A6B5C', desc: 'RedaÃ§Ã£o de artigos otimizados para SEO, landing pages e conteÃºdo tÃ©cnico sobre energia eÃ³lica e terrenos.', tasks: 18, active: true },
+  { id: 'social-media', name: 'Social Media Manager', emoji: 'ð±', color: '#E8563A', desc: 'CriaÃ§Ã£o de posts para Instagram, LinkedIn e Facebook com foco em engajamento e brand awareness.', tasks: 24, active: true },
+  { id: 'market-analyst', name: 'Market Analyst', emoji: 'ð', color: '#F4A261', desc: 'AnÃ¡lise de dados do mercado imobiliÃ¡rio, relatÃ³rios de tendÃªncias e insights para investidores.', tasks: 8, active: true },
+  { id: 'crm-agent', name: 'CRM & Leads Agent', emoji: 'ð¥', color: '#8E44AD', desc: 'GestÃ£o de leads, automaÃ§Ã£o de follow-ups e organizaÃ§Ã£o do pipeline de vendas.', tasks: 15, active: true },
+  { id: 'legal-content', name: 'Legal Content Agent', emoji: 'âï¸', color: '#34495E', desc: 'ProduÃ§Ã£o de guias legais, checklists de documentaÃ§Ã£o e conteÃºdo educativo sobre compra de terrenos.', tasks: 6, active: true },
+  { id: 'project-showcase', name: 'Project Showcase Agent', emoji: 'ð¡', color: '#6C5B3C', desc: 'CriaÃ§Ã£o de materiais de apresentaÃ§Ã£o para projetos especÃ­ficos e propriedades disponÃ­veis.', tasks: 10, active: true },
 ];
 
 const DEFAULT_CONTENT = [
   // Existing 9 from previous Hub
-  { id: 1, title: 'Entrevista: O Futuro da Energia Eólica no Ceará', category: 'entrevistas', status: 'pendente', agent: 'content-strategist', date: '2026-05-08', desc: 'Entrevista com especialista do setor eólico sobre oportunidades de investimento em terrenos para parques eólicos no litoral cearense.', tags: ['energia-eolica', 'ceara', 'investimento'], driveLink: '#', isNew: true },
-  { id: 2, title: 'Guia Completo: Como Comprar Terrenos para Energia Eólica', category: 'seo-blog', status: 'pendente', agent: 'seo-writer', date: '2026-05-07', desc: 'Artigo SEO detalhando o processo de aquisição de terrenos com potencial eólico, documentação necessária e retorno esperado.', tags: ['guia', 'seo', 'terrenos'], driveLink: '#', isNew: true },
-  { id: 3, title: 'Carousel: 5 Razões para Investir em Terrenos no Ceará', category: 'social', status: 'pendente', agent: 'social-media', date: '2026-05-06', desc: 'Post carousel para Instagram destacando as vantagens competitivas do mercado de terrenos no Ceará.', tags: ['instagram', 'carousel', 'investimento'], driveLink: '#', isNew: true },
-  { id: 4, title: 'Relatório: Mercado Imobiliário Ceará Q1 2026', category: 'market', status: 'aprovado', agent: 'market-analyst', date: '2026-05-05', desc: 'Análise trimestral do mercado imobiliário cearense com dados de valorização, volume de vendas e projeções.', tags: ['relatorio', 'mercado', 'Q1-2026'], driveLink: '#', isNew: false },
-  { id: 5, title: 'Email Sequence: Nurturing de Leads Qualificados', category: 'crm', status: 'publicado', agent: 'crm-agent', date: '2026-05-04', desc: 'Sequência de 5 emails para nutrição de leads que demonstraram interesse em terrenos para investimento.', tags: ['email', 'leads', 'automacao'], driveLink: '#', isNew: false },
-  { id: 6, title: 'Blog: Documentação para Compra de Terreno Rural', category: 'seo-blog', status: 'pendente', agent: 'seo-writer', date: '2026-05-03', desc: 'Artigo educativo sobre toda documentação necessária para compra segura de terrenos rurais no Ceará.', tags: ['documentacao', 'legal', 'terreno-rural'], driveLink: '#', isNew: true },
-  { id: 7, title: 'Reels: Tour Virtual - Terreno Praia de Jericoacoara', category: 'social', status: 'pendente', agent: 'social-media', date: '2026-05-02', desc: 'Vídeo curto mostrando terreno disponível próximo a Jericoacoara com potencial turístico e eólico.', tags: ['reels', 'jericoacoara', 'tour'], driveLink: '#', isNew: true },
-  { id: 8, title: 'Pipeline Analysis: Leads Maio 2026', category: 'crm', status: 'aprovado', agent: 'crm-agent', date: '2026-05-01', desc: 'Análise do pipeline de leads do mês com métricas de conversão, origem e próximos passos.', tags: ['pipeline', 'analytics', 'maio'], driveLink: '#', isNew: false },
-  { id: 9, title: 'LinkedIn Post: Oportunidade Exclusiva Litoral Oeste', category: 'social', status: 'publicado', agent: 'social-media', date: '2026-04-30', desc: 'Post para LinkedIn apresentando oportunidade de investimento exclusiva no litoral oeste do Ceará.', tags: ['linkedin', 'exclusivo', 'litoral-oeste'], driveLink: '#', isNew: false },
+  { id: 3, title: 'Carousel: 5 RazÃµes para Investir em Terrenos no CearÃ¡', category: 'social', status: 'pendente', agent: 'social-media', date: '2026-05-06', desc: 'Post carousel para Instagram destacando as vantagens competitivas do mercado de terrenos no CearÃ¡.', tags: ['instagram', 'carousel', 'investimento'], driveLink: '#', isNew: true },
+  { id: 4, title: 'RelatÃ³rio: Mercado ImobiliÃ¡rio CearÃ¡ Q1 2026', category: 'market', status: 'aprovado', agent: 'market-analyst', date: '2026-05-05', desc: 'AnÃ¡lise trimestral do mercado imobiliÃ¡rio cearense com dados de valorizaÃ§Ã£o, volume de vendas e projeÃ§Ãµes.', tags: ['relatorio', 'mercado', 'Q1-2026'], driveLink: '#', isNew: false },
+  { id: 5, title: 'Email Sequence: Nurturing de Leads Qualificados', category: 'crm', status: 'publicado', agent: 'crm-agent', date: '2026-05-04', desc: 'SequÃªncia de 5 emails para nutriÃ§Ã£o de leads que demonstraram interesse em terrenos para investimento.', tags: ['email', 'leads', 'automacao'], driveLink: '#', isNew: false },
+  { id: 6, title: 'Blog: DocumentaÃ§Ã£o para Compra de Terreno Rural', category: 'seo-blog', status: 'pendente', agent: 'seo-writer', date: '2026-05-03', desc: 'Artigo educativo sobre toda documentaÃ§Ã£o necessÃ¡ria para compra segura de terrenos rurais no CearÃ¡.', tags: ['documentacao', 'legal', 'terreno-rural'], driveLink: '#', isNew: true },
+  { id: 7, title: 'Reels: Tour Virtual - Terreno Praia de Jericoacoara', category: 'social', status: 'pendente', agent: 'social-media', date: '2026-05-02', desc: 'VÃ­deo curto mostrando terreno disponÃ­vel prÃ³ximo a Jericoacoara com potencial turÃ­stico e eÃ³lico.', tags: ['reels', 'jericoacoara', 'tour'], driveLink: '#', isNew: true },
+  { id: 8, title: 'Pipeline Analysis: Leads Maio 2026', category: 'crm', status: 'aprovado', agent: 'crm-agent', date: '2026-05-01', desc: 'AnÃ¡lise do pipeline de leads do mÃªs com mÃ©tricas de conversÃ£o, origem e prÃ³ximos passos.', tags: ['pipeline', 'analytics', 'maio'], driveLink: '#', isNew: false },
+  { id: 9, title: 'LinkedIn Post: Oportunidade Exclusiva Litoral Oeste', category: 'social', status: 'publicado', agent: 'social-media', date: '2026-04-30', desc: 'Post para LinkedIn apresentando oportunidade de investimento exclusiva no litoral oeste do CearÃ¡.', tags: ['linkedin', 'exclusivo', 'litoral-oeste'], driveLink: '#', isNew: false },
 
   // New calendar items (32 posts mapped to blog + properties)
-  { id: 10, title: 'Blog: Por que o Ceará é o Novo Polo de Energia Eólica', category: 'seo-blog', status: 'pendente', agent: 'seo-writer', date: '2026-05-12', desc: 'Artigo explorando o crescimento da energia eólica no estado e oportunidades para proprietários de terrenos.', tags: ['energia-eolica', 'ceara', 'blog'], driveLink: '#', isNew: true },
-  { id: 11, title: 'Projeto: Fazenda Solar Aquiraz - 12 Lotes', category: 'projetos', status: 'pendente', agent: 'project-showcase', date: '2026-05-13', desc: 'Material de apresentação para o empreendimento Fazenda Solar em Aquiraz com 12 lotes disponíveis.', tags: ['aquiraz', 'lotes', 'solar'], driveLink: '#', isNew: true },
-  { id: 12, title: 'Guia Legal: ITBI e Escritura de Terrenos no Ceará', category: 'legal', status: 'pendente', agent: 'legal-content', date: '2026-05-14', desc: 'Checklist completo sobre ITBI, escritura pública e registro de imóveis para compra de terrenos.', tags: ['itbi', 'escritura', 'legal'], driveLink: '#', isNew: true },
-  { id: 13, title: 'Social: Antes e Depois - Terreno Beberibe', category: 'social', status: 'pendente', agent: 'social-media', date: '2026-05-15', desc: 'Post mostrando a transformação de um terreno em Beberibe em espaço para energia eólica.', tags: ['antes-depois', 'beberibe', 'transformacao'], driveLink: '#', isNew: true },
-  { id: 14, title: 'Blog: Como Avaliar o Potencial Eólico de um Terreno', category: 'seo-blog', status: 'pendente', agent: 'seo-writer', date: '2026-05-16', desc: 'Guia técnico acessível sobre como medir e avaliar o potencial eólico antes de investir.', tags: ['avaliacao', 'eolico', 'tecnico'], driveLink: '#', isNew: true },
-  { id: 15, title: 'Mercado: Valorização de Terrenos Litoral CE 2025-2026', category: 'mercado', status: 'pendente', agent: 'market-analyst', date: '2026-05-17', desc: 'Dados de valorização imobiliária no litoral cearense com comparativos anuais e projeções.', tags: ['valorizacao', 'litoral', 'dados'], driveLink: '#', isNew: true },
-  { id: 16, title: 'Founder Story: Como Nasceu a TerraVentos', category: 'founder', status: 'pendente', agent: 'content-strategist', date: '2026-05-18', desc: 'Post pessoal de Bernardo contando a história e motivação por trás da criação da TerraVentos.', tags: ['founder', 'historia', 'pessoal'], driveLink: '#', isNew: true },
-  { id: 17, title: 'Construir: Etapas da Construção em Terreno Eólico', category: 'construir', status: 'pendente', agent: 'legal-content', date: '2026-05-19', desc: 'Infográfico e artigo detalhando as etapas desde a compra do terreno até a instalação de torres eólicas.', tags: ['construcao', 'etapas', 'eolico'], driveLink: '#', isNew: true },
-  { id: 18, title: 'Terreno: Oportunidade Paracuru - 5 hectares', category: 'terreno', status: 'pendente', agent: 'project-showcase', date: '2026-05-20', desc: 'Apresentação de terreno de 5 hectares em Paracuru com documentação regularizada e acesso à praia.', tags: ['paracuru', '5ha', 'praia'], driveLink: '#', isNew: true },
+  { id: 12, title: 'Guia Legal: ITBI e Escritura de Terrenos no CearÃ¡', category: 'legal', status: 'pendente', agent: 'legal-content', date: '2026-05-14', desc: 'Checklist completo sobre ITBI, escritura pÃºblica e registro de imÃ³veis para compra de terrenos.', tags: ['itbi', 'escritura', 'legal'], driveLink: '#', isNew: true },
+  { id: 14, title: 'Blog: Como Avaliar o Potencial EÃ³lico de um Terreno', category: 'seo-blog', status: 'pendente', agent: 'seo-writer', date: '2026-05-16', desc: 'Guia tÃ©cnico acessÃ­vel sobre como medir e avaliar o potencial eÃ³lico antes de investir.', tags: ['avaliacao', 'eolico', 'tecnico'], driveLink: '#', isNew: true },
+  { id: 15, title: 'Mercado: ValorizaÃ§Ã£o de Terrenos Litoral CE 2025-2026', category: 'mercado', status: 'pendente', agent: 'market-analyst', date: '2026-05-17', desc: 'Dados de valorizaÃ§Ã£o imobiliÃ¡ria no litoral cearense com comparativos anuais e projeÃ§Ãµes.', tags: ['valorizacao', 'litoral', 'dados'], driveLink: '#', isNew: true },
+  { id: 16, title: 'Founder Story: Como Nasceu a TerraVentos', category: 'founder', status: 'pendente', agent: 'content-strategist', date: '2026-05-18', desc: 'Post pessoal de Bernardo contando a histÃ³ria e motivaÃ§Ã£o por trÃ¡s da criaÃ§Ã£o da TerraVentos.', tags: ['founder', 'historia', 'pessoal'], driveLink: '#', isNew: true },
+  { id: 17, title: 'Construir: Etapas da ConstruÃ§Ã£o em Terreno EÃ³lico', category: 'construir', status: 'pendente', agent: 'legal-content', date: '2026-05-19', desc: 'InfogrÃ¡fico e artigo detalhando as etapas desde a compra do terreno atÃ© a instalaÃ§Ã£o de torres eÃ³licas.', tags: ['construcao', 'etapas', 'eolico'], driveLink: '#', isNew: true },
+  { id: 18, title: 'Terreno: Oportunidade Paracuru - 5 hectares', category: 'terreno', status: 'pendente', agent: 'project-showcase', date: '2026-05-20', desc: 'ApresentaÃ§Ã£o de terreno de 5 hectares em Paracuru com documentaÃ§Ã£o regularizada e acesso Ã  praia.', tags: ['paracuru', '5ha', 'praia'], driveLink: '#', isNew: true },
   { id: 19, title: 'Blog: Investimento em Terrenos vs Apartamentos em 2026', category: 'seo-blog', status: 'pendente', agent: 'seo-writer', date: '2026-05-21', desc: 'Comparativo de ROI entre investimento em terrenos e apartamentos no mercado cearense atual.', tags: ['comparativo', 'roi', 'investimento'], driveLink: '#', isNew: false },
-  { id: 20, title: 'Social: Depoimento Cliente - Investidor SP', category: 'social', status: 'pendente', agent: 'social-media', date: '2026-05-22', desc: 'Vídeo depoimento de cliente de São Paulo que investiu em terrenos no Ceará pela TerraVentos.', tags: ['depoimento', 'cliente', 'sp'], driveLink: '#', isNew: false },
-  { id: 21, title: 'Legal: Due Diligence Completa para Terrenos Rurais', category: 'legal', status: 'pendente', agent: 'legal-content', date: '2026-05-23', desc: 'Guia passo a passo de due diligence jurídica e ambiental para compra de terrenos rurais.', tags: ['due-diligence', 'rural', 'juridico'], driveLink: '#', isNew: false },
-  { id: 22, title: 'Projeto: Condomínio Eólico Canoa Quebrada', category: 'projetos', status: 'pendente', agent: 'project-showcase', date: '2026-05-24', desc: 'Lançamento do condomínio de lotes com infraestrutura para micro geração eólica em Canoa Quebrada.', tags: ['canoa-quebrada', 'condominio', 'eolico'], driveLink: '#', isNew: false },
-  { id: 23, title: 'Mercado: Panorama Energia Renovável Nordeste', category: 'mercado', status: 'pendente', agent: 'market-analyst', date: '2026-05-25', desc: 'Relatório sobre o cenário de energia renovável no Nordeste e impacto na valorização de terrenos.', tags: ['energia-renovavel', 'nordeste', 'panorama'], driveLink: '#', isNew: false },
-  { id: 24, title: 'Founder: Lições de 1 Ano no Mercado de Terrenos', category: 'founder', status: 'pendente', agent: 'content-strategist', date: '2026-05-26', desc: 'Reflexão de Bernardo sobre os aprendizados e desafios do primeiro ano da TerraVentos.', tags: ['licoes', 'aniversario', 'reflexao'], driveLink: '#', isNew: false },
-  { id: 25, title: 'Construir: Custos Reais de Infraestrutura em Terreno', category: 'construir', status: 'pendente', agent: 'legal-content', date: '2026-05-27', desc: 'Planilha e artigo com custos reais de infraestrutura básica (água, luz, acesso) em terrenos rurais.', tags: ['custos', 'infraestrutura', 'planilha'], driveLink: '#', isNew: false },
-  { id: 26, title: 'Blog: Top 10 Praias do Ceará para Investir em Terrenos', category: 'seo-blog', status: 'pendente', agent: 'seo-writer', date: '2026-05-28', desc: 'Ranking das melhores praias cearenses para investimento em terrenos com dados de valorização.', tags: ['top-10', 'praias', 'ranking'], driveLink: '#', isNew: false },
-  { id: 27, title: 'Terreno: Lote Premium Cumbuco - Vista Mar', category: 'terreno', status: 'pendente', agent: 'project-showcase', date: '2026-05-29', desc: 'Apresentação exclusiva de lote premium em Cumbuco com vista mar e infraestrutura completa.', tags: ['cumbuco', 'premium', 'vista-mar'], driveLink: '#', isNew: false },
-  { id: 28, title: 'Social: Infográfico - Processo de Compra Simplificado', category: 'social', status: 'pendente', agent: 'social-media', date: '2026-05-30', desc: 'Infográfico para redes sociais mostrando o processo de compra de terrenos em 6 passos simples.', tags: ['infografico', 'processo', 'simplificado'], driveLink: '#', isNew: false },
-  { id: 29, title: 'CRM: Automação Follow-up Pós Visita', category: 'crm', status: 'pendente', agent: 'crm-agent', date: '2026-05-31', desc: 'Configuração de automação de follow-up para leads que visitaram terrenos presencialmente.', tags: ['automacao', 'follow-up', 'visita'], driveLink: '#', isNew: false },
-  { id: 30, title: 'Legal: Contratos de Arrendamento para Energia Eólica', category: 'legal', status: 'pendente', agent: 'legal-content', date: '2026-06-01', desc: 'Modelo de contrato e guia sobre arrendamento de terrenos para empresas de energia eólica.', tags: ['contrato', 'arrendamento', 'modelo'], driveLink: '#', isNew: false },
-  { id: 31, title: 'Blog: Financiamento de Terrenos - Opções 2026', category: 'seo-blog', status: 'pendente', agent: 'seo-writer', date: '2026-06-02', desc: 'Guia completo de opções de financiamento para compra de terrenos incluindo consórcio e crédito rural.', tags: ['financiamento', 'credito', '2026'], driveLink: '#', isNew: false },
-  { id: 32, title: 'Mercado: Mapa de Calor - Demanda por Região', category: 'mercado', status: 'pendente', agent: 'market-analyst', date: '2026-06-03', desc: 'Mapa interativo de calor mostrando demanda por terrenos em diferentes regiões do Ceará.', tags: ['mapa-calor', 'demanda', 'regioes'], driveLink: '#', isNew: false },
-  { id: 33, title: 'Construir: Sustentabilidade na Construção Costeira', category: 'construir', status: 'pendente', agent: 'legal-content', date: '2026-06-04', desc: 'Artigo sobre práticas sustentáveis para construção em áreas costeiras e requisitos ambientais.', tags: ['sustentabilidade', 'costeira', 'ambiental'], driveLink: '#', isNew: false },
-  { id: 34, title: 'Founder: Visão 2027 - Para Onde Vamos', category: 'founder', status: 'pendente', agent: 'content-strategist', date: '2026-06-05', desc: 'Post de Bernardo compartilhando a visão e planos da TerraVentos para 2027.', tags: ['visao', '2027', 'futuro'], driveLink: '#', isNew: false },
-  { id: 35, title: 'Projeto: Eco Village Flexeiras - 20 Lotes', category: 'projetos', status: 'pendente', agent: 'project-showcase', date: '2026-06-06', desc: 'Apresentação do empreendimento Eco Village em Flexeiras com conceito de vida sustentável.', tags: ['flexeiras', 'eco-village', 'sustentavel'], driveLink: '#', isNew: false },
-  { id: 36, title: 'Social: Live Q&A - Tirando Dúvidas sobre Terrenos', category: 'social', status: 'pendente', agent: 'social-media', date: '2026-06-07', desc: 'Planejamento e roteiro para live no Instagram respondendo dúvidas frequentes sobre compra de terrenos.', tags: ['live', 'qa', 'duvidas'], driveLink: '#', isNew: false },
-  { id: 37, title: 'Terreno: Área Industrial Pecém - 2 hectares', category: 'terreno', status: 'pendente', agent: 'project-showcase', date: '2026-06-08', desc: 'Terreno industrial próximo ao Porto do Pecém com vocação logística e industrial.', tags: ['pecem', 'industrial', 'logistica'], driveLink: '#', isNew: false },
-  { id: 38, title: 'Blog: Guia do Investidor de Primeira Viagem', category: 'seo-blog', status: 'pendente', agent: 'seo-writer', date: '2026-06-09', desc: 'Artigo completo para investidores iniciantes que nunca compraram terrenos, do planejamento à escritura.', tags: ['iniciante', 'guia', 'primeira-viagem'], driveLink: '#', isNew: false },
-  { id: 39, title: 'Entrevista: Prefeito de Acaraú sobre Desenvolvimento', category: 'entrevistas', status: 'pendente', agent: 'content-strategist', date: '2026-06-10', desc: 'Entrevista sobre planos de desenvolvimento urbano e turístico de Acaraú e impacto nos terrenos.', tags: ['acarau', 'desenvolvimento', 'politica'], driveLink: '#', isNew: false },
-  { id: 40, title: 'CRM: Segmentação de Leads por Perfil de Investidor', category: 'crm', status: 'pendente', agent: 'crm-agent', date: '2026-06-11', desc: 'Nova segmentação de leads por perfil: conservador, moderado e arrojado, com comunicação personalizada.', tags: ['segmentacao', 'perfil', 'personalizacao'], driveLink: '#', isNew: false },
-  { id: 41, title: 'Mercado: Comparativo CE vs RN vs PI para Investimento', category: 'mercado', status: 'pendente', agent: 'market-analyst', date: '2026-06-12', desc: 'Análise comparativa de terrenos para investimento entre Ceará, Rio Grande do Norte e Piauí.', tags: ['comparativo', 'estados', 'nordeste'], driveLink: '#', isNew: false },
-  { id: 42, title: '1.000m2 de paraiso em Tatajuba', category: 'terreno', status: 'pendente', agent: 'cartografo', date: '2026-05-11', description: 'Carrossel 10 slides terreno exclusivo 1.000m2 Tatajuba. APA, comparativo Prea, investimento litoral CE.' },
-  { id: 43, title: 'Terreno de Marinha: a linha dos 33 metros', category: 'legal', status: 'pendente', agent: 'legal-content', date: '2026-05-11', description: 'Blog 1800 palavras sobre terrenos de marinha, SPU, laudemio e checklist verificacao.' },
-  { id: 44, title: 'Prea House: beira-mar no coracao do kite', category: 'projetos', status: 'pendente', agent: 'project-showcase', date: '2026-05-11', description: 'Spotlight Airbnb Prea com Reel 30s e carousel 5 slides. Pipeline R$5B investimento.' },
-  { id: 45, title: 'IDACE Tatajuba: a instrucao que muda tudo', category: 'mercado', status: 'pendente', agent: 'market-analyst', date: '2026-05-11', description: 'Analise IDACE-DPU titulacao terras Tatajuba. Elevacao distrito Dez/2025.' },
-  { id: 46, title: 'Por que larguei Londres e vim investir no Ceara', category: 'founder', status: 'pendente', agent: 'content-strategist', date: '2026-05-11', description: 'Founder story: Bloomberg Londres, The Bridge, GI Group exit, tese Costa dos Ventos.' },
-  { id: 47, title: 'FAQ: 5 perguntas de estrangeiros antes de comprar', category: 'entrevistas', status: 'pendente', agent: 'content-strategist', date: '2026-05-11', description: 'FAQ bilingue PT/EN: CPF, matricula, escritura, Golden Visa R$700k, INCRA/SPU.' },
+  { id: 20, title: 'Social: Depoimento Cliente - Investidor SP', category: 'social', status: 'pendente', agent: 'social-media', date: '2026-05-22', desc: 'VÃ­deo depoimento de cliente de SÃ£o Paulo que investiu em terrenos no CearÃ¡ pela TerraVentos.', tags: ['depoimento', 'cliente', 'sp'], driveLink: '#', isNew: false },
+  { id: 21, title: 'Legal: Due Diligence Completa para Terrenos Rurais', category: 'legal', status: 'pendente', agent: 'legal-content', date: '2026-05-23', desc: 'Guia passo a passo de due diligence jurÃ­dica e ambiental para compra de terrenos rurais.', tags: ['due-diligence', 'rural', 'juridico'], driveLink: '#', isNew: false },
+  { id: 22, title: 'Projeto: CondomÃ­nio EÃ³lico Canoa Quebrada', category: 'projetos', status: 'pendente', agent: 'project-showcase', date: '2026-05-24', desc: 'LanÃ§amento do condomÃ­nio de lotes com infraestrutura para micro geraÃ§Ã£o eÃ³lica em Canoa Quebrada.', tags: ['canoa-quebrada', 'condominio', 'eolico'], driveLink: '#', isNew: false },
+  { id: 24, title: 'Founder: LiÃ§Ãµes de 1 Ano no Mercado de Terrenos', category: 'founder', status: 'pendente', agent: 'content-strategist', date: '2026-05-26', desc: 'ReflexÃ£o de Bernardo sobre os aprendizados e desafios do primeiro ano da TerraVentos.', tags: ['licoes', 'aniversario', 'reflexao'], driveLink: '#', isNew: false },
+  { id: 25, title: 'Construir: Custos Reais de Infraestrutura em Terreno', category: 'construir', status: 'pendente', agent: 'legal-content', date: '2026-05-27', desc: 'Planilha e artigo com custos reais de infraestrutura bÃ¡sica (Ã¡gua, luz, acesso) em terrenos rurais.', tags: ['custos', 'infraestrutura', 'planilha'], driveLink: '#', isNew: false },
+  { id: 26, title: 'Blog: Top 10 Praias do CearÃ¡ para Investir em Terrenos', category: 'seo-blog', status: 'pendente', agent: 'seo-writer', date: '2026-05-28', desc: 'Ranking das melhores praias cearenses para investimento em terrenos com dados de valorizaÃ§Ã£o.', tags: ['top-10', 'praias', 'ranking'], driveLink: '#', isNew: false },
+  { id: 27, title: 'Terreno: Lote Premium Cumbuco - Vista Mar', category: 'terreno', status: 'pendente', agent: 'project-showcase', date: '2026-05-29', desc: 'ApresentaÃ§Ã£o exclusiva de lote premium em Cumbuco com vista mar e infraestrutura completa.', tags: ['cumbuco', 'premium', 'vista-mar'], driveLink: '#', isNew: false },
+  { id: 28, title: 'Social: InfogrÃ¡fico - Processo de Compra Simplificado', category: 'social', status: 'pendente', agent: 'social-media', date: '2026-05-30', desc: 'InfogrÃ¡fico para redes sociais mostrando o processo de compra de terrenos em 6 passos simples.', tags: ['infografico', 'processo', 'simplificado'], driveLink: '#', isNew: false },
+  { id: 29, title: 'CRM: AutomaÃ§Ã£o Follow-up PÃ³s Visita', category: 'crm', status: 'pendente', agent: 'crm-agent', date: '2026-05-31', desc: 'ConfiguraÃ§Ã£o de automaÃ§Ã£o de follow-up para leads que visitaram terrenos presencialmente.', tags: ['automacao', 'follow-up', 'visita'], driveLink: '#', isNew: false },
+  { id: 31, title: 'Blog: Financiamento de Terrenos - OpÃ§Ãµes 2026', category: 'seo-blog', status: 'pendente', agent: 'seo-writer', date: '2026-06-02', desc: 'Guia completo de opÃ§Ãµes de financiamento para compra de terrenos incluindo consÃ³rcio e crÃ©dito rural.', tags: ['financiamento', 'credito', '2026'], driveLink: '#', isNew: false },
+  { id: 32, title: 'Mercado: Mapa de Calor - Demanda por RegiÃ£o', category: 'mercado', status: 'pendente', agent: 'market-analyst', date: '2026-06-03', desc: 'Mapa interativo de calor mostrando demanda por terrenos em diferentes regiÃµes do CearÃ¡.', tags: ['mapa-calor', 'demanda', 'regioes'], driveLink: '#', isNew: false },
+  { id: 33, title: 'Construir: Sustentabilidade na ConstruÃ§Ã£o Costeira', category: 'construir', status: 'pendente', agent: 'legal-content', date: '2026-06-04', desc: 'Artigo sobre prÃ¡ticas sustentÃ¡veis para construÃ§Ã£o em Ã¡reas costeiras e requisitos ambientais.', tags: ['sustentabilidade', 'costeira', 'ambiental'], driveLink: '#', isNew: false },
+  { id: 34, title: 'Founder: VisÃ£o 2027 - Para Onde Vamos', category: 'founder', status: 'pendente', agent: 'content-strategist', date: '2026-06-05', desc: 'Post de Bernardo compartilhando a visÃ£o e planos da TerraVentos para 2027.', tags: ['visao', '2027', 'futuro'], driveLink: '#', isNew: false },
+  { id: 35, title: 'Projeto: Eco Village Flexeiras - 20 Lotes', category: 'projetos', status: 'pendente', agent: 'project-showcase', date: '2026-06-06', desc: 'ApresentaÃ§Ã£o do empreendimento Eco Village em Flexeiras com conceito de vida sustentÃ¡vel.', tags: ['flexeiras', 'eco-village', 'sustentavel'], driveLink: '#', isNew: false },
+  { id: 36, title: 'Social: Live Q&A - Tirando DÃºvidas sobre Terrenos', category: 'social', status: 'pendente', agent: 'social-media', date: '2026-06-07', desc: 'Planejamento e roteiro para live no Instagram respondendo dÃºvidas frequentes sobre compra de terrenos.', tags: ['live', 'qa', 'duvidas'], driveLink: '#', isNew: false },
+  { id: 38, title: 'Blog: Guia do Investidor de Primeira Viagem', category: 'seo-blog', status: 'pendente', agent: 'seo-writer', date: '2026-06-09', desc: 'Artigo completo para investidores iniciantes que nunca compraram terrenos, do planejamento Ã  escritura.', tags: ['iniciante', 'guia', 'primeira-viagem'], driveLink: '#', isNew: false },
+  { id: 39, title: 'Entrevista: Prefeito de AcaraÃº sobre Desenvolvimento', category: 'entrevistas', status: 'pendente', agent: 'content-strategist', date: '2026-06-10', desc: 'Entrevista sobre planos de desenvolvimento urbano e turÃ­stico de AcaraÃº e impacto nos terrenos.', tags: ['acarau', 'desenvolvimento', 'politica'], driveLink: '#', isNew: false },
+  { id: 40, title: 'CRM: SegmentaÃ§Ã£o de Leads por Perfil de Investidor', category: 'crm', status: 'pendente', agent: 'crm-agent', date: '2026-06-11', desc: 'Nova segmentaÃ§Ã£o de leads por perfil: conservador, moderado e arrojado, com comunicaÃ§Ã£o personalizada.', tags: ['segmentacao', 'perfil', 'personalizacao'], driveLink: '#', isNew: false },
+  { id: 41, title: 'Mercado: Comparativo CE vs RN vs PI para Investimento', category: 'mercado', status: 'pendente', agent: 'market-analyst', date: '2026-06-12', desc: 'AnÃ¡lise comparativa de terrenos para investimento entre CearÃ¡, Rio Grande do Norte e PiauÃ­.', tags: ['comparativo', 'estados', 'nordeste'], driveLink: '#', isNew: false },
+  { id: 42, title: '1.000m2 de paraiso em Tatajuba', category: 'terreno', status: 'pendente', agent: 'cartografo', date: '2026-05-11', desc: 'Carrossel 10 slides terreno exclusivo 1.000m2 Tatajuba. APA, comparativo Prea, investimento litoral Ceara.', tags: ['tatajuba', 'terreno', 'investimento'], highlights: ['1.000m2 em area de preservacao', 'Comparativo com Prea', 'Potencial de valorizacao costeira'], format: 'carousel', driveLink: '', isNew: true },
+  { id: 43, title: 'Terreno de Marinha: a linha dos 33 metros', category: 'legal', status: 'pendente', agent: 'legal-content', date: '2026-05-11', desc: 'Blog 1800 palavras sobre terrenos de marinha, SPU, laudemio e checklist verificacao.', tags: ['marinha', 'legal', 'laudemio'], highlights: ['Regras SPU para terrenos de marinha', 'Laudemio e taxas aplicaveis', 'Checklist de verificacao'], format: 'blog', driveLink: '', isNew: true },
+  { id: 44, title: 'Prea House: beira-mar no coracao do kite', category: 'projetos', status: 'pendente', agent: 'project-showcase', date: '2026-05-11', desc: 'Spotlight Airbnb Prea com Reel 30s e carousel 5 slides. Pipeline R$5B investimento.', tags: ['prea', 'kitesurf', 'projeto'], highlights: ['Beira-mar em Prea', 'Reel 30s showcase', 'Pipeline investimento R$5B'], format: 'carousel', driveLink: '', isNew: true },
+  { id: 45, title: 'IDACE Tatajuba: a instrucao que muda tudo', category: 'mercado', status: 'pendente', agent: 'market-analyst', date: '2026-05-11', desc: 'Analise IDACE-DPU titulacao terras Tatajuba. Elevacao distrito Dez/2025.', tags: ['idace', 'tatajuba', 'titulacao'], highlights: ['Instrucao normativa IDACE', 'Titulacao de terras em Tatajuba', 'Elevacao a distrito em Dez/2025'], format: 'blog', driveLink: '', isNew: true },
+  { id: 46, title: 'Por que larguei Londres e vim investir no Ceara', category: 'founder', status: 'pendente', agent: 'content-strategist', date: '2026-05-11', desc: 'Founder story: Bloomberg Londres, The Bridge, GI Group exit, tese Costa dos Ventos.', tags: ['founder', 'historia', 'investimento'], highlights: ['De Bloomberg Londres ao Ceara', 'Tese Costa dos Ventos', 'Visao do fundador'], format: 'blog', driveLink: '', isNew: true },
+  { id: 47, title: 'FAQ: 5 perguntas de estrangeiros antes de comprar', category: 'entrevistas', status: 'pendente', agent: 'content-strategist', date: '2026-05-11', desc: 'FAQ bilingual PT/EN: CPF, escritura, financiamento estrangeiro, riscos e retorno.', tags: ['faq', 'estrangeiros', 'compra'], highlights: ['CPF e documentacao', 'Financiamento para estrangeiros', 'Riscos e retorno esperado'], format: 'blog', driveLink: '', isNew: true },
 ];
 
 // ========== STATE ==========
@@ -825,11 +817,11 @@ function saveData() {
 
 // ========== RENDER FUNCTIONS ==========
 function getCategoryInfo(cat) {
-  return CATEGORIES[cat] || { label: cat, icon: '📄', color: '#666', bg: '#f0f0f0' };
+  return CATEGORIES[cat] || { label: cat, icon: 'ð', color: '#666', bg: '#f0f0f0' };
 }
 
 function getAgent(agentId) {
-  return AGENTS.find(a => a.id === agentId) || { name: 'Desconhecido', emoji: '❓', color: '#999' };
+  return AGENTS.find(a => a.id === agentId) || { name: 'Desconhecido', emoji: 'â', color: '#999' };
 }
 
 function formatDate(dateStr) {
@@ -868,19 +860,19 @@ function renderCard(item) {
       </div>
       <div class="card-actions">
         ${item.status === 'pendente' || item.status === 'rejeitado' ? `
-          <button class="btn-approve" onclick="approveItem(${item.id})" title="Aprovar">✅ Aprovar</button>
-          <button class="btn-adjust" onclick="toggleFeedback(${item.id})" title="Ajustar">📝 Ajustar</button>
-          <button class="btn-reject" onclick="rejectItem(${item.id})" title="Rejeitar">🚫 Rejeitar</button>
+          <button class="btn-approve" onclick="approveItem(${item.id})" title="Aprovar">â Aprovar</button>
+          <button class="btn-adjust" onclick="toggleFeedback(${item.id})" title="Ajustar">ð Ajustar</button>
+          <button class="btn-reject" onclick="rejectItem(${item.id})" title="Rejeitar">ð« Rejeitar</button>
         ` : item.status === 'aprovado' ? `
-          <button class="btn-approve" onclick="publishItem(${item.id})" title="Publicar">🚀 Publicar</button>
-          <button class="btn-adjust" onclick="toggleFeedback(${item.id})" title="Ajustar">📝 Ajustar</button>
-          <button class="btn-detail" onclick="openModal(${item.id})" title="Detalhes">🔍 Detalhes</button>
+          <button class="btn-approve" onclick="publishItem(${item.id})" title="Publicar">ð Publicar</button>
+          <button class="btn-adjust" onclick="toggleFeedback(${item.id})" title="Ajustar">ð Ajustar</button>
+          <button class="btn-detail" onclick="openModal(${item.id})" title="Detalhes">ð Detalhes</button>
         ` : `
-          <button class="btn-detail" onclick="openModal(${item.id})" title="Detalhes" style="flex:1">🔍 Ver Detalhes</button>
+          <button class="btn-detail" onclick="openModal(${item.id})" title="Detalhes" style="flex:1">ð Ver Detalhes</button>
         `}
       </div>
       <div class="card-feedback" id="feedback-${item.id}">
-        <textarea placeholder="Descreva os ajustes necessários..." id="feedbackText-${item.id}">${item.feedback || ''}</textarea>
+        <textarea placeholder="Descreva os ajustes necessÃ¡rios..." id="feedbackText-${item.id}">${item.feedback || ''}</textarea>
         <div class="feedback-actions">
           <button class="feedback-cancel" onclick="toggleFeedback(${item.id})">Cancelar</button>
           <button class="feedback-send" onclick="sendFeedback(${item.id})">Enviar Feedback</button>
@@ -894,7 +886,7 @@ function renderCards(containerId, items) {
   const container = document.getElementById(containerId);
   if (!container) return;
   if (items.length === 0) {
-    container.innerHTML = `<div class="empty-state"><div class="empty-icon">📭</div><p>Nenhum conteúdo encontrado.</p></div>`;
+    container.innerHTML = `<div class="empty-state"><div class="empty-icon">ð­</div><p>Nenhum conteÃºdo encontrado.</p></div>`;
   } else {
     container.innerHTML = items.map(renderCard).join('');
   }
@@ -931,7 +923,7 @@ function renderAgents() {
         </div>
         <div class="agent-description">${a.desc}</div>
         <div class="agent-stats">
-          <div class="agent-stat"><strong>${taskCount}</strong> conteúdos</div>
+          <div class="agent-stat"><strong>${taskCount}</strong> conteÃºdos</div>
           <div class="agent-stat"><strong>${contentData.filter(c => c.agent === a.id && c.status === 'pendente').length}</strong> pendentes</div>
         </div>
       </div>
@@ -1026,7 +1018,7 @@ function navigate(page, el) {
   const sidebarLink = document.querySelector(`.sidebar-links a[data-page="${page}"]`);
   if (sidebarLink) sidebarLink.classList.add('active');
 
-  const titles = { dashboard: 'Dashboard', pendentes: 'Pendentes', todos: 'Todos os Conteúdos', aprovados: 'Aprovados', publicados: 'Publicados', agentes: 'Agentes' };
+  const titles = { dashboard: 'Dashboard', pendentes: 'Pendentes', todos: 'Todos os ConteÃºdos', aprovados: 'Aprovados', publicados: 'Publicados', agentes: 'Agentes' };
   document.getElementById('pageTitle').textContent = titles[page] || page;
 
   renderCurrentPage();
@@ -1066,7 +1058,7 @@ function approveItem(id) {
     item.isNew = false;
     saveData();
     renderCurrentPage();
-    showToast('✅ Conteúdo aprovado com sucesso!');
+    showToast('â ConteÃºdo aprovado com sucesso!');
   }
 }
 
@@ -1077,7 +1069,7 @@ function rejectItem(id) {
     item.isNew = false;
     saveData();
     renderCurrentPage();
-    showToast('🚫 Conteúdo rejeitado.');
+    showToast('ð« ConteÃºdo rejeitado.');
   }
 }
 
@@ -1087,7 +1079,7 @@ function publishItem(id) {
     item.status = 'publicado';
     saveData();
     renderCurrentPage();
-    showToast('🚀 Conteúdo marcado como publicado!');
+    showToast('ð ConteÃºdo marcado como publicado!');
   }
 }
 
@@ -1105,7 +1097,7 @@ function sendFeedback(id) {
     saveData();
     toggleFeedback(id);
     renderCurrentPage();
-    showToast('📝 Feedback enviado! Conteúdo retornou para revisão.');
+    showToast('ð Feedback enviado! ConteÃºdo retornou para revisÃ£o.');
   }
 }
 
@@ -1119,7 +1111,7 @@ function openModal(id) {
   document.getElementById('modalBody').innerHTML = `
     <div class="modal-category-badge" style="background:${cat.bg};color:${cat.color}">${cat.icon} ${cat.label}</div>
     <div class="modal-title">${item.title}</div>
-    <div class="modal-meta">${formatDate(item.date)} · ${agent.name}</div>
+    <div class="modal-meta">${formatDate(item.date)} Â· ${agent.name}</div>
     <div class="modal-description">${item.desc}</div>
     <div class="modal-details">
       <div class="modal-detail-row"><span class="label">Status</span><span class="card-status ${item.status}">${item.status.toUpperCase()}</span></div>
@@ -1130,19 +1122,19 @@ function openModal(id) {
       ${item.feedback ? `<div class="modal-detail-row"><span class="label">Feedback</span><span class="value">${item.feedback}</span></div>` : ''}
     </div>
     <div class="modal-links">
-      <a href="${item.driveLink}" target="_blank" class="modal-link">📁 Abrir no Google Drive</a>
-      <a href="https://terraventos.com" target="_blank" class="modal-link">🌐 Ver no Site</a>
-      <a href="https://blog.terraventos.com" target="_blank" class="modal-link">📝 Ver no Blog</a>
+      <a href="${item.driveLink}" target="_blank" class="modal-link">ð Abrir no Google Drive</a>
+      <a href="https://terraventos.com" target="_blank" class="modal-link">ð Ver no Site</a>
+      <a href="https://blog.terraventos.com" target="_blank" class="modal-link">ð Ver no Blog</a>
     </div>
     ${item.status === 'pendente' ? `
       <div class="modal-approval-actions">
-        <button class="modal-btn-approve" onclick="approveItem(${item.id}); closeModal()">✅ Aprovar</button>
-        <button class="modal-btn-adjust" onclick="closeModal(); setTimeout(()=>toggleFeedback(${item.id}),300)">📝 Ajustar</button>
-        <button class="modal-btn-reject" onclick="rejectItem(${item.id}); closeModal()">🚫 Rejeitar</button>
+        <button class="modal-btn-approve" onclick="approveItem(${item.id}); closeModal()">â Aprovar</button>
+        <button class="modal-btn-adjust" onclick="closeModal(); setTimeout(()=>toggleFeedback(${item.id}),300)">ð Ajustar</button>
+        <button class="modal-btn-reject" onclick="rejectItem(${item.id}); closeModal()">ð« Rejeitar</button>
       </div>
     ` : item.status === 'aprovado' ? `
       <div class="modal-approval-actions">
-        <button class="modal-btn-approve" onclick="publishItem(${item.id}); closeModal()">🚀 Publicar</button>
+        <button class="modal-btn-approve" onclick="publishItem(${item.id}); closeModal()">ð Publicar</button>
       </div>
     ` : ''}
   `;
