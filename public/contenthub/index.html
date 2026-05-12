@@ -961,7 +961,7 @@ body {
   </div>
 
   <!-- ===== AGENTES PAGE ===== -->
-  <div class="page" id="page-backlog" style="display:none">
+  <div class="page" id="page-backlog">
       <div class="cards-grid" id="backlogCards"></div>
       <div class="empty-state" id="backlogEmpty" style="display:none"><div class="empty-icon">💬</div>Nenhuma ideia no backlog ainda.</div>
     </div>
@@ -1307,7 +1307,6 @@ function renderCurrentPage() {
     const filtered = getFilteredItems(items);
     renderCards('backlogCards', filtered);
     document.getElementById('backlogEmpty').style.display = items.length === 0 ? '' : 'none';
-    document.getElementById('backlogCards').style.display = items.length === 0 ? 'none' : '';
   } else if (currentPage === 'agentes') {
     renderAgents();
   }
