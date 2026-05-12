@@ -1066,50 +1066,7 @@ function loadData() {
   if (saved) {
     try { contentData = JSON.parse(saved); } catch(e) { contentData = [...DEFAULT_CONTENT]; }
   } else {
-    contentData = [...DEFAULT_CONTENT,
-    {
-      id: 48,
-      title: "IDACE em Tatajuba: O Que Significa Para Investidores",
-      category: "Terreno",
-      status: "pendente",
-      agent: "Content Strategist",
-      date: "12 de mai.",
-      desc: "Carousel explicando as ações recentes do IDACE em Tatajuba e o impacto para compradores de terrenos na região.",
-      tags: ["IDACE", "Tatajuba", "terrenos", "investimento"],
-      highlights: ["Titulação de terras pelo IDACE", "Segurança jurídica para compradores", "Valorização imobiliária"],
-      format: "carousel",
-      driveLink: "",
-      image: "/contenthub/images/post_idace_1.png"
-    },
-    {
-      id: 49,
-      title: "Blog: Como a Titulação do IDACE Valoriza Terrenos em Tatajuba",
-      category: "SEO & Blog",
-      status: "pendente",
-      agent: "SEO Writer",
-      date: "12 de mai.",
-      desc: "Artigo SEO analisando como o processo de titulação do IDACE está impactando os valores de terrenos no litoral de Tatajuba.",
-      tags: ["IDACE", "titulação", "valorização", "Tatajuba", "SEO"],
-      highlights: ["Processo de regularização fundiária", "Dados de valorização imobiliária", "Oportunidades para investidores"],
-      format: "blog",
-      driveLink: "",
-      image: "/contenthub/images/post_idace_2.png"
-    },
-    {
-      id: 50,
-      title: "Atualização: Últimas Notícias do IDACE em Tatajuba 2026",
-      category: "Mercado",
-      status: "pendente",
-      agent: "Market Analyst",
-      date: "12 de mai.",
-      desc: "Cobertura das últimas ações do IDACE na região de Tatajuba com análise de impacto no mercado imobiliário local.",
-      tags: ["IDACE", "notícias", "Tatajuba", "mercado"],
-      highlights: ["Ações recentes do IDACE", "Impacto no mercado local", "Perspectivas para 2026"],
-      format: "blog",
-      driveLink: "",
-      image: "/contenthub/images/post_idace_3.png"
-    }
-  ];
+    contentData = [...DEFAULT_CONTENT];
   }
   // Ensure new items from default that might not exist in saved
   const savedIds = new Set(contentData.map(c => c.id));
@@ -1962,32 +1919,7 @@ const _origRenderCards = renderCards;
 renderCards = function() {
   _origRenderCards.apply(this, arguments);
   setTimeout(attachCardClickHandlers, 50);
-,
-    48: { type: "carousel", slides: [
-        "🏖️ IDACE em Tatajuba: O Que Todo Investidor Precisa Saber",
-        "O IDACE (Instituto de Desenvolvimento Agrário do Ceará) está realizando a titulação de terras em Tatajuba, trazendo segurança jurídica inédita para a região.",
-        "📋 O que é a titulação? O IDACE regulariza a posse de terrenos, emitindo títulos definitivos que garantem a propriedade legal ao comprador.",
-        "💰 Impacto nos preços: Terrenos titulados valorizam em média 40-60% em relação a terrenos sem documentação regular.",
-        "🔒 Segurança para investidores estrangeiros: Com título do IDACE, o processo de compra se torna transparente e juridicamente protegido.",
-        "📈 Tatajuba é o próximo polo de kitesurf premium do Ceará — e a titulação acelera o desenvolvimento imobiliário sustentável.",
-        "🏠 Veja terrenos disponíveis em Tatajuba com documentação regular em terraventos.com",
-        "💬 Comente VENTOS para receber mais detalhes sobre terrenos titulados em Tatajuba"
-      ]},
-    49: { type: "blog", paragraphs: [
-        "A regularização fundiária promovida pelo IDACE em Tatajuba representa um marco para o mercado imobiliário do litoral cearense. O processo de titulação, que vem sendo acelerado desde 2025, está transformando a percepção de risco e atraindo um novo perfil de investidor para a região.",
-        "Historicamente, muitos terrenos no litoral do Ceará enfrentavam incertezas quanto à documentação. Posseiros sem título definitivo, disputas de demarcação e a falta de registro formal criavam barreiras para investidores que exigem segurança jurídica. O trabalho do IDACE muda esse cenário fundamentalmente.",
-        "Dados recentes mostram que terrenos que passaram pelo processo de titulação do IDACE apresentam valorização significativa. A segurança documental atrai não apenas investidores brasileiros, mas também estrangeiros interessados no potencial turístico e imobiliário de Tatajuba.",
-        "Para quem busca investir em terrenos no litoral do Ceará, Tatajuba oferece uma combinação única: praia paradisíaca, ventos constantes para kitesurf, proximidade com Jericoacoara, e agora a segurança jurídica da titulação pelo IDACE.",
-        "💬 Conheça os terrenos disponíveis em Tatajuba com documentação regular em terraventos.com. Comente VENTOS para receber mais detalhes sobre oportunidades de investimento na região."
-      ]},
-    50: { type: "blog", paragraphs: [
-        "O IDACE intensificou suas ações em Tatajuba ao longo de 2026, com novas rodadas de titulação e mapeamento cadastral que prometem regularizar centenas de lotes na região costeira.",
-        "As últimas notícias indicam que o órgão está priorizando áreas com potencial turístico e imobiliário, reconhecendo o papel estratégico de Tatajuba no desenvolvimento do litoral oeste do Ceará.",
-        "O mercado local já responde positivamente. Imobiliárias e corretores relatam aumento na procura por terrenos na região, especialmente de investidores internacionais que acompanham o crescimento do turismo de kitesurf.",
-        "Especialistas apontam que a conclusão do processo de titulação em Tatajuba pode gerar uma onda de desenvolvimento similar ao que ocorreu em Preá e Jericoacoara nas últimas décadas, mas com planejamento urbanístico mais moderno.",
-        "💬 Acompanhe as oportunidades de terrenos em Tatajuba em terraventos.com. Comente VENTOS para receber atualizações sobre o processo de titulação e novas oportunidades."
-      ]}
-  };
+};
 // Initial attach
 setTimeout(attachCardClickHandlers, 500);
 
