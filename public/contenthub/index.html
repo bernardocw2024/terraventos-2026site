@@ -540,6 +540,274 @@ body {
 @media (min-width: 1200px) {
   .cards-grid { grid-template-columns: repeat(3, 1fr); }
 }
+
+
+/* Card click hint */
+.agent-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.agent-card:active {
+  transform: scale(0.97);
+}
+@media (hover: hover) {
+  .agent-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  }
+}
+/* === Detail Modal === */
+.detail-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.detail-overlay.active {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.detail-overlay.visible {
+  opacity: 1;
+}
+.detail-modal {
+  background: #fff;
+  width: 100%;
+  max-width: 520px;
+  max-height: 92vh;
+  border-radius: 20px 20px 0 0;
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+  -webkit-overflow-scrolling: touch;
+}
+.detail-overlay.visible .detail-modal {
+  transform: translateY(0);
+}
+@media (min-width: 600px) {
+  .detail-overlay.active {
+    align-items: center;
+  }
+  .detail-modal {
+    border-radius: 20px;
+    max-height: 85vh;
+    transform: translateY(40px) scale(0.97);
+    opacity: 0;
+  }
+  .detail-overlay.visible .detail-modal {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+.detail-modal-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.detail-modal-header h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0;
+  flex: 1;
+  padding-right: 12px;
+  line-height: 1.3;
+}
+.detail-close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #f0f0f5;
+  color: #555;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+.detail-close-btn:hover {
+  background: #e0e0e8;
+}
+.detail-image-wrap {
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  position: relative;
+  background: #f5f5fa;
+}
+.detail-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 18px 8px;
+}
+.detail-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #e8f4e8;
+  color: #2d8a4e;
+}
+.detail-date {
+  font-size: 12px;
+  color: #888;
+}
+.detail-body {
+  padding: 8px 18px 16px;
+}
+.detail-body p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #333;
+  margin: 0 0 14px;
+  white-space: pre-line;
+}
+/* Carousel slides */
+.detail-slides {
+  position: relative;
+}
+.detail-slide {
+  display: none;
+  padding: 0;
+}
+.detail-slide.active {
+  display: block;
+}
+.detail-slide-number {
+  display: inline-block;
+  background: #1a1a2e;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.detail-slide-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 0 4px;
+}
+.detail-slide-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d0d0d8;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.detail-slide-dot.active {
+  background: #1a1a2e;
+  width: 20px;
+  border-radius: 4px;
+}
+.detail-slide-arrows {
+  display: flex;
+  gap: 8px;
+  padding: 0 18px 8px;
+  justify-content: space-between;
+}
+.detail-slide-arrows button {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #e0e0e8;
+  border-radius: 12px;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.detail-slide-arrows button:hover {
+  background: #f5f5fa;
+}
+/* ManyChat CTA */
+.detail-manychat-cta {
+  margin: 8px 18px 16px;
+  padding: 16px;
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  border-radius: 16px;
+  text-align: center;
+  color: #fff;
+}
+.detail-manychat-cta .cta-icon {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+.detail-manychat-cta .cta-text {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.detail-manychat-cta .cta-sub {
+  font-size: 12px;
+  opacity: 0.85;
+  margin-top: 6px;
+}
+/* Approval buttons in modal */
+.detail-actions {
+  display: flex;
+  gap: 8px;
+  padding: 0 18px 20px;
+}
+.detail-actions button {
+  flex: 1;
+  padding: 11px 8px;
+  border-radius: 12px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.detail-btn-approve {
+  background: #e8f4e8;
+  color: #2d8a4e;
+}
+.detail-btn-approve:hover { background: #d0ecd0; }
+.detail-btn-adjust {
+  background: #fff3e0;
+  color: #e67e22;
+}
+.detail-btn-adjust:hover { background: #ffe8c8; }
+.detail-btn-reject {
+  background: #fde8e8;
+  color: #e74c3c;
+}
+.detail-btn-reject:hover { background: #f8d0d0; }
 </style>
 </head>
 <body>
@@ -857,9 +1125,9 @@ function renderCard(item) {
       </div>
       <div class="card-actions">
         ${item.status === 'pendente' || item.status === 'rejeitado' ? `
-          <button class="btn-approve" onclick="approveItem(${item.id})" title="Aprovar">✅ Aprovar</button>
+          <button class="btn-approve" onclick="event.stopPropagation();approveItem(${item.id})" title="Aprovar">✅ Aprovar</button>
           <button class="btn-adjust" onclick="toggleFeedback(${item.id})" title="Ajustar">📝 Ajustar</button>
-          <button class="btn-reject" onclick="rejectItem(${item.id})" title="Rejeitar">🚫 Rejeitar</button>
+          <button class="btn-reject" onclick="event.stopPropagation();rejectItem(${item.id})" title="Rejeitar">🚫 Rejeitar</button>
         ` : item.status === 'aprovado' ? `
           <button class="btn-approve" onclick="publishItem(${item.id})" title="Publicar">🚀 Publicar</button>
           <button class="btn-adjust" onclick="toggleFeedback(${item.id})" title="Ajustar">📝 Ajustar</button>
@@ -910,7 +1178,7 @@ function renderAgents() {
   grid.innerHTML = AGENTS.map(a => {
     const taskCount = contentData.filter(c => c.agent === a.id).length;
     return `
-      <div class="agent-card">
+      <div class="agent-card" onclick="openDetail(${item.id})" style="cursor:pointer">
         <div class="agent-card-header">
           <div class="agent-avatar-lg" style="background:${a.color}">${a.emoji}</div>
           <div>
@@ -1125,9 +1393,9 @@ function openModal(id) {
     </div>
     ${item.status === 'pendente' ? `
       <div class="modal-approval-actions">
-        <button class="modal-btn-approve" onclick="approveItem(${item.id}); closeModal()">✅ Aprovar</button>
+        <button class="modal-btn-approve" onclick="event.stopPropagation();approveItem(${item.id}); closeModal()">✅ Aprovar</button>
         <button class="modal-btn-adjust" onclick="closeModal(); setTimeout(()=>toggleFeedback(${item.id}),300)">📝 Ajustar</button>
-        <button class="modal-btn-reject" onclick="rejectItem(${item.id}); closeModal()">🚫 Rejeitar</button>
+        <button class="modal-btn-reject" onclick="event.stopPropagation();rejectItem(${item.id}); closeModal()">🚫 Rejeitar</button>
       </div>
     ` : item.status === 'aprovado' ? `
       <div class="modal-approval-actions">
@@ -1156,6 +1424,501 @@ function showToast(msg) {
 // ========== INIT ==========
 loadData();
 renderCurrentPage();
+
+// === Full Content for Detail View ===
+const FULL_CONTENT = {
+  3: {
+    type: 'carousel',
+    slides: [
+      '5 Razões para Investir em Terrenos no Ceará',
+      '1️⃣ Valorização Acelerada\nO litoral cearense registrou valorização média de 22% ao ano nos últimos 3 anos. Terrenos em regiões como Paracuru e Flecheiras estão entre os mais procurados por investidores de todo o Brasil.',
+      '2️⃣ Infraestrutura em Expansão\nNovos acessos rodoviários, saneamento e energia elétrica estão chegando a áreas antes remotas. Isso significa mais conforto e mais valorização para quem compra agora.',
+      '3️⃣ Turismo em Alta\nO Ceará recebeu mais de 4 milhões de turistas em 2025. A demanda por hospedagens e experiências únicas impulsiona o mercado de terrenos em áreas turísticas.',
+      '4️⃣ Custo de Entrada Acessível\nDiferente de imóveis prontos, terrenos permitem começar a investir com valores a partir de R$50 mil, com parcelamento facilitado direto com a TerraVentos.',
+      '5️⃣ Segurança Jurídica\nTodos os terrenos da TerraVentos possuem documentação regularizada, matrícula atualizada e laudo técnico. Investimento seguro do início ao fim.',
+      '💬 Comente VENTOS para receber mais detalhes sobre investimento em terrenos no Ceará!\n\nAcesse: terraventos.com'
+    ]
+  },
+  4: {
+    type: 'report',
+    paragraphs: [
+      'O mercado imobiliário do Ceará encerrou o primeiro trimestre de 2026 com indicadores positivos em todas as regiões monitoradas. A valorização média de terrenos no litoral oeste atingiu 18,5%, superando a média nacional de 12,3%.',
+      'Os municípios de Paracuru, Trairi e Itapipoca lideraram o ranking de valorização, impulsionados por novos empreendimentos turísticos e melhorias na infraestrutura viária. O volume de transações cresceu 31% em relação ao mesmo período de 2025.',
+      'O perfil do comprador também mudou: 42% dos compradores são de outros estados, principalmente São Paulo, Minas Gerais e Distrito Federal. A busca por terrenos para construção de casas de veraneio e investimento patrimonial segue em alta.',
+      'A projeção para o restante de 2026 é de manutenção da tendência de alta, com destaque para áreas próximas a novos projetos de infraestrutura e polos turísticos consolidados.',
+      '💬 Comente VENTOS para receber o relatório completo em PDF!'
+    ]
+  },
+  5: {
+    type: 'email',
+    paragraphs: [
+      'Sequência de 5 emails projetada para nutrir leads qualificados que demonstraram interesse em terrenos para investimento. Cada email é personalizado com base no comportamento do lead.',
+      'Email 1 — Boas-vindas: Apresentação da TerraVentos e do mercado de terrenos no Ceará. Inclui link para o guia gratuito "Como Investir em Terrenos com Segurança".',
+      'Email 2 — Educação: Dados de valorização e cases de sucesso de investidores que compraram terrenos conosco nos últimos 2 anos.',
+      'Email 3 — Oportunidade: Apresentação dos terrenos disponíveis com fotos, localização e condições de pagamento.',
+      'Email 4 — Prova Social: Depoimentos em vídeo de clientes satisfeitos e tour virtual dos loteamentos.',
+      'Email 5 — Urgência: Oferta exclusiva com prazo limitado e condições especiais para fechamento.',
+      '💬 Comente VENTOS para receber mais detalhes sobre automação de leads!'
+    ]
+  },
+  8: {
+    type: 'report',
+    paragraphs: [
+      'O pipeline de leads de maio de 2026 apresenta 247 leads ativos em diferentes estágios do funil. A taxa de conversão geral está em 8,3%, acima da meta de 7%.',
+      'Origem dos leads: 38% via Instagram Ads, 24% via Google Ads, 18% via indicação de clientes, 12% via conteúdo orgânico e 8% via parcerias com corretores.',
+      'Leads quentes (prontos para visita): 43 leads. Destes, 28 já agendaram visita aos terrenos e 15 estão em negociação ativa de condições de pagamento.',
+      'Ações recomendadas: intensificar follow-up nos leads que abriram emails mas não responderam, criar campanha de retargeting para visitantes do site que não converteram.',
+      '💬 Comente VENTOS para receber mais detalhes sobre nossa estratégia de captação de leads!'
+    ]
+  },
+  9: {
+    type: 'social',
+    paragraphs: [
+      '🏖️ Oportunidade Exclusiva no Litoral Oeste do Ceará!\n\nTerreno de 1.200m² a apenas 300 metros da praia, com vista privilegiada e documentação 100% regularizada.',
+      'Ideal para construção de casa de veraneio ou investimento com alto potencial de valorização. A região registrou crescimento de 25% no último ano.',
+      '📍 Localização estratégica próxima a restaurantes, pousadas e pontos turísticos.\n\n✅ Escritura imediata\n✅ Parcelamento em até 60x\n✅ Assessoria jurídica inclusa',
+      '#TerraVentos #InvestimentoImobiliário #TerrenosCeará #LitoralOeste #Investimento #Oportunidade',
+      '💬 Comente VENTOS para receber mais detalhes sobre esta oportunidade!'
+    ]
+  },
+  12: {
+    type: 'blog',
+    paragraphs: [
+      'A compra de um terreno envolve etapas legais importantes que todo investidor precisa conhecer. Neste guia, explicamos os principais custos e processos envolvidos na aquisição de terrenos no Ceará.',
+      'O ITBI (Imposto sobre Transmissão de Bens Imóveis) é um tributo municipal obrigatório na compra de imóveis. No Ceará, a alíquota varia entre 2% e 3% do valor venal do imóvel, dependendo do município.',
+      'A escritura pública é o documento lavrado em cartório que formaliza a transferência de propriedade. O custo varia conforme o valor do imóvel e a tabela de emolumentos do estado.',
+      'O registro no Cartório de Registro de Imóveis é a etapa final que garante a propriedade legal do terreno. Sem o registro, a escritura não tem validade perante terceiros.',
+      'Dica TerraVentos: todos os nossos terrenos já possuem matrícula atualizada e certidões negativas, facilitando o processo de compra e reduzindo custos com documentação.',
+      '💬 Comente VENTOS para receber o guia completo em PDF sobre documentação de terrenos!'
+    ]
+  },
+  15: {
+    type: 'report',
+    paragraphs: [
+      'Análise detalhada da valorização de terrenos no litoral cearense entre 2025 e 2026, com dados consolidados de 12 municípios e mais de 500 transações registradas.',
+      'Destaques: Paracuru liderou com 28% de valorização, seguido por Flecheiras (24%), Mundaú (21%) e Lagoinha (19%). A média geral do litoral ficou em 22,3%.',
+      'Fatores de valorização: expansão da malha viária (CE-085 duplicada), novos resorts e empreendimentos turísticos, e aumento da procura por investidores de outros estados.',
+      'Projeção 2026-2027: expectativa de valorização entre 15% e 25% para terrenos bem localizados, com destaque para áreas próximas a novos empreendimentos hoteleiros.',
+      '💬 Comente VENTOS para receber o relatório completo de valorização!'
+    ]
+  },
+  16: {
+    type: 'blog',
+    paragraphs: [
+      'A TerraVentos nasceu de uma paixão pelo Ceará e da visão de que investir em terrenos no litoral cearense é uma das melhores oportunidades do mercado imobiliário brasileiro.',
+      'Tudo começou quando nossos fundadores, em uma viagem ao litoral oeste, se encantaram com a beleza natural e perceberam o potencial inexplorado da região. Praias paradisíacas, comunidades acolhedoras e preços ainda acessíveis.',
+      'A missão da TerraVentos é democratizar o acesso a terrenos de qualidade no Ceará, oferecendo curadoria rigorosa, documentação transparente e acompanhamento personalizado em cada etapa da compra.',
+      'Hoje, já são mais de 200 terrenos comercializados e uma comunidade de investidores satisfeitos em todo o Brasil. Cada terreno vendido representa um sonho realizado e um investimento sólido para o futuro.',
+      '💬 Comente VENTOS para conhecer nossa história completa e os terrenos disponíveis!'
+    ]
+  },
+  18: {
+    type: 'listing',
+    paragraphs: [
+      '🌊 Terreno Premium em Paracuru — 5 hectares de pura oportunidade!\n\nLocalização privilegiada a 1,5km da praia, com acesso pavimentado e toda a infraestrutura da região.',
+      'Características do terreno:\n• Área total: 50.000m² (5 hectares)\n• Topografia plana com vegetação nativa preservada\n• Frente de 200 metros para via principal\n• Água e energia disponíveis no local',
+      'Ideal para:\n• Loteamento residencial ou turístico\n• Resort ou pousada de alto padrão\n• Condomínio de casas de veraneio\n• Projeto de ecoturismo',
+      'Documentação completa: matrícula atualizada, certidões negativas, CCIR e ITR em dia. Pronto para escritura imediata.',
+      'Valor e condições especiais disponíveis para investidores. Visite terraventos.com para mais detalhes.',
+      '💬 Comente VENTOS para receber a ficha técnica completa deste terreno!'
+    ]
+  },
+  19: {
+    type: 'blog',
+    paragraphs: [
+      'Na hora de investir em imóveis, muitos se perguntam: é melhor comprar um terreno ou um apartamento? Analisamos os dois cenários para ajudar você a tomar a melhor decisão em 2026.',
+      'Valorização: terrenos no litoral do Ceará valorizaram em média 22% ao ano, enquanto apartamentos em capitais nordestinas tiveram valorização média de 8%. A diferença é significativa.',
+      'Custo de entrada: com R$50 mil você já consegue adquirir um terreno de qualidade no litoral cearense. Para um apartamento na mesma faixa, o investimento inicial é pelo menos 5 vezes maior.',
+      'Liquidez e flexibilidade: terrenos oferecem mais flexibilidade — você pode construir, lotear, revender ou manter como reserva de valor. Apartamentos têm custos fixos como condomínio e manutenção.',
+      'Conclusão: para quem busca valorização acima da média com investimento inicial acessível, terrenos no litoral do Ceará representam uma oportunidade única no cenário atual.',
+      '💬 Comente VENTOS para receber nossa análise comparativa completa!'
+    ]
+  },
+  20: {
+    type: 'social',
+    paragraphs: [
+      '⭐ Depoimento Real — Investidor de São Paulo\n\n"Comprei meu terreno em Flecheiras pela TerraVentos em 2024. Em menos de 2 anos, o terreno já valorizou mais de 40%. Foi o melhor investimento que fiz!"',
+      '— Carlos M., empresário, São Paulo/SP\n\nCarlos conheceu a TerraVentos pelo Instagram e decidiu visitar os terrenos em uma viagem ao Ceará. Ficou impressionado com a qualidade da assessoria e a beleza do local.',
+      'Hoje Carlos planeja construir uma casa de veraneio no terreno e já indicou a TerraVentos para 3 amigos investidores.',
+      '#TerraVentos #Depoimento #InvestidorSatisfeito #TerrenosCeará #CasesDeSucesso',
+      '💬 Comente VENTOS para conhecer mais histórias de investidores!'
+    ]
+  },
+  24: {
+    type: 'carousel',
+    slides: [
+      'Como Escolher o Terreno Ideal para Investir',
+      '1️⃣ Localização\nProximidade com praias, vias de acesso e infraestrutura são os principais fatores de valorização. Terrenos a até 2km da praia têm valorização 35% maior.',
+      '2️⃣ Documentação\nVerifique matrícula atualizada, certidões negativas e regularidade fiscal. Na TerraVentos, cuidamos de toda a documentação para você.',
+      '3️⃣ Topografia\nTerrenos planos são mais versáteis e econômicos para construção. Evite terrenos em áreas de risco ou com restrições ambientais.',
+      '4️⃣ Potencial de Uso\nAvalie o que pode ser construído: residencial, comercial, turístico. Terrenos com múltiplas possibilidades de uso têm maior liquidez.',
+      '5️⃣ Infraestrutura\nÁgua, energia, internet e acesso pavimentado agregam valor imediato. Verifique também projetos de infraestrutura previstos para a região.',
+      '💬 Comente VENTOS para receber nosso checklist completo de avaliação de terrenos!'
+    ]
+  },
+  25: {
+    type: 'blog',
+    paragraphs: [
+      'A região do litoral oeste do Ceará está se consolidando como um dos principais destinos de turismo sustentável do Brasil, atraindo investidores de todo o país.',
+      'Municípios como Jericoacoara, Paracuru e Cruz combinam belezas naturais preservadas com infraestrutura turística em expansão, criando um ambiente ideal para investimentos imobiliários.',
+      'O governo do estado anunciou investimentos de R$2,8 bilhões em infraestrutura para a região até 2028, incluindo duplicação de rodovias, aeroporto regional e saneamento básico.',
+      'Para investidores, o momento é agora: os terrenos ainda estão com preços acessíveis, mas a tendência é de valorização acelerada à medida que os projetos de infraestrutura forem concluídos.',
+      '💬 Comente VENTOS para receber mais detalhes sobre oportunidades no litoral oeste!'
+    ]
+  },
+  26: {
+    type: 'carousel',
+    slides: [
+      'Antes e Depois: Transformação do Litoral Cearense',
+      '📍 Paracuru — 2020 vs 2026\nDe vila de pescadores a destino turístico consolidado. Valorização de terrenos: 180% em 6 anos.',
+      '📍 Flecheiras — 2021 vs 2026\nNovos restaurantes, pousadas e condomínios transformaram a paisagem. Terrenos triplicaram de valor.',
+      '📍 Mundaú — 2022 vs 2026\nA chegada de resorts internacionais acelerou o desenvolvimento. Área em plena expansão com terrenos ainda acessíveis.',
+      '📍 Lagoinha — 2023 vs 2026\nInfraestrutura turística em crescimento rápido. Oportunidade de entrada com alto potencial de retorno.',
+      '🔮 Próxima região? Conheça os terrenos disponíveis e invista antes da valorização!\n\nAcesse terraventos.com',
+      '💬 Comente VENTOS para receber o mapa de valorização completo!'
+    ]
+  },
+  28: {
+    type: 'social',
+    paragraphs: [
+      '📊 Dados que todo investidor deveria conhecer sobre o mercado de terrenos no Ceará em 2026.',
+      'O volume de buscas por "terrenos Ceará" cresceu 67% no Google em comparação com 2025. A demanda está em alta e a oferta de terrenos de qualidade é limitada.',
+      'Investidores de SP, MG e DF representam 55% das compras de terrenos no litoral cearense. O Ceará é o destino preferido para diversificação de portfólio imobiliário.',
+      '#MercadoImobiliário #DadosCeará #Investimento #TerraVentos',
+      '💬 Comente VENTOS para receber a análise completa do mercado!'
+    ]
+  },
+  29: {
+    type: 'social',
+    paragraphs: [
+      '🎥 Tour Virtual: Conheça nosso loteamento em Paracuru sem sair de casa!\n\nPasseie pelos terrenos, veja a vista para o mar e conheça toda a infraestrutura disponível.',
+      'O loteamento conta com:\n• Lotes de 300m² a 1.500m²\n• Ruas pavimentadas\n• Rede de água e energia\n• Área verde preservada\n• Segurança 24h',
+      'Agende sua visita presencial ou faça o tour virtual pelo nosso site. Link na bio!',
+      '#TourVirtual #Paracuru #TerrenosCeará #TerraVentos',
+      '💬 Comente VENTOS para receber o link do tour virtual!'
+    ]
+  },
+  31: {
+    type: 'blog',
+    paragraphs: [
+      'O financiamento de terrenos no Brasil segue regras diferentes do financiamento de imóveis prontos. Entenda como funciona e quais são as melhores opções para o seu perfil.',
+      'Diferente de casas e apartamentos, terrenos não podem ser financiados pelo programa Minha Casa Minha Vida. Porém, existem linhas de crédito específicas em bancos como Caixa, BB e Santander.',
+      'Na TerraVentos, oferecemos parcelamento direto em até 60 vezes, sem necessidade de aprovação bancária. As parcelas são fixas e corrigidas apenas pelo IPCA.',
+      'Dica: muitos investidores optam por comprar o terreno à vista com desconto e financiar a construção depois. Essa estratégia pode economizar até 30% no custo total do investimento.',
+      '💬 Comente VENTOS para simular o financiamento do seu terreno!'
+    ]
+  },
+  32: {
+    type: 'carousel',
+    slides: [
+      'Checklist: Documentos para Comprar um Terreno',
+      '📋 Documentos do Comprador\n• RG e CPF\n• Comprovante de residência\n• Comprovante de renda\n• Certidão de estado civil',
+      '📋 Documentos do Terreno\n• Matrícula atualizada (até 30 dias)\n• Certidão negativa de ônus\n• IPTU ou ITR em dia\n• Certidão de inteiro teor',
+      '📋 Documentos do Vendedor\n• Certidões negativas (federal, estadual, municipal)\n• Certidão de ações trabalhistas\n• Comprovante de titularidade',
+      '✅ Na TerraVentos, preparamos toda a documentação para você. Processo simplificado e seguro do início ao fim.',
+      '💬 Comente VENTOS para receber o checklist completo em PDF!'
+    ]
+  },
+  33: {
+    type: 'social',
+    paragraphs: [
+      '🌅 Pôr do sol em Flecheiras — Imagina ter um terreno com essa vista!\n\nTerrenos disponíveis a partir de R$45 mil, com parcelamento facilitado.',
+      'Flecheiras é uma das praias mais bonitas do Ceará, com águas calmas, piscinas naturais e uma comunidade acolhedora. Perfeita para casa de veraneio ou investimento.',
+      'Agende sua visita e conheça pessoalmente. Transporte saindo de Fortaleza incluso!',
+      '#Flecheiras #PôrDoSol #TerrenosCeará #ParaísoCearense #TerraVentos',
+      '💬 Comente VENTOS para agendar sua visita!'
+    ]
+  },
+  34: {
+    type: 'blog',
+    paragraphs: [
+      'O conceito de ecoturismo está transformando o litoral cearense e criando novas oportunidades para investidores que buscam alinhar rentabilidade com sustentabilidade.',
+      'Projetos de turismo sustentável no Ceará atraem um perfil de turista com maior poder aquisitivo e disposição para pagar mais por experiências autênticas e ambientalmente responsáveis.',
+      'Terrenos em áreas de preservação ambiental com potencial para ecoturismo estão entre os mais valorizados da região. A demanda por pousadas e experiências na natureza cresce 30% ao ano.',
+      'A TerraVentos oferece terrenos cuidadosamente selecionados que permitem projetos sustentáveis, respeitando a legislação ambiental e maximizando o potencial de retorno.',
+      '💬 Comente VENTOS para conhecer terrenos com potencial para ecoturismo!'
+    ]
+  },
+  36: {
+    type: 'report',
+    paragraphs: [
+      'Comparativo de rentabilidade entre diferentes classes de ativos em 2025-2026: terrenos, renda fixa, ações e fundos imobiliários.',
+      'Terrenos no litoral CE: +22% ao ano (média). CDI: +10,5%. Ibovespa: +12%. FIIs: +8%. Os terrenos lideraram em rentabilidade com risco moderado.',
+      'Vantagens adicionais dos terrenos: não há taxa de administração, não há come-cotas, patrimônio tangível com valorização real acima da inflação.',
+      'Para investidores conservadores, terrenos oferecem proteção contra inflação e volatilidade do mercado financeiro, com potencial de ganho de capital expressivo.',
+      '💬 Comente VENTOS para receber a análise comparativa completa de investimentos!'
+    ]
+  },
+  38: {
+    type: 'social',
+    paragraphs: [
+      '🏗️ Novidade TerraVentos: Parceria com construtoras locais!\n\nAgora você pode comprar o terreno e já ter o projeto da casa incluso. Pacote completo de investimento.',
+      'Nossas construtoras parceiras são certificadas e têm experiência em construções no litoral cearense. Projetos modernos, sustentáveis e otimizados para o clima local.',
+      'Pacotes a partir de R$180 mil (terreno + construção). Financiamento facilitado direto com a TerraVentos.',
+      '#TerraVentos #TerrenoMaisCasa #Construção #InvestimentoCompleto',
+      '💬 Comente VENTOS para receber os pacotes terreno + construção!'
+    ]
+  },
+  39: {
+    type: 'carousel',
+    slides: [
+      'Guia do Investidor: Tipos de Terreno no Ceará',
+      '🏖️ Terreno de Praia\nÁreas a até 2km do mar. Alta valorização turística. Ideal para pousadas, casas de veraneio e airbnb. Valorização média: 25% ao ano.',
+      '🌿 Terreno Rural\nÁreas maiores em regiões de desenvolvimento. Ideais para loteamentos e projetos de ecoturismo. Excelente custo-benefício.',
+      '🏘️ Terreno Urbano\nLotes em áreas urbanas de cidades litorâneas. Infraestrutura completa. Ideal para construção imediata de residência ou comércio.',
+      '📐 Terreno para Loteamento\nÁreas grandes com potencial de subdivisão. Alto retorno para investidores que desejam desenvolver e revender lotes individuais.',
+      'Cada tipo tem suas vantagens. Na TerraVentos, ajudamos você a escolher o terreno ideal para o seu perfil e objetivo.',
+      '💬 Comente VENTOS para descobrir qual tipo de terreno é ideal para você!'
+    ]
+  },
+  40: {
+    type: 'blog',
+    paragraphs: [
+      'O Airbnb mudou a forma como investidores enxergam o mercado imobiliário, e o litoral do Ceará é um dos destinos com maior potencial de retorno na plataforma.',
+      'Propriedades em praias como Jericoacoara, Cumbuco e Paracuru alcançam taxas de ocupação de 70% a 85% na alta temporada, com diárias que podem superar R$800.',
+      'O investimento em terreno + construção de uma casa para aluguel por temporada pode ter payback em 4 a 6 anos, dependendo da localização e do padrão da construção.',
+      'A TerraVentos oferece consultoria completa para investidores que desejam construir para renda de aluguel, incluindo projeto arquitetônico otimizado para Airbnb.',
+      '💬 Comente VENTOS para receber a simulação de retorno com aluguel por temporada!'
+    ]
+  },
+  41: {
+    type: 'social',
+    paragraphs: [
+      '📢 Evento Exclusivo TerraVentos: Café com Investidores em São Paulo!\n\nData: 24 de maio de 2026\nLocal: Hotel Fasano, Jardins — São Paulo/SP',
+      'Apresentação exclusiva de novos terrenos, dados de mercado e condições especiais para participantes do evento.',
+      'Vagas limitadas! Confirme sua presença pelo link na bio ou comentando abaixo.',
+      '#EventoTerraVentos #CaféComInvestidores #SãoPaulo #Networking',
+      '💬 Comente VENTOS para garantir sua vaga no evento!'
+    ]
+  },
+  42: {
+    type: 'listing',
+    paragraphs: [
+      '🌴 Condomínio Tatajuba — Lotes exclusivos em localização privilegiada!\n\nTerrenos de 450m² a 800m² em condomínio fechado, a 500 metros da praia.',
+      'O condomínio oferece:\n• Portaria 24h\n• Ruas internas pavimentadas\n• Rede de água e esgoto\n• Iluminação LED\n• Área de lazer com piscina\n• Quadra esportiva',
+      'Localizado em uma das regiões mais bonitas do litoral cearense, o Condomínio Tatajuba combina segurança, conforto e contato com a natureza.',
+      'Condições especiais de lançamento: entrada facilitada e parcelas fixas. Visite terraventos.com/TATAJUBA para mais detalhes.',
+      '💬 Comente VENTOS para receber a tabela de preços e disponibilidade!'
+    ]
+  },
+  43: {
+    type: 'blog',
+    paragraphs: [
+      'A tributação na compra e venda de terrenos é um tema que gera muitas dúvidas entre investidores. Neste artigo, esclarecemos os principais impostos e obrigações fiscais.',
+      'Na compra: ITBI (2-3% do valor venal), custos de cartório (escritura e registro), e eventuais taxas de prefeitura. Total estimado: 4-6% do valor do terreno.',
+      'Na venda: Imposto de Renda sobre o ganho de capital (15% a 22,5% sobre o lucro). Existe redução progressiva conforme o tempo de posse do imóvel.',
+      'Estratégia fiscal: terrenos mantidos por mais de 5 anos têm redução significativa no IR sobre ganho de capital. Planejamento tributário é essencial para maximizar retorno.',
+      '💬 Comente VENTOS para receber nossa planilha de simulação tributária!'
+    ]
+  },
+  44: {
+    type: 'listing',
+    paragraphs: [
+      '🏠 Préa House — Casas prontas à beira-mar!\n\nA TerraVentos apresenta o Préa House: casas de alto padrão em frente à praia de Preá, próximo a Jericoacoara.',
+      'As casas possuem:\n• 3 suítes com varanda\n• Sala ampla com vista para o mar\n• Cozinha gourmet\n• Piscina privativa\n• Jardim tropical\n• Estacionamento',
+      'Preá é a nova sensação do litoral cearense, com ondas perfeitas para kitesurf e uma atmosfera sofisticada que atrai turistas do mundo todo.',
+      'Ideal para moradia, veraneio ou renda com aluguel de temporada. Rentabilidade estimada de 12% ao ano com Airbnb.',
+      '💬 Comente VENTOS para agendar uma visita ao Préa House!'
+    ]
+  },
+  45: {
+    type: 'carousel',
+    slides: [
+      'Processo de Compra TerraVentos — Simples e Seguro',
+      '1️⃣ Escolha\nNavegue pelo nosso catálogo online ou agende uma visita. Nossa equipe ajuda você a encontrar o terreno ideal para seu perfil.',
+      '2️⃣ Reserva\nEscolheu? Faça a reserva com sinal de apenas R$1.000. O terreno fica reservado por 7 dias enquanto preparamos a documentação.',
+      '3️⃣ Documentação\nNossa equipe jurídica prepara toda a documentação. Você recebe tudo pronto para assinatura em até 5 dias úteis.',
+      '4️⃣ Pagamento\nEscolha a forma que melhor se encaixa: à vista com desconto, parcelado em até 60x, ou financiamento bancário.',
+      '5️⃣ Escritura\nApós a quitação, providenciamos a escritura e o registro. Você recebe a matrícula atualizada em seu nome.',
+      '✅ Acompanhamento personalizado em cada etapa. Do primeiro contato à escritura, estamos com você!',
+      '💬 Comente VENTOS para iniciar seu processo de compra!'
+    ]
+  },
+  46: {
+    type: 'social',
+    paragraphs: [
+      '🎯 Meta 2026: Diversificar meu patrimônio com terrenos no Ceará!\n\nSe esse é o seu objetivo, a TerraVentos pode ajudar. Terrenos a partir de R$35 mil com parcelamento facilitado.',
+      'Por que diversificar com terrenos?\n✅ Patrimônio tangível\n✅ Proteção contra inflação\n✅ Valorização acima da média\n✅ Sem taxas de administração\n✅ Herança simplificada',
+      'Mais de 200 investidores já escolheram a TerraVentos. Faça parte dessa comunidade!',
+      '#Diversificação #Patrimônio #Investimento #TerraVentos #Ceará',
+      '💬 Comente VENTOS para começar a diversificar seu patrimônio!'
+    ]
+  },
+  47: {
+    type: 'carousel',
+    slides: [
+      'FAQ: 5 Perguntas de Estrangeiros Antes de Comprar',
+      '1️⃣ Estrangeiros podem comprar terrenos no Brasil?\nSim! Não residentes podem adquirir imóveis urbanos sem restrições. Para áreas rurais acima de 10 módulos fiscais, é necessária aprovação do INCRA.',
+      '2️⃣ Preciso de CPF para comprar?\nSim, mas é fácil obter. A TerraVentos auxilia estrangeiros no processo de obtenção do CPF junto à Receita Federal.',
+      '3️⃣ Como funciona o pagamento?\nAceitamos transferência internacional, PIX e parcelamento direto. Não é necessário ter conta bancária no Brasil para a compra.',
+      '4️⃣ A documentação é segura?\nTodos os terrenos possuem matrícula atualizada e certidões negativas. Oferecemos assessoria jurídica bilíngue (português/inglês).',
+      '5️⃣ Posso construir e alugar?\nSim! Muitos compradores estrangeiros constroem para aluguel de temporada via Airbnb, com excelente rentabilidade.',
+      '💬 Comente VENTOS para receber o guia completo para compradores internacionais!'
+    ]
+  },
+};
+
+// === Detail View Functions ===
+let currentSlideIndex = 0;
+let currentSlides = [];
+
+function getCategoryInfo(cat) {
+  const map = {
+    'social': { label: 'Social Media', color: '#e8f4e8', textColor: '#2d8a4e' },
+    'market': { label: 'Mercado', color: '#e3f2fd', textColor: '#1565c0' },
+    'crm': { label: 'CRM', color: '#f3e5f5', textColor: '#7b1fa2' },
+    'legal': { label: 'Legal', color: '#fff3e0', textColor: '#e65100' },
+    'mercado': { label: 'Mercado', color: '#e3f2fd', textColor: '#1565c0' },
+    'founder': { label: 'Founder', color: '#fce4ec', textColor: '#c62828' },
+    'terreno': { label: 'Terreno', color: '#e8f5e9', textColor: '#2e7d32' },
+    'seo-blog': { label: 'Blog/SEO', color: '#e0f2f1', textColor: '#00695c' },
+    'entrevistas': { label: 'Entrevistas', color: '#fff8e1', textColor: '#f57f17' },
+    'listing': { label: 'Listing', color: '#e8eaf6', textColor: '#283593' }
+  };
+  return map[cat] || { label: cat, color: '#f0f0f5', textColor: '#555' };
+}
+
+function openDetail(itemId) {
+  const item = contentData.find(i => i.id === itemId);
+  if (!item) return;
+  const fc = FULL_CONTENT[itemId];
+  const overlay = document.getElementById('detailOverlay');
+  const modal = document.getElementById('detailModal');
+  
+  // Populate header
+  document.getElementById('detailTitle').textContent = item.title;
+  document.getElementById('detailImage').src = item.image || '/contenthub/images/post_' + itemId + '.png';
+  
+  // Badge
+  const catInfo = getCategoryInfo(item.category);
+  const badge = document.getElementById('detailBadge');
+  badge.textContent = catInfo.label;
+  badge.style.background = catInfo.color;
+  badge.style.color = catInfo.textColor;
+  
+  // Date
+  const dateObj = new Date(item.date + 'T12:00:00');
+  document.getElementById('detailDate').textContent = dateObj.toLocaleDateString('pt-BR', { day: 'numeric', month: 'short', year: 'numeric' });
+  
+  // Body content
+  const body = document.getElementById('detailBody');
+  body.innerHTML = '';
+  
+  if (fc && fc.type === 'carousel' && fc.slides) {
+    currentSlides = fc.slides;
+    currentSlideIndex = 0;
+    let slidesHtml = '<div class="detail-slides" id="detailSlides">';
+    fc.slides.forEach((slide, i) => {
+      slidesHtml += '<div class="detail-slide' + (i === 0 ? ' active' : '') + '" data-idx="' + i + '">';
+      slidesHtml += '<span class="detail-slide-number">' + (i + 1) + ' / ' + fc.slides.length + '</span>';
+      slidesHtml += '<p>' + slide.replace(/\n/g, '<br>') + '</p>';
+      slidesHtml += '</div>';
+    });
+    slidesHtml += '<div class="detail-slide-nav" id="slideNav">';
+    fc.slides.forEach((_, i) => {
+      slidesHtml += '<button class="detail-slide-dot' + (i === 0 ? ' active' : '') + '" onclick="goToSlide(' + i + ')"></button>';
+    });
+    slidesHtml += '</div></div>';
+    slidesHtml += '<div class="detail-slide-arrows"><button onclick="prevSlide()">\u2190 Anterior</button><button onclick="nextSlide()">Pr\u00f3ximo \u2192</button></div>';
+    body.innerHTML = slidesHtml;
+  } else if (fc) {
+    const pars = fc.paragraphs || fc.slides || [];
+    pars.forEach(p => {
+      const el = document.createElement('p');
+      el.innerHTML = p.replace(/\n/g, '<br>');
+      body.appendChild(el);
+    });
+  } else {
+    const el = document.createElement('p');
+    el.textContent = item.desc;
+    body.appendChild(el);
+  }
+  
+  // CTA
+  const topic = item.title.replace(/^(Carousel:|Blog:|Social:|Reel:|Email Sequence:|Guia Legal:|Relat\u00f3rio:|Pipeline Analysis:|LinkedIn Post:|Mercado:|Founder Story:|Terreno:|FAQ:)\s*/i, '');
+  document.getElementById('detailCta').textContent = 'Comente VENTOS para receber mais detalhes sobre ' + topic;
+  
+  // Approval actions
+  const actions = document.getElementById('detailActions');
+  actions.innerHTML = '';
+  if (item.status !== 'publicado') {
+    actions.innerHTML = '<button class="detail-btn-approve" onclick="handleDetailAction(' + itemId + ',\'aprovado\')">\u2705 Aprovar</button>' +
+      '<button class="detail-btn-adjust" onclick="handleDetailAction(' + itemId + ',\'ajuste\')">\u270f\ufe0f Ajustar</button>' +
+      '<button class="detail-btn-reject" onclick="handleDetailAction(' + itemId + ',\'rejeitado\')">\u274c Rejeitar</button>';
+  }
+  
+  // Show
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      overlay.classList.add('visible');
+    });
+  });
+  modal.scrollTop = 0;
+}
+
+function closeDetail() {
+  const overlay = document.getElementById('detailOverlay');
+  overlay.classList.remove('visible');
+  setTimeout(() => {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }, 350);
+}
+
+function goToSlide(idx) {
+  currentSlideIndex = idx;
+  const slides = document.querySelectorAll('#detailSlides .detail-slide');
+  const dots = document.querySelectorAll('#slideNav .detail-slide-dot');
+  slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+  dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+}
+
+function nextSlide() {
+  if (currentSlideIndex < currentSlides.length - 1) goToSlide(currentSlideIndex + 1);
+}
+
+function prevSlide() {
+  if (currentSlideIndex > 0) goToSlide(currentSlideIndex - 1);
+}
+
+function handleDetailAction(itemId, newStatus) {
+  closeDetail();
+  setTimeout(() => {
+    if (newStatus === 'aprovado') approveItem(itemId);
+    else if (newStatus === 'rejeitado') rejectItem(itemId);
+    else if (newStatus === 'ajuste') {
+      const item = contentData.find(i => i.id === itemId);
+      if (item) { item.status = 'ajuste'; saveData(); renderCards(); }
+    }
+  }, 400);
+}
+
 </script>
+
+<!-- Detail Modal -->
+<div class="detail-overlay" id="detailOverlay" onclick="if(event.target===this)closeDetail()">
+  <div class="detail-modal" id="detailModal">
+    <div class="detail-modal-header">
+      <h3 id="detailTitle"></h3>
+      <button class="detail-close-btn" onclick="closeDetail()">&times;</button>
+    </div>
+    <div class="detail-image-wrap">
+      <img id="detailImage" src="" alt="">
+    </div>
+    <div class="detail-meta">
+      <span class="detail-badge" id="detailBadge"></span>
+      <span class="detail-date" id="detailDate"></span>
+    </div>
+    <div class="detail-body" id="detailBody"></div>
+    <div class="detail-manychat-cta">
+      <div class="cta-icon">💬</div>
+      <div class="cta-text" id="detailCta">Comente VENTOS para receber mais detalhes</div>
+      <div class="cta-sub">via Instagram &bull; resposta automática</div>
+    </div>
+    <div class="detail-actions" id="detailActions"></div>
+  </div>
+</div>
 </body>
 </html>
