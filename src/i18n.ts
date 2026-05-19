@@ -14,6 +14,9 @@ i18n
             linkCopied: "Link copiado!",
             shareText: "Confira esta propriedade na Terra Ventos: "
           },
+          seo: {
+            intro: "A Terra Ventos é uma curadoria exclusiva de imóveis de alto padrão no litoral do Ceará. Atuamos nas regiões de Preá, Tatajuba e Bitupitá, oferecendo oportunidades únicas de investimento em terrenos, casas de praia e projetos de ecoturismo de luxo. Com vento constante, infraestrutura em crescimento e valorização comprovada, o Ceará é hoje um dos destinos mais promissores para investidores do Brasil e do exterior."
+          },
           nav: {
             inicio: "Início",
             oportunidades: "Oportunidades",
@@ -177,6 +180,9 @@ i18n
             linkCopied: "Link copied!",
             shareText: "Check out this property on Terra Ventos: "
           },
+          seo: {
+            intro: "Terra Ventos is an exclusive curation of high-end properties on the coast of Ceará. We operate in the regions of Preá, Tatajuba, and Bitupitá, offering unique investment opportunities in land, beach houses, and luxury ecotourism projects. With constant wind, growing infrastructure, and proven appreciation, Ceará is today one of the most promising destinations for investors from Brazil and abroad."
+          },
           nav: { inicio: "Home", oportunidades: "Opportunities", projetos: "Projects", estudo: "Wind Study", regioes: "Regions", contato: "Contact Us" },
           hero: {
             cta: "View Projects",
@@ -313,6 +319,9 @@ i18n
             share: "Compartir",
             linkCopied: "¡Enlace copiado!",
             shareText: "Mira esta propiedad en Terra Ventos: "
+          },
+          seo: {
+            intro: "Terra Ventos es una curaduría exclusiva de propiedades de alto nivel en la costa de Ceará. Operamos en las regiones de Preá, Tatajuba y Bitupitá, ofreciendo oportunidades únicas de inversión en terrenos, casas de playa y proyectos de ecoturismo de lujo. Con viento constante, infraestructura en crecimiento y valorización comprobada, Ceará es hoy uno de los destinos más prometedores para inversores de Brasil y del exterior."
           },
           nav: { inicio: "Inicio", oportunidades: "Oportunidades", projetos: "Proyectos", estudo: "Estudio de los Vientos", regioes: "Regiones", contato: "Contáctenos" },
           hero: {

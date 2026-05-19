@@ -257,46 +257,40 @@ function App() {
   // Hreflang tags for SEO — indicam versões em outros idiomas
   useEffect(() => {
     const baseUrl = window.location.origin;
-    const currentPathNoLang = currentPath;
+    const path = currentPath;
 
-    const languages = ["pt-BR", "en", "es"];
-    const hrefLangMap: Record<string, string> = {
-      "pt-BR": `${baseUrl}${currentPathNoLang}`,
-      en: `${baseUrl}${currentPathNoLang}`,
-      es: `${baseUrl}${currentPathNoLang}`,
-    };
 
-    // Remove existing hreflang tags
     document
       .querySelectorAll('link[rel="alternate"][hreflang]')
       .forEach((el) => el.remove());
 
-    // Add hreflang tags for each language
+    const languages = ["pt-BR", "en", "es"];
     languages.forEach((lang) => {
       const link = document.createElement("link");
       link.rel = "alternate";
       link.hreflang = lang;
-      link.href = hrefLangMap[lang];
+      link.href = `${baseUrl}${path}`;
       document.head.appendChild(link);
     });
 
-    // Add x-default (English as fallback)
-    const xDefaultLink = document.createElement("link");
-    xDefaultLink.rel = "alternate";
-    xDefaultLink.hreflang = "x-default";
-    xDefaultLink.href = `${baseUrl}${currentPathNoLang}`;
-    document.head.appendChild(xDefaultLink);
+    // x-default
+    const xDefault = document.createElement("link");
+    xDefault.rel = "alternate";
+    xDefault.hreflang = "x-default";
+    xDefault.href = `${baseUrl}${path}`;
+    document.head.appendChild(xDefault);
 
-    // Add canonical tag
-    const canonicalLink =
-      document.querySelector('link[rel="canonical"]') ||
-      document.createElement("link");
-    canonicalLink.rel = "canonical";
-    canonicalLink.href = `${baseUrl}${currentPathNoLang}`;
-    if (!document.querySelector('link[rel="canonical"]')) {
-      document.head.appendChild(canonicalLink);
+    // ✅ Canônica — sempre atualiza o href, nunca cria duplicada
+    let canonical = document.querySelector(
+      'link[rel="canonical"]',
+    ) as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement("link") as HTMLLinkElement;
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
     }
-  }, [currentPath]);
+    canonical.href = `${baseUrl}${path}`;
+  }, [currentPath, i18n.language]);
 
   const handleSelectOpportunity = (item: OportunidadeDetalhe) => {
     runTransitionTo(`/propriedade/${item.slug}`);
@@ -724,6 +718,15 @@ function App() {
                   </div>
                 </section>
               </div>
+
+              {/* SEO: Conteúdo descritivo visível para buscadores e leitores */}
+              <section className="seo-intro-content">
+                <div className="seo-intro-container">
+                  <p>
+                    {t("seo.intro")}
+                  </p>
+                </div>
+              </section>
 
               <Oportunidades onSelect={handleSelectOpportunity} />
 
