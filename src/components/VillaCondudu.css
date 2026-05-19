@@ -259,12 +259,24 @@
     padding: 48px 16px;
   }
 
+  .condudu-content {
+    text-align: center;
+  }
+
   .condudu-title {
     font-size: 1.45rem;
   }
 
   .condudu-subtitle {
     font-size: 0.92rem;
+  }
+
+  .condudu-tags {
+    justify-content: center;
+  }
+
+  .condudu-price-line {
+    justify-content: center;
   }
 
   .condudu-price {
@@ -277,5 +289,10 @@
 
   .condudu-tag {
     font-size: 0.75rem;
+  }
+
+  .condudu-cta {
+    display: block;
+    margin: 0 auto;
   }
 }
