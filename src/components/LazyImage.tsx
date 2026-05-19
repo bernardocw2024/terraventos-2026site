@@ -85,7 +85,6 @@ export default function LazyImage({
       style={{
         opacity: isLoaded ? 1 : 0.7,
         transition: "opacity 0.3s ease-in-out",
-        backgroundColor: "#f0f0f0",
       }}
     />
   );
