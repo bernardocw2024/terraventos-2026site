@@ -1,7 +1,7 @@
 .condudu-section {
   padding: 80px 48px;
   background-color: #fff;
-  font-family: 'Avenir', 'Manrope', sans-serif;
+  font-family: "Avenir", "Manrope", sans-serif;
 }
 
 .condudu-container {
@@ -17,7 +17,9 @@
   position: relative;
   opacity: 0;
   transform: translateX(-40px);
-  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s, transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+  transition:
+    opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s,
+    transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
 }
 
 .condudu-section.is-visible .condudu-media {
@@ -29,16 +31,16 @@
   display: inline-block;
   padding: 4px 16px;
   border-radius: 20px;
-  background-color: #C4B096;
+  background-color: #c4b096;
   color: #111827;
   font-size: 0.85rem;
-  font-family: 'Diodrum', sans-serif;
+  font-family: "Diodrum", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 16px;
   transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .condudu-pill:hover {
@@ -65,7 +67,9 @@
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s ease;
+  transition:
+    opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 1.2s ease;
   transform: scale(1.05);
 }
 
@@ -109,7 +113,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   pointer-events: auto;
   color: #111;
@@ -118,7 +122,7 @@
 .condudu-slider-arrow:hover {
   background: #ffffff;
   transform: scale(1.1);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Slider Dots */
@@ -158,7 +162,9 @@
   max-width: 520px;
   opacity: 0;
   transform: translateX(40px);
-  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s, transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+  transition:
+    opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s,
+    transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
 }
 
 .condudu-section.is-visible .condudu-content {
@@ -168,7 +174,7 @@
 
 .condudu-title {
   font-size: 2.2rem;
-  font-family: 'Avenir', 'Manrope', sans-serif;
+  font-family: "Avenir", "Manrope", sans-serif;
   font-weight: 500;
   color: #111;
   margin: 0 0 20px 0;
@@ -176,7 +182,7 @@
 }
 
 .condudu-subtitle {
-  font-family: 'Diodrum', sans-serif;
+  font-family: "Diodrum", sans-serif;
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
@@ -211,13 +217,13 @@
   font-size: 1.25rem;
   font-weight: 700;
   color: #111827;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 .condudu-price-note {
   font-size: 0.82rem;
   color: #6b7280;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 .condudu-cta {
@@ -230,7 +236,10 @@
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .condudu-cta:hover {
