@@ -68,10 +68,11 @@ if (!fs.existsSync(templatePath)) {
 
 const template = fs.readFileSync(templatePath, 'utf8');
 
-function generatePage(targetPath, title, desc, img, url, langCode, langId) {
+function generatePage(targetPath, title, desc, img, url, langCode, langId, imgAlt = null) {
   let html = template;
   const fullImageUrl = img.startsWith('http') ? img : `${baseUrl}${img}`;
   const displayTitle = title.includes('Terra Ventos') ? title : `${title} | Terra Ventos`;
+  const imageAltText = imgAlt || displayTitle;
 
   // Basico
   html = html.replace(/<html lang=".*?"/g, `<html lang="${langId}" prefix="og: http://ogp.me/ns#"`);
@@ -91,6 +92,16 @@ function generatePage(targetPath, title, desc, img, url, langCode, langId) {
   html = html.replace(/<meta name="twitter:description" content=".*?" ?\/?>/g, `<meta name="twitter:description" content="${desc}" />`);
   html = html.replace(/<meta name="twitter:image" content=".*?" ?\/?>/g, `<meta name="twitter:image" content="${fullImageUrl}" />`);
   html = html.replace(/<meta name="twitter:url" content=".*?" ?\/?>/g, `<meta name="twitter:url" content="${url}" />`);
+
+  // OG image dimensions + alt (melhora preview no LinkedIn, WhatsApp, Instagram)
+  html = html.replace(/<meta property="og:image:width" content=".*?">/g, '<meta property="og:image:width" content="1200">');
+  html = html.replace(/<meta property="og:image:height" content=".*?">/g, '<meta property="og:image:height" content="630">');
+  // Inject og:image:alt if not already present
+  if (!html.includes('og:image:alt')) {
+    html = html.replace('</head>', `<meta property="og:image:alt" content="${imageAltText}" />\n</head>`);
+  } else {
+    html = html.replace(/<meta property="og:image:alt" content=".*?" ?\/?>/g, `<meta property="og:image:alt" content="${imageAltText}" />`);
+  }
 
   // Injetar script para forçar o idioma no React (através do localStorage)
   const langScript = `<script>localStorage.setItem('i18nextLng', '${langId}');</script>`;
@@ -166,16 +177,21 @@ Object.entries(locales).forEach(([langId, data]) => {
   // Listagem de Propriedades (Oportunidades)
   const listPath = path.resolve(distPath, langId === 'pt' ? '' : langId, 'propriedades', 'index.html');
   const listTitle = langId === 'pt'
-    ? 'Oportunidades de Investimento e Imóveis no Ceará'
+    ? 'Imóveis de Luxo no Ceará — Todas as Propriedades | Terra Ventos'
     : langId === 'en'
-      ? 'Investment Opportunities and Real Estate in Ceará'
-      : 'Oportunidades de Inversión e Inmuebles en Ceará';
+      ? 'Luxury Real Estate in Ceará — All Properties | Terra Ventos'
+      : 'Inmuebles de Lujo en Ceará — Todas las Propiedades | Terra Ventos';
   const listDesc = langId === 'pt'
-    ? 'Curadoria exclusiva de imóveis de alto padrão e oportunidades de investimento no litoral cearense (Preá, Tatajuba, Bitupitá).'
+    ? 'Explore 9+ imóveis exclusivos à beira-mar no litoral do Ceará. Terrenos, casas e projetos de alto padrão em Preá, Tatajuba e Bitupitá. Curadoria Terra Ventos.'
     : langId === 'en'
-      ? 'Exclusive curation of high-end properties and investment opportunities on the Ceará coast (Preá, Tatajuba, Bitupitá).'
-      : 'Curaduría exclusiva de propiedades de alto nivel y oportunidades de inversión en la costa de Ceará (Preá, Tatajuba, Bitupitá).';
-  generatePage(listPath, listTitle, listDesc, '/banners/2.png', `${baseUrl}${langPrefix}/propriedades`, data.code, langId);
+      ? 'Browse 9+ exclusive beachfront properties on the Ceará coast. High-end land, houses, and projects in Preá, Tatajuba and Bitupitá. Terra Ventos curation.'
+      : 'Explora 9+ propiedades exclusivas frente al mar en la costa de Ceará. Terrenos, casas y proyectos de alto nivel en Preá, Tatajuba y Bitupitá.';
+  const listImgAlt = langId === 'pt'
+    ? 'Imóveis de Luxo no Ceará — Terra Ventos'
+    : langId === 'en'
+      ? 'Luxury Real Estate in Ceará — Terra Ventos'
+      : 'Inmuebles de Lujo en Ceará — Terra Ventos';
+  generatePage(listPath, listTitle, listDesc, '/og-propriedades.png', `${baseUrl}${langPrefix}/propriedades`, data.code, langId, listImgAlt);
   console.log(`Página Listagem Propriedades gerada para: ${langId}`);
 
   sitemap += `
