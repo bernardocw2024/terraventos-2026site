@@ -29,8 +29,9 @@ function App() {
   const [selectedOpportunity, setSelectedOpportunity] =
     useState<OportunidadeDetalhe>(() => {
       const path = window.location.pathname.toLowerCase();
-      if (path.startsWith("/propriedade/")) {
-        let slug = path
+      const cleanPath = path.replace(/^\/(en|es)/, "").replace(/\/$/, "") || "/";
+      if (cleanPath.startsWith("/propriedade/")) {
+        let slug = cleanPath
           .replace("/propriedade/", "")
           .split("?")[0]
           .split("#")[0];
@@ -44,7 +45,8 @@ function App() {
       }
       return oportunidadesData[0];
     });
-  const isPaginaIndividual = currentPath.startsWith("/propriedade/");
+  const cleanPath = currentPath.replace(/^\/(en|es)/, "").replace(/\/$/, "") || "/";
+  const isPaginaIndividual = cleanPath.startsWith("/propriedade/");
   const [transitionClass, setTransitionClass] = useState<
     "page-enter" | "page-exit"
   >("page-enter");
@@ -108,8 +110,9 @@ function App() {
       const normalizedPath = nextPath.toLowerCase();
       setCurrentPath(normalizedPath);
 
-      if (normalizedPath.startsWith("/propriedade/")) {
-        let slug = normalizedPath
+      const cleanNormalized = normalizedPath.replace(/^\/(en|es)/, "").replace(/\/$/, "") || "/";
+      if (cleanNormalized.startsWith("/propriedade/")) {
+        let slug = cleanNormalized
           .replace("/propriedade/", "")
           .split("?")[0]
           .split("#")[0];
@@ -354,7 +357,7 @@ function App() {
             href="#projetos"
             onClick={(e) => {
               e.preventDefault();
-              if (currentPath === "/") {
+              if (cleanPath === "/") {
                 scrollToSection("projetos");
               } else {
                 runTransitionTo("/");
@@ -532,7 +535,7 @@ function App() {
           </h1>
           {isPaginaIndividual ? (
             <PaginaIndividual item={selectedOpportunity} />
-          ) : currentPath === "/propriedades" ? (
+          ) : cleanPath === "/propriedades" ? (
             <div id="propriedades">
               <ListagemPropriedades
                 items={getOportunidadesData(i18n.language)}

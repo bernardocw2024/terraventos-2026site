@@ -163,6 +163,30 @@ Object.entries(locales).forEach(([langId, data]) => {
     <xhtml:link rel="alternate" hreflang="es" href="${baseUrl}/es/"/>
   </url>`;
 
+  // Listagem de Propriedades (Oportunidades)
+  const listPath = path.resolve(distPath, langId === 'pt' ? '' : langId, 'propriedades', 'index.html');
+  const listTitle = langId === 'pt'
+    ? 'Oportunidades de Investimento e Imóveis no Ceará'
+    : langId === 'en'
+      ? 'Investment Opportunities and Real Estate in Ceará'
+      : 'Oportunidades de Inversión e Inmuebles en Ceará';
+  const listDesc = langId === 'pt'
+    ? 'Curadoria exclusiva de imóveis de alto padrão e oportunidades de investimento no litoral cearense (Preá, Tatajuba, Bitupitá).'
+    : langId === 'en'
+      ? 'Exclusive curation of high-end properties and investment opportunities on the Ceará coast (Preá, Tatajuba, Bitupitá).'
+      : 'Curaduría exclusiva de propiedades de alto nivel y oportunidades de inversión en la costa de Ceará (Preá, Tatajuba, Bitupitá).';
+  generatePage(listPath, listTitle, listDesc, '/banners/2.png', `${baseUrl}${langPrefix}/propriedades`, data.code, langId);
+  console.log(`Página Listagem Propriedades gerada para: ${langId}`);
+
+  sitemap += `
+  <url>
+    <loc>${baseUrl}${langPrefix}/propriedades</loc>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="${baseUrl}/propriedades"/>
+    <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}/en/propriedades"/>
+    <xhtml:link rel="alternate" hreflang="es" href="${baseUrl}/es/propriedades"/>
+  </url>`;
+
   // Propriedades
   data.properties.forEach(prop => {
     const propPath = path.resolve(distPath, langId === 'pt' ? '' : langId, 'propriedade', prop.slug, 'index.html');

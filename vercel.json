@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/((?!assets|favicon\\.ico|api|propriedade|en|es)[^.]*)",
+      "source": "/((?!assets|favicon\\.ico|api|propriedade(?:/|$)|en(?:/|$)|es(?:/|$))[^.]*)",
       "destination": "/index.html"
     }
   ],
