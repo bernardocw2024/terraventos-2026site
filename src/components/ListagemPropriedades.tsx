@@ -25,7 +25,7 @@ const ListagemPropriedades: React.FC<ListagemPropriedadesProps> = ({ items, onSe
   const filterOptions = ['all', 'venda', 'lancamento', 'temporada', 'investimento'];
 
   return (
-    <section className="listing-page">
+    <section className="listing-page" data-reveal-managed="true">
       <div className="listing-header">
         <button 
           className="back-to-home" 
