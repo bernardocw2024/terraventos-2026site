@@ -306,7 +306,7 @@
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .listing-page {
-    padding-top: 40px;
+    padding-top: 60px;
   }
 
   .listing-title {
