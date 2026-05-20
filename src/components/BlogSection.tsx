@@ -41,7 +41,7 @@ const BlogSection: React.FC = () => {
         title: "Tatajuba Kite Real Estate: O Jogo das Lagoas do Ceará em 2026",
         summary: "Tatajuba, a 25 km de Jeri, combina 99% de confiabilidade de vento com preços de terra de fronteira. A realidade jurídica, ecológica e de investimento para compradores de kite em 2026.",
         url: "https://blog.terraventos.com/p/tatajuba-kite-real-estate-cearas",
-        image: "/TATAJUBA/Image_from_Image.png (4).png",
+        image: "/blog/tatajuba.png",
         date: "6 Mai 2026"
       }
     ],
@@ -71,7 +71,7 @@ const BlogSection: React.FC = () => {
         title: "Tatajuba Kite Real Estate: Ceará's 2026 Lagoon Play",
         summary: "Tatajuba, 25 km from Jeri, blends 99% wind reliability with frontier land prices. Inside the legal, ecological and investment reality for kite buyers in 2026.",
         url: "https://blog.terraventos.com/p/tatajuba-kite-real-estate-cearas",
-        image: "/TATAJUBA/Image_from_Image.png (4).png",
+        image: "/blog/tatajuba.png",
         date: "May 6, 2026"
       }
     ],
@@ -101,7 +101,7 @@ const BlogSection: React.FC = () => {
         title: "Tatajuba Kite Real Estate: El Juego de las Lagunas de Ceará 2026",
         summary: "Tatajuba, a 25 km de Jeri, combina 99% de confiabilidad de viento con precios de tierra de frontera. La realidad jurídica, ecológica e inversora para compradores de kite en 2026.",
         url: "https://blog.terraventos.com/p/tatajuba-kite-real-estate-cearas",
-        image: "/TATAJUBA/Image_from_Image.png (4).png",
+        image: "/blog/tatajuba.png",
         date: "6 May 2026"
       }
     ]

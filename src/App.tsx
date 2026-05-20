@@ -50,6 +50,7 @@ function App() {
   const [transitionClass, setTransitionClass] = useState<
     "page-enter" | "page-exit"
   >("page-enter");
+  const [previousPath, setPreviousPath] = useState<string>("/");
   const [heroSlideIndex, setHeroSlideIndex] = useState(0);
   const isSwitchingRef = useRef(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
@@ -296,6 +297,7 @@ function App() {
   }, [currentPath, i18n.language]);
 
   const handleSelectOpportunity = (item: OportunidadeDetalhe) => {
+    setPreviousPath(currentPath); // save where we came from
     runTransitionTo(`/propriedade/${item.slug}`);
   };
 
@@ -306,7 +308,7 @@ function App() {
           {isPaginaIndividual && (
             <button
               className="header-back-button"
-              onClick={() => runTransitionTo("/")}
+              onClick={() => runTransitionTo(previousPath || "/")}
               aria-label={t("pagina.back") || "Voltar"}
             >
               <svg
