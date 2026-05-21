@@ -2,7 +2,20 @@ import { useTranslation } from 'react-i18next';
 import './Footer.css';
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    e.preventDefault();
+    const lang = (i18n.language || 'pt').split('-')[0];
+    const prefixedPath = lang === 'pt' ? path : `/${lang}${path}`;
+    const event = new CustomEvent('navigate', { detail: prefixedPath });
+    window.dispatchEvent(event);
+  };
+
+  const getPrefixedPath = (path: string) => {
+    const lang = (i18n.language || 'pt').split('-')[0];
+    return lang === 'pt' ? path : `/${lang}${path}`;
+  };
 
   return (
     <footer className="footer-luxo">
@@ -16,6 +29,22 @@ export default function Footer() {
           <p><a href="mailto:info@terraventos.com.br">info@terraventos.com.br</a></p>
           <p>Fortaleza, Ceará - Rua Monsenhor Bruno, nº 1153, sala 608, Aldeota, Fortaleza - CE, 60115-191</p>
           <p>Preá, Cruz, Ceará - Rua Antônio Chagas, nº 857 - Preá, Cruz - CE, 62595-000</p>
+        </div>
+
+        <div className="footer-luxo-links">
+          <h4>{t('nav.quemSomos')} & {t('nav.contato_dedicado')}</h4>
+          <a href={getPrefixedPath('/quem-somos')} onClick={(e) => handleLinkClick(e, '/quem-somos')}>
+            {t('nav.quemSomos')}
+          </a>
+          <a href={getPrefixedPath('/contato')} onClick={(e) => handleLinkClick(e, '/contato')}>
+            {t('nav.contato_dedicado')}
+          </a>
+          <a href={getPrefixedPath('/termos-e-condicoes')} onClick={(e) => handleLinkClick(e, '/termos-e-condicoes')}>
+            {t('nav.termos')}
+          </a>
+          <a href={getPrefixedPath('/politica-de-privacidade')} onClick={(e) => handleLinkClick(e, '/politica-de-privacidade')}>
+            {t('nav.privacidade')}
+          </a>
         </div>
 
         <div className="footer-luxo-right">

@@ -153,6 +153,61 @@ function generatePage(targetPath, title, desc, img, url, langCode, langId, imgAl
   fs.writeFileSync(targetPath, html);
 }
 
+const instPages = [
+  {
+    slug: 'quem-somos',
+    titles: {
+      pt: 'Quem Somos | Terra Ventos',
+      en: 'About Us | Terra Ventos',
+      es: 'Quiénes Somos | Terra Ventos'
+    },
+    descriptions: {
+      pt: 'Curadoria de imóveis de luxo e investimentos estratégicos no litoral do Ceará.',
+      en: 'Curating luxury properties and strategic investments on the Ceará coast.',
+      es: 'Curaduría de propiedades de lujo e inversiones estratégicas en la costa de Ceará.'
+    }
+  },
+  {
+    slug: 'termos-e-condicoes',
+    titles: {
+      pt: 'Termos e Condições | Terra Ventos',
+      en: 'Terms & Conditions | Terra Ventos',
+      es: 'Términos y Condiciones | Terra Ventos'
+    },
+    descriptions: {
+      pt: 'Regras e diretrizes para navegação e serviços da Terra Ventos.',
+      en: 'Rules and guidelines for browsing and using Terra Ventos services.',
+      es: 'Reglas y directrices para la navegación y servicios de Terra Ventos.'
+    }
+  },
+  {
+    slug: 'politica-de-privacidade',
+    titles: {
+      pt: 'Política de Privacidade | Terra Ventos',
+      en: 'Privacy Policy | Terra Ventos',
+      es: 'Política de Privacidad | Terra Ventos'
+    },
+    descriptions: {
+      pt: 'Como protegemos e respeitamos os seus dados pessoais.',
+      en: 'How we protect and respect your personal data.',
+      es: 'Cómo protegemos y respetamos sus datos personales.'
+    }
+  },
+  {
+    slug: 'contato',
+    titles: {
+      pt: 'Contato | Terra Ventos',
+      en: 'Contact Us | Terra Ventos',
+      es: 'Contacto | Terra Ventos'
+    },
+    descriptions: {
+      pt: 'Canais oficiais de atendimento da Terra Ventos. CNPJ 60.726.249/0001-00.',
+      en: 'Official service channels for Terra Ventos. CNPJ 60.726.249/0001-00.',
+      es: 'Canales oficiales de atención de Terra Ventos. CNPJ 60.726.249/0001-00.'
+    }
+  }
+];
+
 // Gerar Sitemap.xml
 let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">`;
@@ -202,6 +257,24 @@ Object.entries(locales).forEach(([langId, data]) => {
     <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}/en/propriedades"/>
     <xhtml:link rel="alternate" hreflang="es" href="${baseUrl}/es/propriedades"/>
   </url>`;
+
+  // Institucionais
+  instPages.forEach(p => {
+    const instPath = path.resolve(distPath, langId === 'pt' ? '' : langId, p.slug, 'index.html');
+    const title = p.titles[langId];
+    const desc = p.descriptions[langId];
+    generatePage(instPath, title, desc, '/og-propriedades.png', `${baseUrl}${langPrefix}/${p.slug}`, data.code, langId);
+    console.log(`Página Institucional gerada: ${langId} - ${p.slug}`);
+
+    sitemap += `
+  <url>
+    <loc>${baseUrl}${langPrefix}/${p.slug}</loc>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="${baseUrl}/${p.slug}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}/en/${p.slug}"/>
+    <xhtml:link rel="alternate" hreflang="es" href="${baseUrl}/es/${p.slug}"/>
+  </url>`;
+  });
 
   // Propriedades
   data.properties.forEach(prop => {

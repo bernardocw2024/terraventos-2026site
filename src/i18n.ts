@@ -23,7 +23,11 @@ i18n
             projetos: "Projetos",
             estudo: "Estudo dos Ventos",
             regioes: "Regiões",
-            contato: "Entrar em contato"
+            contato: "Entrar em contato",
+            quemSomos: "Quem Somos",
+            termos: "Termos e Condições",
+            privacidade: "Política de Privacidade",
+            contato_dedicado: "Contato"
           },
           hero: {
             cta: "Conhecer Projetos",
@@ -149,6 +153,41 @@ i18n
             }
           },
           footer: { rights: "© Copyright 2026. Todos os direitos reservados." },
+          institucional: {
+            quemSomos: {
+              title: "QUEM SOMOS",
+              subtitle: "Curadoria de imóveis de luxo e investimentos estratégicos no litoral do Ceará.",
+              p1: "A Terra Ventos é especialista em curadoria de imóveis de alto padrão e oportunidades exclusivas de investimento no litoral do Ceará, com foco principal nos destinos do Preá, Tatajuba e Bitupitá.",
+              p2: "Nossa missão é conectar pessoas apaixonadas pelo estilo de vida à beira-mar e investidores com visão de futuro a ativos imobiliários altamente valorizados. Combinamos a essência rústica local com os mais altos padrões de design internacional.",
+              p3: "Com mais de 10 anos de experiência imobiliária no Ceará, oferecemos assessoria completa em todas as etapas: desde a curadoria inicial (early stage) e due diligence jurídico rigoroso até a auditoria fundiária, proporcionando total segurança patrimonial e valorização real.",
+              p4: "Seja para moradia, temporada no maior spot de kitesurf do mundo ou rentabilidade sustentável, a Terra Ventos é o seu porto seguro no litoral oeste cearense."
+            },
+            termos: {
+              title: "TERMOS E CONDIÇÕES DE USO",
+              subtitle: "Regras e diretrizes para navegação e serviços da Terra Ventos.",
+              p1: "Estes termos regulam o uso do site e dos serviços fornecidos pela TERRAVENTOS EMPREENDIMENTOS E PARTICIPACOES LTDA, sob o CNPJ 60.726.249/0001-00. Ao navegar por este site, você declara estar ciente e concordar com os termos aqui dispostos.",
+              p2: "A Terra Ventos atua na curadoria e intermediação de ativos imobiliários, divulgação de oportunidades de investimento e hospedagens de temporada. As informações sobre valores, áreas e disponibilidade dos imóveis podem ser modificadas sem aviso prévio e devem ser confirmadas formalmente com nossos consultores.",
+              p3: "O conteúdo deste site, incluindo fotos, vídeos, textos e marcas, é de propriedade exclusiva ou licenciado pela Terra Ventos. Qualquer reprodução não autorizada sem citação prévia da fonte é estritamente proibida.",
+              p4: "A empresa não garante que as informações contidas no site estejam livres de imprecisões técnicas e não se responsabiliza por perdas e danos decorrentes de decisões tomadas com base exclusiva em materiais publicitários genéricos."
+            },
+            privacidade: {
+              title: "POLÍTICA DE PRIVACIDADE",
+              subtitle: "Como protegemos e respeitamos os seus dados pessoais.",
+              p1: "A TERRAVENTOS EMPREENDIMENTOS E PARTICIPACOES LTDA (CNPJ 60.726.249/0001-00) assume o compromisso de proteger a privacidade de seus usuários, em total conformidade com a Lei Geral de Proteção de Dados (LGPD).",
+              p2: "Os dados informados em nossos formulários de contato ou via WhatsApp (como nome, e-mail e telefone) são armazenados em ambiente seguro e utilizados unicamente para prestar os atendimentos solicitados, enviar portfólios de imóveis ou novidades selecionadas do litoral cearense.",
+              p3: "A Terra Ventos assegura que não comercializa, aluga ou compartilha suas informações pessoais com terceiros para fins publicitários.",
+              p4: "Você possui o direito de consultar, atualizar ou solicitar a exclusão total dos seus dados de nossa base a qualquer momento, bastando para isso enviar um e-mail para info@terraventos.com.br."
+            },
+            contato: {
+              title: "FALE CONOSCO",
+              subtitle: "Canais oficiais de atendimento da Terra Ventos.",
+              cnpj: "CNPJ",
+              razaoSocial: "Razão Social",
+              telefone: "Telefone",
+              email: "E-mail",
+              endereco: "Endereço Oficial"
+            }
+          },
           blog: {
             badge: "Insights & Mercado",
             title: "ACOMPANHE NOSSA<br />CURADORIA NO BLOG",
@@ -183,7 +222,7 @@ i18n
           seo: {
             intro: "Terra Ventos is an exclusive curation of high-end properties on the coast of Ceará. We operate in the regions of Preá, Tatajuba, and Bitupitá, offering unique investment opportunities in land, beach houses, and luxury ecotourism projects. With constant wind, growing infrastructure, and proven appreciation, Ceará is today one of the most promising destinations for investors from Brazil and abroad."
           },
-          nav: { inicio: "Home", oportunidades: "Opportunities", projetos: "Projects", estudo: "Wind Study", regioes: "Regions", contato: "Contact Us" },
+          nav: { inicio: "Home", oportunidades: "Opportunities", projetos: "Projects", estudo: "Wind Study", regioes: "Regions", contato: "Contact Us", quemSomos: "About Us", termos: "Terms & Conditions", privacidade: "Privacy Policy", contato_dedicado: "Contact" },
           hero: {
             cta: "View Projects",
             tags: ["Terra Ventos Launch", "Beachfront Opportunity", "Event Venue", "Investments on the coast of Ceará"],
@@ -289,6 +328,41 @@ i18n
             }
           },
           footer: { rights: "© Copyright 2026. All Rights Reserved." },
+          institucional: {
+            quemSomos: {
+              title: "ABOUT US",
+              subtitle: "Curating luxury properties and strategic investments on the Ceará coast.",
+              p1: "Terra Ventos specializes in high-end real estate curation and exclusive investment opportunities along the Ceará coast, focusing on Preá, Tatajuba, and Bitupitá.",
+              p2: "Our mission is to connect beachfront lifestyle enthusiasts and forward-thinking investors with high-appreciating real estate assets, merging local rustic charm with international design standards.",
+              p3: "With over 10 years of real estate experience in Ceará, we provide full advisory across all stages: from early-stage curation and rigorous legal due diligence to land auditing, ensuring asset safety and strong growth.",
+              p4: "Whether you are looking for a beach home, a seasonal stay in the world's best kitesurfing spot, or sustainable appreciation, Terra Ventos is your trusted partner on Ceará's west coast."
+            },
+            termos: {
+              title: "TERMS AND CONDITIONS",
+              subtitle: "Rules and guidelines for browsing and using Terra Ventos services.",
+              p1: "These terms regulate the use of this website and services provided by TERRAVENTOS EMPREENDIMENTOS E PARTICIPACOES LTDA, registered under CNPJ 60.726.249/0001-00. By browsing this site, you agree to comply with these terms.",
+              p2: "Terra Ventos operates in the curation and brokerage of real estate assets, investment opportunities, and seasonal vacation rentals. Price, area, and availability information are subject to change and must be verified with our consultants.",
+              p3: "The contents of this website, including photographs, videos, copy, and logos, are the sole property of or licensed by Terra Ventos. Any unauthorized copy or usage is strictly prohibited.",
+              p4: "We do not warrant that all site content is free of errors, and we accept no liability for losses or damages arising from decisions based solely on general promotional materials."
+            },
+            privacidade: {
+              title: "PRIVACY POLICY",
+              subtitle: "How we protect and respect your personal data.",
+              p1: "TERRAVENTOS EMPREENDIMENTOS E PARTICIPACOES LTDA (CNPJ 60.726.249/0001-00) is committed to protecting user privacy, fully complying with General Data Protection Regulations.",
+              p2: "Personal data entered into our contact forms or submitted via WhatsApp (such as name, email, and phone) are stored in secure environments and used solely to process your requests, share real estate portfolios, and send curated market updates.",
+              p3: "Terra Ventos guarantees that we do not sell, rent, or share your personal data with third parties for marketing purposes.",
+              p4: "You hold the right to access, update, or request the deletion of your personal data at any time by contacting us at info@terraventos.com.br."
+            },
+            contato: {
+              title: "CONTACT US",
+              subtitle: "Official service channels for Terra Ventos.",
+              cnpj: "Corporate Tax ID (CNPJ)",
+              razaoSocial: "Company Name",
+              telefone: "Phone",
+              email: "Email",
+              endereco: "Official Address"
+            }
+          },
           blog: {
             badge: "Insights & Market",
             title: "FOLLOW OUR<br />CURATION ON THE BLOG",
@@ -323,7 +397,7 @@ i18n
           seo: {
             intro: "Terra Ventos es una curaduría exclusiva de propiedades de alto nivel en la costa de Ceará. Operamos en las regiones de Preá, Tatajuba y Bitupitá, ofreciendo oportunidades únicas de inversión en terrenos, casas de playa y proyectos de ecoturismo de lujo. Con viento constante, infraestructura en crecimiento y valorización comprobada, Ceará es hoy uno de los destinos más prometedores para inversores de Brasil y del exterior."
           },
-          nav: { inicio: "Inicio", oportunidades: "Oportunidades", projetos: "Proyectos", estudo: "Estudio de los Vientos", regioes: "Regiones", contato: "Contáctenos" },
+          nav: { inicio: "Inicio", oportunidades: "Oportunidades", projetos: "Proyectos", estudo: "Estudio de los Vientos", regioes: "Regiones", contato: "Contáctenos", quemSomos: "Quiénes Somos", termos: "Términos y Condiciones", privacidade: "Política de Privacidad", contato_dedicado: "Contacto" },
           hero: {
             cta: "Ver Proyectos",
             tags: ["Lanzamiento Terra Ventos", "Oportunidad Frente al Mar", "Lugar de Eventos", "Inversiones en la costa de Ceará"],
@@ -439,6 +513,41 @@ i18n
             }
           },
           footer: { rights: "© Copyright 2026. Todos os direitos reservados." },
+          institucional: {
+            quemSomos: {
+              title: "QUIÉNES SOMOS",
+              subtitle: "Curaduría de propiedades de lujo e inversiones estratégicas en la costa de Ceará.",
+              p1: "Terra Ventos se especializa en la curaduría de bienes raíces de alto nivel y oportunidades exclusivas de inversión en el litoral de Ceará, con enfoque en Preá, Tatajuba y Bitupitá.",
+              p2: "Nuestra misión es conectar a los entusiastas del estilo de vida frente al mar y a los inversores visionarios con activos inmobiliarios de alta valorización, uniendo la esencia rústica local con estándares internacionales de diseño.",
+              p3: "Con más de 10 años de experiencia inmobiliaria en Ceará, brindamos asesoría integral en todas las etapas: desde la curaduría inicial y una debida diligencia legal rigurosa hasta la auditoría de tierras, garantizando la seguridad del patrimonio y rentabilidades reales.",
+              p4: "Ya sea para residencia, alquiler vacacional en la mejor zona de kitesurf del mundo o rentabilidad sostenible, Terra Ventos es su socio de confianza en la costa oeste de Ceará."
+            },
+            termos: {
+              title: "TÉRMINOS Y CONDICIONES",
+              subtitle: "Reglas y directrices para la navegación y servicios de Terra Ventos.",
+              p1: "Estos términos regulan el uso del sitio web y los servicios de TERRAVENTOS EMPREENDIMENTOS E PARTICIPACOES LTDA (CNPJ 60.726.249/0001-00). Al navegar en este sitio, usted acepta cumplir con estos términos.",
+              p2: "Terra Ventos actúa en la curaduría e intermediación de activos inmobiliarios, promoción de inversiones y alquileres vacacionales. La información de precios, áreas y disponibilidad está sujeta a cambios y debe ser verificada con nuestros asesores.",
+              p3: "El contenido de este sitio (fotos, videos, textos y marcas) es propiedad exclusiva o licenciado por Terra Ventos. Queda prohibida la reproducción no autorizada.",
+              p4: "La empresa no garantiza la ausencia total de errores técnicos en el sitio y no se responsabiliza por decisiones de inversión basadas exclusivamente en contenidos de divulgación general."
+            },
+            privacidade: {
+              title: "POLÍTICA DE PRIVACIDAD",
+              subtitle: "Cómo protegemos y respetamos sus datos personales.",
+              p1: "TERRAVENTOS EMPREENDIMENTOS E PARTICIPACOES LTDA (CNPJ 60.726.249/0001-00) tiene el compromiso de proteger la privacidad de sus usuarios, en conformidad con las regulaciones de protección de datos personales.",
+              p2: "Los datos ingresados en nuestros formularios o compartidos vía WhatsApp (nombre, correo y teléfono) se guardan de forma segura y se usan únicamente para responder consultas y enviar portafolios de propiedades o novedades del mercado.",
+              p3: "Terra Ventos garantiza que no vende, alquila ni comparte su información personal con terceros con fines publicitarios.",
+              p4: "Usted tiene derecho a consultar, corregir o solicitar la eliminación completa de sus datos enviando un correo electrónico a info@terraventos.com.br."
+            },
+            contato: {
+              title: "CONTÁCTENOS",
+              subtitle: "Canales oficiales de atención de Terra Ventos.",
+              cnpj: "Identificación Fiscal (CNPJ)",
+              razaoSocial: "Razón Social",
+              telefone: "Teléfono",
+              email: "Correo Electrónico",
+              endereco: "Dirección Oficial"
+            }
+          },
           blog: {
             badge: "Insights y Mercado",
             title: "SIGA NUESTRA<br />CURADURÍA EN EL BLOG",

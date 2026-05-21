@@ -1,0 +1,255 @@
+.pagina-institucional {
+  max-width: 1120px;
+  margin: 18px auto 64px;
+  padding: 0 24px;
+  font-family: 'Avenir', 'Manrope', sans-serif;
+  color: #111827;
+}
+
+/* Back Button */
+.inst-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 15px;
+  font-family: 'Avenir', sans-serif;
+  font-weight: 600;
+  padding: 8px 16px 8px 0;
+  margin-bottom: 24px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.inst-back-button:hover {
+  transform: translateX(-4px);
+  opacity: 0.7;
+}
+
+/* Header */
+.inst-header {
+  margin-bottom: 48px;
+  text-align: left;
+}
+
+.inst-pill {
+  display: inline-block;
+  background-color: #C4B096;
+  color: #111827;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-family: 'Diodrum', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.inst-title {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #111827;
+  font-family: 'Avenir', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.inst-subtitle {
+  margin: 12px 0 0;
+  color: #7a7a7a;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Standard Content Layout */
+.inst-text-content {
+  max-width: 800px;
+  color: #4b5563;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.inst-text-content p {
+  margin: 0 0 24px 0;
+}
+
+.inst-text-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Contact Layout */
+.inst-contato-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Info Card */
+.inst-contato-info-card {
+  width: 100%;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+  padding: 48px 44px;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.03), 
+    0 20px 40px -10px rgba(0, 0, 0, 0.05);
+}
+
+.inst-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.inst-info-address-full {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 32px;
+  margin-top: 32px;
+}
+
+.inst-addresses-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.inst-address-box {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.inst-address-box strong {
+  color: #C4B096;
+  font-weight: 600;
+}
+
+.inst-info-item {
+  margin-bottom: 28px;
+}
+
+.inst-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.inst-info-label {
+  display: block;
+  color: #C4B096;
+  font-size: 11px;
+  font-family: 'Diodrum', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.inst-info-value {
+  display: block;
+  color: #111827;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.inst-link {
+  color: #111827;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.inst-link:hover {
+  color: #C4B096;
+}
+
+.inst-tag-corporate,
+.inst-tag-curator {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.inst-tag-corporate {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.inst-tag-curator {
+  background: rgba(34, 197, 94, 0.1);
+  color: #16a34a;
+}
+
+.inst-contato-value strong {
+  color: #374151;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .pagina-institucional {
+    margin-bottom: 42px;
+  }
+
+  .inst-back-button {
+    position: sticky;
+    top: 71px;
+    z-index: 90;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    margin-top: -18px;
+    padding: 12px 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  }
+
+  .inst-header {
+    margin-bottom: 32px;
+    margin-top: 16px;
+  }
+
+  .inst-title {
+    font-size: 24px;
+  }
+
+  .inst-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .inst-text-content {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .inst-contato-info-card {
+    padding: 32px 24px;
+    border-radius: 20px;
+  }
+
+  .inst-info-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .inst-addresses-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .inst-info-address-full {
+    padding-top: 24px;
+    margin-top: 24px;
+  }
+}

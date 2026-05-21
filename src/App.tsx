@@ -12,6 +12,7 @@ import Depoimentos from "./components/Depoimentos";
 import FormularioLuxo from "./components/FormularioLuxo";
 import Footer from "./components/Footer";
 import PaginaIndividual from "./components/PaginaIndividual";
+import PaginaInstitucional from "./components/PaginaInstitucional";
 import {
   oportunidadesData,
   type OportunidadeDetalhe,
@@ -232,6 +233,15 @@ function App() {
   useEffect(() => {
     if (isPaginaIndividual) return;
 
+    // Skip global reset for institutional pages as they manage their own SEO
+    const isInstitutional = [
+      "/quem-somos",
+      "/termos-e-condicoes",
+      "/politica-de-privacidade",
+      "/contato"
+    ].includes(cleanPath);
+    if (isInstitutional) return;
+
     const title = "Terra Ventos | Imóveis de Luxo e Investimentos no Ceará";
     const description =
       "Curadoria exclusiva de imóveis de alto padrão e oportunidades de investimento no litoral cearense (Preá, Tatajuba, Bitupitá).";
@@ -256,7 +266,7 @@ function App() {
     updateMeta("twitter:title", title);
     updateMeta("twitter:description", description);
     updateMeta("twitter:image", imageUrl);
-  }, [currentPath, isPaginaIndividual, t]);
+  }, [currentPath, cleanPath, isPaginaIndividual, t]);
 
   // Hreflang tags for SEO — indicam versões em outros idiomas
   useEffect(() => {
@@ -544,6 +554,11 @@ function App() {
                 onSelect={handleSelectOpportunity}
               />
             </div>
+          ) : ["/quem-somos", "/termos-e-condicoes", "/politica-de-privacidade", "/contato"].includes(cleanPath) ? (
+            <PaginaInstitucional
+              pageType={cleanPath.substring(1) as any}
+              onBack={() => runTransitionTo(previousPath || "/")}
+            />
           ) : (
             <>
               <div className="hero-background">
