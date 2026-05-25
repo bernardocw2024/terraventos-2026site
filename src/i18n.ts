@@ -27,7 +27,8 @@ i18n
             quemSomos: "Quem Somos",
             termos: "Termos e Condições",
             privacidade: "Política de Privacidade",
-            contato_dedicado: "Contato"
+            contato_dedicado: "Contato",
+            comunidade: "Comunidade"
           },
           hero: {
             cta: "Conhecer Projetos",
@@ -222,7 +223,7 @@ i18n
           seo: {
             intro: "Terra Ventos is an exclusive curation of high-end properties on the coast of Ceará. We operate in the regions of Preá, Tatajuba, and Bitupitá, offering unique investment opportunities in land, beach houses, and luxury ecotourism projects. With constant wind, growing infrastructure, and proven appreciation, Ceará is today one of the most promising destinations for investors from Brazil and abroad."
           },
-          nav: { inicio: "Home", oportunidades: "Opportunities", projetos: "Projects", estudo: "Wind Study", regioes: "Regions", contato: "Contact Us", quemSomos: "About Us", termos: "Terms & Conditions", privacidade: "Privacy Policy", contato_dedicado: "Contact" },
+          nav: { inicio: "Home", oportunidades: "Opportunities", projetos: "Projects", estudo: "Wind Study", regioes: "Regions", contato: "Contact Us", quemSomos: "About Us", termos: "Terms & Conditions", privacidade: "Privacy Policy", contato_dedicado: "Contact", comunidade: "Community" },
           hero: {
             cta: "View Projects",
             tags: ["Terra Ventos Launch", "Beachfront Opportunity", "Event Venue", "Investments on the coast of Ceará"],
@@ -397,7 +398,7 @@ i18n
           seo: {
             intro: "Terra Ventos es una curaduría exclusiva de propiedades de alto nivel en la costa de Ceará. Operamos en las regiones de Preá, Tatajuba y Bitupitá, ofreciendo oportunidades únicas de inversión en terrenos, casas de playa y proyectos de ecoturismo de lujo. Con viento constante, infraestructura en crecimiento y valorización comprobada, Ceará es hoy uno de los destinos más prometedores para inversores de Brasil y del exterior."
           },
-          nav: { inicio: "Inicio", oportunidades: "Oportunidades", projetos: "Proyectos", estudo: "Estudio de los Vientos", regioes: "Regiones", contato: "Contáctenos", quemSomos: "Quiénes Somos", termos: "Términos y Condiciones", privacidade: "Política de Privacidad", contato_dedicado: "Contacto" },
+          nav: { inicio: "Inicio", oportunidades: "Oportunidades", projetos: "Proyectos", estudo: "Estudio de los Vientos", regioes: "Regiones", contato: "Contáctenos", quemSomos: "Quiénes Somos", termos: "Términos y Condiciones", privacidade: "Política de Privacidad", contato_dedicado: "Contacto", comunidade: "Comunidad" },
           hero: {
             cta: "Ver Proyectos",
             tags: ["Lanzamiento Terra Ventos", "Oportunidad Frente al Mar", "Lugar de Eventos", "Inversiones en la costa de Ceará"],

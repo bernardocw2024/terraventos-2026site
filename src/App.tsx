@@ -12,6 +12,7 @@ import Depoimentos from "./components/Depoimentos";
 import FormularioLuxo from "./components/FormularioLuxo";
 import Footer from "./components/Footer";
 import PaginaIndividual from "./components/PaginaIndividual";
+import VentoAfavor from "./components/VentoAfavor";
 import PaginaInstitucional from "./components/PaginaInstitucional";
 import {
   oportunidadesData,
@@ -48,6 +49,7 @@ function App() {
     });
   const cleanPath = currentPath.replace(/^\/(en|es)/, "").replace(/\/$/, "") || "/";
   const isPaginaIndividual = cleanPath.startsWith("/propriedade/");
+  const isVentoAfavor = cleanPath === "/ventoafavor";
   const [transitionClass, setTransitionClass] = useState<
     "page-enter" | "page-exit"
   >("page-enter");
@@ -238,7 +240,8 @@ function App() {
       "/quem-somos",
       "/termos-e-condicoes",
       "/politica-de-privacidade",
-      "/contato"
+      "/contato",
+      "/ventoafavor"
     ].includes(cleanPath);
     if (isInstitutional) return;
 
@@ -310,6 +313,11 @@ function App() {
     setPreviousPath(currentPath); // save where we came from
     runTransitionTo(`/propriedade/${item.slug}`);
   };
+
+  // Rota /ventoafavor — fullscreen sem header/footer, com botão de retorno flutuante
+  if (isVentoAfavor) {
+    return <VentoAfavor onBack={() => runTransitionTo("/")} />;
+  }
 
   return (
     <div className="app-container">
@@ -406,6 +414,16 @@ function App() {
             }}
           >
             {t("nav.regioes")}
+          </a>
+          <a
+            href="/ventoafavor"
+            className="nav-comunidade-link"
+            onClick={(e) => {
+              e.preventDefault();
+              runTransitionTo("/ventoafavor");
+            }}
+          >
+            {t("nav.comunidade")}
           </a>
           <a
             href="https://www.instagram.com/terraventos/"
