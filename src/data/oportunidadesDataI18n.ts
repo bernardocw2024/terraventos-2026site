@@ -3,6 +3,35 @@ import { oportunidadesData, type OportunidadeDetalhe } from './oportunidadesData
 export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe>[]> = {
   pt: [
     {
+      id: '10',
+      slug: 'casa-alto-padrao-praia-barrinha', category: 'venda',
+      title: 'VENDA',
+      badge: 'Venda',
+      propertyTitle: 'CASA DE ALTO PADRÃO NA PRAIA DA BARRINHA',
+      location: 'Barrinha - Acaraú - CE',
+      rating: 5,
+      exclusiveText: '400 m² | 4 Suítes | 5 Banheiros | Piscina | A 400m da Praia',
+      summaryDescription: 'Casa de alto padrão a 400 metros da praia da Barrinha, com arquitetura praiana sofisticada, piscina, espaço gourmet, quadra de beach tennis e jardim com coqueiros.',
+      about: [
+        'Encante-se com essa casa simplesmente incrível, onde o charme rústico encontra o conforto e a sofisticação. Localizada a apenas 400 metros da praia, é o lugar perfeito para quem busca tranquilidade, contato com a natureza e momentos inesquecíveis.',
+        'A propriedade conta com uma arquitetura única, com acabamentos em madeira, cobertura em palha e ambientes amplos e integrados, criando uma atmosfera acolhedora e elegante.',
+        'Área de lazer completa com piscina, espaço gourmet amplo, perfeito para receber amigos e família.',
+        'Varanda superior com vista e ventilação privilegiada. Jardim com coqueiros e muito verde.',
+        'Quadra de areia para beach tennis/volley. Ambientes integrados e bem iluminados. Estilo praiano sofisticado.'
+      ],
+      infra: [
+        'Área Total: 400 m²',
+        'Área do Terreno: 3.706,54 m²',
+        'Operação: Venda | Finalidade: Residencial',
+        'Status: Novo | Situação: Desocupado',
+        'Características: Muro, Lavanderia, Quintal, Varanda, Sala de estar, Cozinha, Banheiro social'
+      ],
+      facilities: ['4 Suítes', '5 Banheiros', '3 Vagas', 'Piscina', 'Espaço Gourmet', 'Quadra de Areia', 'Varanda', 'Jardim com Coqueiros'],
+      priceTag: '',
+      price: 'R$ 6.600.000,00',
+      installments: 'Consulte condições',
+    },
+    {
       id: '09',
       slug: 'area-exclusiva-tatajuba-guriu-100000m', category: 'venda',
       title: 'VENDA',
@@ -404,6 +433,35 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
   ],
   en: [
     {
+      id: '10',
+      slug: 'casa-alto-padrao-praia-barrinha', category: 'venda',
+      title: 'FOR SALE',
+      badge: 'For Sale',
+      propertyTitle: 'HIGH-END BEACH HOUSE — PRAIA DA BARRINHA',
+      location: 'Barrinha - Acaraú - CE',
+      rating: 5,
+      exclusiveText: '400 m² | 4 Suites | 5 Bathrooms | Pool | 400m from the Beach',
+      summaryDescription: 'High-end beach house 400 meters from Praia da Barrinha, featuring sophisticated coastal architecture, pool, gourmet space, beach tennis court and garden with coconut palms.',
+      about: [
+        'Be enchanted by this simply incredible house, where rustic charm meets comfort and sophistication. Located just 400 meters from the beach, it is the perfect place for those seeking tranquility, contact with nature and unforgettable moments.',
+        'The property features a unique architecture with wood finishes, palm thatch roofing and spacious, integrated environments, creating a welcoming and elegant atmosphere.',
+        'Complete leisure area with pool, large gourmet space, perfect for entertaining friends and family.',
+        'Upper veranda with privileged views and ventilation. Garden with coconut palms and lush greenery.',
+        'Sand court for beach tennis/volleyball. Integrated, well-lit environments. Sophisticated coastal style.'
+      ],
+      infra: [
+        'Total Area: 400 m²',
+        'Land Area: 3,706.54 m²',
+        'Operation: Sale | Purpose: Residential',
+        'Status: New | Occupancy: Vacant',
+        'Features: Wall, Laundry, Backyard, Veranda, Living Room, Kitchen, Guest Bathroom'
+      ],
+      facilities: ['4 Suites', '5 Bathrooms', '3 Parking Spots', 'Pool', 'Gourmet Space', 'Sand Court', 'Veranda', 'Coconut Palm Garden'],
+      priceTag: '',
+      price: 'R$ 6,600,000.00',
+      installments: 'Consult conditions',
+    },
+    {
       id: '09',
       slug: 'area-exclusiva-tatajuba-guriu-100000m', category: 'venda',
       title: 'FOR SALE',
@@ -785,6 +843,35 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
     },
   ],
   es: [
+    {
+      id: '10',
+      slug: 'casa-alto-padrao-praia-barrinha', category: 'venda',
+      title: 'VENTA',
+      badge: 'Venta',
+      propertyTitle: 'CASA DE ALTA GAMA EN PRAIA DA BARRINHA',
+      location: 'Barrinha - Acaraú - CE',
+      rating: 5,
+      exclusiveText: '400 m² | 4 Suites | 5 Baños | Piscina | A 400m de la Playa',
+      summaryDescription: 'Casa de alta gama a 400 metros de Praia da Barrinha, con arquitectura costera sofisticada, piscina, espacio gourmet, cancha de beach tennis y jardín con palmeras.',
+      about: [
+        'Quédate maravillado con esta casa simplemente increíble, donde el encanto rústico se une a la comodidad y la sofisticación. Ubicada a solo 400 metros de la playa, es el lugar perfecto para quienes buscan tranquilidad, contacto con la naturaleza y momentos inolvidables.',
+        'La propiedad cuenta con una arquitectura única, con acabados en madera, cubierta de palma y ambientes amplios e integrados, creando una atmósfera acogedora y elegante.',
+        'Área de ocio completa con piscina, amplio espacio gourmet, perfecto para recibir amigos y familia.',
+        'Terraza superior con vistas y ventilación privilegiadas. Jardín con palmeras cocoteras y mucho verde.',
+        'Cancha de arena para beach tennis/voley. Ambientes integrados y bien iluminados. Estilo costero sofisticado.'
+      ],
+      infra: [
+        'Área Total: 400 m²',
+        'Área del Terreno: 3.706,54 m²',
+        'Operación: Venta | Finalidad: Residencial',
+        'Estado: Nuevo | Ocupación: Desocupado',
+        'Características: Muro, Lavandería, Patio, Terraza, Sala de estar, Cocina, Baño social'
+      ],
+      facilities: ['4 Suites', '5 Baños', '3 Garajes', 'Piscina', 'Espacio Gourmet', 'Cancha de Arena', 'Terraza', 'Jardín con Palmeras'],
+      priceTag: '',
+      price: 'R$ 6.600.000,00',
+      installments: 'Consulte condiciones',
+    },
     {
       id: '09',
       slug: 'area-exclusiva-tatajuba-guriu-100000m', category: 'venda',

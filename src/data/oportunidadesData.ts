@@ -37,6 +37,53 @@ export type OportunidadeDetalhe = {
 
 export const oportunidadesData: OportunidadeDetalhe[] = [
   {
+    id: '10',
+    slug: 'casa-alto-padrao-praia-barrinha',
+    title: 'VENDA',
+    image: '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/1.jpg',
+    badge: 'Venda',
+    propertyTitle: 'CASA DE ALTO PADRÃO NA PRAIA DA BARRINHA',
+    location: 'Barrinha - Acaraú - CE',
+    rating: 5,
+    exclusiveText: '400 m² | 4 Suítes | 5 Banheiros | Piscina | A 400m da Praia',
+    summaryDescription: 'Casa de alto padrão a 400 metros da praia da Barrinha, com arquitetura praiana sofisticada, piscina, espaço gourmet, quadra de beach tennis e jardim com coqueiros.',
+    about: [
+      'Encante-se com essa casa simplesmente incrível, onde o charme rústico encontra o conforto e a sofisticação. Localizada a apenas 400 metros da praia, é o lugar perfeito para quem busca tranquilidade, contato com a natureza e momentos inesquecíveis.',
+      'A propriedade conta com uma arquitetura única, com acabamentos em madeira, cobertura em palha e ambientes amplos e integrados, criando uma atmosfera acolhedora e elegante.',
+      'Área de lazer completa com piscina, espaço gourmet amplo, perfeito para receber amigos e família.',
+      'Varanda superior com vista e ventilação privilegiada. Jardim com coqueiros e muito verde.',
+      'Quadra de areia para beach tennis/volley. Ambientes integrados e bem iluminados. Estilo praiano sofisticado.'
+    ],
+    infra: [
+      'Área Total: 400 m²',
+      'Área do Terreno: 3.706,54 m²',
+      'Operação: Venda | Finalidade: Residencial',
+      'Status: Novo | Situação: Desocupado',
+      'Características: Muro, Lavanderia, Quintal, Varanda, Sala de estar, Cozinha, Banheiro social'
+    ],
+    facilities: ['4 Suítes', '5 Banheiros', '3 Vagas', 'Piscina', 'Espaço Gourmet', 'Quadra de Areia', 'Varanda', 'Jardim com Coqueiros'],
+    gallery: {
+      main: '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/1.jpg',
+      sideTop: '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/2.jpg',
+      sideBottom: '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/3.jpg',
+      extra: [
+        '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/4.jpg',
+        '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/5.png',
+        '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/6.png',
+        '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/7.png',
+        '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/8.png',
+        '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/9.png',
+        '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/10.png'
+      ]
+    },
+    mapImage: '/mapa.avif',
+    mapUrl: 'https://maps.google.com/maps?q=Barrinha+18,+Barrinha,+Acara%C3%BA+-+CE,+62580-000&hl=pt-BR&z=16&output=embed',
+    priceTag: '',
+    price: 'R$ 6.600.000,00',
+    installments: 'Consulte condições',
+    category: 'venda'
+  },
+  {
     id: '09',
     slug: 'area-exclusiva-tatajuba-guriu-100000m',
     title: 'VENDA',

@@ -84,9 +84,6 @@ const ListagemPropriedades: React.FC<ListagemPropriedadesProps> = ({ items, onSe
                 <div className="property-badge">{item.badge}</div>
               </div>
               <div className="property-card-content">
-                <div className="property-card-rating">
-                  <span className="stars">{'★'.repeat(item.rating)}{'☆'.repeat(5 - item.rating)}</span>
-                </div>
                 <h3 className="property-card-title">{item.propertyTitle}</h3>
                 <p className="property-card-location">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

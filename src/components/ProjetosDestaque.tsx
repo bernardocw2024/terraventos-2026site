@@ -11,6 +11,18 @@ type ProjetosDestaqueProps = {
 
 const projetos = [
   {
+    id: "10",
+    image: "/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/1.jpg",
+    tag: "VENDA",
+    location: "Barrinha - Acaraú, CE",
+    title: "Casa de Alto Padrão na Praia da Barrinha",
+    area: "400 m²",
+    beds: 4,
+    baths: 5,
+    price: "R$ 6.600.000,00",
+    detailIndex: 0,
+  },
+  {
     id: "09",
     image: "https://vumbnail.com/1186057204.jpg",
     tag: "VENDA",
