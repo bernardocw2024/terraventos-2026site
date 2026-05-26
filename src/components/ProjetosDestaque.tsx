@@ -12,7 +12,7 @@ type ProjetosDestaqueProps = {
 const projetos = [
   {
     id: "10",
-    image: "/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/1.jpg",
+    image: "/CasadeAltoPadraonaPraiadaBarrinha/fotosTerraVentos/1.jpg",
     tag: "VENDA",
     location: "Barrinha - Acaraú, CE",
     title: "Casa de Alto Padrão na Praia da Barrinha",

@@ -40,7 +40,7 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     id: '10',
     slug: 'casa-alto-padrao-praia-barrinha',
     title: 'VENDA',
-    image: '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/1.jpg',
+    image: '/CasadeAltoPadraonaPraiadaBarrinha/fotosTerraVentos/1.jpg',
     badge: 'Venda',
     propertyTitle: 'CASA DE ALTO PADRÃO NA PRAIA DA BARRINHA',
     location: 'Barrinha - Acaraú - CE',
@@ -63,17 +63,17 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     ],
     facilities: ['4 Suítes', '5 Banheiros', '3 Vagas', 'Piscina', 'Espaço Gourmet', 'Quadra de Areia', 'Varanda', 'Jardim com Coqueiros'],
     gallery: {
-      main: '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/1.jpg',
-      sideTop: '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/2.jpg',
-      sideBottom: '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/3.jpg',
+      main: '/CasadeAltoPadraonaPraiadaBarrinha/fotosTerraVentos/1.jpg',
+      sideTop: '/CasadeAltoPadraonaPraiadaBarrinha/fotosTerraVentos/2.jpg',
+      sideBottom: '/CasadeAltoPadraonaPraiadaBarrinha/fotosTerraVentos/3.jpg',
       extra: [
-        '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/4.jpg',
-        '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/5.png',
-        '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/6.png',
-        '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/7.png',
-        '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/8.png',
-        '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/9.png',
-        '/Casa de Alto Padrão na Praia da Barrinha/fotosTerraVentos/10.png'
+        '/CasadeAltoPadraonaPraiadaBarrinha/fotosTerraVentos/4.jpg',
+        '/CasadeAltoPadraonaPraiadaBarrinha/fotosTerraVentos/5.png',
+        '/CasadeAltoPadraonaPraiadaBarrinha/fotosTerraVentos/6.png',
+        '/CasadeAltoPadraonaPraiadaBarrinha/fotosTerraVentos/7.png',
+        '/CasadeAltoPadraonaPraiadaBarrinha/fotosTerraVentos/8.png',
+        '/CasadeAltoPadraonaPraiadaBarrinha/fotosTerraVentos/9.png',
+        '/CasadeAltoPadraonaPraiadaBarrinha/fotosTerraVentos/10.png'
       ]
     },
     mapImage: '/mapa.avif',
