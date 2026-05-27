@@ -199,6 +199,15 @@ function generateLink(){
   var waBase = 'https://wa.me/5585985572807?text=';
   var msg = 'Olá Bernardo, sou ' + name + ', advogado(a). Gerei meu link de parceria no site: ' + link;
   document.getElementById('waBtn').href = waBase + encodeURIComponent(msg);
+
+  // Save to CRM
+  saveToCRM(name, 'advogado', slug, link);
+}
+
+var CRM_URL = 'APPS_SCRIPT_URL_HERE';
+function saveToCRM(name, type, ref, link){
+  if(CRM_URL==='APPS_SCRIPT_URL_HERE')return;
+  try{fetch(CRM_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,type:type,ref:ref,link:link,source:'advogados'})})}catch(e){}
 }
 
 function copyLink(){
