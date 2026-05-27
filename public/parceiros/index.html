@@ -101,7 +101,7 @@
   <h2>Como funciona</h2>
   <div class="step">
     <div class="step-num">1</div>
-    <div class="step-text"><strong>Cadastre-se</strong> — fale com Bernardo no WhatsApp e receba seu link exclusivo</div>
+    <div class="step-text"><strong>Cadastre-se</strong> — digite seu nome abaixo e gere seu link exclusivo na hora</div>
   </div>
   <div class="step">
     <div class="step-num">2</div>
@@ -122,12 +122,17 @@
 
 <div class="divider"></div>
 
-<!-- Tracking link for registered partners -->
-<div class="tracking-box" id="trackingSection" style="display:none">
-  <h3>Seu link exclusivo</h3>
-  <div class="link-display" id="trackingLink"></div>
-  <button class="copy-btn" id="copyBtn" onclick="copyLink()">Copiar link</button>
-  <p style="font-size:11px;color:var(--steel);text-align:center;margin-top:8px">Envie este link para seus clientes e contatos. Toda visita e compra via esse link será rastreada como sua indicação.</p>
+<!-- Self-service link generator -->
+<div class="tracking-box" id="generatorSection">
+  <h3>Gere seu link exclusivo</h3>
+  <p style="font-size:13px;color:var(--cream);text-align:center;margin-bottom:16px">Digite seu nome ou o nome do seu negócio para criar seu link de indicação.</p>
+  <input type="text" id="nameInput" placeholder="Seu nome ou negócio (ex: Kite School Preá)" style="width:100%;padding:12px 16px;border-radius:8px;border:1px solid rgba(200,180,155,.3);background:rgba(255,255,255,.08);color:var(--white);font-size:15px;font-family:inherit;outline:none;margin-bottom:12px" onfocus="this.style.borderColor='var(--sand)'" onblur="this.style.borderColor='rgba(200,180,155,.3)'">
+  <button class="copy-btn" id="generateBtn" onclick="generateLink()" style="margin-bottom:0">Gerar meu link</button>
+  <div id="linkResult" style="display:none;margin-top:16px">
+    <div class="link-display" id="trackingLink"></div>
+    <button class="copy-btn" id="copyBtn" onclick="copyLink()" style="margin-top:8px">Copiar link</button>
+    <p style="font-size:11px;color:var(--steel);text-align:center;margin-top:8px">Envie este link para seus clientes e contatos. Toda compra via esse link será rastreada como sua indicação.</p>
+  </div>
 </div>
 
 <div class="project">
@@ -138,11 +143,11 @@
 <div class="divider"></div>
 
 <div class="cta-section">
-  <div class="intro">Quer participar?</div>
+  <div class="intro">Dúvidas?</div>
   <h2>Fale com Bernardo</h2>
   <a id="waBtn" href="#" class="wa-btn" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    Quero ser parceiro
+    Tirar dúvidas
   </a>
   <div class="note">Sem compromisso — tire suas dúvidas</div>
 </div>
@@ -156,24 +161,48 @@
 (function(){
   var params = new URLSearchParams(window.location.search);
   var ref = params.get('ref') || '';
-  var refName = ref.replace(/[_-]/g, ' ').replace(/\b\w/g, function(c){return c.toUpperCase()});
-
   var waBase = 'https://wa.me/5585985572807?text=';
   var msg = 'Olá Bernardo, quero participar do Programa Parceiro Local da Terra Ventos. Meu nome é ';
 
   if (ref) {
+    var refName = ref.replace(/[_-]/g, ' ').replace(/\b\w/g, function(c){return c.toUpperCase()});
     document.getElementById('refBadge').style.display = 'block';
     document.getElementById('refName').textContent = 'Parceiro: ' + refName;
-
-    var trackLink = 'https://www.terraventos.com/bitupita?ref=' + ref;
-    document.getElementById('trackingSection').style.display = 'block';
-    document.getElementById('trackingLink').textContent = trackLink;
-
-    msg = 'Olá Bernardo, sou ' + refName + ' e quero participar do Programa Parceiro Local.';
+    document.getElementById('nameInput').value = refName;
+    setTimeout(generateLink, 300);
+    msg = 'Olá Bernardo, sou ' + refName + ', parceiro local da Terra Ventos.';
   }
 
   document.getElementById('waBtn').href = waBase + encodeURIComponent(msg);
 })();
+
+function generateLink(){
+  var name = document.getElementById('nameInput').value.trim();
+  if(!name){document.getElementById('nameInput').style.borderColor='#e74c3c';return}
+  document.getElementById('nameInput').style.borderColor='var(--sand)';
+
+  var slug = name.toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g,'')
+    .replace(/[^a-z0-9\s]/g,'')
+    .replace(/\s+/g,'-');
+
+  var link = 'https://www.terraventos.com/bitupita?ref=' + slug;
+  document.getElementById('trackingLink').textContent = link;
+  document.getElementById('linkResult').style.display = 'block';
+
+  var btn = document.getElementById('generateBtn');
+  btn.textContent = 'LINK GERADO ✓';
+  btn.style.background = '#25D366';
+  btn.style.color = '#fff';
+
+  var refName = name.replace(/\b\w/g, function(c){return c.toUpperCase()});
+  document.getElementById('refBadge').style.display = 'block';
+  document.getElementById('refName').textContent = 'Parceiro: ' + refName;
+
+  var waBase = 'https://wa.me/5585985572807?text=';
+  var msg = 'Olá Bernardo, sou ' + name + '. Gerei meu link de parceiro no site: ' + link;
+  document.getElementById('waBtn').href = waBase + encodeURIComponent(msg);
+}
 
 function copyLink(){
   var link = document.getElementById('trackingLink').textContent;
@@ -182,6 +211,8 @@ function copyLink(){
   var b=document.getElementById('copyBtn');b.textContent='COPIADO ✓';b.classList.add('copied');
   setTimeout(function(){b.textContent='COPIAR LINK';b.classList.remove('copied')},2000);
 }
+
+document.getElementById('nameInput').addEventListener('keypress',function(e){if(e.key==='Enter')generateLink()});
 </script>
 </body>
 </html>
