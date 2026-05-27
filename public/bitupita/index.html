@@ -127,23 +127,38 @@
     text-transform: uppercase;
     margin-bottom: 20px;
   }
-  .pdf-container {
-    max-width: 800px;
+  .qr-box {
+    max-width: 380px;
     margin: 0 auto;
-    border-radius: 12px;
-    overflow: hidden;
+    padding: 32px;
+    background: var(--white);
+    border-radius: 16px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    background: var(--cream);
+    text-align: center;
   }
-  .pdf-container iframe {
+  .qr-box canvas {
+    display: block;
+    margin: 0 auto 16px;
+    max-width: 260px;
     width: 100%;
-    height: 70vh;
-    min-height: 500px;
-    border: none;
+    height: auto;
+  }
+  .qr-box .qr-label {
+    font-size: 13px;
+    color: var(--navy);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .qr-box .qr-sublabel {
+    font-size: 12px;
+    color: var(--steel);
+    font-weight: 300;
   }
   .pdf-download {
     display: inline-block;
-    margin-top: 16px;
+    margin-top: 20px;
     padding: 12px 32px;
     background: transparent;
     border: 1px solid var(--sand);
@@ -254,7 +269,7 @@
     .hero h1 { font-size: 28px; letter-spacing: 4px; }
     .highlights { gap: 16px; }
     .highlight .number { font-size: 18px; }
-    .pdf-container iframe { height: 50vh; min-height: 350px; }
+    .qr-box { max-width: 300px; padding: 24px; }
     .whatsapp-btn { padding: 16px 32px; font-size: 16px; }
   }
 </style>
@@ -297,13 +312,15 @@
 
 <div class="divider"></div>
 
-<!-- PDF Section -->
+<!-- QR + PDF Section -->
 <div class="pdf-section">
-  <h2>Investment Presentation</h2>
-  <div class="pdf-container">
-    <iframe src="/bitupita/Bitupita_EN_TerraVentos.pdf" title="Bitupita Investment Presentation"></iframe>
+  <h2>Scan &amp; Contact Us</h2>
+  <div class="qr-box">
+    <canvas id="qr"></canvas>
+    <div class="qr-label">WhatsApp Bernardo</div>
+    <div class="qr-sublabel">+55 (85) 98557-2807</div>
   </div>
-  <a href="/bitupita/Bitupita_EN_TerraVentos.pdf" download class="pdf-download">Download Full Presentation</a>
+  <a href="/bitupita/Bitupita_EN_TerraVentos.pdf" target="_blank" class="pdf-download">View Full Presentation (PDF)</a>
 </div>
 
 <div class="divider"></div>
@@ -333,5 +350,16 @@
   <div class="copy">&copy; 2026 Terra Ventos. All rights reserved.</div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+<script>
+new QRious({
+  element: document.getElementById('qr'),
+  value: 'https://wa.me/5585985572807?text=Hello%2C%20I%27m%20interested%20in%20your%20project%20in%20Bitupit%C3%A1.%20My%20name%20is%20',
+  size: 520,
+  foreground: '#142431',
+  background: '#FFFFFF',
+  level: 'H'
+});
+</script>
 </body>
 </html>
