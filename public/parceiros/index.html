@@ -83,6 +83,45 @@
 
 <div class="divider"></div>
 
+<!-- Self-service link generator — FIRST -->
+<div class="tracking-box" id="generatorSection">
+  <h3>Gere seu link exclusivo</h3>
+  <p style="font-size:13px;color:var(--cream);text-align:center;margin-bottom:16px">Digite seu nome ou o nome do seu negócio para criar seu link de indicação.</p>
+  <input type="text" id="nameInput" placeholder="Seu nome ou negócio (ex: Kite School Preá)" style="width:100%;padding:12px 16px;border-radius:8px;border:1px solid rgba(200,180,155,.3);background:rgba(255,255,255,.08);color:var(--white);font-size:15px;font-family:inherit;outline:none;margin-bottom:12px" onfocus="this.style.borderColor='var(--sand)'" onblur="this.style.borderColor='rgba(200,180,155,.3)'">
+  <button class="copy-btn" id="generateBtn" onclick="generateLink()" style="margin-bottom:0">Gerar meu link</button>
+  <div id="linkResult" style="display:none;margin-top:16px">
+    <div class="link-display" id="trackingLink"></div>
+    <button class="copy-btn" id="copyBtn" onclick="copyLink()" style="margin-top:8px">Copiar link</button>
+    <p style="font-size:11px;color:var(--steel);text-align:center;margin-top:8px">Envie este link para seus clientes e contatos. Toda compra via esse link será rastreada como sua indicação.</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="steps">
+  <h2>Como funciona</h2>
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-text"><strong>Crie seu link</strong> — coloque seu nome acima e pronto</div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-text"><strong>Compartilhe</strong> — envie o link para quem possa ter interesse em investir</div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-text"><strong>Ganhe R$30 mil</strong> — se a pessoa comprar, a recompensa é sua</div>
+  </div>
+</div>
+
+<div class="benefits">
+  <div class="benefit"><span class="check">✓</span><span class="txt">Sem custo pra participar</span></div>
+  <div class="benefit"><span class="check">✓</span><span class="txt">Indique quantas pessoas quiser</span></div>
+  <div class="benefit"><span class="check">✓</span><span class="txt">Pagamento direto na sua conta</span></div>
+</div>
+
+<div class="divider"></div>
+
 <div class="who">
   <h2>Quem pode participar</h2>
   <div class="who-grid">
@@ -96,44 +135,6 @@
 </div>
 
 <div class="divider"></div>
-
-<div class="steps">
-  <h2>Como funciona</h2>
-  <div class="step">
-    <div class="step-num">1</div>
-    <div class="step-text"><strong>Cadastre-se</strong> — digite seu nome abaixo e gere seu link exclusivo na hora</div>
-  </div>
-  <div class="step">
-    <div class="step-num">2</div>
-    <div class="step-text"><strong>Indique</strong> — envie seu link para clientes, amigos, turistas interessados em investir</div>
-  </div>
-  <div class="step">
-    <div class="step-num">3</div>
-    <div class="step-text"><strong>Receba</strong> — se o indicado comprar, você ganha <strong>R$30.000</strong> em até 30 dias após a escritura</div>
-  </div>
-</div>
-
-<div class="benefits">
-  <div class="benefit"><span class="check">✓</span><span class="txt">Sem custo pra participar</span></div>
-  <div class="benefit"><span class="check">✓</span><span class="txt">Indique quantas pessoas quiser</span></div>
-  <div class="benefit"><span class="check">✓</span><span class="txt">Link rastreável — sabemos que veio de você</span></div>
-  <div class="benefit"><span class="check">✓</span><span class="txt">Pagamento direto na sua conta</span></div>
-</div>
-
-<div class="divider"></div>
-
-<!-- Self-service link generator -->
-<div class="tracking-box" id="generatorSection">
-  <h3>Gere seu link exclusivo</h3>
-  <p style="font-size:13px;color:var(--cream);text-align:center;margin-bottom:16px">Digite seu nome ou o nome do seu negócio para criar seu link de indicação.</p>
-  <input type="text" id="nameInput" placeholder="Seu nome ou negócio (ex: Kite School Preá)" style="width:100%;padding:12px 16px;border-radius:8px;border:1px solid rgba(200,180,155,.3);background:rgba(255,255,255,.08);color:var(--white);font-size:15px;font-family:inherit;outline:none;margin-bottom:12px" onfocus="this.style.borderColor='var(--sand)'" onblur="this.style.borderColor='rgba(200,180,155,.3)'">
-  <button class="copy-btn" id="generateBtn" onclick="generateLink()" style="margin-bottom:0">Gerar meu link</button>
-  <div id="linkResult" style="display:none;margin-top:16px">
-    <div class="link-display" id="trackingLink"></div>
-    <button class="copy-btn" id="copyBtn" onclick="copyLink()" style="margin-top:8px">Copiar link</button>
-    <p style="font-size:11px;color:var(--steel);text-align:center;margin-top:8px">Envie este link para seus clientes e contatos. Toda compra via esse link será rastreada como sua indicação.</p>
-  </div>
-</div>
 
 <div class="project">
   <h2>O Projeto Bitupitá</h2>
