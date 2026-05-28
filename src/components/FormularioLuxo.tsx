@@ -1,4 +1,4 @@
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser'; // desativado — usando apenas Brevo
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import toast, { Toaster } from 'react-hot-toast';
@@ -35,7 +35,38 @@ export default function FormularioLuxo() {
     return errs;
   };
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendToBrevo = async (formData: FormData) => {
+    const firstName = formData.get('firstName')?.toString().trim() ?? '';
+    const lastName = formData.get('lastName')?.toString().trim() ?? '';
+    const fullName = [firstName, lastName].filter(Boolean).join(' ');
+
+    const payload = {
+      name: fullName,
+      email: formData.get('email')?.toString().trim() ?? '',
+      mobile_phone: formData.get('phone')?.toString().trim() ?? '',
+      message: formData.get('message')?.toString().trim() ?? '',
+    };
+
+    const res = await fetch('/api/brevo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+
+    const text = await res.text();
+    let json: unknown = null;
+    try { json = text ? JSON.parse(text) : null; } catch { json = text; }
+
+    if (!res.ok) {
+      console.warn('[brevo] non-ok response:', res.status, json);
+      throw new Error(`Brevo error ${res.status}`);
+    }
+
+    console.log('[brevo] contact registered:', json);
+  };
+
+
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formRef.current) return;
 
@@ -48,27 +79,28 @@ export default function FormularioLuxo() {
     setErrors({});
     setIsSending(true);
 
-    emailjs.sendForm(
-      'service_lr09pp8',
-      'template_e800aaa',
-      formRef.current,
-      'Gv7fqaOjlowe6NdnI'
-    )
-      .then(() => {
-        toast.success(t('form.success', 'Mensagem recebida com sucesso!'), {
-          duration: 8000,
-          style: { background: '#111827', color: '#C4B096', border: '1px solid rgba(196, 176, 150, 0.3)' },
-          iconTheme: { primary: '#C4B096', secondary: '#111827' },
-        });
-        setIsSent(true);
-        setIsSending(false);
-        formRef.current?.reset();
-        setTimeout(() => setIsSent(false), 8000);
-      }, (error) => {
-        console.error('Erro ao enviar email:', error.text);
-        setIsSending(false);
-        toast.error('Ocorreu um erro no envio. Tente novamente mais tarde.');
+    const formData = new FormData(formRef.current);
+
+    // --- EmailJS desativado temporariamente ---
+    // emailjs.sendForm('service_lr09pp8', 'template_e800aaa', formRef.current, 'Gv7fqaOjlowe6NdnI')
+
+    // Envia apenas para o Brevo
+    try {
+      await sendToBrevo(formData);
+      toast.success(t('form.success', 'Mensagem recebida com sucesso!'), {
+        duration: 8000,
+        style: { background: '#111827', color: '#C4B096', border: '1px solid rgba(196, 176, 150, 0.3)' },
+        iconTheme: { primary: '#C4B096', secondary: '#111827' },
       });
+      setIsSent(true);
+      formRef.current?.reset();
+      setTimeout(() => setIsSent(false), 8000);
+    } catch (err) {
+      console.error('Erro ao enviar para o Brevo:', err);
+      toast.error('Ocorreu um erro no envio. Tente novamente mais tarde.');
+    } finally {
+      setIsSending(false);
+    }
   };
 
   const clearError = (field: Fields) => {
