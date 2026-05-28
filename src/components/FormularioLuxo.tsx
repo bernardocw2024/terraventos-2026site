@@ -183,18 +183,7 @@ export default function FormularioLuxo() {
               {errors.email && <span className="formulario-error">{errors.email}</span>}
             </label>
 
-            <label>
-              <input
-                type="tel"
-                name="phone"
-                placeholder={t('form.fields.phone')}
-                onChange={() => clearError('phone')}
-                className={errors.phone ? 'field-error' : ''}
-              />
-              {errors.phone && <span className="formulario-error">{errors.phone}</span>}
-            </label>
-
-            <label className="formulario-country-label">
+            <div className="formulario-phone-group">
               <select
                 className="formulario-country-select"
                 value={selectedCountry}
@@ -205,7 +194,15 @@ export default function FormularioLuxo() {
                   <option key={c.code} value={c.code}>{c.label}</option>
                 ))}
               </select>
-            </label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder={t('form.fields.phone')}
+                onChange={() => clearError('phone')}
+                className={`formulario-phone-input ${errors.phone ? 'field-error' : ''}`}
+              />
+              {errors.phone && <span className="formulario-error" style={{ position: 'absolute', bottom: '-20px', left: 0 }}>{errors.phone}</span>}
+            </div>
           </div>
 
           <label className="formulario-luxo-message">
