@@ -1,25 +1,30 @@
 /**
  * Normaliza um número de telefone para o formato E.164 exigido pela Brevo.
- * Exemplos aceitos: "(85) 99999-9999", "85999999999", "+5585999999999"
- * Retorna null se o número for inválido.
+ * Aceita um DDI opcional (ex: '1' para EUA, '351' para Portugal).
+ * Se não informado, assume Brasil (+55).
  */
-function formatPhone(raw) {
+function formatPhone(raw, ddi = '55') {
   if (!raw) return null;
 
   // Remove tudo que não for dígito
-  const digits = raw.replace(/\D/g, "");
+  const digits = raw.replace(/\D/g, '');
+  if (!digits) return null;
 
-  // Já tem DDI 55 + DDD + número: 12 (fixo) ou 13 (celular) dígitos
-  if (digits.startsWith("55") && (digits.length === 12 || digits.length === 13)) {
+  // Já vem com o DDI completo (ex: +5511999...)
+  if (digits.startsWith('55') && (digits.length === 12 || digits.length === 13)) {
     return `+${digits}`;
   }
 
-  // Número brasileiro sem DDI: 10 (fixo) ou 11 dígitos (celular)
-  if (digits.length === 10 || digits.length === 11) {
-    return `+55${digits}`;
+  // Se o DDI é conhecido, usa ele para montar o E.164
+  if (ddi && digits.length >= 6) {
+    // Se o número já começa com o DDI, não duplica
+    if (digits.startsWith(ddi)) {
+      return `+${digits}`;
+    }
+    return `+${ddi}${digits}`;
   }
 
-  // Número internacional genérico (7-15 dígitos)
+  // Fallback: número internacional genérico (7-15 dígitos)
   if (digits.length >= 7 && digits.length <= 15) {
     return `+${digits}`;
   }
@@ -60,7 +65,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "Email é obrigatório" });
     }
 
-    const formattedPhone = formatPhone(body.mobile_phone || "");
+    const formattedPhone = formatPhone(body.mobile_phone || '', body.countryDdi || '55');
     console.log("[brevo] formatted phone:", formattedPhone);
 
     // Separa o nome completo em primeiro e sobrenome
@@ -71,9 +76,10 @@ export default async function handler(req, res) {
 
     // Mapeamento para os atributos existentes na conta Brevo
     const attributes = {
-      NOME: firstName,           // campo nativo da conta Brevo
-      SOBRENOME: lastName,       // campo nativo da conta Brevo
-      MENSAGEM: body.message || "",
+      NOME: firstName,
+      SOBRENOME: lastName,
+      MENSAGEM: body.message || '',
+      PAIS_ESTADO: body.paisEstado || '',
     };
 
     // Só inclui SMS se o número for válido (evita erro 400 da Brevo)

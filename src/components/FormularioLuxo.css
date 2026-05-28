@@ -223,6 +223,39 @@
   }
 }
 
+.formulario-country-label {
+  grid-column: 1 / -1;
+  display: block;
+}
+
+.formulario-country-select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #b4b4b4;
+  background: transparent;
+  color: #4c4c4c;
+  font-size: 16px;
+  font-family: 'Manrope', sans-serif;
+  padding: 0 4px 10px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  transition: border-color 0.25s ease;
+}
+
+.formulario-country-select:focus {
+  border-bottom-color: #89a9c8;
+}
+
+.formulario-country-select option {
+  color: #4c4c4c;
+  background: #fff;
+}
+
 .formulario-luxo-submit {
   margin-top: 24px;
   width: 100%;

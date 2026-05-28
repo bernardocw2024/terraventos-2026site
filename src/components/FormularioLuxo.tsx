@@ -4,7 +4,30 @@ import { useTranslation } from 'react-i18next';
 import toast, { Toaster } from 'react-hot-toast';
 import './FormularioLuxo.css';
 
-type Fields = 'firstName' | 'lastName' | 'email' | 'phone' | 'message';
+type Fields = 'firstName' | 'lastName' | 'email' | 'phone' | 'message' | 'country';
+
+// País → { label, DDI }
+const COUNTRIES = [
+  { code: 'BR', label: '🇧🇷 Brasil', ddi: '55' },
+  { code: 'US', label: '🇺🇸 Estados Unidos', ddi: '1' },
+  { code: 'PT', label: '🇵🇹 Portugal', ddi: '351' },
+  { code: 'AR', label: '🇦🇷 Argentina', ddi: '54' },
+  { code: 'UY', label: '🇺🇾 Uruguai', ddi: '598' },
+  { code: 'PY', label: '🇵🇾 Paraguai', ddi: '595' },
+  { code: 'CL', label: '🇨🇱 Chile', ddi: '56' },
+  { code: 'CO', label: '🇨🇴 Colômbia', ddi: '57' },
+  { code: 'MX', label: '🇲🇽 México', ddi: '52' },
+  { code: 'DE', label: '🇩🇪 Alemanha', ddi: '49' },
+  { code: 'FR', label: '🇫🇷 França', ddi: '33' },
+  { code: 'GB', label: '🇬🇧 Reino Unido', ddi: '44' },
+  { code: 'IT', label: '🇮🇹 Itália', ddi: '39' },
+  { code: 'ES', label: '🇪🇸 Espanha', ddi: '34' },
+  { code: 'NL', label: '🇳🇱 Holanda', ddi: '31' },
+  { code: 'CH', label: '🇨🇭 Suíça', ddi: '41' },
+  { code: 'AU', label: '🇦🇺 Austrália', ddi: '61' },
+  { code: 'CA', label: '🇨🇦 Canadá', ddi: '1' },
+  { code: 'OTHER', label: '🌍 Outro', ddi: '' },
+] as const;
 
 export default function FormularioLuxo() {
   const { t } = useTranslation();
@@ -13,6 +36,7 @@ export default function FormularioLuxo() {
   const [isSending, setIsSending] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<Fields, string>>>({});
+  const [selectedCountry, setSelectedCountry] = useState('BR');
 
   const validate = (form: HTMLFormElement): Partial<Record<Fields, string>> => {
     const data = new FormData(form);
@@ -40,11 +64,17 @@ export default function FormularioLuxo() {
     const lastName = formData.get('lastName')?.toString().trim() ?? '';
     const fullName = [firstName, lastName].filter(Boolean).join(' ');
 
+    const countryData = COUNTRIES.find(c => c.code === selectedCountry);
+    const countryLabel = countryData?.label ?? selectedCountry;
+    const countryDdi = countryData?.ddi ?? '';
+
     const payload = {
       name: fullName,
       email: formData.get('email')?.toString().trim() ?? '',
       mobile_phone: formData.get('phone')?.toString().trim() ?? '',
       message: formData.get('message')?.toString().trim() ?? '',
+      paisEstado: countryLabel,
+      countryDdi,
     };
 
     const res = await fetch('/api/brevo', {
@@ -162,6 +192,19 @@ export default function FormularioLuxo() {
                 className={errors.phone ? 'field-error' : ''}
               />
               {errors.phone && <span className="formulario-error">{errors.phone}</span>}
+            </label>
+
+            <label className="formulario-country-label">
+              <select
+                className="formulario-country-select"
+                value={selectedCountry}
+                onChange={e => setSelectedCountry(e.target.value)}
+                aria-label="País"
+              >
+                {COUNTRIES.map(c => (
+                  <option key={c.code} value={c.code}>{c.label}</option>
+                ))}
+              </select>
             </label>
           </div>
 
