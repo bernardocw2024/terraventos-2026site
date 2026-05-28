@@ -90,37 +90,55 @@ export default async function handler(req, res) {
 
     console.log("[brevo] payload:", JSON.stringify(payload));
 
-    const brevoRes = await fetch("https://api.brevo.com/v3/contacts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "api-key": BREVO_API_KEY,
-      },
-      body: JSON.stringify(payload),
-    });
+    // Função auxiliar para chamar a API da Brevo
+    const callBrevo = async (p) => {
+      const r = await fetch("https://api.brevo.com/v3/contacts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "api-key": BREVO_API_KEY,
+        },
+        body: JSON.stringify(p),
+      });
+      const text = await r.text();
+      let json = null;
+      try { json = JSON.parse(text); } catch { json = text; }
+      return { status: r.status, ok: r.ok, json };
+    };
 
-    const responseText = await brevoRes.text();
-    console.log("[brevo] response status:", brevoRes.status);
-    console.log("[brevo] raw response text:", responseText);
+    let result = await callBrevo(payload);
+    console.log("[brevo] response status:", result.status);
+    console.log("[brevo] raw response:", JSON.stringify(result.json));
 
-    let responseJson = null;
-    try {
-      responseJson = JSON.parse(responseText);
-    } catch {
-      responseJson = responseText;
+    // Se o SMS já está vinculado a outro contato, tenta sem o SMS
+    if (
+      !result.ok &&
+      result.json?.code === "duplicate_parameter" &&
+      result.json?.metadata?.duplicate_identifiers?.includes("SMS")
+    ) {
+      console.warn("[brevo] SMS duplicado — retentando sem o campo SMS");
+      const payloadSemSMS = {
+        ...payload,
+        attributes: { ...payload.attributes },
+      };
+      delete payloadSemSMS.attributes.SMS;
+      result = await callBrevo(payloadSemSMS);
+      console.log("[brevo] retry status:", result.status);
+      console.log("[brevo] retry response:", JSON.stringify(result.json));
     }
 
-    if (!brevoRes.ok) {
-      console.error("[brevo] non-ok response from Brevo:", brevoRes.status);
+    if (!result.ok) {
+      console.error("[brevo] non-ok response from Brevo:", result.status);
       return res.status(500).json({
         error: true,
-        status: brevoRes.status,
-        body: responseJson,
+        status: result.status,
+        body: result.json,
       });
     }
 
-    console.log("[brevo] contact created successfully", responseJson);
-    return res.status(200).json({ success: true, brevo_response: responseJson });
+    console.log("[brevo] contact created successfully", result.json);
+    return res.status(200).json({ success: true, brevo_response: result.json });
+
   } catch (err) {
     console.error("[brevo] internal error:", err);
     return res.status(500).json({ error: "Erro interno", message: err?.message });
