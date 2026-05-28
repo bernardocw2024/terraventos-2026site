@@ -208,7 +208,7 @@ function generateLink(){
   saveToCRM(name, 'parceiro', slug, link);
 }
 
-var CRM_URL = 'APPS_SCRIPT_URL_HERE';
+var CRM_URL = 'https://script.google.com/macros/s/AKfycbxW-BrksD4x99EC7XLFICovqLglVhkGapI2oAhYrD7Q78LdZaPv62r_zBO-FTC0ruT1/exec';
 function saveToCRM(name, type, ref, link){
   if(CRM_URL==='APPS_SCRIPT_URL_HERE')return;
   try{fetch(CRM_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,type:type,ref:ref,link:link,source:'parceiros'})})}catch(e){}
