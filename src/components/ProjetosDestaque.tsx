@@ -234,6 +234,44 @@ export default function ProjetosDestaque({ onSelect }: ProjetosDestaqueProps) {
           onScroll={checkScroll}
         >
           <div className="pd-slider-track">
+            {/* OPÇÃO DE TAÍBA (CARD FIXO) */}
+            <a
+              href="/taiba"
+              className="pd-card"
+              onClick={(e) => {
+                e.preventDefault();
+                window.dispatchEvent(new CustomEvent('navigate', { detail: '/taiba' }));
+              }}
+            >
+              <div className="pd-image-wrapper">
+                <LazyImage src="/taiba/Picture.png" alt="Oportunidades em Taíba" className="pd-image" />
+                <div className="pd-tag">INVESTIMENTO</div>
+              </div>
+              <div className="pd-content">
+                <div className="pd-location">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                  </svg>
+                  <span>Taíba, Ceará, Brasil</span>
+                </div>
+                <h3 className="pd-card-title">Oportunidades Exclusivas em Taíba</h3>
+                <div className="pd-amenities">
+                  <div className="pd-amenity">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M8 3v18M16 3v18M3 8h18M3 16h18" />
+                    </svg>
+                    A partir de 560 m²
+                  </div>
+                </div>
+                <div className="pd-price">
+                  <span style={{ fontSize: "0.6em", display: "block", fontWeight: 400, opacity: 0.8, marginBottom: "2px", lineHeight: 1, textTransform: "lowercase", letterSpacing: "0.5px" }}>
+                    a partir de
+                  </span>
+                  R$ 110.000,00
+                </div>
+              </div>
+            </a>
+
             {projetos.map((projeto) => {
               const itemFromData = localizedData.find(
                 (d) => d.id === projeto.id,

@@ -22,6 +22,7 @@ import { getOportunidadesData } from "./data/oportunidadesDataI18n";
 import ListagemPropriedades from "./components/ListagemPropriedades";
 import BlogSection from "./components/BlogSection";
 import LazyImage from "./components/LazyImage";
+import PaginaTaiba from "./components/PaginaTaiba";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -569,6 +570,12 @@ function App() {
             <div id="propriedades">
               <ListagemPropriedades
                 items={getOportunidadesData(i18n.language)}
+                onSelect={handleSelectOpportunity}
+              />
+            </div>
+          ) : cleanPath === "/taiba" ? (
+            <div id="taiba">
+              <PaginaTaiba
                 onSelect={handleSelectOpportunity}
               />
             </div>

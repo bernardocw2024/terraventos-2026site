@@ -69,6 +69,45 @@ const ListagemPropriedades: React.FC<ListagemPropriedadesProps> = ({ items, onSe
       </div>
 
       <div className="listing-grid">
+        {/* OPÇÃO DE TAÍBA FIXA NO TOPO */}
+        {(selectedFilter === 'all' || selectedFilter === 'investimento' || selectedFilter === 'venda') && (
+          <a 
+            href="/taiba"
+            className="property-card"
+            onClick={(e) => {
+              e.preventDefault();
+              window.dispatchEvent(new CustomEvent('navigate', { detail: '/taiba' }));
+            }}
+          >
+            <div className="property-card-image" style={{ backgroundImage: `url("/taiba/Picture.png")` }}>
+              <div className="property-badge">Investimento</div>
+            </div>
+            <div className="property-card-content">
+              <h3 className="property-card-title">Oportunidades Exclusivas em Taíba</h3>
+              <p className="property-card-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Taíba, Ceará, Brasil
+              </p>
+              <div className="property-card-footer">
+                <div className="property-price">
+                  <span className="price-tag">A partir de</span>
+                  <span className="price-value">R$ 110.000,00</span>
+                </div>
+                <div className="view-details-btn">
+                  Ver Opções
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '4px' }}>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        )}
+
         {filteredItems.length > 0 ? (
           filteredItems.map((item) => (
             <a 
