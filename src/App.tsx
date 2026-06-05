@@ -575,9 +575,7 @@ function App() {
             </div>
           ) : cleanPath === "/taiba" ? (
             <div id="taiba">
-              <PaginaTaiba
-                onSelect={handleSelectOpportunity}
-              />
+              <PaginaTaiba />
             </div>
           ) : ["/quem-somos", "/termos-e-condicoes", "/politica-de-privacidade", "/contato"].includes(cleanPath) ? (
             <PaginaInstitucional
