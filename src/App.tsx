@@ -25,8 +25,6 @@ import LazyImage from "./components/LazyImage";
 import PaginaTaiba from "./components/PaginaTaiba";
 import PropriedadesV2 from "./components/PropriedadesV2";
 import PaginaIndividualV2 from "./components/PaginaIndividualV2";
-import ListagemPropriedadesV2 from './components/ListagemPropriedadesV2';
-import PaginaIndividualV2 from './components/PaginaIndividualV2';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -81,11 +79,11 @@ function App() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Anti-FOUC: marca o root como pronto assim que o React monta e os estilos estÃÂ£o aplicados
+  // Anti-FOUC: marca o root como pronto assim que o React monta e os estilos estÃÂÃÂ£o aplicados
   useEffect(() => {
     const root = document.getElementById("root");
     if (root) {
-      // rAF garante que o browser jÃÂ¡ pintou o primeiro frame com os estilos corretos
+      // rAF garante que o browser jÃÂÃÂ¡ pintou o primeiro frame com os estilos corretos
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           root.classList.add("app-ready");
@@ -250,9 +248,9 @@ function App() {
     ].includes(cleanPath);
     if (isInstitutional) return;
 
-    const title = "Terra Ventos | ImÃÂ³veis de Luxo e Investimentos no CearÃÂ¡";
+    const title = "Terra Ventos | ImÃÂÃÂ³veis de Luxo e Investimentos no CearÃÂÃÂ¡";
     const description =
-      "Curadoria exclusiva de imÃÂ³veis de alto padrÃÂ£o e oportunidades de investimento no litoral cearense (PreÃÂ¡, Tatajuba, BitupitÃÂ¡).";
+      "Curadoria exclusiva de imÃÂÃÂ³veis de alto padrÃÂÃÂ£o e oportunidades de investimento no litoral cearense (PreÃÂÃÂ¡, Tatajuba, BitupitÃÂÃÂ¡).";
     const imageUrl = `${window.location.origin}/banners/2.png`;
     const url = window.location.origin + currentPath;
 
@@ -276,7 +274,7 @@ function App() {
     updateMeta("twitter:image", imageUrl);
   }, [currentPath, cleanPath, isPaginaIndividual, t]);
 
-  // Hreflang tags for SEO Ã¢ÂÂ indicam versÃÂµes em outros idiomas
+  // Hreflang tags for SEO ÃÂ¢ÃÂÃÂ indicam versÃÂÃÂµes em outros idiomas
   useEffect(() => {
     const baseUrl = window.location.origin;
     const path = currentPath;
@@ -302,7 +300,7 @@ function App() {
     xDefault.href = `${baseUrl}${path}`;
     document.head.appendChild(xDefault);
 
-    // Ã¢ÂÂ CanÃÂ´nica Ã¢ÂÂ sempre atualiza o href, nunca cria duplicada
+    // ÃÂ¢ÃÂÃÂ CanÃÂÃÂ´nica ÃÂ¢ÃÂÃÂ sempre atualiza o href, nunca cria duplicada
     let canonical = document.querySelector(
       'link[rel="canonical"]',
     ) as HTMLLinkElement | null;
@@ -319,7 +317,7 @@ function App() {
     runTransitionTo(`/propriedade/${item.slug}`);
   };
 
-  // Rota /ventoafavor Ã¢ÂÂ fullscreen sem header/footer, com botÃÂ£o de retorno flutuante
+  // Rota /ventoafavor ÃÂ¢ÃÂÃÂ fullscreen sem header/footer, com botÃÂÃÂ£o de retorno flutuante
   if (isVentoAfavor) {
     return <VentoAfavor onBack={() => runTransitionTo("/")} />;
   }
@@ -449,7 +447,7 @@ function App() {
           </a>
         </nav>
 
-        {/* Language selector Ã¢ÂÂ outside nav so it stays visible on mobile */}
+        {/* Language selector ÃÂ¢ÃÂÃÂ outside nav so it stays visible on mobile */}
         <div className="language-selector-wrapper" ref={langRef}>
           <button
             className="language-selector-trigger"
@@ -505,7 +503,7 @@ function App() {
                 }}
               >
                 <img src="https://flagcdn.com/w20/br.png" alt="PT" />{" "}
-                <span>PortuguÃÂªs</span>
+                <span>PortuguÃÂÃÂªs</span>
               </button>
               <button
                 onClick={() => {
@@ -525,7 +523,7 @@ function App() {
                 }}
               >
                 <img src="https://flagcdn.com/w20/es.png" alt="ES" />{" "}
-                <span>EspaÃÂ±ol</span>
+                <span>EspaÃÂÃÂ±ol</span>
               </button>
             </div>
           )}
@@ -566,7 +564,7 @@ function App() {
         <div className={`page-shell ${transitionClass}`}>
           {/* SEO H1 - Visually hidden but accessible to crawlers */}
           <h1 className="sr-only">
-            Terra Ventos | ImÃÂ³veis de Luxo e Investimentos no CearÃÂ¡
+            Terra Ventos | ImÃÂÃÂ³veis de Luxo e Investimentos no CearÃÂÃÂ¡
           </h1>
           {isPaginaIndividual ? (
             <PaginaIndividual item={selectedOpportunity} />
@@ -576,14 +574,7 @@ function App() {
                 items={getOportunidadesData(i18n.language)}
                 onSelect={handleSelectOpportunity}
               />
-            </div>
-          ) : cleanPath === "/propriedades-v2" ? (
-            <div id="propriedades-v2">
-              <ListagemPropriedadesV2 />
-            </div>
-          ) : cleanPath.startsWith("/propriedade-v2/") ? (
-            <PaginaIndividualV2 />
-          ) : cleanPath === "/propriedades-v2" ? (
+            </div>) : cleanPath === "/propriedades-v2" ? (
             <div id="propriedades-v2">
               <PropriedadesV2 />
             </div>
@@ -648,7 +639,7 @@ function App() {
                           (prev) => (prev + 1) % heroSlides.length,
                         )
                       }
-                      aria-label="PrÃÂ³ximo"
+                      aria-label="PrÃÂÃÂ³ximo"
                     >
                       <svg
                         width="24"
@@ -778,7 +769,7 @@ function App() {
                 </section>
               </div>
 
-              {/* SEO: ConteÃÂºdo descritivo visÃÂ­vel para buscadores e leitores */}
+              {/* SEO: ConteÃÂÃÂºdo descritivo visÃÂÃÂ­vel para buscadores e leitores */}
               <section className="seo-intro-content">
                 <div className="seo-intro-container">
                   <p>
