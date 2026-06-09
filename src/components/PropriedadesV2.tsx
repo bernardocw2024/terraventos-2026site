@@ -55,7 +55,7 @@ const PropriedadesV2: React.FC<PropriedadesV2Props> = ({ onSelect }) => {
         <button 
           className="back-to-home" 
           onClick={() => window.dispatchEvent(new CustomEvent('navigate', { detail: '/' }))}
-          aria-label="Voltar para o inÃ­cio"
+          aria-label="Voltar para o início"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -94,7 +94,7 @@ const PropriedadesV2: React.FC<PropriedadesV2Props> = ({ onSelect }) => {
       </div>
 
       <div className="listing-grid">
-        {/* OPÃÃO DE TAÃBA FIXA NO TOPO */}
+        {/* OPÇÃO DE TAÍBA FIXA NO TOPO */}
         {(selectedFilter === 'all' || selectedFilter === 'investimento' || selectedFilter === 'venda') && (
           <a 
             href="/taiba"
@@ -108,13 +108,13 @@ const PropriedadesV2: React.FC<PropriedadesV2Props> = ({ onSelect }) => {
               <div className="property-badge">Investimento</div>
             </div>
             <div className="property-card-content">
-              <h3 className="property-card-title">Oportunidades Exclusivas em TaÃ­ba</h3>
+              <h3 className="property-card-title">Oportunidades Exclusivas em Taíba</h3>
               <p className="property-card-location">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                TaÃ­ba, CearÃ¡, Brasil
+                Taíba, Ceará, Brasil
               </p>
               <div className="property-card-footer">
                 <div className="property-price">
@@ -122,7 +122,7 @@ const PropriedadesV2: React.FC<PropriedadesV2Props> = ({ onSelect }) => {
                   <span className="price-value">R$ 110.000,00</span>
                 </div>
                 <div className="view-details-btn">
-                  Ver OpÃ§Ãµes
+                  Ver Opções
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '4px' }}>
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
