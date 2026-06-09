@@ -42,26 +42,26 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     title: 'VENDA',
     image: '/CasadeAltoPadraonaPraiadaBarrinha/fotosTerraVentos/1.jpg',
     badge: 'Venda',
-    propertyTitle: 'CASA DE ALTO PADRÃO NA PRAIA DA BARRINHA',
-    location: 'Barrinha - Acaraú - CE',
+    propertyTitle: 'CASA DE ALTO PADRÃO NA PRAIA DA BARRINHA',
+    location: 'Barrinha - AcaraÃº - CE',
     rating: 5,
-    exclusiveText: '400 m² | 4 Suítes | 5 Banheiros | Piscina | A 400m da Praia',
-    summaryDescription: 'Casa de alto padrão a 400 metros da praia da Barrinha, com arquitetura praiana sofisticada, piscina, espaço gourmet, quadra de beach tennis e jardim com coqueiros.',
+    exclusiveText: '400 mÂ² | 4 SuÃ­tes | 5 Banheiros | Piscina | A 400m da Praia',
+    summaryDescription: 'Casa de alto padrÃ£o a 400 metros da praia da Barrinha, com arquitetura praiana sofisticada, piscina, espaÃ§o gourmet, quadra de beach tennis e jardim com coqueiros.',
     about: [
-      'Encante-se com essa casa simplesmente incrível, onde o charme rústico encontra o conforto e a sofisticação. Localizada a apenas 400 metros da praia, é o lugar perfeito para quem busca tranquilidade, contato com a natureza e momentos inesquecíveis.',
-      'A propriedade conta com uma arquitetura única, com acabamentos em madeira, cobertura em palha e ambientes amplos e integrados, criando uma atmosfera acolhedora e elegante.',
-      'Área de lazer completa com piscina, espaço gourmet amplo, perfeito para receber amigos e família.',
-      'Varanda superior com vista e ventilação privilegiada. Jardim com coqueiros e muito verde.',
+      'Encante-se com essa casa simplesmente incrÃ­vel, onde o charme rÃºstico encontra o conforto e a sofisticaÃ§Ã£o. Localizada a apenas 400 metros da praia, Ã© o lugar perfeito para quem busca tranquilidade, contato com a natureza e momentos inesquecÃ­veis.',
+      'A propriedade conta com uma arquitetura Ãºnica, com acabamentos em madeira, cobertura em palha e ambientes amplos e integrados, criando uma atmosfera acolhedora e elegante.',
+      'Ãrea de lazer completa com piscina, espaÃ§o gourmet amplo, perfeito para receber amigos e famÃ­lia.',
+      'Varanda superior com vista e ventilaÃ§Ã£o privilegiada. Jardim com coqueiros e muito verde.',
       'Quadra de areia para beach tennis/volley. Ambientes integrados e bem iluminados. Estilo praiano sofisticado.'
     ],
     infra: [
-      'Área Total: 400 m²',
-      'Área do Terreno: 3.706,54 m²',
-      'Operação: Venda | Finalidade: Residencial',
-      'Status: Novo | Situação: Desocupado',
-      'Características: Muro, Lavanderia, Quintal, Varanda, Sala de estar, Cozinha, Banheiro social'
+      'Ãrea Total: 400 mÂ²',
+      'Ãrea do Terreno: 3.706,54 mÂ²',
+      'OperaÃ§Ã£o: Venda | Finalidade: Residencial',
+      'Status: Novo | SituaÃ§Ã£o: Desocupado',
+      'CaracterÃ­sticas: Muro, Lavanderia, Quintal, Varanda, Sala de estar, Cozinha, Banheiro social'
     ],
-    facilities: ['4 Suítes', '5 Banheiros', '3 Vagas', 'Piscina', 'Espaço Gourmet', 'Quadra de Areia', 'Varanda', 'Jardim com Coqueiros'],
+    facilities: ['4 SuÃ­tes', '5 Banheiros', '3 Vagas', 'Piscina', 'EspaÃ§o Gourmet', 'Quadra de Areia', 'Varanda', 'Jardim com Coqueiros'],
     gallery: {
       main: '/CasadeAltoPadraonaPraiadaBarrinha/fotosTerraVentos/1.jpg',
       sideTop: '/CasadeAltoPadraonaPraiadaBarrinha/fotosTerraVentos/2.jpg',
@@ -80,7 +80,7 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     mapUrl: 'https://maps.google.com/maps?q=Barrinha+18,+Barrinha,+Acara%C3%BA+-+CE,+62580-000&hl=pt-BR&z=16&output=embed',
     priceTag: '',
     price: 'R$ 6.600.000,00',
-    installments: 'Consulte condições',
+    installments: 'Consulte condiÃ§Ãµes',
     category: 'venda'
   },
   {
@@ -88,47 +88,47 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     slug: 'area-exclusiva-tatajuba-guriu-100000m',
     title: 'VENDA',
     image: 'https://vumbnail.com/1186057204.jpg',
-    badge: 'Oportunidade Única',
-    propertyTitle: 'ÁREA EXCLUSIVA PÉ NA AREIA — 100.000 m²',
-    location: 'Entre Tatajuba e Guriú, Ceará, Brasil',
+    badge: 'Oportunidade Ãnica',
+    propertyTitle: 'ÃREA EXCLUSIVA PÃ NA AREIA â 100.000 mÂ²',
+    location: 'Entre Tatajuba e GuriÃº, CearÃ¡, Brasil',
     rating: 5,
-    exclusiveText: '100.000 m² | 200m de Frente Mar | Matrícula e Escritura Pública',
+    exclusiveText: '100.000 mÂ² | 200m de Frente Mar | MatrÃ­cula e Escritura PÃºblica',
     about: [
-      'Uma oportunidade monumental no litoral cearense: 10 hectares de área totalmente pé na areia localizada estrategicamente entre as vilas de Tatajuba e Guriú.',
-      'Com 200 metros de frente para o mar, esta propriedade é um dos ativos mais raros e valiosos da região, ideal para o desenvolvimento de resorts de luxo, hotelaria de charme ou um refúgio particular de alto padrão.',
-      'Segurança Jurídica Absoluta: Imóvel com Matrícula e Escritura Pública, garantindo uma transação sólida e proteção patrimonial integral.',
-      'Infraestrutura e Acesso: Acesso facilitado pelos fundos e proximidade estratégica com rede de energia elétrica trifásica (apenas 500 metros), reduzindo significativamente os custos de implementação.',
-      'Imagens e Vídeos por: Thiago Faquinel (@thiagofaquinel)'
+      'Uma oportunidade monumental no litoral cearense: 10 hectares de Ã¡rea totalmente pÃ© na areia localizada estrategicamente entre as vilas de Tatajuba e GuriÃº.',
+      'Com 200 metros de frente para o mar, esta propriedade Ã© um dos ativos mais raros e valiosos da regiÃ£o, ideal para o desenvolvimento de resorts de luxo, hotelaria de charme ou um refÃºgio particular de alto padrÃ£o.',
+      'SeguranÃ§a JurÃ­dica Absoluta: ImÃ³vel com MatrÃ­cula e Escritura PÃºblica, garantindo uma transaÃ§Ã£o sÃ³lida e proteÃ§Ã£o patrimonial integral.',
+      'Infraestrutura e Acesso: Acesso facilitado pelos fundos e proximidade estratÃ©gica com rede de energia elÃ©trica trifÃ¡sica (apenas 500 metros), reduzindo significativamente os custos de implementaÃ§Ã£o.',
+      'Imagens e VÃ­deos por: Thiago Faquinel (@thiagofaquinel)'
     ],
     infra: [
-      'Área Total: 100.000 m² (10 Hectares)',
+      'Ãrea Total: 100.000 mÂ² (10 Hectares)',
       'Testada: 200 metros de frente mar',
-      'Energia Trifásica a 500m',
-      'Matrícula e Escritura Pública'
+      'Energia TrifÃ¡sica a 500m',
+      'MatrÃ­cula e Escritura PÃºblica'
     ],
-    facilities: ['200m Frente Mar', '10 Hectares', 'Energia Trifásica', 'Escritura Pública'],
+    facilities: ['200m Frente Mar', '10 Hectares', 'Energia TrifÃ¡sica', 'Escritura PÃºblica'],
     gallery: {
       main: 'https://vumbnail.com/1186057204.jpg',
-      sideTop: '/GURIU/VS--TATAJUBAfromTerraVentosonVimeo-0’20”.jpg',
-      sideBottom: '/GURIU/VS--Vimeo-TerraVentos-0’38”.jpg',
+      sideTop: '/GURIU/VS--TATAJUBAfromTerraVentosonVimeo-0â20â.jpg',
+      sideBottom: '/GURIU/VS--Vimeo-TerraVentos-0â38â.jpg',
       extra: []
     },
     videoSources: [
       'https://player.vimeo.com/video/1186057204',
       'https://player.vimeo.com/video/1186057221'
     ],
-    videoGalleryCredits: 'Vídeo por: Thiago Faquinel (@thiagofaquinel)',
+    videoGalleryCredits: 'VÃ­deo por: Thiago Faquinel (@thiagofaquinel)',
     mapImage: '/mapa.avif',
     mapUrl: 'https://maps.google.com/maps?q=-2.8477636,-40.6163572&hl=pt-BR&z=15&output=embed',
     documents: [
       {
-        label: 'Tatajuba: O Paraíso Escondido do Kitesurf',
+        label: 'Tatajuba: O ParaÃ­so Escondido do Kitesurf',
         url: 'https://blog.terraventos.com/p/tatajuba-the-hidden-kitesurf-paradise',
-        legend: 'Leia mais sobre a localização e o potencial de valorização da região.'
+        legend: 'Leia mais sobre a localizaÃ§Ã£o e o potencial de valorizaÃ§Ã£o da regiÃ£o.'
       }
     ],
     price: 'R$ 15.000.000,00',
-    installments: 'Investimento: R$ 150,00 por m²',
+    installments: 'Investimento: R$ 150,00 por mÂ²',
     priceTag: '',
     category: 'venda'
   },
@@ -138,23 +138,23 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     title: 'VENDA',
     image: '/TATAJUBA/Image_from_Image.png (4).png',
     badge: 'Exclusividade',
-    propertyTitle: 'TERRENO EXCLUSIVO EM TATAJUBA — 1.000 m²',
-    location: 'Tatajuba, Ceará, Brasil',
+    propertyTitle: 'TERRENO EXCLUSIVO EM TATAJUBA â 1.000 mÂ²',
+    location: 'Tatajuba, CearÃ¡, Brasil',
     rating: 5,
-    exclusiveText: '1.000 m² | Matrícula Individualizada | Oportunidade Única',
+    exclusiveText: '1.000 mÂ² | MatrÃ­cula Individualizada | Oportunidade Ãnica',
     about: [
-      'Descubra a joia de Tatajuba: Um terreno de 1.000 m² no coração da vila que é o novo desejo do kitesurf mundial.',
-      'Segurança Jurídica Total: Imóvel com matrícula individualizada e processo de desmembramento finalizado, oferecendo a tranquilidade que o investidor experiente exige.',
-      'Localização Estratégica: Situado em uma região de altíssima valorização, ideal para quem busca construir um refúgio exclusivo ou realizar um investimento imobiliário estratégico.',
-      'Estilo de Vida Tatajuba: Viva em harmonia com a natureza, em um local reconhecido por sua hospitalidade, ventos constantes e paisagens de tirar o fôlego.'
+      'Descubra a joia de Tatajuba: Um terreno de 1.000 mÂ² no coraÃ§Ã£o da vila que Ã© o novo desejo do kitesurf mundial.',
+      'SeguranÃ§a JurÃ­dica Total: ImÃ³vel com matrÃ­cula individualizada e processo de desmembramento finalizado, oferecendo a tranquilidade que o investidor experiente exige.',
+      'LocalizaÃ§Ã£o EstratÃ©gica: Situado em uma regiÃ£o de altÃ­ssima valorizaÃ§Ã£o, ideal para quem busca construir um refÃºgio exclusivo ou realizar um investimento imobiliÃ¡rio estratÃ©gico.',
+      'Estilo de Vida Tatajuba: Viva em harmonia com a natureza, em um local reconhecido por sua hospitalidade, ventos constantes e paisagens de tirar o fÃ´lego.'
     ],
     infra: [
-      'Área Total: 1.000 m²',
-      'Matrícula Individualizada',
-      'Localização Premium em Tatajuba',
+      'Ãrea Total: 1.000 mÂ²',
+      'MatrÃ­cula Individualizada',
+      'LocalizaÃ§Ã£o Premium em Tatajuba',
       'Pronto para Desmembramento'
     ],
-    facilities: ['1.000 m²', 'Matrícula Pronta', 'Kitesurf Paradise', 'Exclusividade'],
+    facilities: ['1.000 mÂ²', 'MatrÃ­cula Pronta', 'Kitesurf Paradise', 'Exclusividade'],
     gallery: {
       main: '/TATAJUBA/Image_from_Image.png (4).png',
       sideTop: '/TATAJUBA/Image_from_Image.png (5).png',
@@ -165,19 +165,19 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     mapUrl: 'https://maps.google.com/maps?q=-2.854046,-40.696586&hl=pt-BR&z=15&output=embed',
     documents: [
       {
-        label: 'Tatajuba: O Paraíso Escondido do Kitesurf',
+        label: 'Tatajuba: O ParaÃ­so Escondido do Kitesurf',
         url: 'https://blog.terraventos.com/p/tatajuba-the-hidden-kitesurf-paradise',
-        legend: 'Leia mais sobre a localização e o potencial de valorização de Tatajuba.'
+        legend: 'Leia mais sobre a localizaÃ§Ã£o e o potencial de valorizaÃ§Ã£o de Tatajuba.'
       },
       {
         label: 'Veja Planta',
         url: '/TATAJUBA/3a85c744-9b82-45ca-9042-125872c4e7f1.jpeg',
-        legend: 'Visualize o desmembramento e dimensões exatas da área.'
+        legend: 'Visualize o desmembramento e dimensÃµes exatas da Ã¡rea.'
       }
     ],
     priceTag: '',
     price: 'R$ 800.000,00',
-    installments: 'Consulte condições exclusivas',
+    installments: 'Consulte condiÃ§Ãµes exclusivas',
     category: 'venda'
   },
   {
@@ -186,23 +186,23 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     title: 'VENDA',
     image: '/prea oportunidade/WhatsApp Image 2026-04-21 at 09.32.47.jpeg',
     badge: 'Oportunidade',
-    propertyTitle: 'TERRENO EXCLUSIVO PREÁ — 200M DO MAR',
-    location: 'Preá, Ceará, Brasil',
+    propertyTitle: 'TERRENO EXCLUSIVO PREÃ â 200M DO MAR',
+    location: 'PreÃ¡, CearÃ¡, Brasil',
     rating: 5,
-    exclusiveText: '250 m² | 10m x 25m | Apenas 200m da Praia',
+    exclusiveText: '250 mÂ² | 10m x 25m | Apenas 200m da Praia',
     about: [
       'Excelente oportunidade de investimento em um dos destinos mais valorizados do litoral cearense.',
-      'Terreno com 250 m² (10m x 25m) localizado em posição estratégica no Preá.',
-      'Situado a apenas 200 metros da praia, vizinho aos prestigiados empreendimentos Botanik e Carnaúba Windhouse.',
-      'Ideal para quem busca construir a casa dos sonhos ou investir em um mercado em plena ascensão.'
+      'Terreno com 250 mÂ² (10m x 25m) localizado em posiÃ§Ã£o estratÃ©gica no PreÃ¡.',
+      'Situado a apenas 200 metros da praia, vizinho aos prestigiados empreendimentos Botanik e CarnaÃºba Windhouse.',
+      'Ideal para quem busca construir a casa dos sonhos ou investir em um mercado em plena ascensÃ£o.'
     ],
     infra: [
-      'Área Total: 250 m²',
-      'Dimensões: 10m x 25m',
-      'Distância da Praia: 200m',
-      'Localização Premium'
+      'Ãrea Total: 250 mÂ²',
+      'DimensÃµes: 10m x 25m',
+      'DistÃ¢ncia da Praia: 200m',
+      'LocalizaÃ§Ã£o Premium'
     ],
-    facilities: ['200m da Praia', 'Vizinho Botanik', 'Vizinho Carnaúba', 'Exclusividade'],
+    facilities: ['200m da Praia', 'Vizinho Botanik', 'Vizinho CarnaÃºba', 'Exclusividade'],
     gallery: {
       main: '/prea oportunidade/WhatsApp Image 2026-04-21 at 09.32.47.jpeg',
       sideTop: '/prea oportunidade/WhatsApp Image 2026-04-21 at 09.32.48.jpeg',
@@ -218,7 +218,7 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     ],
     priceTag: 'A partir de',
     price: 'R$ 400.000,00',
-    installments: 'Consulte condições de mercado',
+    installments: 'Consulte condiÃ§Ãµes de mercado',
     category: 'venda'
   },
   {
@@ -227,26 +227,26 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     title: 'VENDA',
     image: '/Prea House/Image_from_Image.png (14).png',
     badge: 'Venda',
-    propertyTitle: 'PREÁ HOUSE',
-    location: 'Preá, Ceará, Brasil',
+    propertyTitle: 'PREÃ HOUSE',
+    location: 'PreÃ¡, CearÃ¡, Brasil',
     rating: 5,
-    exclusiveText: '745 m² | 3 Suítes | Piscina de 68 m²',
+    exclusiveText: '745 mÂ² | 3 SuÃ­tes | Piscina de 68 mÂ²',
     about: [
-      'Propriedade luxuosa composta por duas construções separadas ligadas por uma piscina central.',
-      'Casa dos Fundos: 2 suítes (32.5 m² cada), móveis planejados, área central de estar e cozinha (32 m²) com ilha e bancadas de madeira, despensa 10 m² e varanda frontal.',
-      'Prédio Frontal: Área Gourmet semiaberta (54 m²), 1 suíte (24 m²), lavabo e depósito/garagem para quadriciclo (8.5 m²).',
-      'Rooftop Terrace: 96 m² com preparação estrutural para expansão e infraestrutura para aquecimento a gás e bombas de pressão.',
+      'Propriedade luxuosa composta por duas construÃ§Ãµes separadas ligadas por uma piscina central.',
+      'Casa dos Fundos: 2 suÃ­tes (32.5 mÂ² cada), mÃ³veis planejados, Ã¡rea central de estar e cozinha (32 mÂ²) com ilha e bancadas de madeira, despensa 10 mÂ² e varanda frontal.',
+      'PrÃ©dio Frontal: Ãrea Gourmet semiaberta (54 mÂ²), 1 suÃ­te (24 mÂ²), lavabo e depÃ³sito/garagem para quadriciclo (8.5 mÂ²).',
+      'Rooftop Terrace: 96 mÂ² com preparaÃ§Ã£o estrutural para expansÃ£o e infraestrutura para aquecimento a gÃ¡s e bombas de pressÃ£o.',
       'Piscina em L: 65.000 litros (10m x 4m) com prainha, assentos embutidos e ionizador automatizado controlado por smartphone.',
-      'Acabamento Premium: Esquadrias em Timborana, estrutura em Maçaranduba e deck em Tatajuba.'
+      'Acabamento Premium: Esquadrias em Timborana, estrutura em MaÃ§aranduba e deck em Tatajuba.'
     ],
     infra: [
-      'Área Total: 745 m² | Construída: 261 m²',
-      'Sistemas: Aquecimento a gás em todos os pontos e irrigação automatizada no jardim.',
-      'Segurança: Alarme sincronizado em todas as portas e sistema CCTV com 8 câmeras de alta definição (acesso remoto).',
-      'Elétrica: Portões automatizados com interfone e controle remoto.',
-      'Versatilidade: Terraço preparado para construção de novas suítes ou área de lazer superior.'
+      'Ãrea Total: 745 mÂ² | ConstruÃ­da: 261 mÂ²',
+      'Sistemas: Aquecimento a gÃ¡s em todos os pontos e irrigaÃ§Ã£o automatizada no jardim.',
+      'SeguranÃ§a: Alarme sincronizado em todas as portas e sistema CCTV com 8 cÃ¢meras de alta definiÃ§Ã£o (acesso remoto).',
+      'ElÃ©trica: PortÃµes automatizados com interfone e controle remoto.',
+      'Versatilidade: TerraÃ§o preparado para construÃ§Ã£o de novas suÃ­tes ou Ã¡rea de lazer superior.'
     ],
-    facilities: ['3 Suítes', 'Piscina de 68 m²', 'Área Gourmet', 'Rooftop', 'Segurança CCTV', 'Portão Eletrônico'],
+    facilities: ['3 SuÃ­tes', 'Piscina de 68 mÂ²', 'Ãrea Gourmet', 'Rooftop', 'SeguranÃ§a CCTV', 'PortÃ£o EletrÃ´nico'],
     gallery: {
       main: '/Prea House/Image_from_Image.png (14).png',
       sideTop: '/Prea House/Image_from_Image.png (15).png',
@@ -265,33 +265,33 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     mapUrl: 'https://maps.google.com/maps?q=-2.812328,-40.428784&z=15&output=embed',
     priceTag: '',
     price: 'R$ 2.700.000,00',
-    installments: 'Consulte condições',
+    installments: 'Consulte condiÃ§Ãµes',
     category: 'venda'
   },
   {
     id: '04',
     slug: 'villa-prabhu',
-    title: 'LANÇAMENTO',
+    title: 'LANÃAMENTO',
     image: '/VILLA_PRABHU/PERSPECTIVAS-3D-VILLA-PRABHU-2.webp',
-    badge: 'LANÇAMENTO',
-    propertyTitle: 'VILLA PRABHU — PARACURU-CE',
-    location: 'Paracuru, Ceará, Brasil',
+    badge: 'LANÃAMENTO',
+    propertyTitle: 'VILLA PRABHU â PARACURU-CE',
+    location: 'Paracuru, CearÃ¡, Brasil',
     rating: 5,
-    exclusiveText: 'Loteamento Fechado em Paracuru-CE com lagoa privativa, lazer completo e a 100m da praia. Alto padrão e exclusividade em uma das praias mais belas do Ceará',
+    exclusiveText: 'Loteamento Fechado em Paracuru-CE com lagoa privativa, lazer completo e a 100m da praia. Alto padrÃ£o e exclusividade em uma das praias mais belas do CearÃ¡',
     about: [
-      'O Villa Prabhu é um empreendimento planejado pela Bianchi Urbanismo, focado em oferecer qualidade de vida e segurança.',
-      'Situado em uma região privilegiada com ampla área verde e recursos hídricos, o projeto destaca-se pelo planejamento urbano inteligente e integração com a natureza.',
-      'Lotes Exclusivos: Unidades espaçosas com áreas privativas a partir de 242 m² até mais de 600 m².',
-      'Planejamento de Etapas: Projeto dividido em fases, com a Etapa 1 já consolidada e unidades disponíveis na Etapa 2.',
+      'O Villa Prabhu Ã© um empreendimento planejado pela Bianchi Urbanismo, focado em oferecer qualidade de vida e seguranÃ§a.',
+      'Situado em uma regiÃ£o privilegiada com ampla Ã¡rea verde e recursos hÃ­dricos, o projeto destaca-se pelo planejamento urbano inteligente e integraÃ§Ã£o com a natureza.',
+      'Lotes Exclusivos: Unidades espaÃ§osas com Ã¡reas privativas a partir de 242 mÂ² atÃ© mais de 600 mÂ².',
+      'Planejamento de Etapas: Projeto dividido em fases, com a Etapa 1 jÃ¡ consolidada e unidades disponÃ­veis na Etapa 2.',
       'Urbanismo de Qualidade: Infraestrutura pensada para o bem-estar, com ruas como a Av. Prabhu e Rua Azalea.'
     ],
     infra: [
-      'Financiamento Direto: Facilidade de pagamento em até 120 parcelas mensais.',
-      'Pronto para Investir: Documentação e tabela de vendas atualizada para 2026.',
-      'Localização Estratégica: Quadras planejadas para garantir privacidade e fácil acesso às áreas comuns.',
-      'Cenário Natural: Loteamento cercado por água e vegetação preservada.'
+      'Financiamento Direto: Facilidade de pagamento em atÃ© 120 parcelas mensais.',
+      'Pronto para Investir: DocumentaÃ§Ã£o e tabela de vendas atualizada para 2026.',
+      'LocalizaÃ§Ã£o EstratÃ©gica: Quadras planejadas para garantir privacidade e fÃ¡cil acesso Ã s Ã¡reas comuns.',
+      'CenÃ¡rio Natural: Loteamento cercado por Ã¡gua e vegetaÃ§Ã£o preservada.'
     ],
-    facilities: ['Projeto Urbanístico', 'Parcelamento em 120x', 'Áreas Verdes', 'Pronto para Construir'],
+    facilities: ['Projeto UrbanÃ­stico', 'Parcelamento em 120x', 'Ãreas Verdes', 'Pronto para Construir'],
     gallery: {
       main: '/VILLA_PRABHU/PERSPECTIVAS-3D-VILLA-PRABHU-2.webp',
       sideTop: '/VILLA_PRABHU/Drone-47-1-1.webp',
@@ -316,14 +316,14 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     ],
     documents: [
       {
-        label: 'Tabela de Preços (120 meses) – Atualizada 2026',
-        url: '/VILLA_PRABHU/Tabela de Preços (120 meses).pdf',
+        label: 'Tabela de PreÃ§os (120 meses) â Atualizada 2026',
+        url: '/VILLA_PRABHU/Tabela de PreÃ§os (120 meses).pdf',
         legend: 'Detalhamento de valores, sinal e parcelas mensais.'
       },
       {
         label: 'Mapa de Disponibilidade (Masterplan)',
         url: '/VILLA_PRABHU/Mapa de Disponibilidade (Masterplan).pdf',
-        legend: 'Visualize a localização exata de cada lote e áreas verdes.'
+        legend: 'Visualize a localizaÃ§Ã£o exata de cada lote e Ã¡reas verdes.'
       }
     ],
     priceTag: 'Consulte',
@@ -337,31 +337,31 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     title: 'TEMPORADA',
     image: '/VillaCondutuPaginaInicial/Image_from_Image.png (29).png',
     badge: 'Temporada',
-    propertyTitle: 'CASA ALTO PADRÃO 3 SUÍTES',
-    location: 'FRENTE À PRAIA DO PREÁ',
+    propertyTitle: 'CASA ALTO PADRÃO 3 SUÃTES',
+    location: 'FRENTE Ã PRAIA DO PREÃ',
     rating: 5,
-    exclusiveText: 'FRENTE À PRAIA DO PREÁ',
+    exclusiveText: 'FRENTE Ã PRAIA DO PREÃ',
     about: [
-      'Vila Conduru III — Piscina, churrasqueira, varanda e condomínio de luxo 24 horas.',
-      'Seu Refúgio Privado Beira-Mar no Preá: A experiência definitiva de luxo rústico.',
-      'A Vila Conduru III é agora seu palco privado para o melhor vento do mundo e eventos exclusivos. Localizada literalmente à beira-mar.',
-      '1. Localização Beira-Mar: Esqueça transfers ou longas caminhadas. Aqui, o quintal é a praia.',
-      '2. Experiência de Resort: A exclusividade de uma vila com as comodidades de um hotel boutique.',
-      '3. Arquitetura que Respira (Design Bioclimático)',
-      '4. Estilo de Vida Orgânico & Conectividade: A vila elimina as barreiras entre você e o paraíso.',
-      '5. Suporte Concierge Terra Ventos: Sua única preocupação será velejar.'
+      'Vila Conduru III â Piscina, churrasqueira, varanda e condomÃ­nio de luxo 24 horas.',
+      'Seu RefÃºgio Privado Beira-Mar no PreÃ¡: A experiÃªncia definitiva de luxo rÃºstico.',
+      'A Vila Conduru III Ã© agora seu palco privado para o melhor vento do mundo e eventos exclusivos. Localizada literalmente Ã  beira-mar.',
+      '1. LocalizaÃ§Ã£o Beira-Mar: EsqueÃ§a transfers ou longas caminhadas. Aqui, o quintal Ã© a praia.',
+      '2. ExperiÃªncia de Resort: A exclusividade de uma vila com as comodidades de um hotel boutique.',
+      '3. Arquitetura que Respira (Design BioclimÃ¡tico)',
+      '4. Estilo de Vida OrgÃ¢nico & Conectividade: A vila elimina as barreiras entre vocÃª e o paraÃ­so.',
+      '5. Suporte Concierge Terra Ventos: Sua Ãºnica preocupaÃ§Ã£o serÃ¡ velejar.'
     ],
     infra: [
-      'Piscina no condomínio',
-      '3 suítes amplas',
+      'Piscina no condomÃ­nio',
+      '3 suÃ­tes amplas',
       'Churrasqueira',
       'Beira-mar',
       'Kite-point',
       'Projeto Patricia Mureta',
       'Estacionamento',
-      'Segurança 24h'
+      'SeguranÃ§a 24h'
     ],
-    facilities: ['3 Suítes', 'Beira-mar', 'Pé na areia', 'Piscina', 'Cozinha Completa', 'Ar-condicionado', 'Lavabo', 'Estacionamento', 'Segurança 24h'],
+    facilities: ['3 SuÃ­tes', 'Beira-mar', 'PÃ© na areia', 'Piscina', 'Cozinha Completa', 'Ar-condicionado', 'Lavabo', 'Estacionamento', 'SeguranÃ§a 24h'],
     gallery: {
       main: '/VillaCondutuPaginaInicial/Image_from_Image.png (29).png',
       sideTop: '/VillaCondutuPaginaInicial/Image_from_Image.png (31).png',
@@ -383,7 +383,7 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     },
     mapImage: '/mapa.avif',
     mapUrl: 'https://maps.google.com/maps?q=34.100222,-118.450709&z=15&output=embed',
-    priceTag: 'Diária',
+    priceTag: 'DiÃ¡ria',
     price: 'Consulte',
     installments: 'consultar disponibilidade',
     reservationUrl: 'https://www.airbnb.com.br/rooms/1613864657831968386?guests=1&adults=1&s=67&unique_share_id=17ad520f-3f88-4bca-a33f-731c6d077710',
@@ -395,25 +395,25 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     title: 'VENDA',
     image: '/bitupitaPaginaIndividual/DJI_20251020023318_0221_D.jpg',
     badge: 'Venda',
-    propertyTitle: 'TERRENOS PÉ NA AREIA EM BITUPITÁ',
-    location: 'Bitupitá, Ceará, Brasil',
+    propertyTitle: 'TERRENOS PÃ NA AREIA EM BITUPITÃ',
+    location: 'BitupitÃ¡, CearÃ¡, Brasil',
     rating: 5,
-    exclusiveText: '4.300 m² | 10 Projetos de Terrenos Exclusivos',
+    exclusiveText: '4.300 mÂ² | 10 Projetos de Terrenos Exclusivos',
     about: [
-      'A Próxima Fronteira de Valorização: Exclusividade, pé na areia e o m² mais estratégico do Litoral Oeste.',
-      'Existem lugares que o mercado ainda não descobriu, mas o vento sim. Bitupitá é o último refúgio intocado na Rota Costa dos Ventos.',
-      '1. A Nova Rota do Foil: Com ventos constantes durante 6 a 8 meses por ano e águas perfeitas para foil.',
+      'A PrÃ³xima Fronteira de ValorizaÃ§Ã£o: Exclusividade, pÃ© na areia e o mÂ² mais estratÃ©gico do Litoral Oeste.',
+      'Existem lugares que o mercado ainda nÃ£o descobriu, mas o vento sim. BitupitÃ¡ Ã© o Ãºltimo refÃºgio intocado na Rota Costa dos Ventos.',
+      '1. A Nova Rota do Foil: Com ventos constantes durante 6 a 8 meses por ano e Ã¡guas perfeitas para foil.',
       '2. Escassez Real: Um projeto de apenas 10 lotes exclusivos, garantindo baixa densidade e privacidade absoluta.',
-      '3. Acesso Direto Beira-Mar: Propriedades com frente mar livre e acesso imediato à praia.',
-      '4. Segurança Jurídica Terra Ventos: Documentação 100% revisada com matrícula individualizada.'
+      '3. Acesso Direto Beira-Mar: Propriedades com frente mar livre e acesso imediato Ã  praia.',
+      '4. SeguranÃ§a JurÃ­dica Terra Ventos: DocumentaÃ§Ã£o 100% revisada com matrÃ­cula individualizada.'
     ],
     infra: [
-      'Localização Prime e Exclusiva',
+      'LocalizaÃ§Ã£o Prime e Exclusiva',
       'Vila Privativa com 10 projetos',
-      'Pé na areia',
+      'PÃ© na areia',
       'Ideal para o velejo/kite'
     ],
-    facilities: ['Projeto Exclusivo', 'Beira-mar', 'Próximo a serviços'],
+    facilities: ['Projeto Exclusivo', 'Beira-mar', 'PrÃ³ximo a serviÃ§os'],
     gallery: {
       main: '/bitupitaPaginaIndividual/DJI_20251207012123_0102_D.jpg',
       sideTop: '/bitupitaPaginaIndividual/DJI_20251019210638_0111_D.jpg',
@@ -440,27 +440,27 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     title: 'INVESTIMENTO',
     image: '/viladoinglesPaginaInicial/Final 04 (1).png',
     badge: 'Investimento',
-    propertyTitle: 'VILA DO INGLÊS',
-    location: 'Preá, Ceará, Brasil',
+    propertyTitle: 'VILA DO INGLÃS',
+    location: 'PreÃ¡, CearÃ¡, Brasil',
     rating: 5,
-    exclusiveText: '200 m² | 2 Banheiros | 10 Projetos Exclusivos',
+    exclusiveText: '200 mÂ² | 2 Banheiros | 10 Projetos Exclusivos',
     about: [
-      'A Essência do Luxo Sustentável: Uma mistura única de sustentabilidade moderna e tranquilidade.',
-      'Inspirada em um refúgio de Nova York, esta residência oferece 200 m² alimentados inteiramente por energia solar.',
-      '1. Design Sustentável: Sistemas inteligentes com painéis solares no telhado.',
+      'A EssÃªncia do Luxo SustentÃ¡vel: Uma mistura Ãºnica de sustentabilidade moderna e tranquilidade.',
+      'Inspirada em um refÃºgio de Nova York, esta residÃªncia oferece 200 mÂ² alimentados inteiramente por energia solar.',
+      '1. Design SustentÃ¡vel: Sistemas inteligentes com painÃ©is solares no telhado.',
       '2. Conforto Estilo Spa: 2 banheiros modernos e imersivos.',
-      '3. Transparência Dinâmica: Amplas paredes de vidro do chão ao teto.',
-      '4. Privacidade Panorâmica: Terraço privativo no rooftop.',
-      '5. Conexão Exclusiva: O contraste entre a localização premium e a paz isolada.'
+      '3. TransparÃªncia DinÃ¢mica: Amplas paredes de vidro do chÃ£o ao teto.',
+      '4. Privacidade PanorÃ¢mica: TerraÃ§o privativo no rooftop.',
+      '5. ConexÃ£o Exclusiva: O contraste entre a localizaÃ§Ã£o premium e a paz isolada.'
     ],
     infra: [
-      'Sistema de painéis solares no rooftop',
-      'Paredes de vidro do chão ao teto',
-      'Terraço privativo no rooftop',
+      'Sistema de painÃ©is solares no rooftop',
+      'Paredes de vidro do chÃ£o ao teto',
+      'TerraÃ§o privativo no rooftop',
       '2 banheiros modernos',
-      'Localização isolada de alto padrão'
+      'LocalizaÃ§Ã£o isolada de alto padrÃ£o'
     ],
-    facilities: ['!Beira-mar', 'Ar-condicionado', '!Máquina de lavar', '!Internet', 'Aquecedor de água', 'Geladeira', 'Sofá', 'Guarda-roupa'],
+    facilities: ['!Beira-mar', 'Ar-condicionado', '!MÃ¡quina de lavar', '!Internet', 'Aquecedor de Ã¡gua', 'Geladeira', 'SofÃ¡', 'Guarda-roupa'],
     gallery: {
       main: '/viladoinglesPaginaInicial/FINAL 09 (1).png',
       sideTop: '/viladoinglesPaginaInicial/FINAL 01 (3).png',
@@ -500,16 +500,16 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     propertyTitle: 'Casa Matanzas com tinaja / vista mar e bosque',
     location: 'Navidad, O\'Higgins, Chile',
     rating: 5,
-    exclusiveText: 'Descubra Matanzas Paradise 🌊 Casa moderna confortavelmente equipada para 6 hóspedes, vistas panorâmicas espetaculares do mar e da floresta.',
+    exclusiveText: 'Descubra Matanzas Paradise ð Casa moderna confortavelmente equipada para 6 hÃ³spedes, vistas panorÃ¢micas espetaculares do mar e da floresta.',
     about: [
-      'Descubra Matanzas Paradise: Casa moderna confortavelmente equipada para 6 hóspedes.',
-      'Vistas panorâmicas espetaculares do mar e da floresta.',
-      'Ideal para quem busca tranquilidade em um dos destinos de kitesurf e windsurf mais icônicos do Chile.',
-      '1. Fora da rede: energia solar, espaço sustentável em harmonia com a natureza.',
+      'Descubra Matanzas Paradise: Casa moderna confortavelmente equipada para 6 hÃ³spedes.',
+      'Vistas panorÃ¢micas espetaculares do mar e da floresta.',
+      'Ideal para quem busca tranquilidade em um dos destinos de kitesurf e windsurf mais icÃ´nicos do Chile.',
+      '1. Fora da rede: energia solar, espaÃ§o sustentÃ¡vel em harmonia com a natureza.',
       '2. Estacionamento privado no local.',
-      '3. Localização Privilegiada: Apenas 7 min da Praia de Matanzas e La Vega de Pupuya.',
-      '4. Terraço com hot tub (ofurô privado).',
-      '5. Ambiente tranquilo, próximo a restaurantes, supermercados e clubes esportivos.'
+      '3. LocalizaÃ§Ã£o Privilegiada: Apenas 7 min da Praia de Matanzas e La Vega de Pupuya.',
+      '4. TerraÃ§o com hot tub (ofurÃ´ privado).',
+      '5. Ambiente tranquilo, prÃ³ximo a restaurantes, supermercados e clubes esportivos.'
     ],
     infra: [
       'Vista para o mar',
@@ -519,7 +519,7 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
       'Estacionamento gratuito',
       'Hot tub privada',
       'Aceita animais',
-      'Câmeras de segurança externas'
+      'CÃ¢meras de seguranÃ§a externas'
     ],
     facilities: ['Vista mar', 'Vista vale', 'Cozinha completa', 'Wi-Fi', 'Estacionamento', 'Hot tub privada', 'Pets allowed', 'CCTV'],
     gallery: {
@@ -560,10 +560,104 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     },
     mapImage: '/mapa.avif',
     mapUrl: 'https://maps.google.com/maps?q=-33.95,-71.86&z=15&output=embed',
-    priceTag: 'Diária',
+    priceTag: 'DiÃ¡ria',
     price: 'Consulte',
     installments: 'Consulte pacotes',
     reservationUrl: 'https://www.airbnb.com.br/rooms/1495622230762379698?unique_share_id=e222b343-72c6-400c-bec4-afd4286d8719&viralityEntryPoint=1&s=76&source_impression_id=p3_1775581234_P3rzyIdyGvGibmTw',
     category: 'temporada'
+  }
+,
+  {
+    id: '11',
+    slug: 'lote-109-taiba',
+    title: 'VENDA',
+    image: '/taiba/lote109_img-000.jpg',
+    badge: 'Oportunidade',
+    propertyTitle: 'LOTE 109 — TAIBA',
+    location: 'Taiba, Ceará, Brasil',
+    rating: 5,
+    exclusiveText: '560 m² | 14 x 40m | Escritura | Murado | Pronto para Construir',
+    summaryDescription: 'Terreno de 560 m² em localização estratégica entre duas casas já construídas em Taiba, totalmente murado e pronto para construir. Documentação regular com escritura.',
+    about: [
+      'Oportunidade única em Taiba: Lote de 560 m² (14 x 40 m) em localização privilegiada, situado estrategicamente entre duas casas já construídas.',
+      'Segurança Jurídica: Imóvel com Escritura, garantindo transação sólida e proteção patrimonial integral.',
+      'Totalmente murado e sem necessidade de aterro — um grande diferencial na região. Terreno 100% pronto para construir, sem custos adicionais de preparação.',
+      'Taiba é um dos destinos mais valorizados do litoral cearense, conhecida por suas lagoas, ventos constantes ideais para kitesurf, e uma cena gastronômica e hoteleira em plena expansão.',
+      'Valor muito abaixo do mercado — oportunidade para quem busca construir a casa dos sonhos ou investir em um terreno com alto potencial de valorização.'
+    ],
+    infra: [
+      'Área Total: 560 m²',
+      'Dimensões: 14 x 40 metros',
+      'Escritura Pública',
+      'Totalmente Murado',
+      'Pronto para Construir (sem aterro)'
+    ],
+    facilities: ['560 m²', 'Escritura', 'Murado', 'Pronto para Construir', 'Localização Estratégica'],
+    gallery: {
+      main: '/taiba/lote109_img-000.jpg',
+      sideTop: '/taiba/lote109_img-001.jpg',
+      sideBottom: '/taiba/lote109_img-002.jpg',
+      extra: [
+        '/taiba/lote109_img-003.jpg'
+      ]
+    },
+    mapImage: '/mapa.avif',
+    mapUrl: 'https://maps.google.com/maps?q=-3.5125,-38.9090&hl=pt-BR&z=15&output=embed',
+    documents: [
+      {
+        label: 'Ficha do Lote 109',
+        url: '/taiba/Lote_109_Taiba (1).pdf',
+        legend: 'Detalhes completos, características e localização do terreno.'
+      }
+    ],
+    priceTag: '',
+    price: 'R$ 115.000,00',
+    installments: 'À vista',
+    category: 'venda'
+  },
+  {
+    id: '12',
+    slug: 'lote-barramar-lagoa-taiba',
+    title: 'INVESTIMENTO',
+    image: '/taiba/barramar720_img-000.jpg',
+    badge: 'Investimento',
+    propertyTitle: 'LOTE BARRAMAR LAGOA — TAIBA',
+    location: 'Taiba, Ceará, Brasil',
+    rating: 5,
+    exclusiveText: '800 m² | 20 x 40m | ~300m da Lagoa do Kitesurf',
+    summaryDescription: 'Terreno de 800 m² no Loteamento Barramar em Taiba, a apenas 300 metros da Lagoa do Kitesurf. Oportunidade de investimento em zona turística de alta valorização.',
+    about: [
+      'Oportunidade de investimento no Loteamento Barramar, em Taiba, Ceará: terreno de 800 m² (20 x 40 m) em zona turística de alta valorização.',
+      'Localização Privilegiada: A apenas ~300 metros da famosa Lagoa do Kitesurf de Taiba, point mundial para esportes aquáticos e turismo de experiência.',
+      'Taiba é reconhecida internacionalmente como um dos melhores destinos de kitesurf do mundo, com ventos constantes durante 6 a 8 meses por ano e infraestrutura turística em franca expansão.',
+      'O Loteamento Barramar oferece terrenos amplos em uma região que combina tranquilidade, natureza e proximidade a serviços essenciais.',
+      'Ideal para quem busca construir uma casa de veraneio, pousada ou investir em lotes com alto potencial de valorização no litoral cearense.'
+    ],
+    infra: [
+      'Área Total: 800 m²',
+      'Dimensões: 20 x 40 metros',
+      'Distância da Lagoa: ~300 metros',
+      'Loteamento Barramar'
+    ],
+    facilities: ['800 m²', 'Próximo à Lagoa', 'Kitesurf Paradise', 'Zona Turística'],
+    gallery: {
+      main: '/taiba/barramar720_img-000.jpg',
+      sideTop: '/taiba/barramar720_img-001.jpg',
+      sideBottom: '/taiba/Picture.png',
+      extra: []
+    },
+    mapImage: '/mapa.avif',
+    mapUrl: 'https://maps.google.com/maps?q=-3.5125,-38.9090&hl=pt-BR&z=15&output=embed',
+    documents: [
+      {
+        label: 'Ficha do Lote Barramar Lagoa',
+        url: '/taiba/Lote_Barramar_Lagoa.pdf',
+        legend: 'Detalhes completos do terreno no Loteamento Barramar.'
+      }
+    ],
+    priceTag: '',
+    price: 'R$ 215.000,00',
+    installments: 'Consulte condições',
+    category: 'investimento'
   }
 ];
