@@ -23,6 +23,8 @@ import ListagemPropriedades from "./components/ListagemPropriedades";
 import BlogSection from "./components/BlogSection";
 import LazyImage from "./components/LazyImage";
 import PaginaTaiba from "./components/PaginaTaiba";
+import ListagemPropriedadesV2 from './components/ListagemPropriedadesV2';
+import PaginaIndividualV2 from './components/PaginaIndividualV2';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -49,7 +51,7 @@ function App() {
       return oportunidadesData[0];
     });
   const cleanPath = currentPath.replace(/^\/(en|es)/, "").replace(/\/$/, "") || "/";
-  const isPaginaIndividual = cleanPath.startsWith("/propriedade/");
+  const isPaginaIndividual = cleanPath.startsWith("/propriedade/") || cleanPath.startsWith("/propriedade-v2/");
   const isVentoAfavor = cleanPath === "/ventoafavor";
   const [transitionClass, setTransitionClass] = useState<
     "page-enter" | "page-exit"
@@ -77,11 +79,11 @@ function App() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Anti-FOUC: marca o root como pronto assim que o React monta e os estilos estão aplicados
+  // Anti-FOUC: marca o root como pronto assim que o React monta e os estilos estÃ£o aplicados
   useEffect(() => {
     const root = document.getElementById("root");
     if (root) {
-      // rAF garante que o browser já pintou o primeiro frame com os estilos corretos
+      // rAF garante que o browser jÃ¡ pintou o primeiro frame com os estilos corretos
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           root.classList.add("app-ready");
@@ -246,9 +248,9 @@ function App() {
     ].includes(cleanPath);
     if (isInstitutional) return;
 
-    const title = "Terra Ventos | Imóveis de Luxo e Investimentos no Ceará";
+    const title = "Terra Ventos | ImÃ³veis de Luxo e Investimentos no CearÃ¡";
     const description =
-      "Curadoria exclusiva de imóveis de alto padrão e oportunidades de investimento no litoral cearense (Preá, Tatajuba, Bitupitá).";
+      "Curadoria exclusiva de imÃ³veis de alto padrÃ£o e oportunidades de investimento no litoral cearense (PreÃ¡, Tatajuba, BitupitÃ¡).";
     const imageUrl = `${window.location.origin}/banners/2.png`;
     const url = window.location.origin + currentPath;
 
@@ -272,7 +274,7 @@ function App() {
     updateMeta("twitter:image", imageUrl);
   }, [currentPath, cleanPath, isPaginaIndividual, t]);
 
-  // Hreflang tags for SEO — indicam versões em outros idiomas
+  // Hreflang tags for SEO â indicam versÃµes em outros idiomas
   useEffect(() => {
     const baseUrl = window.location.origin;
     const path = currentPath;
@@ -298,7 +300,7 @@ function App() {
     xDefault.href = `${baseUrl}${path}`;
     document.head.appendChild(xDefault);
 
-    // ✅ Canônica — sempre atualiza o href, nunca cria duplicada
+    // â CanÃ´nica â sempre atualiza o href, nunca cria duplicada
     let canonical = document.querySelector(
       'link[rel="canonical"]',
     ) as HTMLLinkElement | null;
@@ -315,7 +317,7 @@ function App() {
     runTransitionTo(`/propriedade/${item.slug}`);
   };
 
-  // Rota /ventoafavor — fullscreen sem header/footer, com botão de retorno flutuante
+  // Rota /ventoafavor â fullscreen sem header/footer, com botÃ£o de retorno flutuante
   if (isVentoAfavor) {
     return <VentoAfavor onBack={() => runTransitionTo("/")} />;
   }
@@ -445,7 +447,7 @@ function App() {
           </a>
         </nav>
 
-        {/* Language selector — outside nav so it stays visible on mobile */}
+        {/* Language selector â outside nav so it stays visible on mobile */}
         <div className="language-selector-wrapper" ref={langRef}>
           <button
             className="language-selector-trigger"
@@ -501,7 +503,7 @@ function App() {
                 }}
               >
                 <img src="https://flagcdn.com/w20/br.png" alt="PT" />{" "}
-                <span>Português</span>
+                <span>PortuguÃªs</span>
               </button>
               <button
                 onClick={() => {
@@ -521,7 +523,7 @@ function App() {
                 }}
               >
                 <img src="https://flagcdn.com/w20/es.png" alt="ES" />{" "}
-                <span>Español</span>
+                <span>EspaÃ±ol</span>
               </button>
             </div>
           )}
@@ -562,7 +564,7 @@ function App() {
         <div className={`page-shell ${transitionClass}`}>
           {/* SEO H1 - Visually hidden but accessible to crawlers */}
           <h1 className="sr-only">
-            Terra Ventos | Imóveis de Luxo e Investimentos no Ceará
+            Terra Ventos | ImÃ³veis de Luxo e Investimentos no CearÃ¡
           </h1>
           {isPaginaIndividual ? (
             <PaginaIndividual item={selectedOpportunity} />
@@ -573,6 +575,12 @@ function App() {
                 onSelect={handleSelectOpportunity}
               />
             </div>
+          ) : cleanPath === "/propriedades-v2" ? (
+            <div id="propriedades-v2">
+              <ListagemPropriedadesV2 />
+            </div>
+          ) : cleanPath.startsWith("/propriedade-v2/") ? (
+            <PaginaIndividualV2 />
           ) : cleanPath === "/taiba" ? (
             <div id="taiba">
               <PaginaTaiba />
@@ -632,7 +640,7 @@ function App() {
                           (prev) => (prev + 1) % heroSlides.length,
                         )
                       }
-                      aria-label="Próximo"
+                      aria-label="PrÃ³ximo"
                     >
                       <svg
                         width="24"
@@ -762,7 +770,7 @@ function App() {
                 </section>
               </div>
 
-              {/* SEO: Conteúdo descritivo visível para buscadores e leitores */}
+              {/* SEO: ConteÃºdo descritivo visÃ­vel para buscadores e leitores */}
               <section className="seo-intro-content">
                 <div className="seo-intro-container">
                   <p>
