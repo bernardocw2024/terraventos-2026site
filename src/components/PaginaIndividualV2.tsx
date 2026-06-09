@@ -7,7 +7,7 @@ import { resolveProperty } from './PropriedadesV2';
 
 type PaginaIndividualV2Props = {
   slug?: string;
-  item?: OportunidadeDetalhe; // Permite passar o item via props se já tivermos, mas prioriza o slug
+  item?: OportunidadeDetalhe; // Permite passar o item via props se jÃ¡ tivermos, mas prioriza o slug
 };
 
 export default function PaginaIndividualV2({ slug, item: propItem }: PaginaIndividualV2Props) {
@@ -30,16 +30,12 @@ export default function PaginaIndividualV2({ slug, item: propItem }: PaginaIndiv
     return null;
   })();
 
-  // If data not loaded yet, show loading (AFTER all hooks)
-  if (!jsonLoaded || !resolvedItem) {
-    return <section className="pagina-individual"><div className="pi-main"><p style={{textAlign:'center',padding:'4rem'}}>Carregando...</p></div></section>;
-  }
   const item = resolvedItem;
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const [lightboxVideo, setLightboxVideo] = useState<string | null>(null);
   const [isAlbumOpen, setIsAlbumOpen] = useState(false);
 
-  // Coleta todas as fotos disponíveis para o álbum
+  // Coleta todas as fotos disponÃ­veis para o Ã¡lbum
   const allPhotos = [
     item.gallery.main,
     item.gallery.sideTop,
@@ -83,6 +79,11 @@ export default function PaginaIndividualV2({ slug, item: propItem }: PaginaIndiv
       document.body.style.overflow = '';
     };
   }, [item, i18n.language]);
+
+  // Loading guard - AFTER all hooks
+  if (!jsonLoaded || !item) {
+    return <section className="pagina-individual"><div className="pi-main"><p style={{textAlign:'center',padding:'4rem'}}>Carregando...</p></div></section>;
+  }
 
   const openLightbox = (src: string) => {
     setLightboxImage(src);
@@ -195,7 +196,7 @@ export default function PaginaIndividualV2({ slug, item: propItem }: PaginaIndiv
         </div>
         <p className="pi-exclusive">{item.exclusiveText}</p>
 
-        {/* ── GALLERY STRIP BUTTON ── */}
+        {/* ââ GALLERY STRIP BUTTON ââ */}
         {allPhotos.length > 1 && (
           <button className="pi-gallery-strip" onClick={openAlbum} aria-label="Abrir galeria de fotos">
             <div className="pi-gallery-strip-previews">
@@ -263,12 +264,12 @@ export default function PaginaIndividualV2({ slug, item: propItem }: PaginaIndiv
                   if (l.includes('piscina')) return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.5 0 2.5 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.5 0 2.5 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.5 0 2.5 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /></svg>;
                   if (l.includes('cozinha')) return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M6 13V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v5" /><path d="M4 13h10" /><path d="M10 16v4" /><path d="M18 3v18" /><path d="M15 13h6" /><circle cx="18" cy="18" r="2" /></svg>;
                   if (l.includes('estacionamento') || l.includes('vaga') || l.includes('parking')) return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M9 17V7h4a3 3 0 0 1 0 6H9" /></svg>;
-                  if (l.includes('portaria') || l.includes('segurança') || l.includes('security')) return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>;
+                  if (l.includes('portaria') || l.includes('seguranÃ§a') || l.includes('security')) return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>;
                   if (l.includes('quarto') || l.includes('dormitorio') || l.includes('bedroom')) return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 7V5a2 2 0 012-2h14a2 2 0 012 2v2" /><path d="M3 13h18M3 17h18M3 21h18M21 7v14M3 7v14" /></svg>;
                   if (l.includes('banheiro') || l.includes('lavabo') || l.includes('bath')) return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M7 21a2 2 0 0 1-2-2v-1h14v1a2 2 0 0 1-2 2H7z" /><path d="M18 14V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v10" /><path d="M2 14h20" /><path d="M6 20h12" /></svg>;
-                  if (l.includes('projeto exclusivo') || l.includes('projeto urbanístico')) return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polygon points="12 2 15 8.5 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 9 8.5 12 2" /></svg>;
+                  if (l.includes('projeto exclusivo') || l.includes('projeto urbanÃ­stico')) return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polygon points="12 2 15 8.5 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 9 8.5 12 2" /></svg>;
                   if (l.includes('parcelamento') || l.includes('financiamento')) return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="10" width="18" height="12" rx="2" /><path d="M7 10V7a5 5 0 0 1 10 0v3" /><path d="M12 14v4" /><path d="M10 16h4" /></svg>;
-                  if (l.includes('áreas verdes') || l.includes('natureza')) return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2L4 12H8L4 20H11V24H13V20H20L16 12H20L12 2Z" /></svg>;
+                  if (l.includes('Ã¡reas verdes') || l.includes('natureza')) return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2L4 12H8L4 20H11V24H13V20H20L16 12H20L12 2Z" /></svg>;
                   if (l.includes('pronto para construir')) return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 20h18L12 4z" /><path d="M7 16h10" /></svg>;
                   if (l.includes('vale')) return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M8 18l-6-6 6-6M12 2l-8 18h16L12 2z" /><path d="M12 2l-4 12h8L12 2z" /><path d="M16 18l6-6-6-6" /></svg>;
                   if (l.includes('jacuzzi') || l.includes('hidromassagem')) return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M22 12c0 5.5-4.5 10-10 10S2 17.5 2 12s4.5-10 10-10 10 4.5 10 10z" /><path d="M7 12c0 2.8 2.2 5 5 5s5-2.2 5-5" /><path d="M12 7v5" /></svg>;
@@ -288,7 +289,7 @@ export default function PaginaIndividualV2({ slug, item: propItem }: PaginaIndiv
             {item.videoSources && item.videoSources.length > 0 && (
               <div className="pi-video-gallery-v3">
                 <div className="pi-section-header">
-                  <h3 className="pi-section-title">{t('pagina.videoGallery') || 'Galeria de Vídeos'}</h3>
+                  <h3 className="pi-section-title">{t('pagina.videoGallery') || 'Galeria de VÃ­deos'}</h3>
                 </div>
                 
                 <div className="pi-video-grid-v3">
@@ -380,7 +381,7 @@ export default function PaginaIndividualV2({ slug, item: propItem }: PaginaIndiv
                 {t('hero.card.experience').replace('\n', ' ')}
               </p>
               <div className="pi-stars">
-                ★★★★★
+                âââââ
               </div>
               
               {item.reservationUrl ? (
@@ -433,7 +434,7 @@ export default function PaginaIndividualV2({ slug, item: propItem }: PaginaIndiv
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title={`Mapa de localização para ${item.propertyTitle}`}
+              title={`Mapa de localizaÃ§Ã£o para ${item.propertyTitle}`}
             />
           ) : (
             <img src={item.mapImage} alt={`Mapa da localizacao de ${item.propertyTitle}`} className="pi-map" />
@@ -453,7 +454,7 @@ export default function PaginaIndividualV2({ slug, item: propItem }: PaginaIndiv
           {lightboxImage && (
             <img 
               src={lightboxImage} 
-              alt="Visualização ampliada" 
+              alt="VisualizaÃ§Ã£o ampliada" 
               className="pi-lightbox-img" 
               onClick={(e) => e.stopPropagation()} 
             />
