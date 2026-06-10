@@ -79,11 +79,11 @@ function App() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Anti-FOUC: marca o root como pronto assim que o React monta e os estilos estÃÂÃÂ£o aplicados
+  // Anti-FOUC: marca o root como pronto assim que o React monta e os estilos estão aplicados
   useEffect(() => {
     const root = document.getElementById("root");
     if (root) {
-      // rAF garante que o browser jÃÂÃÂ¡ pintou o primeiro frame com os estilos corretos
+      // rAF garante que o browser já pintou o primeiro frame com os estilos corretos
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           root.classList.add("app-ready");
@@ -248,9 +248,9 @@ function App() {
     ].includes(cleanPath);
     if (isInstitutional) return;
 
-    const title = "Terra Ventos | ImÃÂÃÂ³veis de Luxo e Investimentos no CearÃÂÃÂ¡";
+    const title = "Terra Ventos | Imóveis de Luxo e Investimentos no Ceará";
     const description =
-      "Curadoria exclusiva de imÃÂÃÂ³veis de alto padrÃÂÃÂ£o e oportunidades de investimento no litoral cearense (PreÃÂÃÂ¡, Tatajuba, BitupitÃÂÃÂ¡).";
+      "Curadoria exclusiva de imóveis de alto padrão e oportunidades de investimento no litoral cearense (Preá, Tatajuba, Bitupitá).";
     const imageUrl = `${window.location.origin}/banners/2.png`;
     const url = window.location.origin + currentPath;
 
@@ -274,7 +274,7 @@ function App() {
     updateMeta("twitter:image", imageUrl);
   }, [currentPath, cleanPath, isPaginaIndividual, t]);
 
-  // Hreflang tags for SEO ÃÂ¢ÃÂÃÂ indicam versÃÂÃÂµes em outros idiomas
+  // Hreflang tags for SEO — indicam versões em outros idiomas
   useEffect(() => {
     const baseUrl = window.location.origin;
     const path = currentPath;
@@ -300,7 +300,7 @@ function App() {
     xDefault.href = `${baseUrl}${path}`;
     document.head.appendChild(xDefault);
 
-    // ÃÂ¢ÃÂÃÂ CanÃÂÃÂ´nica ÃÂ¢ÃÂÃÂ sempre atualiza o href, nunca cria duplicada
+    // ✅ Canônica — sempre atualiza o href, nunca cria duplicada
     let canonical = document.querySelector(
       'link[rel="canonical"]',
     ) as HTMLLinkElement | null;
@@ -317,7 +317,7 @@ function App() {
     runTransitionTo(`/propriedade/${item.slug}`);
   };
 
-  // Rota /ventoafavor ÃÂ¢ÃÂÃÂ fullscreen sem header/footer, com botÃÂÃÂ£o de retorno flutuante
+  // Rota /ventoafavor — fullscreen sem header/footer, com botão de retorno flutuante
   if (isVentoAfavor) {
     return <VentoAfavor onBack={() => runTransitionTo("/")} />;
   }
@@ -447,7 +447,7 @@ function App() {
           </a>
         </nav>
 
-        {/* Language selector ÃÂ¢ÃÂÃÂ outside nav so it stays visible on mobile */}
+        {/* Language selector — outside nav so it stays visible on mobile */}
         <div className="language-selector-wrapper" ref={langRef}>
           <button
             className="language-selector-trigger"
@@ -503,7 +503,7 @@ function App() {
                 }}
               >
                 <img src="https://flagcdn.com/w20/br.png" alt="PT" />{" "}
-                <span>PortuguÃÂÃÂªs</span>
+                <span>Português</span>
               </button>
               <button
                 onClick={() => {
@@ -523,7 +523,7 @@ function App() {
                 }}
               >
                 <img src="https://flagcdn.com/w20/es.png" alt="ES" />{" "}
-                <span>EspaÃÂÃÂ±ol</span>
+                <span>Español</span>
               </button>
             </div>
           )}
@@ -564,9 +564,11 @@ function App() {
         <div className={`page-shell ${transitionClass}`}>
           {/* SEO H1 - Visually hidden but accessible to crawlers */}
           <h1 className="sr-only">
-            Terra Ventos | ImÃÂÃÂ³veis de Luxo e Investimentos no CearÃÂÃÂ¡
+            Terra Ventos | Imóveis de Luxo e Investimentos no Ceará
           </h1>
-          {isPaginaIndividual ? (
+          {cleanPath.startsWith("/propriedade-v2/") ? (
+            <PaginaIndividualV2 slug={cleanPath.replace("/propriedade-v2/", "").split("?")[0].split("#")[0].replace(/\/$/, "")} />
+          ) : isPaginaIndividual ? (
             <PaginaIndividual item={selectedOpportunity} />
           ) : cleanPath === "/propriedades" ? (
             <div id="propriedades">
@@ -578,8 +580,6 @@ function App() {
             <div id="propriedades-v2">
               <PropriedadesV2 />
             </div>
-          ) : cleanPath.startsWith("/propriedade-v2/") ? (
-            <PaginaIndividualV2 slug={cleanPath.replace("/propriedade-v2/", "").split("?")[0].split("#")[0].replace(/\/$/, "")} />
           ) : cleanPath === "/taiba" ? (
             <div id="taiba">
               <PaginaTaiba />
@@ -639,7 +639,7 @@ function App() {
                           (prev) => (prev + 1) % heroSlides.length,
                         )
                       }
-                      aria-label="PrÃÂÃÂ³ximo"
+                      aria-label="Próximo"
                     >
                       <svg
                         width="24"
@@ -769,7 +769,7 @@ function App() {
                 </section>
               </div>
 
-              {/* SEO: ConteÃÂÃÂºdo descritivo visÃÂÃÂ­vel para buscadores e leitores */}
+              {/* SEO: Conteúdo descritivo visível para buscadores e leitores */}
               <section className="seo-intro-content">
                 <div className="seo-intro-container">
                   <p>
