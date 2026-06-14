@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terra Ventos Founders - Gerador de Convites</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#142431;--gold:#C8B49B;--dark:#0d1a24;--cream:#F5F0EB;--white:#FFFFFF}
+body{font-family:'Inter',sans-serif;background:var(--navy);color:var(--cream);min-height:100vh;padding:2rem}
+.container{max-width:700px;margin:0 auto}
+h1{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--white);text-align:center;margin-bottom:0.3rem}
+.sub{text-align:center;color:var(--gold);font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:2rem}
+.card{background:linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.01));border:1px solid rgba(200,180,155,0.15);border-radius:16px;padding:2rem;margin-bottom:1.5rem}
+.card h2{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--white);margin-bottom:1rem}
+label{display:block;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;font-weight:500}
+input,select,textarea{width:100%;padding:0.8rem 1rem;background:rgba(255,255,255,0.06);border:1px solid rgba(200,180,155,0.15);border-radius:8px;color:var(--cream);font-family:'Inter',sans-serif;font-size:0.95rem;outline:none;margin-bottom:1rem;transition:border-color 0.3s}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C8B49B' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
+select option{background:var(--navy);color:var(--cream)}
+textarea{resize:vertical;min-height:120px;font-family:monospace;font-size:0.85rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:600px){.row{grid-template-columns:1fr}}
+.btn{display:inline-block;padding:0.8rem 1.5rem;background:linear-gradient(135deg,var(--gold),#b8a48b);color:var(--navy);font-weight:600;font-size:0.9rem;border:none;border-radius:8px;cursor:pointer;letter-spacing:1px;transition:all 0.3s;text-decoration:none;margin-right:0.5rem;margin-bottom:0.5rem}
+.btn:hover{transform:translateY(-1px);box-shadow:0 4px 15px rgba(200,180,155,0.3)}
+.btn.outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+.btn.outline:hover{background:rgba(200,180,155,0.1)}
+.result{margin-top:1rem;padding:1rem;background:rgba(200,180,155,0.08);border:1px solid rgba(200,180,155,0.2);border-radius:8px;word-break:break-all;font-size:0.9rem;display:none}
+.result a{color:var(--gold)}
+.batch-results{margin-top:1rem;display:none}
+.batch-item{display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid rgba(200,180,155,0.1);flex-wrap:wrap;gap:0.5rem}
+.batch-item:last-child{border-bottom:none}
+.batch-item .name{color:var(--white);font-weight:500}
+.batch-item .link{color:var(--gold);font-size:0.85rem;word-break:break-all;flex:1;margin:0 1rem}
+.batch-item .actions{display:flex;gap:0.3rem;flex-shrink:0}
+.btn-sm{padding:0.4rem 0.8rem;font-size:0.75rem;margin:0}
+.copied{background:rgba(200,180,155,0.2);color:var(--gold);border:1px solid var(--gold)}
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);padding:0.8rem 1.5rem;border-radius:8px;font-weight:600;font-size:0.85rem;opacity:0;transition:opacity 0.3s;pointer-events:none;z-index:100}
+.toast.show{opacity:1}
+footer{text-align:center;margin-top:2rem;padding:1rem}
+footer a{color:var(--gold);text-decoration:none;font-size:0.85rem}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Gerador de Convites</h1>
+<p class="sub">Terra Ventos Founders &bull; Uso Interno</p>
+
+<div class="card">
+<h2>Convite Individual</h2>
+<div class="row">
+<div><label>Nome do Convidado</label><input type="text" id="single-name" placeholder="Ex: Joao Silva"></div>
+<div><label>Idioma</label><select id="single-lang"><option value="pt">Portugues</option><option value="en">English</option></select></div>
+</div>
+<label>WhatsApp do Convidado (opcional)</label>
+<input type="tel" id="single-whatsapp" placeholder="+55 85 99999-9999">
+<div style="margin-top:0.5rem">
+<button class="btn" onclick="generateSingle()">Gerar Link</button>
+<button class="btn outline" onclick="previewSingle()">Preview</button>
+</div>
+<div class="result" id="single-result"></div>
+</div>
+
+<div class="card">
+<h2>Convites em Lote</h2>
+<label>Nomes (um por linha)</label>
+<textarea id="batch-names" placeholder="Joao Silva&#10;Maria Santos&#10;Pedro Costa"></textarea>
+<div class="row">
+<div><label>Idioma</label><select id="batch-lang"><option value="pt">Portugues</option><option value="en">English</option></select></div>
+<div style="display:flex;align-items:flex-end;padding-bottom:1rem"><button class="btn" onclick="generateBatch()">Gerar Links</button></div>
+</div>
+<div class="batch-results" id="batch-results"></div>
+<div style="display:none;margin-top:1rem" id="batch-actions">
+<button class="btn" onclick="copyAllLinks()">Copiar Todos os Links</button>
+</div>
+</div>
+
+<footer>
+<a href="/founders">&larr; Voltar para pagina Founders</a>
+</footer>
+</div>
+
+<div class="toast" id="toast">Link copiado!</div>
+
+<script>
+var BASE='https://terraventos.com/founders';
+var MSG_PT='Ola {nome}! Voce foi convidado para a comunidade *Terra Ventos Founders* - 30 membros fundadores conectando investidores e kitesurfistas no Ceara. Veja seu convite personalizado: {link}';
+var MSG_EN='Hello {nome}! You have been invited to the *Terra Ventos Founders* community - 30 founding members connecting investors and kitesurfers in Ceara, Brazil. See your personalized invite: {link}';
+
+function showToast(msg){var t=document.getElementById('toast');t.textContent=msg||'Link copiado!';t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2000)}
+
+function makeLink(name){return BASE+'?nome='+encodeURIComponent(name.trim())}
+
+function makeWhatsAppLink(name,phone,lang){
+var link=makeLink(name);
+var msg=lang==='en'?MSG_EN:MSG_PT;
+msg=msg.replace('{nome}',name.trim()).replace('{link}',link);
+var url='https://wa.me/';
+if(phone){url+=phone.replace(/[\s\-\(\)\+]/g,'');}
+url+='?text='+encodeURIComponent(msg);
+return url;
+}
+
+function copyText(text){navigator.clipboard.writeText(text).then(function(){showToast()}).catch(function(){var ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);showToast()})}
+
+function generateSingle(){
+var name=document.getElementById('single-name').value.trim();
+if(!name){alert('Digite o nome do convidado');return}
+var lang=document.getElementById('single-lang').value;
+var phone=document.getElementById('single-whatsapp').value.trim();
+var link=makeLink(name);
+var waLink=makeWhatsAppLink(name,phone,lang);
+var r=document.getElementById('single-result');
+r.style.display='block';
+r.innerHTML='<p style="margin-bottom:0.5rem"><strong>Link:</strong> <a href="'+link+'" target="_blank">'+link+'</a></p>'
++'<div style="margin-top:0.5rem">'
++'<button class="btn btn-sm" onclick="copyText(\''+link.replace(/'/g,"\\'")+'\')">Copiar Link</button>'
++'<a class="btn btn-sm" href="'+waLink+'" target="_blank" rel="noopener">Enviar via WhatsApp</a>'
++'<a class="btn btn-sm outline" href="'+link+'" target="_blank">Preview</a>'
++'</div>';
+}
+
+function previewSingle(){
+var name=document.getElementById('single-name').value.trim();
+if(!name){alert('Digite o nome do convidado');return}
+window.open(makeLink(name),'_blank');
+}
+
+function generateBatch(){
+var text=document.getElementById('batch-names').value.trim();
+if(!text){alert('Digite os nomes');return}
+var names=text.split('\n').filter(function(n){return n.trim()});
+var lang=document.getElementById('batch-lang').value;
+var container=document.getElementById('batch-results');
+var html='';
+names.forEach(function(name){
+name=name.trim();
+if(!name)return;
+var link=makeLink(name);
+var waLink=makeWhatsAppLink(name,'',lang);
+html+='<div class="batch-item">'
++'<span class="name">'+name+'</span>'
++'<span class="link">'+link+'</span>'
++'<span class="actions">'
++'<button class="btn btn-sm" onclick="copyText(\''+link.replace(/'/g,"\\'")+'\')">Copiar</button>'
++'<a class="btn btn-sm outline" href="'+waLink+'" target="_blank" rel="noopener">WhatsApp</a>'
++'</span></div>';
+});
+container.innerHTML=html;
+container.style.display='block';
+document.getElementById('batch-actions').style.display='block';
+}
+
+function copyAllLinks(){
+var text=document.getElementById('batch-names').value.trim();
+var names=text.split('\n').filter(function(n){return n.trim()});
+var links=names.map(function(n){return n.trim()+': '+makeLink(n)}).join('\n');
+copyText(links);
+showToast('Todos os links copiados!');
+}
+</script>
+</body>
+</html>
