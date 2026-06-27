@@ -10,6 +10,15 @@
     "min_daily_budget_brl": 5.14
   },
 
+  "drive": {
+    "root_folder_id": "1c61SH6oMyFIVdVmBnNQO7SWcCaBSzNL7",
+    "raw": "1idaKJolUGY10RnZRorx884OdA6x_gt_6",
+    "generated": "1aXs3xCS_cSfkYjw8tKG38WCcLpJYccl0",
+    "creatives": "1VlosLx5jUq5G0hTzq1_egnwUwwJJuGnH",
+    "whitelisting": "1jvNuKMtU02skwquZ2IZfI9zkyM19WTaz",
+    "reports": "1Yj7FE6WGp2SIO7YfI7Zwd5KgDNEG6l5n"
+  },
+
   "budget": {
     "daily_test_total_brl": 100,
     "per_unit_daily_brl": 6.5,

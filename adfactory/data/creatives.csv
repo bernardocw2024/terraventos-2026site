@@ -1,1 +1,2 @@
 creative_id,concept_id,hook_id,language,format,opening_variant,property_ref,source_asset,ai_used,ai_label,meta_ad_id,adset_id,campaign_id,utm_content,status,impressions,hook_rate,hold_rate,ctr,cost_per_lp_view,cpl,qual_leads,cost_per_qual_lead,decision,decided_at,confidence,notes
+C1-PT-9x16-reveal-v1,C1,BR-02,PT,9x16-reveal,reveal,bitupita-projeto,hf:346c7142-0cf5-45d1-8d25-13efed327b56,TRUE,Projeção 3D,,,,C1-PT-9x16-reveal-v1,draft,,,,,,,,,,,,"Render Runway a partir de /bitupita.JPG. Pareie com foto real. QA visual pendente."
