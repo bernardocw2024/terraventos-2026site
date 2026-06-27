@@ -1,0 +1,68 @@
+{
+  "_comment": "Copie para config.json (git-ignored). NADA fixo no código — todos os limites aqui.",
+
+  "meta": {
+    "ad_account_id": "act_1631628834217759",
+    "business_id": "644652842069333",
+    "page_id": "644651102069507",
+    "dataset_id": "PREENCHER_APOS_F2",
+    "currency": "BRL",
+    "min_daily_budget_brl": 5.14
+  },
+
+  "budget": {
+    "daily_test_total_brl": 100,
+    "per_unit_daily_brl": 6.5,
+    "max_units_round_1": 16,
+    "hard_stop_total_brl": 3000
+  },
+
+  "data_gate": {
+    "min_impressions_per_unit": 1000,
+    "min_spend_per_unit_brl": 15,
+    "read_window_hours": 72
+  },
+
+  "qualification": {
+    "qualified_lead_definition": "whatsapp_conversation_within_icp",
+    "target_cost_per_qualified_lead_brl": 200,
+    "cpl_acceptable_range_brl": [150, 250]
+  },
+
+  "bracket": {
+    "kill_metric_stage_a": "hook_rate",
+    "graduate_metric_stage_b": "cost_per_qualified_lead",
+    "winners_to_revary": 8,
+    "low_confidence_max_impressions": 3000
+  },
+
+  "geos": {
+    "include": ["DE", "FR", "NL", "GB", "ES", "PT", "AR", "BR"],
+    "br_regions": ["SP", "RJ", "MG"],
+    "exclude": ["EG", "MENA"]
+  },
+
+  "languages": ["pt-BR", "en", "es-ES", "es-AR"],
+
+  "compliance": {
+    "declare_housing_special_category": true,
+    "demographic_targeting_allowed": false,
+    "min_budget_anti_persona_brl": 150000
+  },
+
+  "inventory_focus": {
+    "min_lot_price_brl": 700000,
+    "include_tiers": ["lote_700k+", "casa_luxo", "projeto_proprio"],
+    "own_project_exception": "bitupita-projeto"
+  },
+
+  "factual_guardrails": {
+    "wind_season": "junho-dezembro (6 meses)",
+    "forbid_phrases": ["o ano todo", "vento constante", "perto de Jeri", "near Jeri"],
+    "price_only_from_live_listing": true,
+    "ai_image_requires_label": true
+  },
+
+  "tagline": "Invista com o vento a favor / Invest with the wind at your back",
+  "dry_run_default": true
+}
