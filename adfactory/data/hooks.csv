@@ -1,0 +1,54 @@
+hook_id,segment,language,text,notes
+EU-LIF-01,primario_europeu,PT,"E se o seu spot de kite tivesse o seu nome na escritura?",lifestyle/propriedade
+EU-LIF-01,primario_europeu,EN,"What if your favourite kite spot had your name on the deed?",lifestyle/propriedade
+EU-LIF-01,primario_europeu,ES-ES,"¿Y si tu spot de kite tuviera tu nombre en la escritura?",lifestyle/propriedade
+EU-LIF-02,primario_europeu,PT,"Seis meses de vento, de junho a dezembro. O resto do ano, é seu para viver.",temporada correta
+EU-LIF-02,primario_europeu,EN,"Six months of wind, June to December. The rest of the year, it's yours to live in.",temporada correta
+EU-LIF-02,primario_europeu,ES-ES,"Seis meses de viento, de junio a diciembre. El resto del año, es tuyo para vivir.",temporada correta
+EU-LIF-03,primario_europeu,PT,"Tarifa em agosto, lotado. Aqui, o vento é só seu.",comparacao Tarifa
+EU-LIF-03,primario_europeu,EN,"Tarifa in August is a crowd. Here, the wind is yours alone.",comparacao Tarifa
+EU-LIF-03,primario_europeu,ES-ES,"Tarifa en agosto, lleno. Aquí, el viento es solo tuyo.",comparacao Tarifa
+EU-WING-01,primario_europeu,PT,"A primeira batida de wing ao amanhecer, antes de qualquer um chegar.",wingfoil
+EU-WING-01,primario_europeu,EN,"The first wing session at dawn — before anyone else is on the water.",wingfoil
+EU-WING-01,primario_europeu,ES-ES,"La primera sesión de wing al amanecer, antes de que llegue nadie.",wingfoil
+EU-WING-02,primario_europeu,PT,"Downwind de foil entre dunas. Depois, café na sua varanda.",wingfoil
+EU-WING-02,primario_europeu,EN,"A foil downwinder between the dunes. Then coffee on your own veranda.",wingfoil
+EU-WING-02,primario_europeu,ES-ES,"Un downwind de foil entre dunas. Después, café en tu propia terraza.",wingfoil
+EU-REN-01,primario_europeu,PT,"Voa na temporada. Rentabiliza quando você não está.",renda suave
+EU-REN-01,primario_europeu,EN,"Ride it in season. Let it earn when you're away.",renda suave
+EU-REN-01,primario_europeu,ES-ES,"Navegás en temporada. Rinde cuando no estás.",renda suave
+AR-HEDGE-01,secundario_argentino,ES-AR,"Ya kiteás en Brasil. ¿Y si en vez de alquilar, fuera tuyo?",voseo
+AR-HEDGE-02,secundario_argentino,ES-AR,"Tu plata, en ladrillos a la orilla del mar — no en un banco que no controlás.",voseo
+AR-HEDGE-03,secundario_argentino,ES-AR,"El viento no tiene cepo. Tu inversión, tampoco debería.",voseo
+AR-HEDGE-04,secundario_argentino,ES-AR,"La comunidad argentina ya está en Ceará. Falta tu lugar.",voseo
+AR-HEDGE-05,secundario_argentino,ES-AR,"Un activo en reales, en una costa que se valoriza. Hablemos sin vueltas.",voseo
+GV-01,terciario_golden_visa,EN,"Residency in Brazil starts with the right coastal asset. I'll show you which one.",RN36 >=700k
+GV-02,terciario_golden_visa,EN,"A second passport conversation that begins on a beach, not in a queue.",RN36
+GV-03,terciario_golden_visa,ES-ES,"Tu residencia en Brasil empieza por el activo correcto en la costa. Te asesoro.",RN36
+GV-04,terciario_golden_visa,PT,"Cidadania, diversificação e pé na areia — na ordem certa, com segurança jurídica.",RN36
+GV-05,terciario_golden_visa,EN,"Most people buy the property and then learn the law. We do it the other way around.",advisory
+BR-01,quaternario_br,PT,"Você conhece o mercado. Você só ainda não conhece a Costa do Kite.",alta renda BR
+BR-02,quaternario_br,PT,"Antes de Jeri virar Jeri, alguém comprou cedo. Bitupitá é esse momento agora.",Bitupitá nova fronteira
+BR-03,quaternario_br,PT,"Segunda casa que o mercado ainda não precificou.",alta renda BR
+BR-04,quaternario_br,PT,"Curadoria, não classificado. A diferença aparece na escritura.",boutique
+MACRO-01,tese_macro,PT,"Bilhões em energia eólica não chegam a uma costa por acaso. O capital vem atrás.",Estudo dos Ventos
+MACRO-01,tese_macro,EN,"Billions in wind-energy investment don't land on a coast by accident. Capital follows.",Estudo dos Ventos
+MACRO-01,tese_macro,ES-ES,"Miles de millones en energía eólica no llegan a una costa por casualidad. El capital sigue.",Estudo dos Ventos
+MACRO-02,tese_macro,PT,"Aeroporto, turismo recorde, energia. Três sinais, uma mesma faixa de areia.",Estudo dos Ventos
+MACRO-02,tese_macro,EN,"An airport, record tourism, energy money. Three signals, one strip of sand.",Estudo dos Ventos
+MACRO-02,tese_macro,ES-ES,"Aeropuerto, turismo récord, energía. Tres señales, una misma franja de arena.",Estudo dos Ventos
+CULT-01,inteligencia_cultural,EN,"I spent 11 winters in London. I know exactly what you're trading it for.",fundador
+CULT-02,inteligencia_cultural,ES-AR,"Viví ocho años en el Cono Sur. Entiendo de qué se trata mover capital con cabeza.",fundador voseo
+CULT-03,inteligencia_cultural,PT,"Vinte anos fora me ensinaram a olhar o litoral do Ceará como um europeu — e a comprá-lo como um local.",fundador
+CULT-04,inteligencia_cultural,EN,"Same property. Explained in your language, in your financial logic, by someone who's lived both.",pilar central
+WSE-01,why_settle_europe,EN,"Why settle for a grey terrace in Europe when the wind is here?",vencedor 5,75%
+WSE-02,why_settle_europe,EN,"Same budget. One buys a flat with no view. The other buys a coastline.",vencedor 5,75%
+WSE-02,why_settle_europe,ES-ES,"El mismo presupuesto. Uno compra un piso sin vistas. El otro, una costa entera.",vencedor 5,75%
+WSE-02,why_settle_europe,PT,"O que um apartamento sem vista custa na Europa compra um pedaço de litoral aqui.",vencedor 5,75%
+LAND-01,terreno_casa,PT,"Hoje é areia e vento. Veja o que pode nascer aqui. (Projeção 3D)",render IA rotulado
+LAND-01,terreno_casa,EN,"Today it's sand and wind. Here's what could rise on it. (3D projection)",render IA rotulado
+LAND-01,terreno_casa,ES-ES,"Hoy es arena y viento. Mirá lo que podría levantarse acá. (Proyección 3D)",render IA rotulado
+LAND-02,terreno_casa,PT,"O terreno é real. A casa, ainda é uma ideia. Podemos construí-la — comece pela conversa.",render IA rotulado
+EXCL-01,exclusividade,PT,"Algumas oportunidades não vão para o site. Essa é uma delas.",off-market
+EXCL-01,exclusividade,EN,"Some opportunities never reach the website. This is one of them.",off-market
+EXCL-02,exclusividade,PT,"Curadoria significa que eu já disse 'não' a 90% antes de te mostrar isto.",boutique

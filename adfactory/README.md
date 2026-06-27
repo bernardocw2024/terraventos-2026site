@@ -45,10 +45,10 @@ Habitação (Housing) do Meta em cada etapa.
 | Fase | Entrega | Status |
 |---|---|---|
 | **F0** | Descoberta + arquitetura + modelo de dados + estrutura de pastas + decisões | ✅ este commit |
-| **F1** | Biblioteca + placar (Drive + Sheets), entrada manual possível | a seguir |
+| **F1** | Biblioteca + placar (CSVs em `data/`) seeded com inventário + hooks + conceitos | ✅ |
 | **F2** | **Pixel + rastreio** — código do site pronto (inerte até configurar o Pixel ID) | 🟡 site ✅ · falta criar Pixel |
-| **F3** | Pipeline de geração (variações/formatos/localização + módulo de visualização por IA rotulada) | |
-| **F4** | Lançador Meta + checadores de compliance/factual + tetos + dry-run | |
+| **F3** | Pipeline de geração (variações/formatos/localização + visualização por IA rotulada) | em andamento |
+| **F4** | Lançador Meta + checadores compliance/factual + dry-run | 🟡 core ✅ (CLI) · falta lançador API |
 | **F5** | Mensuração + mata-mata (matar/graduar/iterar automático) | |
 | **F6** | Relatório + nutrição (resumo semanal Gmail; drip Brevo opt-in) | |
 | **F7** | Multicanal (só depois que o Meta funcionar) | |

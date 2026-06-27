@@ -1,0 +1,14 @@
+{
+  "name": "terraventos-adfactory",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Fábrica de anúncios Meta Ads da Terra Ventos — core determinístico + CLI (F4).",
+  "engines": { "node": ">=20" },
+  "bin": { "adfactory": "./cli.mjs" },
+  "scripts": {
+    "check-hooks": "node cli.mjs check-hooks",
+    "plan": "node cli.mjs plan",
+    "score": "node cli.mjs score"
+  }
+}
