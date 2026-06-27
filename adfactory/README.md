@@ -46,7 +46,7 @@ Habitação (Housing) do Meta em cada etapa.
 |---|---|---|
 | **F0** | Descoberta + arquitetura + modelo de dados + estrutura de pastas + decisões | ✅ este commit |
 | **F1** | Biblioteca + placar (Drive + Sheets), entrada manual possível | a seguir |
-| **F2** | **Pixel + rastreio** (dataset, eventos, UTM, atribuição lead→criativo) — 1ª tarefa técnica | crítico |
+| **F2** | **Pixel + rastreio** — código do site pronto (inerte até configurar o Pixel ID) | 🟡 site ✅ · falta criar Pixel |
 | **F3** | Pipeline de geração (variações/formatos/localização + módulo de visualização por IA rotulada) | |
 | **F4** | Lançador Meta + checadores de compliance/factual + tetos + dry-run | |
 | **F5** | Mensuração + mata-mata (matar/graduar/iterar automático) | |

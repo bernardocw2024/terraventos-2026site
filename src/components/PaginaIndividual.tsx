@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import './PaginaIndividual.css';
 import type { OportunidadeDetalhe } from '../data/oportunidadesData';
 import { getOportunidadesData } from '../data/oportunidadesDataI18n';
+import { buildWhatsAppUrl, trackWhatsAppClick } from '../lib/tracking';
 
 type PaginaIndividualProps = {
   slug?: string;
@@ -394,10 +395,11 @@ export default function PaginaIndividual({ slug, item: propItem }: PaginaIndivid
                   <p className="pi-contact-text">
                     {t('pagina.contact')}
                   </p>
-                  <a 
-                    href="https://wa.me/5585985572807" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={buildWhatsAppUrl({ ref: item.slug })}
+                    onClick={() => trackWhatsAppClick(item.slug)}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="pi-cta"
                   >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

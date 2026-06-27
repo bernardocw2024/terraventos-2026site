@@ -25,6 +25,7 @@ import LazyImage from "./components/LazyImage";
 import PaginaTaiba from "./components/PaginaTaiba";
 import PropriedadesV2 from "./components/PropriedadesV2";
 import PaginaIndividualV2 from "./components/PaginaIndividualV2";
+import { buildWhatsAppUrl, trackWhatsAppClick } from "./lib/tracking";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -805,7 +806,8 @@ function App() {
       </main>
       {/* Fixed WhatsApp Button */}
       <a
-        href="https://wa.me/5585985572807"
+        href={buildWhatsAppUrl()}
+        onClick={() => trackWhatsAppClick()}
         target="_blank"
         rel="noreferrer"
         className="whatsapp-fixed-button"
