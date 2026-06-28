@@ -13,6 +13,7 @@ import { readCsvObjects } from './core/csv.mjs';
 import { checkFactual } from './core/factual.mjs';
 import { checkCompliance } from './core/compliance.mjs';
 import { buildPlan } from './core/plan.mjs';
+import { buildLaunchPlan } from './core/launcher.mjs';
 import { scoreAll } from './core/scoring.mjs';
 import { buildUtmUrl, buildWhatsAppUrl } from './core/utm.mjs';
 
@@ -81,6 +82,24 @@ switch (cmd) {
     for (const r of results) console.log(`${color[r.decision] || ''}${r.decision.toUpperCase().padEnd(9)}${X} ${r.creative_id.padEnd(34)} ${D}${r.reason} (${r.confidence})${X}`);
     break;
   }
+  case 'launch': {
+    const lp = buildLaunchPlan(cfg);
+    console.log(`\n${R}● DRY-RUN — NADA foi enviado ao Meta. Tudo reversível.${X}  ${D}(config: ${cfg._source})${X}`);
+    console.log(`\n${G}CAMPANHA${X}  ${lp.campaign.name}`);
+    console.log(`  objetivo=${lp.campaign.objective} · categoria=${lp.campaign.special_ad_categories.join(',') || 'nenhuma'} · status=${lp.campaign.status}`);
+    console.log(`  compliance: Housing=${lp.compliance.housing ? 'sim' : 'NÃO'} · demografia=${lp.compliance.demographic_targeting ? 'sim' : 'não'} · excluídos=${lp.compliance.excluded.join(',') || '—'}`);
+    const b = lp.budget;
+    const capColor = b.over_cap ? R : G;
+    console.log(`  verba (${b.mode}): R$${b.daily_total_brl}/dia de ${lp.items.length} unidades · teto R$${b.cap_brl} ${capColor}${b.over_cap ? '⚠ ACIMA DO TETO' : '✓ dentro do teto'}${X}`);
+    console.log(`\n${G}AD SETS / ADS${X} (${lp.items.length}):`);
+    for (const it of lp.items) {
+      console.log(`  • ${it.creative_id.padEnd(30)} R$${((it.adset.daily_budget_cents || 0) / 100).toFixed(2)}/dia ${it.ad.creative.ai_label ? Y + '[3D]' + X : '    '} ${D}${it.ad.creative.primary_text.slice(0, 48)}${X}`);
+      console.log(`      ${D}→ ${it.ad.creative.link_url}${X}`);
+    }
+    if (lp.blocked_factual.length) console.log(`\n${R}${lp.blocked_factual.length} unidade(s) excluída(s) por guardrail factual (fail-safe).${X}`);
+    console.log(`\n${D}Para lançar de verdade: configurar o Pixel (F2), aprovar as ferramentas Meta e remover o dry-run no lançador ao vivo.${X}`);
+    break;
+  }
   case 'utm': {
     const [creativeId, url] = args;
     if (!creativeId) { console.error('Uso: node cli.mjs utm <creative_id> [url]'); process.exit(1); }
@@ -91,5 +110,5 @@ switch (cmd) {
     break;
   }
   default:
-    console.log(`Fábrica de Anúncios · CLI (F4)\n\n  check "<texto>"        factual + compliance\n  check-hooks            valida o banco de hooks\n  plan                   dry-run do lote (unidades, verba, bloqueios)\n  score                  decisões do mata-mata sobre creatives.csv\n  utm <creative_id> [url]  UTM + link de WhatsApp com ref\n`);
+    console.log(`Fábrica de Anúncios · CLI (F4)\n\n  check "<texto>"        factual + compliance\n  check-hooks            valida o banco de hooks\n  plan                   dry-run do lote (unidades, verba, bloqueios)\n  launch                 dry-run do lançador Meta (campanha/ad sets/ads)\n  score                  decisões do mata-mata sobre creatives.csv\n  utm <creative_id> [url]  UTM + link de WhatsApp com ref\n`);
 }

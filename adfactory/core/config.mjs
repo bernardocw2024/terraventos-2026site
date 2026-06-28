@@ -19,5 +19,19 @@ export function loadConfig() {
     ctr_floor: 1.5, // 1,5% — piso de CTR para sobreviver
     ...(cfg.scoring || {}),
   };
+  // Defaults do lançador (sobrescrevíveis no config.json → launch).
+  cfg.launch = {
+    // Sem Pixel: round 1 otimiza tráfego/cliques (triagem por hook/CTR).
+    // Com Pixel (F2): trocar para OUTCOME_LEADS otimizando Lead/Contact.
+    objective: 'OUTCOME_TRAFFIC',
+    optimization_goal: 'LINK_CLICKS',
+    billing_event: 'IMPRESSIONS',
+    call_to_action: 'LEARN_MORE',
+    status: 'PAUSED', // SEMPRE pausado na criação — ativação é passo humano
+    budget_mode: 'ABO', // verba igual por unidade (ad set)
+    age_min: 18,
+    age_max: 65,
+    ...(cfg.launch || {}),
+  };
   return cfg;
 }

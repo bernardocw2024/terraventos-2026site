@@ -48,7 +48,7 @@ Habitação (Housing) do Meta em cada etapa.
 | **F1** | Biblioteca + placar (CSVs em `data/`) seeded com inventário + hooks + conceitos | ✅ |
 | **F2** | **Pixel + rastreio** — código do site pronto (inerte até configurar o Pixel ID) | 🟡 site ✅ · falta criar Pixel |
 | **F3** | Pipeline de geração — Drive criado, 1º render de Bitupitá produzido (QA pendente) | 🟡 em andamento |
-| **F4** | Lançador Meta + checadores compliance/factual + dry-run | 🟡 core ✅ (CLI) · falta lançador API |
+| **F4** | Lançador Meta + checadores compliance/factual + dry-run | 🟡 dry-run ✅ (`launch`) · falta disparo ao vivo (Pixel+aprovação) |
 | **F5** | Mensuração + mata-mata (matar/graduar/iterar automático) | |
 | **F6** | Relatório + nutrição (resumo semanal Gmail; drip Brevo opt-in) | |
 | **F7** | Multicanal (só depois que o Meta funcionar) | |
