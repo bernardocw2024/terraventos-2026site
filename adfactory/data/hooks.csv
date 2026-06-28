@@ -52,3 +52,12 @@ LAND-02,terreno_casa,PT,"O terreno é real. A casa, ainda é uma ideia. Podemos 
 EXCL-01,exclusividade,PT,"Algumas oportunidades não vão para o site. Essa é uma delas.",off-market
 EXCL-01,exclusividade,EN,"Some opportunities never reach the website. This is one of them.",off-market
 EXCL-02,exclusividade,PT,"Curadoria significa que eu já disse 'não' a 90% antes de te mostrar isto.",boutique
+DELTA-01,delta_ecoturismo,PT,"Bitupitá não é o fim do mapa — é o começo do Delta do Parnaíba, na Rota das Emoções.",ecodestino verificado
+DELTA-01,delta_ecoturismo,EN,"Bitupitá isn't the end of the map — it's the gateway to the Parnaíba Delta, on Brazil's Rota das Emoções.",ecodestino verificado
+DELTA-01,delta_ecoturismo,ES-ES,"Bitupitá no es el fin del mapa — es la puerta al Delta del Parnaíba, en la Rota das Emoções.",ecodestino verificado
+DELTA-02,delta_ecoturismo,PT,"Seis quilômetros de dunas móveis e lagoas de água doce — um mini Lençóis a poucos passos do seu lote.",dunas/lagoas
+DELTA-02,delta_ecoturismo,EN,"Six kilometres of shifting dunes and freshwater lagoons — a pocket Lençóis a short walk from your lot.",dunas/lagoas
+DELTA-02,delta_ecoturismo,ES-ES,"Seis kilómetros de dunas móviles y lagunas de agua dulce — un mini Lençóis a pasos de tu lote.",dunas/lagoas
+DELTA-03,delta_ecoturismo,PT,"Onde cinco rios encontram o mar, e o maior manguezal do Ceará ainda é intocado.",5 rios/manguezal
+DELTA-03,delta_ecoturismo,EN,"Where five rivers meet the sea, and Ceará's largest mangrove is still untouched.",5 rios/manguezal
+DELTA-03,delta_ecoturismo,ES-ES,"Donde cinco ríos encuentran el mar, y el mayor manglar de Ceará sigue intacto.",5 rios/manguezal
