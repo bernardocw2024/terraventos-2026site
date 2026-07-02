@@ -25,6 +25,8 @@ import LazyImage from "./components/LazyImage";
 import PaginaTaiba from "./components/PaginaTaiba";
 import PropriedadesV2 from "./components/PropriedadesV2";
 import PaginaIndividualV2 from "./components/PaginaIndividualV2";
+import BlogList from "./components/BlogList";
+import BlogPost from "./components/BlogPost";
 import { buildWhatsAppUrl, trackWhatsAppClick } from "./lib/tracking";
 
 function App() {
@@ -54,6 +56,7 @@ function App() {
   const cleanPath = currentPath.replace(/^\/(en|es)/, "").replace(/\/$/, "") || "/";
   const isPaginaIndividual = cleanPath.startsWith("/propriedade/") || cleanPath.startsWith("/propriedade-v2/");
   const isVentoAfavor = cleanPath === "/ventoafavor";
+  const isBlog = cleanPath === "/blog" || cleanPath.startsWith("/blog/");
   const [transitionClass, setTransitionClass] = useState<
     "page-enter" | "page-exit"
   >("page-enter");
@@ -247,7 +250,7 @@ function App() {
       "/contato",
       "/ventoafavor"
     ].includes(cleanPath);
-    if (isInstitutional) return;
+    if (isInstitutional || isBlog) return;
 
     const title = "Terra Ventos | Imóveis de Luxo e Investimentos no Ceará";
     const description =
@@ -273,7 +276,7 @@ function App() {
     updateMeta("twitter:title", title);
     updateMeta("twitter:description", description);
     updateMeta("twitter:image", imageUrl);
-  }, [currentPath, cleanPath, isPaginaIndividual, t]);
+  }, [currentPath, cleanPath, isPaginaIndividual, isBlog, t]);
 
   // Hreflang tags for SEO — indicam versões em outros idiomas
   useEffect(() => {
@@ -567,7 +570,14 @@ function App() {
           <h1 className="sr-only">
             Terra Ventos | Imóveis de Luxo e Investimentos no Ceará
           </h1>
-          {cleanPath.startsWith("/propriedade-v2/") ? (
+          {cleanPath === "/blog" ? (
+            <BlogList onOpen={(slug) => runTransitionTo(`/blog/${slug}`)} />
+          ) : isBlog ? (
+            <BlogPost
+              slug={cleanPath.replace("/blog/", "").split("?")[0].split("#")[0].replace(/\/$/, "")}
+              onBack={() => runTransitionTo("/blog")}
+            />
+          ) : cleanPath.startsWith("/propriedade-v2/") ? (
             <PaginaIndividualV2 slug={cleanPath.replace("/propriedade-v2/", "").split("?")[0].split("#")[0].replace(/\/$/, "")} />
           ) : isPaginaIndividual ? (
             <PaginaIndividual item={selectedOpportunity} />
