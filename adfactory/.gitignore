@@ -1,0 +1,7 @@
+# Segredos e config local — nunca commitar
+.env
+.env.*
+!.env.example
+config/config.json
+node_modules/
+*.log
