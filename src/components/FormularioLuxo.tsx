@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import toast, { Toaster } from 'react-hot-toast';
 import './FormularioLuxo.css';
+import { trackEvent } from '../lib/tracking';
 
 type Fields = 'firstName' | 'lastName' | 'email' | 'phone' | 'message' | 'country';
 
@@ -117,6 +118,7 @@ export default function FormularioLuxo() {
     // Envia apenas para o Brevo
     try {
       await sendToBrevo(formData);
+      trackEvent('Lead', { content_name: 'formulario_luxo', country: selectedCountry });
       toast.success(t('form.success', 'Mensagem recebida com sucesso!'), {
         duration: 8000,
         style: { background: '#111827', color: '#C4B096', border: '1px solid rgba(196, 176, 150, 0.3)' },

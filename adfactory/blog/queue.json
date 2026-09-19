@@ -1,0 +1,16 @@
+{
+  "cadence": "2x/semana — terça e quinta, 09:00 America/Fortaleza (12:00Z)",
+  "note": "Fila de temas do blog. O loop pega o próximo item 'pending', gera o artigo trilingue (PT/EN/ES), roda o check factual/compliance e agenda via /api/posts com published_at no próximo slot livre.",
+  "topics": [
+    { "id": 1, "pillar": "Delta", "slug": "delta-do-parnaiba-o-lado-desconhecido-do-litoral-do-ceara", "title_pt": "Delta do Parnaíba: o lado desconhecido do litoral do Ceará", "status": "scheduled", "published_at": "2026-08-04T12:00:00Z" },
+    { "id": 2, "pillar": "Bitupitá", "slug": "bitupita-a-nova-fronteira-do-litoral-cearense", "title_pt": "Bitupitá: a nova fronteira do litoral cearense", "status": "pending" },
+    { "id": 3, "pillar": "Macro/Investimento", "slug": "por-que-o-oeste-do-ceara-virou-o-novo-endereco-do-capital", "title_pt": "Por que o oeste do Ceará virou o novo endereço do capital", "status": "pending" },
+    { "id": 4, "pillar": "Kite", "slug": "kitesurf-no-ceara-o-mapa-dos-melhores-spots", "title_pt": "Kitesurf no Ceará: o mapa dos melhores spots", "status": "pending" },
+    { "id": 5, "pillar": "Golden Visa", "slug": "comprar-terreno-frente-mar-no-brasil-sendo-estrangeiro", "title_pt": "Comprar terreno frente-mar no Brasil sendo estrangeiro: o passo a passo", "status": "pending" },
+    { "id": 6, "pillar": "Tatajuba", "slug": "tatajuba-dunas-lagoas-e-um-dos-ultimos-paraisos-do-kite", "title_pt": "Tatajuba: dunas, lagoas e um dos últimos paraísos do kite", "status": "pending" },
+    { "id": 7, "pillar": "Foil/Ecoar", "slug": "wing-foil-o-esporte-que-esta-chegando-ao-litoral-do-ceara", "title_pt": "Wing foil: o esporte que está chegando ao litoral do Ceará", "status": "pending" },
+    { "id": 8, "pillar": "Rota das Emoções", "slug": "rota-das-emocoes-jericoacoara-delta-e-lencois-num-so-roteiro", "title_pt": "Rota das Emoções: Jericoacoara, Delta e Lençóis num só roteiro", "status": "pending" },
+    { "id": 9, "pillar": "Jurídico", "slug": "seguranca-juridica-na-compra-de-terreno-no-ceara", "title_pt": "Segurança jurídica na compra de terreno no Ceará: matrícula e escritura", "status": "pending" },
+    { "id": 10, "pillar": "Preá", "slug": "prea-do-vilarejo-de-pescadores-ao-endereco-do-vento", "title_pt": "Preá: do vilarejo de pescadores ao endereço mais disputado do vento", "status": "pending" }
+  ]
+}

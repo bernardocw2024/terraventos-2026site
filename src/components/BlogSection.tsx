@@ -145,7 +145,7 @@ const BlogSection: React.FC = () => {
         </div>
 
         <div className="blog-footer">
-          <a href="https://blog.terraventos.com/" target="_blank" rel="noopener noreferrer" className="blog-all-link">
+          <a href="/blog" className="blog-all-link">
             {t('blog.viewAll', 'Ver todos os artigos')}
           </a>
         </div>
