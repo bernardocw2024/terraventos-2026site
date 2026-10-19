@@ -18,6 +18,7 @@ export const destaquesImovel: Record<string, DestaquesImovel> = {
   'casa-3-quartos-piscina-cavalo-bravo-prea': { quartos: '3', suites: '2', banheiros: '4', areaTerreno: '1.300 m²', areaConstruida: '250 m²' },
   'prea-house': { quartos: '3', suites: '3', areaTerreno: '745 m²', areaConstruida: '261 m²' },
   'mansao-praia-do-prea': { quartos: '4', suites: '4' },
+  'casa-alto-padrao-prea-4-suites-simi': { quartos: '4', suites: '4', areaTerreno: '1.800 m²', areaConstruida: '300 m²' },
   'casa-praia-do-prea-5-suites-vlad': { quartos: '5', suites: '5', areaTerreno: '1.734 m²', areaConstruida: '739 m²' },
   'casa-praia-do-prea-5-suites-vlad-2': { quartos: '5', suites: '5', areaTerreno: '1.734 m²', areaConstruida: '739 m²' },
   'casa-alto-padrao-praia-barrinha': { quartos: '4', suites: '4', banheiros: '5', areaTerreno: '3.706 m²', areaConstruida: '400 m²' },
