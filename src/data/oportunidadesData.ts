@@ -3458,7 +3458,24 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     ]
   },
   mapImage: "/mapa.avif",
-  mapUrl: "https://maps.google.com/maps?q=Praia+do+Pre%C3%A1,+Cruz+-+CE&hl=pt-BR&z=14&output=embed",
+  mapUrl: "https://maps.google.com/maps?q=-2.815145,-40.420544&hl=pt-BR&z=16&output=embed",
+  documents: [
+    {
+      label: "Apresentação do Imóvel",
+      url: "/documentos/casa-alto-padrao-prea-4-suites-simi-apresentacao.pdf",
+      legend: "Material completo da casa: fotos, diferenciais, áreas e valor."
+    },
+    {
+      label: "Projeto Arquitetônico",
+      url: "/documentos/casa-alto-padrao-prea-4-suites-simi-projeto-arquitetonico.pdf",
+      legend: "Fachada norte e plantas baixas do pavimento térreo e do pavimento superior."
+    },
+    {
+      label: "Localização (KML)",
+      url: "/documentos/casa-alto-padrao-prea-4-suites-simi-localizacao.kml",
+      legend: "Ponto exato da casa para abrir no Google Earth ou Google Maps."
+    }
+  ],
   priceTag: "Valor",
   price: "R$ 4.000.000,00",
   installments: "Consulte condições",

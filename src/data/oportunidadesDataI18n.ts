@@ -3731,6 +3731,23 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
       "Only 200 meters from the beach"
     ],
     facilities: ["4 Suites", "300 sqm Built", "1,800 sqm Lot", "Sea-View Terrace", "Jacuzzi", "Solar Energy", "200 m from the Beach"],
+    documents: [
+      {
+        label: "Property Presentation",
+        url: "/documentos/casa-alto-padrao-prea-4-suites-simi-apresentacao.pdf",
+        legend: "Complete material on the house: photos, highlights, areas and price."
+      },
+      {
+        label: "Architectural Project",
+        url: "/documentos/casa-alto-padrao-prea-4-suites-simi-projeto-arquitetonico.pdf",
+        legend: "North façade and floor plans of the ground floor and upper floor."
+      },
+      {
+        label: "Location (KML)",
+        url: "/documentos/casa-alto-padrao-prea-4-suites-simi-localizacao.kml",
+        legend: "Exact location of the house to open in Google Earth or Google Maps."
+      }
+    ],
     priceTag: "Price",
     price: "R$ 4,000,000.00",
     installments: "Contact us for terms",
@@ -5397,6 +5414,23 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
       "A solo 200 metros de la playa"
     ],
     facilities: ["4 Suites", "300 m² Construidos", "Terreno de 1.800 m²", "Terraza Vista al Mar", "Jacuzzi", "Energía Solar", "A 200 m de la Playa"],
+    documents: [
+      {
+        label: "Presentación del Inmueble",
+        url: "/documentos/casa-alto-padrao-prea-4-suites-simi-apresentacao.pdf",
+        legend: "Material completo de la casa: fotos, diferenciales, áreas y valor."
+      },
+      {
+        label: "Proyecto Arquitectónico",
+        url: "/documentos/casa-alto-padrao-prea-4-suites-simi-projeto-arquitetonico.pdf",
+        legend: "Fachada norte y plantas de la planta baja y la planta superior."
+      },
+      {
+        label: "Ubicación (KML)",
+        url: "/documentos/casa-alto-padrao-prea-4-suites-simi-localizacao.kml",
+        legend: "Ubicación exacta de la casa para abrir en Google Earth o Google Maps."
+      }
+    ],
     priceTag: "Valor",
     price: "R$ 4.000.000,00",
     installments: "Consulte las condiciones",
