@@ -15,7 +15,10 @@ export default function PropertyDocuments({ documents }: Props) {
         <p className="pi-section-description">{t('pagina.downloadDesc') || 'Acesse os arquivos oficiais do empreendimento.'}</p>
       </div>
       <div className="pi-documents-grid">
-        {documents.map((doc, idx) => (
+        {documents.map((doc, idx) => {
+          // PDF abre no navegador; outros formatos (ex: .kml) baixam direto.
+          const isPdf = /\.pdf$/i.test(doc.url);
+          return (
           <div key={idx} className="pi-document-card">
             <div className="pi-document-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -35,11 +38,13 @@ export default function PropertyDocuments({ documents }: Props) {
               className="pi-document-download"
               target="_blank"
               rel="noopener noreferrer"
+              download={isPdf ? undefined : ''}
             >
-              {t('pagina.viewPdf') || 'Visualizar PDF'}
+              {isPdf ? (t('pagina.viewPdf') || 'Visualizar PDF') : (t('pagina.downloadFile') || 'Baixar arquivo')}
             </a>
           </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
