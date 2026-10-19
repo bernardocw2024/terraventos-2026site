@@ -12,6 +12,19 @@ type ProjetosDestaqueProps = {
 
 const projetos = [
   {
+    id: "casa-alto-padrao-prea-4-suites-simi",
+    image: "/imoveis/casa-alto-padrao-prea-4-suites-simi-01-fachada-jardim.webp",
+    tag: "VENDA",
+    location: "Praia do Preá - CE",
+    title: "CASA ALTO PADRÃO 4 SUÍTES — PRAIA DO PREÁ",
+    area: "1.800 m²",
+    beds: 4,
+    baths: null,
+    price: "R$ 4.000.000,00",
+    detailIndex: 0,
+    pinned: true,
+  },
+  {
     id: "casa-3-quartos-piscina-cavalo-bravo-prea",
     image: "/imoveis/casa-3-quartos-piscina-cavalo-bravo-prea-01-fachada-piscina.webp",
     tag: "VENDA",
