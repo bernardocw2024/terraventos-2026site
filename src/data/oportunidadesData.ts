@@ -3477,7 +3477,7 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     }
   ],
   priceTag: "Valor",
-  price: "R$ 4.000.000,00",
+  price: "R$ 4.500.000,00",
   installments: "Consulte condições",
   category: "venda"
 },

@@ -20,7 +20,7 @@ const projetos = [
     area: "1.800 m²",
     beds: 4,
     baths: null,
-    price: "R$ 4.000.000,00",
+    price: "R$ 4.500.000,00",
     detailIndex: 0,
     pinned: true,
   },

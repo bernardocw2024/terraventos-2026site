@@ -3749,7 +3749,7 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
       }
     ],
     priceTag: "Price",
-    price: "R$ 4,000,000.00",
+    price: "R$ 4,500,000.00",
     installments: "Contact us for terms",
     category: "venda"
   },
@@ -5432,7 +5432,7 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
       }
     ],
     priceTag: "Valor",
-    price: "R$ 4.000.000,00",
+    price: "R$ 4.500.000,00",
     installments: "Consulte las condiciones",
     category: "venda"
   },
