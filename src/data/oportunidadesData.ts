@@ -3583,14 +3583,14 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
   location: "Praia do Preá, Cruz - CE",
   rating: 5,
   exclusiveText: "4 Suítes | Piscina de 15 m | 258 m² Construídos | A 5 minutos a pé da praia",
-  summaryDescription: "Sobrado moderno no Preá, a 5 minutos a pé da praia: 4 suítes, piscina de 15 m com deck, jardim com pergolado, terraço no rooftop e gerador com autonomia total. Em rua tranquila de casas, sem saída, e já operando com ótimas avaliações no Airbnb.",
+  summaryDescription: "Sobrado moderno no Preá, a 5 minutos a pé da praia: 4 suítes, piscina de 15 m com deck, jardim com pergolado, terraço no rooftop e gerador com autonomia total. Em rua tranquila de casas, sem saída, e já operando no Airbnb com nota 5,0 (56 avaliações).",
   about: [
     "Uma casa cheia de luz, cor e personalidade, a apenas 5 minutos a pé da Praia do Preá — um dos melhores spots de kitesurf do mundo.",
     "O sobrado tem 258 m² construídos em dois pavimentos, em terreno de aproximadamente 310 m². No térreo, sala de estar e sala de jantar integradas à cozinha americana, com portas de vidro e madeira que se abrem para a piscina e para o jardim. Os murais artísticos nas paredes externas dão à casa uma identidade única.",
     "São 4 suítes no total: as suítes Sol, Mar e Dunas, todas amplas, com cama king, ar-condicionado, banheiro privativo e bancada de home office (Sol e Dunas também têm varanda privativa), além da suíte master, ainda maior, com escritório e closet integrados.",
     "A área externa reúne piscina em raia de 15 metros com deck de madeira, espreguiçadeiras, pergolado com lounge, jardim com palmeiras e um terraço no rooftop com vista para o pôr do sol. Completam a casa lavabo e lavanderia.",
     "Infraestrutura pensada para a vida no litoral: gerador com autonomia total, poço profundo de 40 metros e fossa séptica, com todas as plantas (arquitetônica, elétrica e hidráulica). A casa fica em uma rua tranquila de casas, sem saída, na mesma rua da Casa Ohana.",
-    "Hoje a casa já opera com sucesso como hospedagem no Airbnb, com avaliações excelentes — ideal para morar, passar temporadas ou investir com renda imediata."
+    "Hoje a casa já opera com sucesso como hospedagem no Airbnb: as suítes Sol, Mar e Dunas têm nota 5,0, com 56 avaliações no total e anfitriã Superhost — ideal para morar, passar temporadas ou investir com renda imediata."
   ],
   infra: [
     "Terreno: aprox. 310 m²",
@@ -3610,7 +3610,8 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     "Poço profundo de 40 m e fossa séptica",
     "Plantas arquitetônica, elétrica e hidráulica",
     "Rua tranquila de casas, sem saída",
-    "A 5 minutos a pé da praia"
+    "A 5 minutos a pé da praia",
+    "Já opera no Airbnb: nota 5,0 nas 3 suítes (56 avaliações), Superhost"
   ],
   facilities: ["4 Suítes", "258 m² Construídos", "Piscina de 15 m", "Rooftop", "Gerador", "Poço Profundo", "Perto da Praia"],
   gallery: {
@@ -3667,6 +3668,21 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
       label: "Projeto Arquitetônico",
       url: "/documentos/casa-4-suites-piscina-prea-projeto-arquitetonico.pdf",
       legend: "Plantas do pavimento térreo, do pavimento superior, da cobertura e de situação, com quadro de áreas."
+    },
+    {
+      label: "Avaliações no Airbnb — Suíte Sol",
+      url: "https://www.airbnb.com.br/rooms/1210057610664415425",
+      legend: "Anúncio real da casa no Airbnb: nota 5,0 com 19 avaliações de hóspedes."
+    },
+    {
+      label: "Avaliações no Airbnb — Suíte Mar",
+      url: "https://www.airbnb.com.br/rooms/1210050195544843480",
+      legend: "Anúncio real da casa no Airbnb: nota 5,0 com 18 avaliações de hóspedes."
+    },
+    {
+      label: "Avaliações no Airbnb — Suíte Dunas",
+      url: "https://www.airbnb.com.br/rooms/1210033995543673713",
+      legend: "Anúncio real da casa no Airbnb: nota 5,0 com 19 avaliações de hóspedes."
     }
   ],
   priceTag: "Valor",
