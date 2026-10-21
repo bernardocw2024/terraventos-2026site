@@ -16,8 +16,9 @@ export default function PropertyDocuments({ documents }: Props) {
       </div>
       <div className="pi-documents-grid">
         {documents.map((doc, idx) => {
-          // PDF abre no navegador; outros formatos (ex: .kml) baixam direto.
+          // PDF abre no navegador; link externo abre em nova aba; outros formatos (ex: .kml) baixam direto.
           const isPdf = /\.pdf$/i.test(doc.url);
+          const isExternal = /^https?:\/\//i.test(doc.url);
           return (
           <div key={idx} className="pi-document-card">
             <div className="pi-document-icon">
@@ -38,9 +39,9 @@ export default function PropertyDocuments({ documents }: Props) {
               className="pi-document-download"
               target="_blank"
               rel="noopener noreferrer"
-              download={isPdf ? undefined : ''}
+              download={isPdf || isExternal ? undefined : ''}
             >
-              {isPdf ? (t('pagina.viewPdf') || 'Visualizar PDF') : (t('pagina.downloadFile') || 'Baixar arquivo')}
+              {isExternal ? (t('pagina.openLink') || 'Abrir link') : isPdf ? (t('pagina.viewPdf') || 'Visualizar PDF') : (t('pagina.downloadFile') || 'Baixar arquivo')}
             </a>
           </div>
           );
