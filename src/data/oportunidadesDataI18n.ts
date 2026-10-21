@@ -3794,6 +3794,59 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
     category: "venda"
   },
   {
+    id: "casa-4-suites-piscina-prea",
+    slug: "casa-4-suites-piscina-prea",
+    title: "FOR SALE",
+    searchTitle: "4-Suite House with Pool — Preá Beach",
+    image: "/imoveis/casa-4-suites-piscina-prea-01-piscina-raia-mural-kitesurf.webp",
+    badge: "Exclusive Opportunity",
+    propertyTitle: "4-SUITE HOUSE WITH POOL — PREÁ BEACH",
+    location: "Preá Beach, Cruz - CE",
+    rating: 5,
+    exclusiveText: "4 Suites | 15 m Pool | 258 sqm Built | 5-minute walk to the beach",
+    summaryDescription: "Modern two-story house in Preá, a 5-minute walk from the beach: 4 suites, 15 m pool with deck, garden with pergola, rooftop terrace and a generator with full autonomy. On a quiet dead-end street of houses, and already running with great reviews on Airbnb.",
+    about: [
+      "A house full of light, color and personality, just a 5-minute walk from Preá Beach — one of the best kitesurfing spots in the world.",
+      "The two-story house has 258 sqm built on a lot of approximately 310 sqm. On the ground floor, the living and dining rooms are integrated with the open kitchen, with glass and wood doors opening onto the pool and garden. Artistic murals on the outside walls give the house a unique identity.",
+      "There are 4 suites in total: the Sol, Mar and Dunas suites, all spacious, with king bed, air conditioning, private bathroom and a home-office desk (Sol and Dunas also have a private balcony), plus the even larger master suite, with an integrated office and walk-in closet.",
+      "The outdoor area features a 15-meter lap pool with wooden deck, sun loungers, a pergola lounge, a garden with palm trees and a rooftop terrace with sunset views. A powder room and laundry complete the house.",
+      "Infrastructure designed for coastal living: generator with full autonomy, 40-meter deep well and septic tank, with all plans (architectural, electrical and plumbing). The house is on a quiet dead-end street of houses, on the same street as Casa Ohana.",
+      "The house already runs successfully as an Airbnb rental with excellent reviews — ideal to live in, spend the season or invest with immediate income."
+    ],
+    infra: [
+      "Lot: approx. 310 sqm",
+      "Built area: 258 sqm (2 floors)",
+      "4 suites, all with private bathroom",
+      "Master suite with office and walk-in closet",
+      "Suites with king bed, air conditioning and home office",
+      "Private balconies",
+      "Powder room",
+      "Integrated living and dining rooms",
+      "Equipped open kitchen",
+      "15 m lap pool with wooden deck",
+      "Garden with palm trees and pergola lounge",
+      "Rooftop terrace with sunset views",
+      "Laundry",
+      "Generator with full autonomy",
+      "40 m deep well and septic tank",
+      "Architectural, electrical and plumbing plans",
+      "Quiet dead-end street of houses",
+      "5-minute walk to the beach"
+    ],
+    facilities: ["4 Suites", "258 sqm Built", "15 m Pool", "Rooftop", "Generator", "Deep Well", "Near the Beach"],
+    documents: [
+      {
+        label: "Architectural Project",
+        url: "/documentos/casa-4-suites-piscina-prea-projeto-arquitetonico.pdf",
+        legend: "Ground floor, upper floor, roof and site plans, with area table."
+      }
+    ],
+    priceTag: "Price",
+    price: "R$ 3,500,000.00",
+    installments: "Contact us for terms",
+    category: "venda"
+  },
+  {
     id: "sitio-espinho-camocim",
     slug: "sitio-espinho-camocim",
     title: "FOR SALE",
@@ -5473,6 +5526,59 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
     facilities: ["1.300 m² de Terreno", "250 m² Construidos", "3 Habitaciones", "Piscina", "Área Gourmet", "Amueblada", "Matrícula y Escritura"],
     priceTag: "Valor",
     price: "R$ 1.700.000,00",
+    installments: "Consulte las condiciones",
+    category: "venda"
+  },
+  {
+    id: "casa-4-suites-piscina-prea",
+    slug: "casa-4-suites-piscina-prea",
+    title: "VENTA",
+    searchTitle: "Casa 4 Suites con Piscina — Playa de Preá",
+    image: "/imoveis/casa-4-suites-piscina-prea-01-piscina-raia-mural-kitesurf.webp",
+    badge: "Oportunidad Exclusiva",
+    propertyTitle: "CASA 4 SUITES CON PISCINA — PLAYA DE PREÁ",
+    location: "Playa de Preá, Cruz - CE",
+    rating: 5,
+    exclusiveText: "4 Suites | Piscina de 15 m | 258 m² Construidos | A 5 minutos a pie de la playa",
+    summaryDescription: "Casa moderna de dos plantas en Preá, a 5 minutos a pie de la playa: 4 suites, piscina de 15 m con deck, jardín con pérgola, terraza en la azotea y generador con autonomía total. En una calle tranquila de casas, sin salida, y ya operando con excelentes reseñas en Airbnb.",
+    about: [
+      "Una casa llena de luz, color y personalidad, a solo 5 minutos a pie de la Playa de Preá — uno de los mejores spots de kitesurf del mundo.",
+      "La casa tiene 258 m² construidos en dos plantas, en un terreno de aproximadamente 310 m². En la planta baja, la sala de estar y el comedor están integrados a la cocina americana, con puertas de vidrio y madera que se abren a la piscina y al jardín. Los murales artísticos en las paredes exteriores le dan a la casa una identidad única.",
+      "Son 4 suites en total: las suites Sol, Mar y Dunas, todas amplias, con cama king, aire acondicionado, baño privado y escritorio para home office (Sol y Dunas también tienen balcón privado), además de la suite principal, aún más grande, con oficina y vestidor integrados.",
+      "El área exterior reúne una piscina de carril de 15 metros con deck de madera, tumbonas, pérgola con lounge, jardín con palmeras y una terraza en la azotea con vista al atardecer. Completan la casa un medio baño y lavandería.",
+      "Infraestructura pensada para la vida en la costa: generador con autonomía total, pozo profundo de 40 metros y fosa séptica, con todos los planos (arquitectónico, eléctrico e hidráulico). La casa está en una calle tranquila de casas, sin salida, en la misma calle que la Casa Ohana.",
+      "Hoy la casa ya opera con éxito como alojamiento en Airbnb, con excelentes reseñas — ideal para vivir, pasar temporadas o invertir con renta inmediata."
+    ],
+    infra: [
+      "Terreno: aprox. 310 m²",
+      "Área construida: 258 m² (2 plantas)",
+      "4 suites, todas con baño privado",
+      "Suite principal con oficina y vestidor",
+      "Suites con cama king, aire acondicionado y home office",
+      "Balcones privados",
+      "Medio baño",
+      "Sala de estar y comedor integrados",
+      "Cocina americana equipada",
+      "Piscina de carril de 15 m con deck de madera",
+      "Jardín con palmeras y pérgola con lounge",
+      "Terraza en la azotea con vista al atardecer",
+      "Lavandería",
+      "Generador con autonomía total",
+      "Pozo profundo de 40 m y fosa séptica",
+      "Planos arquitectónico, eléctrico e hidráulico",
+      "Calle tranquila de casas, sin salida",
+      "A 5 minutos a pie de la playa"
+    ],
+    facilities: ["4 Suites", "258 m² Construidos", "Piscina de 15 m", "Azotea", "Generador", "Pozo Profundo", "Cerca de la Playa"],
+    documents: [
+      {
+        label: "Proyecto Arquitectónico",
+        url: "/documentos/casa-4-suites-piscina-prea-projeto-arquitetonico.pdf",
+        legend: "Planos de la planta baja, planta alta, cubierta y situación, con cuadro de áreas."
+      }
+    ],
+    priceTag: "Valor",
+    price: "R$ 3.500.000,00",
     installments: "Consulte las condiciones",
     category: "venda"
   },
