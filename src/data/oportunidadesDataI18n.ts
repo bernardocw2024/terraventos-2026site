@@ -3807,14 +3807,14 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
     summaryDescription: "Modern two-story house in Preá, a 5-minute walk from the beach: 4 suites, 15 m pool with deck, garden with pergola, rooftop terrace and a generator with full autonomy. On a quiet dead-end street of houses, and already running on Airbnb with a 5.0 rating (56 reviews).",
     about: [
       "A house full of light, color and personality, just a 5-minute walk from Preá Beach — one of the best kitesurfing spots in the world.",
-      "The two-story house has 258 sqm built on a lot of approximately 310 sqm. On the ground floor, the living and dining rooms are integrated with the open kitchen, with glass and wood doors opening onto the pool and garden. Artistic murals on the outside walls give the house a unique identity.",
+      "The two-story house has 258 sqm built on a 320 sqm lot. On the ground floor, the living and dining rooms are integrated with the open kitchen, with glass and wood doors opening onto the pool and garden. Artistic murals on the outside walls give the house a unique identity.",
       "There are 4 suites in total: the Sol, Mar and Dunas suites, all spacious, with king bed, air conditioning, private bathroom and a home-office desk (Sol and Dunas also have a private balcony), plus the even larger master suite, with an integrated office and walk-in closet.",
       "The outdoor area features a 15-meter lap pool with wooden deck, sun loungers, a pergola lounge, a garden with palm trees and a rooftop terrace with sunset views. A powder room and laundry complete the house.",
       "Infrastructure designed for coastal living: generator with full autonomy, 40-meter deep well and septic tank, with all plans (architectural, electrical and plumbing). The house is on a quiet dead-end street of houses, on the same street as Casa Ohana.",
       "The house already runs successfully as an Airbnb rental: the Sol, Mar and Dunas suites are rated 5.0, with 56 reviews in total and a Superhost host — ideal to live in, spend the season or invest with immediate income."
     ],
     infra: [
-      "Lot: approx. 310 sqm",
+      "Lot: 320 sqm",
       "Built area: 258 sqm (2 floors)",
       "4 suites, all with private bathroom",
       "Master suite with office and walk-in closet",
@@ -5559,14 +5559,14 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
     summaryDescription: "Casa moderna de dos plantas en Preá, a 5 minutos a pie de la playa: 4 suites, piscina de 15 m con deck, jardín con pérgola, terraza en la azotea y generador con autonomía total. En una calle tranquila de casas, sin salida, y ya operando en Airbnb con nota 5,0 (56 reseñas).",
     about: [
       "Una casa llena de luz, color y personalidad, a solo 5 minutos a pie de la Playa de Preá — uno de los mejores spots de kitesurf del mundo.",
-      "La casa tiene 258 m² construidos en dos plantas, en un terreno de aproximadamente 310 m². En la planta baja, la sala de estar y el comedor están integrados a la cocina americana, con puertas de vidrio y madera que se abren a la piscina y al jardín. Los murales artísticos en las paredes exteriores le dan a la casa una identidad única.",
+      "La casa tiene 258 m² construidos en dos plantas, en un terreno de 320 m². En la planta baja, la sala de estar y el comedor están integrados a la cocina americana, con puertas de vidrio y madera que se abren a la piscina y al jardín. Los murales artísticos en las paredes exteriores le dan a la casa una identidad única.",
       "Son 4 suites en total: las suites Sol, Mar y Dunas, todas amplias, con cama king, aire acondicionado, baño privado y escritorio para home office (Sol y Dunas también tienen balcón privado), además de la suite principal, aún más grande, con oficina y vestidor integrados.",
       "El área exterior reúne una piscina de carril de 15 metros con deck de madera, tumbonas, pérgola con lounge, jardín con palmeras y una terraza en la azotea con vista al atardecer. Completan la casa un medio baño y lavandería.",
       "Infraestructura pensada para la vida en la costa: generador con autonomía total, pozo profundo de 40 metros y fosa séptica, con todos los planos (arquitectónico, eléctrico e hidráulico). La casa está en una calle tranquila de casas, sin salida, en la misma calle que la Casa Ohana.",
       "Hoy la casa ya opera con éxito como alojamiento en Airbnb: las suites Sol, Mar y Dunas tienen nota 5,0, con 56 reseñas en total y anfitriona Superhost — ideal para vivir, pasar temporadas o invertir con renta inmediata."
     ],
     infra: [
-      "Terreno: aprox. 310 m²",
+      "Terreno: 320 m²",
       "Área construida: 258 m² (2 plantas)",
       "4 suites, todas con baño privado",
       "Suite principal con oficina y vestidor",
