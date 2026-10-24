@@ -3873,14 +3873,15 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
     location: "Farol Beach, Itarema - CE",
     rating: 5,
     exclusiveText: "Beachfront | 178 sqm | 2 Suites | Private Pool | Kitesurf Spot",
-    summaryDescription: "178 sqm villa with 2 suites and a private pool at Casa Suíça Kite Villas, a gated community of 14 beachfront villas on Farol Beach, Ilha do Guajiru (Itarema), with 100 m of ocean frontage, kite point, pool, tennis court and restaurant — plus hotel-style management that rents out the villa when you're away.",
+    summaryDescription: "178 sqm villa with 2 suites and a private pool at Casa Suíça Kite Villas, a gated community of 14 beachfront villas on Farol Beach, Ilha do Guajiru (Itarema), with 100 m of ocean frontage, kite point, pool, tennis court and restaurant — plus an optional management and rental service for the villa.",
     about: [
       "Kitesurfing in your backyard: Casa Suíça Kite Villas sits on Farol Beach, in Ilha do Guajiru, Itarema — one of the quietest beaches on Ceará's west coast, facing a huge lagoon of shallow, crystal-clear water formed by a 7 km sandbar, perfect for beginners and experienced kiters alike.",
       "The community covers a 20,000 sqm plot with 100 meters of beachfront and has only 14 individual villas, surrounded by gardens, coconut palms and a permanent preservation area. It is developed by the same group behind Casa Suíça, the pousada and kite school operating in Ilha do Guajiru since 2006.",
       "Each villa has 178 sqm, with 2 suites with private bathrooms, a living room with panoramic windows, a full kitchen with ocean views, a laundry area and a large covered terrace with wooden deck and private pool. Wooden architecture with a natural roof, blending into the landscape, and its own parking space.",
       "Common areas designed for beach life: a large pool with ocean views, a beach bar with deck, lookout and water-sports support (kite point exclusive to residents), a kitesurf and wingfoil school, a restaurant with sunset views, a tennis court, a barbecue and events area, a generator and parking for residents and visitors.",
-      "Built by RA Construtora, specialized in high-end projects in Northeast Brazil, and managed by KV ADM with hotel-style services: check-in and check-out, daily cleaning, maintenance and, on demand, a private chef or babysitter. When you're not using it, management rents out your villa — the community's villas currently rent for R$ 2,000 to R$ 2,500 per night.",
-      "Strategic location on the Wind Route: about 40 minutes from Jericoacoara airport, close to Preá, Jericoacoara and Icaraizinho, and a few hours from Fortaleza. Limited units — some villas are already sold; ask about availability."
+      "Built by RA Construtora, specialized in high-end projects in Northeast Brazil, and managed by KV ADM with hotel-style services: check-in and check-out, daily cleaning, maintenance and, on demand, a private chef or babysitter. The management and rental service is optional (32% management fee on rental revenue, separate from the condo fee): when you're not using it, management rents out your villa — the community's villas currently rent for R$ 2,000 to R$ 2,500 per night.",
+      "Strategic location on the Wind Route: about 40 minutes from Jericoacoara airport, close to Preá, Jericoacoara and Icaraizinho, and a few hours from Fortaleza. Limited units: of the community's 14 villas, 6 have already been sold and 8 are still available.",
+      "Prices and terms: R$ 2,500,000 per villa on the second row and R$ 2,700,000 per villa on the first row, facing the ocean — prices per unit, including land, construction and private pool. Payment with a 30% down payment and the balance in 5 or 6 installments, following the construction stages. Condo fee currently around R$ 2,700 to R$ 2,800 per month, subject to adjustment next year according to the community's budget and expenses."
     ],
     infra: [
       "178 sqm villa",
@@ -3903,10 +3904,13 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
       "Barbecue and events area",
       "Generator",
       "Permanent preservation area",
-      "Hotel-style management (KV ADM): check-in/check-out, daily cleaning and maintenance",
+      "Optional management and rental (KV ADM): check-in/check-out, daily cleaning and maintenance",
       "Vacation-rental income when the villa is not in use",
       "Built by RA Construtora (high-end)",
-      "~40 min from Jericoacoara airport"
+      "~40 min from Jericoacoara airport",
+      "Villas on the first row (oceanfront) or second row",
+      "8 of 14 villas available",
+      "Condo fee around R$ 2,700 to R$ 2,800/month"
     ],
     facilities: ["Beachfront", "178 sqm", "2 Suites", "Private Pool", "Kitesurf Spot", "Gated Community", "Hotel Management"],
     documents: [
@@ -3916,9 +3920,9 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
         legend: "Full presentation of Casa Suíça Kite Villas (in Portuguese): location, floor plan of the 178 sqm villa, common areas, master plan, construction and management."
       }
     ],
-    priceTag: "Price",
+    priceTag: "Starting at",
     price: "R$ 2,500,000.00",
-    installments: "Contact us for terms",
+    installments: "30% down + balance in 5 or 6 installments",
     category: "venda"
   },
   {
@@ -5684,14 +5688,15 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
     location: "Praia do Farol, Itarema - CE",
     rating: 5,
     exclusiveText: "Frente al Mar | 178 m² | 2 Suites | Piscina Privada | Spot de Kitesurf",
-    summaryDescription: "Villa de 178 m² con 2 suites y piscina privada en Casa Suíça Kite Villas, condominio cerrado de 14 villas frente al mar en Praia do Farol, Ilha do Guajiru (Itarema), con 100 m de frente al mar, punto de kite, piscina, cancha de tenis y restaurante — y gestión hotelera que alquila la villa cuando no estás.",
+    summaryDescription: "Villa de 178 m² con 2 suites y piscina privada en Casa Suíça Kite Villas, condominio cerrado de 14 villas frente al mar en Praia do Farol, Ilha do Guajiru (Itarema), con 100 m de frente al mar, punto de kite, piscina, cancha de tenis y restaurante — y servicio opcional de administración y alquiler de la villa.",
     about: [
       "Kitesurf en el patio de tu casa: Casa Suíça Kite Villas está en Praia do Farol, en la Ilha do Guajiru, Itarema — una de las playas más tranquilas del litoral oeste de Ceará, frente a una enorme laguna de aguas poco profundas y cristalinas formada por una franja de arena de 7 km, perfecta tanto para principiantes como para kiters con experiencia.",
       "El condominio ocupa un terreno de 20.000 m² con 100 metros de frente a la playa y reúne solo 14 villas individuales, rodeadas de jardines, cocoteros y un área de preservación permanente. Lo desarrolla el mismo grupo de Casa Suíça, posada y escuela de kite que opera en la Ilha do Guajiru desde 2006.",
       "Cada villa tiene 178 m², con 2 suites con baño privado, sala de estar con ventanales panorámicos, cocina completa con vista al mar, área de servicio y una amplia terraza cubierta con deck de madera y piscina privada. Arquitectura en madera y cubierta natural, integrada al paisaje, con plaza de estacionamiento propia.",
       "Áreas comunes pensadas para la vida de playa: gran piscina con vista al mar, bar en la playa con deck, mirador y apoyo a las actividades acuáticas (punto de kite exclusivo para residentes), escuela de kitesurf y wingfoil, restaurante con vista al atardecer, cancha de tenis, área de parrilla y eventos, generador y estacionamiento para residentes y visitantes.",
-      "Construcción de RA Construtora, especializada en alto estándar en el Nordeste, y gestión de KV ADM con servicios de hotel: check-in y check-out, limpieza diaria, mantenimiento y, bajo demanda, chef privado o niñera. Cuando no la estés usando, la administración alquila tu villa — hoy las villas del condominio se alquilan por R$ 2.000 a R$ 2.500 la noche.",
-      "Ubicación estratégica en la Ruta de los Vientos: a unos 40 minutos del aeropuerto de Jericoacoara, cerca de Preá, Jericoacoara e Icaraizinho, y a pocas horas de Fortaleza. Unidades limitadas — algunas villas ya se vendieron; consulta la disponibilidad."
+      "Construcción de RA Construtora, especializada en alto estándar en el Nordeste, y gestión de KV ADM con servicios de hotel: check-in y check-out, limpieza diaria, mantenimiento y, bajo demanda, chef privado o niñera. El servicio de administración y alquiler es opcional (tasa de gestión del 32% sobre los ingresos por alquiler, aparte de la cuota del condominio): cuando no la estés usando, la administración alquila tu villa — hoy las villas del condominio se alquilan por R$ 2.000 a R$ 2.500 la noche.",
+      "Ubicación estratégica en la Ruta de los Vientos: a unos 40 minutos del aeropuerto de Jericoacoara, cerca de Preá, Jericoacoara e Icaraizinho, y a pocas horas de Fortaleza. Unidades limitadas: de las 14 villas del condominio, 6 ya se vendieron y 8 siguen disponibles.",
+      "Precios y condiciones: R$ 2.500.000 por villa en la segunda línea y R$ 2.700.000 por villa en la primera línea, frente al mar — precios por unidad, que incluyen terreno, construcción y piscina privada. Pago con una entrada del 30% y el saldo en 5 o 6 cuotas, según el avance y las etapas de la construcción. Cuota del condominio de aproximadamente R$ 2.700 a R$ 2.800 al mes, sujeta a ajuste el próximo año según el presupuesto y los gastos del condominio."
     ],
     infra: [
       "Villa de 178 m²",
@@ -5714,10 +5719,13 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
       "Área de parrilla y eventos",
       "Generador",
       "Área de preservación permanente",
-      "Gestión hotelera (KV ADM): check-in/check-out, limpieza diaria y mantenimiento",
+      "Administración y alquiler opcional (KV ADM): check-in/check-out, limpieza diaria y mantenimiento",
       "Ingresos por alquiler vacacional cuando la villa no está en uso",
       "Construcción RA Construtora (alto estándar)",
-      "A ~40 min del aeropuerto de Jericoacoara"
+      "A ~40 min del aeropuerto de Jericoacoara",
+      "Villas en primera línea (frente al mar) o en segunda línea",
+      "8 de 14 villas disponibles",
+      "Cuota del condominio de aprox. R$ 2.700 a R$ 2.800/mes"
     ],
     facilities: ["Frente al Mar", "178 m²", "2 Suites", "Piscina Privada", "Spot de Kitesurf", "Condominio Cerrado", "Gestión Hotelera"],
     documents: [
@@ -5727,9 +5735,9 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
         legend: "Presentación completa de Casa Suíça Kite Villas (en portugués): ubicación, planta de la villa de 178 m², áreas comunes, plano maestro, construcción y gestión."
       }
     ],
-    priceTag: "Valor",
+    priceTag: "Desde",
     price: "R$ 2.500.000,00",
-    installments: "Consulte las condiciones",
+    installments: "Entrada del 30% + saldo en 5 o 6 cuotas",
     category: "venda"
   },
   {

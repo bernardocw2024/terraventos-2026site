@@ -3701,14 +3701,15 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
   location: "Praia do Farol, Itarema - CE",
   rating: 5,
   exclusiveText: "Pé na Areia | 178 m² | 2 Suítes | Piscina Privativa | Spot de Kitesurf",
-  summaryDescription: "Villa de 178 m² com 2 suítes e piscina privativa no Casa Suíça Kite Villas, condomínio fechado de 14 villas pé na areia na Praia do Farol, Ilha do Guajiru (Itarema), com 100 m de frente para o mar, ponto de kite, piscina, quadra de tênis e restaurante — e gestão hoteleira que aluga a villa quando você não está.",
+  summaryDescription: "Villa de 178 m² com 2 suítes e piscina privativa no Casa Suíça Kite Villas, condomínio fechado de 14 villas pé na areia na Praia do Farol, Ilha do Guajiru (Itarema), com 100 m de frente para o mar, ponto de kite, piscina, quadra de tênis e restaurante — e serviço opcional de administração e locação da villa.",
   about: [
     "Kitesurf no quintal de casa: o Casa Suíça Kite Villas fica na Praia do Farol, na Ilha do Guajiru, em Itarema — uma das praias mais tranquilas do litoral oeste do Ceará, em frente a uma enorme lagoa de águas rasas e cristalinas formada por uma faixa de areia de 7 km, perfeita tanto para quem está aprendendo quanto para kiters experientes.",
     "O condomínio fica em um terreno de 20.000 m² com 100 metros de frente para a praia e reúne apenas 14 villas individuais, cercadas de jardins, coqueiros e área de preservação permanente. O projeto é do mesmo grupo da Casa Suíça, pousada e escola de kite que opera na Ilha do Guajiru desde 2006.",
     "Cada villa tem 178 m², com 2 suítes com banheiro privativo, sala de estar com janelas panorâmicas, cozinha completa com vista para o mar, área de serviço e um amplo terraço coberto com deck de madeira e piscina privativa. Arquitetura em madeira e cobertura natural, integrada à paisagem, com vaga de estacionamento própria.",
     "Áreas comuns pensadas para a vida de praia: grande piscina com vista para o mar, bar na praia com deck, mirante e apoio às atividades no mar (ponto de kite exclusivo dos moradores), escola de kitesurf e wingfoil, restaurante com vista para o pôr do sol, quadra de tênis, área de churrasco e eventos, gerador e estacionamento para moradores e visitantes.",
-    "Construção da RA Construtora, especializada em alto padrão no Nordeste, e gestão da KV ADM com serviços de hotel: check-in e check-out, limpeza diária, manutenção e, sob demanda, chef particular ou babá. Quando você não estiver usando, a administração aluga a sua villa — hoje as villas do condomínio são alugadas por R$ 2.000 a R$ 2.500 a diária.",
-    "Localização estratégica na Rota dos Ventos: a cerca de 40 minutos do aeroporto de Jericoacoara, perto do Preá, de Jericoacoara e de Icaraizinho, e a poucas horas de Fortaleza. Unidades limitadas — algumas villas já foram vendidas; consulte a disponibilidade."
+    "Construção da RA Construtora, especializada em alto padrão no Nordeste, e gestão da KV ADM com serviços de hotel: check-in e check-out, limpeza diária, manutenção e, sob demanda, chef particular ou babá. O serviço de administração e locação é opcional (taxa de gestão de 32% sobre a receita de locação, separada da taxa condominial): quando você não estiver usando, a administração aluga a sua villa — hoje as villas do condomínio são alugadas por R$ 2.000 a R$ 2.500 a diária.",
+    "Localização estratégica na Rota dos Ventos: a cerca de 40 minutos do aeroporto de Jericoacoara, perto do Preá, de Jericoacoara e de Icaraizinho, e a poucas horas de Fortaleza. Unidades limitadas: das 14 villas do condomínio, 6 já foram vendidas e 8 continuam disponíveis.",
+    "Valores e condições: R$ 2.500.000 por villa na segunda linha e R$ 2.700.000 por villa na primeira linha, de frente para o mar — valores por unidade, incluindo terreno, construção e piscina privativa. Pagamento com entrada de 30% e saldo em 5 ou 6 parcelas, conforme o andamento e as etapas da construção. Taxa condominial em torno de R$ 2.700 a R$ 2.800 por mês, sujeita a reajuste no próximo ano conforme o orçamento e as despesas do condomínio."
   ],
   infra: [
     "Villa de 178 m²",
@@ -3731,10 +3732,13 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     "Área de churrasco e eventos",
     "Gerador",
     "Área de preservação permanente",
-    "Gestão hoteleira (KV ADM): check-in/check-out, limpeza diária e manutenção",
+    "Administração e locação opcional (KV ADM): check-in/check-out, limpeza diária e manutenção",
     "Renda com aluguel por temporada quando a villa não estiver em uso",
     "Construção RA Construtora (alto padrão)",
-    "A ~40 min do aeroporto de Jericoacoara"
+    "A ~40 min do aeroporto de Jericoacoara",
+    "Villas na 1ª linha (frente para o mar) ou na 2ª linha",
+    "8 de 14 villas disponíveis",
+    "Taxa condominial em torno de R$ 2.700 a R$ 2.800/mês"
   ],
   facilities: ["Pé na Areia", "178 m²", "2 Suítes", "Piscina Privativa", "Spot de Kitesurf", "Condomínio Fechado", "Gestão Hoteleira"],
   gallery: {
@@ -3784,7 +3788,7 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
     ]
   },
   mapImage: "/mapa.avif",
-  mapUrl: "https://maps.google.com/maps?q=-2.8735,-39.9420&hl=pt-BR&z=14&output=embed",
+  mapUrl: "https://maps.google.com/maps?q=-2.8726626,-39.9321012&hl=pt-BR&z=16&output=embed",
   videoSources: [
     "https://youtu.be/d4kR4Yx7kSo"
   ],
@@ -3798,9 +3802,9 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
       legend: "Apresentação completa do Casa Suíça Kite Villas: localização, planta baixa da villa de 178 m², áreas comuns, plano mestre, construção e gestão."
     }
   ],
-  priceTag: "Valor",
+  priceTag: "A partir de",
   price: "R$ 2.500.000,00",
-  installments: "Consulte condições",
+  installments: "Entrada de 30% + saldo em 5 ou 6 parcelas",
   category: "venda"
 },
 {
