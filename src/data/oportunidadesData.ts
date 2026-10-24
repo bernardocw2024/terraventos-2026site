@@ -3788,6 +3788,9 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
   videoSources: [
     "https://youtu.be/d4kR4Yx7kSo"
   ],
+  videoThumbnails: [
+    "/imoveis/villa-casa-suica-kite-villas-guajiru-video-capa.webp"
+  ],
   documents: [
     {
       label: "E-book do Empreendimento",
