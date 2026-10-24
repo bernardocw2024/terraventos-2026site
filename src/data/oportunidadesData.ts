@@ -3784,7 +3784,8 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
       "/imoveis/villa-casa-suica-kite-villas-guajiru-39-varanda-noite.webp",
       "/imoveis/villa-casa-suica-kite-villas-guajiru-40-piscina-privativa-noite.webp",
       "/imoveis/villa-casa-suica-kite-villas-guajiru-41-planta-baixa-178m2.webp",
-      "/imoveis/villa-casa-suica-kite-villas-guajiru-42-plano-mestre-condominio.webp"
+      "/imoveis/villa-casa-suica-kite-villas-guajiru-42-plano-mestre-condominio.webp",
+      "/imoveis/villa-casa-suica-kite-villas-guajiru-43-planta-villas-vendidas-disponiveis.webp"
     ]
   },
   mapImage: "/mapa.avif",
