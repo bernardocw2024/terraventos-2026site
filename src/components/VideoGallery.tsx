@@ -12,21 +12,35 @@ type VideoGalleryProps = {
   onOpenVideo?: (src: string) => void;
 };
 
-// A galeria toca tanto vídeos do Vimeo quanto do Google Drive. O Drive não expõe uma
-// API de player embutível (sem evento "ended"), então o avanço automático por
+// A galeria toca vídeos do Vimeo, do Google Drive e do YouTube. Drive e YouTube não
+// usam a API do player do Vimeo (sem evento "ended"), então o avanço automático por
 // contagem regressiva só existe para fontes Vimeo.
 function isDriveSource(src: string): boolean {
   return src.includes('drive.google.com');
 }
 
+// Aceita youtu.be/ID, youtube.com/watch?v=ID, /embed/ID e /shorts/ID.
+function getYouTubeId(src: string): string | null {
+  const match = src.match(/(?:youtu\.be\/|youtube(?:-nocookie)?\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/))([\w-]{11})/);
+  return match ? match[1] : null;
+}
+
+function isVimeoSource(src: string): boolean {
+  return !isDriveSource(src) && !getYouTubeId(src);
+}
+
 function getEmbedSrc(src: string): string {
   if (isDriveSource(src)) return src;
+  const youTubeId = getYouTubeId(src);
+  if (youTubeId) return `https://www.youtube-nocookie.com/embed/${youTubeId}?autoplay=1&rel=0&modestbranding=1`;
   return `${src}${src.includes('?') ? '&' : '?'}title=0&byline=0&portrait=0&badge=0&autoplay=1&dnt=1`;
 }
 
 function getThumbSrc(src: string, videoThumbnails: string[] | undefined, idx: number, mainImage: string): string {
   if (videoThumbnails?.[idx]) return videoThumbnails[idx];
-  if (!isDriveSource(src)) {
+  const youTubeId = getYouTubeId(src);
+  if (youTubeId) return `https://i.ytimg.com/vi/${youTubeId}/hqdefault.jpg`;
+  if (isVimeoSource(src)) {
     const vimeoId = src.split('/video/')[1]?.split('?')[0];
     if (vimeoId) return `https://vumbnail.com/${vimeoId}.jpg`;
   }
@@ -40,9 +54,9 @@ export default function VideoGallery({ videoSources, videoThumbnails, mainImage,
   const [countdown, setCountdown] = useState<number | null>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
-  // Initialize Vimeo player and listen for "ended" (Drive não tem essa API — sem auto-avanço)
+  // Initialize Vimeo player and listen for "ended" (Drive e YouTube não têm essa API — sem auto-avanço)
   useEffect(() => {
-    if (playingIndex !== null && iframeRef.current && !isDriveSource(videoSources[playingIndex])) {
+    if (playingIndex !== null && iframeRef.current && isVimeoSource(videoSources[playingIndex])) {
       const player = new Player(iframeRef.current);
 
       player.on('ended', () => {

@@ -3914,11 +3914,6 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
         label: "Project E-book",
         url: "/documentos/villa-casa-suica-kite-villas-ebook.pdf",
         legend: "Full presentation of Casa Suíça Kite Villas (in Portuguese): location, floor plan of the 178 sqm villa, common areas, master plan, construction and management."
-      },
-      {
-        label: "Project Video",
-        url: "https://youtu.be/d4kR4Yx7kSo",
-        legend: "Official video of Casa Suíça Kite Villas in Ilha do Guajiru (YouTube)."
       }
     ],
     priceTag: "Price",
@@ -5730,11 +5725,6 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
         label: "E-book del Proyecto",
         url: "/documentos/villa-casa-suica-kite-villas-ebook.pdf",
         legend: "Presentación completa de Casa Suíça Kite Villas (en portugués): ubicación, planta de la villa de 178 m², áreas comunes, plano maestro, construcción y gestión."
-      },
-      {
-        label: "Video del Proyecto",
-        url: "https://youtu.be/d4kR4Yx7kSo",
-        legend: "Video oficial de Casa Suíça Kite Villas en la Ilha do Guajiru (YouTube)."
       }
     ],
     priceTag: "Valor",
