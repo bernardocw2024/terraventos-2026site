@@ -3863,6 +3863,70 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
     category: "venda"
   },
   {
+    id: "villa-casa-suica-kite-villas-guajiru",
+    slug: "villa-casa-suica-kite-villas-guajiru",
+    title: "FOR SALE",
+    searchTitle: "2-Suite Beachfront Villa — Casa Suíça Kite Villas — Ilha do Guajiru",
+    image: "/imoveis/villa-casa-suica-kite-villas-guajiru-01-villa-piscina-privativa-deck.webp",
+    badge: "Exclusive Opportunity",
+    propertyTitle: "BEACHFRONT VILLA — CASA SUÍÇA KITE VILLAS — ILHA DO GUAJIRU",
+    location: "Farol Beach, Itarema - CE",
+    rating: 5,
+    exclusiveText: "Beachfront | 178 sqm | 2 Suites | Private Pool | Kitesurf Spot",
+    summaryDescription: "178 sqm villa with 2 suites and a private pool at Casa Suíça Kite Villas, a gated community of 14 beachfront villas on Farol Beach, Ilha do Guajiru (Itarema), with 100 m of ocean frontage, kite point, pool, tennis court and restaurant — plus hotel-style management that rents out the villa when you're away.",
+    about: [
+      "Kitesurfing in your backyard: Casa Suíça Kite Villas sits on Farol Beach, in Ilha do Guajiru, Itarema — one of the quietest beaches on Ceará's west coast, facing a huge lagoon of shallow, crystal-clear water formed by a 7 km sandbar, perfect for beginners and experienced kiters alike.",
+      "The community covers a 20,000 sqm plot with 100 meters of beachfront and has only 14 individual villas, surrounded by gardens, coconut palms and a permanent preservation area. It is developed by the same group behind Casa Suíça, the pousada and kite school operating in Ilha do Guajiru since 2006.",
+      "Each villa has 178 sqm, with 2 suites with private bathrooms, a living room with panoramic windows, a full kitchen with ocean views, a laundry area and a large covered terrace with wooden deck and private pool. Wooden architecture with a natural roof, blending into the landscape, and its own parking space.",
+      "Common areas designed for beach life: a large pool with ocean views, a beach bar with deck, lookout and water-sports support (kite point exclusive to residents), a kitesurf and wingfoil school, a restaurant with sunset views, a tennis court, a barbecue and events area, a generator and parking for residents and visitors.",
+      "Built by RA Construtora, specialized in high-end projects in Northeast Brazil, and managed by KV ADM with hotel-style services: check-in and check-out, daily cleaning, maintenance and, on demand, a private chef or babysitter. When you're not using it, management rents out your villa — the community's villas currently rent for R$ 2,000 to R$ 2,500 per night.",
+      "Strategic location on the Wind Route: about 40 minutes from Jericoacoara airport, close to Preá, Jericoacoara and Icaraizinho, and a few hours from Fortaleza. Limited units — some villas are already sold; ask about availability."
+    ],
+    infra: [
+      "178 sqm villa",
+      "2 suites with private bathroom",
+      "Living room with panoramic windows",
+      "Full kitchen with ocean views",
+      "Laundry area",
+      "Covered terrace with wooden deck",
+      "Private pool",
+      "Air conditioning and Wi-Fi",
+      "1 parking space",
+      "Gated community with only 14 villas",
+      "20,000 sqm plot with 100 m of ocean frontage",
+      "Direct beach access (beachfront)",
+      "Kite point and beach bar exclusive to residents",
+      "Kitesurf and wingfoil school",
+      "Shared pool with ocean views",
+      "Restaurant with sunset views",
+      "Tennis court",
+      "Barbecue and events area",
+      "Generator",
+      "Permanent preservation area",
+      "Hotel-style management (KV ADM): check-in/check-out, daily cleaning and maintenance",
+      "Vacation-rental income when the villa is not in use",
+      "Built by RA Construtora (high-end)",
+      "~40 min from Jericoacoara airport"
+    ],
+    facilities: ["Beachfront", "178 sqm", "2 Suites", "Private Pool", "Kitesurf Spot", "Gated Community", "Hotel Management"],
+    documents: [
+      {
+        label: "Project E-book",
+        url: "/documentos/villa-casa-suica-kite-villas-ebook.pdf",
+        legend: "Full presentation of Casa Suíça Kite Villas (in Portuguese): location, floor plan of the 178 sqm villa, common areas, master plan, construction and management."
+      },
+      {
+        label: "Project Video",
+        url: "https://youtu.be/d4kR4Yx7kSo",
+        legend: "Official video of Casa Suíça Kite Villas in Ilha do Guajiru (YouTube)."
+      }
+    ],
+    priceTag: "Price",
+    price: "R$ 2,500,000.00",
+    installments: "Contact us for terms",
+    category: "venda"
+  },
+  {
     id: "sitio-espinho-camocim",
     slug: "sitio-espinho-camocim",
     title: "FOR SALE",
@@ -5611,6 +5675,70 @@ export const oportunidadesDataByLang: Record<string, Partial<OportunidadeDetalhe
     ],
     priceTag: "Valor",
     price: "R$ 3.500.000,00",
+    installments: "Consulte las condiciones",
+    category: "venda"
+  },
+  {
+    id: "villa-casa-suica-kite-villas-guajiru",
+    slug: "villa-casa-suica-kite-villas-guajiru",
+    title: "VENTA",
+    searchTitle: "Villa 2 Suites Frente al Mar — Casa Suíça Kite Villas — Ilha do Guajiru",
+    image: "/imoveis/villa-casa-suica-kite-villas-guajiru-01-villa-piscina-privativa-deck.webp",
+    badge: "Oportunidad Exclusiva",
+    propertyTitle: "VILLA FRENTE AL MAR — CASA SUÍÇA KITE VILLAS — ILHA DO GUAJIRU",
+    location: "Praia do Farol, Itarema - CE",
+    rating: 5,
+    exclusiveText: "Frente al Mar | 178 m² | 2 Suites | Piscina Privada | Spot de Kitesurf",
+    summaryDescription: "Villa de 178 m² con 2 suites y piscina privada en Casa Suíça Kite Villas, condominio cerrado de 14 villas frente al mar en Praia do Farol, Ilha do Guajiru (Itarema), con 100 m de frente al mar, punto de kite, piscina, cancha de tenis y restaurante — y gestión hotelera que alquila la villa cuando no estás.",
+    about: [
+      "Kitesurf en el patio de tu casa: Casa Suíça Kite Villas está en Praia do Farol, en la Ilha do Guajiru, Itarema — una de las playas más tranquilas del litoral oeste de Ceará, frente a una enorme laguna de aguas poco profundas y cristalinas formada por una franja de arena de 7 km, perfecta tanto para principiantes como para kiters con experiencia.",
+      "El condominio ocupa un terreno de 20.000 m² con 100 metros de frente a la playa y reúne solo 14 villas individuales, rodeadas de jardines, cocoteros y un área de preservación permanente. Lo desarrolla el mismo grupo de Casa Suíça, posada y escuela de kite que opera en la Ilha do Guajiru desde 2006.",
+      "Cada villa tiene 178 m², con 2 suites con baño privado, sala de estar con ventanales panorámicos, cocina completa con vista al mar, área de servicio y una amplia terraza cubierta con deck de madera y piscina privada. Arquitectura en madera y cubierta natural, integrada al paisaje, con plaza de estacionamiento propia.",
+      "Áreas comunes pensadas para la vida de playa: gran piscina con vista al mar, bar en la playa con deck, mirador y apoyo a las actividades acuáticas (punto de kite exclusivo para residentes), escuela de kitesurf y wingfoil, restaurante con vista al atardecer, cancha de tenis, área de parrilla y eventos, generador y estacionamiento para residentes y visitantes.",
+      "Construcción de RA Construtora, especializada en alto estándar en el Nordeste, y gestión de KV ADM con servicios de hotel: check-in y check-out, limpieza diaria, mantenimiento y, bajo demanda, chef privado o niñera. Cuando no la estés usando, la administración alquila tu villa — hoy las villas del condominio se alquilan por R$ 2.000 a R$ 2.500 la noche.",
+      "Ubicación estratégica en la Ruta de los Vientos: a unos 40 minutos del aeropuerto de Jericoacoara, cerca de Preá, Jericoacoara e Icaraizinho, y a pocas horas de Fortaleza. Unidades limitadas — algunas villas ya se vendieron; consulta la disponibilidad."
+    ],
+    infra: [
+      "Villa de 178 m²",
+      "2 suites con baño privado",
+      "Sala de estar con ventanales panorámicos",
+      "Cocina completa con vista al mar",
+      "Área de servicio",
+      "Terraza cubierta con deck de madera",
+      "Piscina privada",
+      "Aire acondicionado y Wi-Fi",
+      "1 plaza de estacionamiento",
+      "Condominio cerrado con solo 14 villas",
+      "Terreno de 20.000 m² con 100 m de frente al mar",
+      "Acceso directo a la playa (frente al mar)",
+      "Punto de kite y bar en la playa exclusivos para residentes",
+      "Escuela de kitesurf y wingfoil",
+      "Piscina común con vista al mar",
+      "Restaurante con vista al atardecer",
+      "Cancha de tenis",
+      "Área de parrilla y eventos",
+      "Generador",
+      "Área de preservación permanente",
+      "Gestión hotelera (KV ADM): check-in/check-out, limpieza diaria y mantenimiento",
+      "Ingresos por alquiler vacacional cuando la villa no está en uso",
+      "Construcción RA Construtora (alto estándar)",
+      "A ~40 min del aeropuerto de Jericoacoara"
+    ],
+    facilities: ["Frente al Mar", "178 m²", "2 Suites", "Piscina Privada", "Spot de Kitesurf", "Condominio Cerrado", "Gestión Hotelera"],
+    documents: [
+      {
+        label: "E-book del Proyecto",
+        url: "/documentos/villa-casa-suica-kite-villas-ebook.pdf",
+        legend: "Presentación completa de Casa Suíça Kite Villas (en portugués): ubicación, planta de la villa de 178 m², áreas comunes, plano maestro, construcción y gestión."
+      },
+      {
+        label: "Video del Proyecto",
+        url: "https://youtu.be/d4kR4Yx7kSo",
+        legend: "Video oficial de Casa Suíça Kite Villas en la Ilha do Guajiru (YouTube)."
+      }
+    ],
+    priceTag: "Valor",
+    price: "R$ 2.500.000,00",
     installments: "Consulte las condiciones",
     category: "venda"
   },
