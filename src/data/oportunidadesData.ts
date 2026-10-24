@@ -3785,16 +3785,14 @@ export const oportunidadesData: OportunidadeDetalhe[] = [
   },
   mapImage: "/mapa.avif",
   mapUrl: "https://maps.google.com/maps?q=-2.8735,-39.9420&hl=pt-BR&z=14&output=embed",
+  videoSources: [
+    "https://youtu.be/d4kR4Yx7kSo"
+  ],
   documents: [
     {
       label: "E-book do Empreendimento",
       url: "/documentos/villa-casa-suica-kite-villas-ebook.pdf",
       legend: "Apresentação completa do Casa Suíça Kite Villas: localização, planta baixa da villa de 178 m², áreas comuns, plano mestre, construção e gestão."
-    },
-    {
-      label: "Vídeo do Empreendimento",
-      url: "https://youtu.be/d4kR4Yx7kSo",
-      legend: "Vídeo oficial do Casa Suíça Kite Villas na Ilha do Guajiru (YouTube)."
     }
   ],
   priceTag: "Valor",
