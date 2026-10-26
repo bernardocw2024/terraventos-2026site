@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>O papel do terreno — Terra Segura | Terra Ventos</title>
+<meta name="description" content="Animação educativa da Terra Ventos: matrícula, averbações, ônus e certidões negativas explicados de forma simples para quem quer comprar terreno no litoral do Ceará com segurança.">
+<link rel="canonical" href="https://www.terraventos.com/terra-segura">
+<link rel="icon" href="/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Terra Ventos">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="O papel do terreno — Terra Segura | Terra Ventos">
+<meta property="og:description" content="Animação educativa da Terra Ventos: matrícula, averbações, ônus e certidões negativas explicados de forma simples para quem quer comprar terreno no litoral do Ceará com segurança.">
+<meta property="og:url" content="https://www.terraventos.com/terra-segura">
+<meta property="og:image" content="https://www.terraventos.com/og/og-propriedades.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Figtree:wght@400;600;700&display=swap">
+<style>
+/* Layout: navy brand band with the official logo, then one illustrated plate (coast landscape + field-notebook card), caption below. Single light look. */
+:root{
+  --navy:#142431; --ground:#eef0ea; --plate:#f8f7f1; --ink:#1c2a33; --ink2:#55666c;
+  --sea:#4f8a8f; --gold:#c9a46a; --rust:#c0643c;
+  --serif:"Newsreader",Georgia,serif; --sans:"Figtree",system-ui,sans-serif; color-scheme:light;
+}
+html,body{background:var(--ground);color:var(--ink)}
+body{font-family:var(--sans);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px}
+.wrap{max-width:1000px;margin:0 auto;display:grid;gap:16px}
+.brand{background:var(--navy);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:10px 22px;border-radius:3px}
+.brand img{height:92px;width:auto;display:block}
+.brand p{margin:0;color:#d8c39a;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.1;margin:4px 0 0;text-wrap:balance}
+h1 em{color:var(--sea)}
+.plate{background:var(--plate);border:1px solid #d9ddd4;border-radius:3px;overflow:hidden}
+svg{display:block;width:100%;height:auto}
+svg text{stroke:none}
+.cap{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;padding:20px 26px 6px;border-top:1px solid #e3e5de;min-height:140px}
+.num{font-family:var(--serif);font-size:3.2rem;line-height:1;color:var(--gold);font-variant-numeric:tabular-nums}
+.txt{display:grid;gap:6px;min-width:0}
+.term{font-family:var(--serif);font-size:2.1rem;margin:0;font-weight:600}
+.pt{margin:0;line-height:1.55;max-width:64ch;font-size:1.25rem}
+.en{margin:0;font-family:var(--serif);font-style:italic;color:var(--ink2);font-size:1.2rem}
+.ctrl{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 26px 20px}
+button{font:600 1rem var(--sans);background:transparent;color:var(--ink);border:1px solid var(--ink);border-radius:999px;padding:7px 16px;cursor:pointer}
+button:hover{background:var(--ink);color:var(--plate)}
+button:focus-visible{outline:2px solid var(--sea);outline-offset:3px}
+.bar{display:flex;gap:6px;margin-left:auto}
+.seg{width:36px;height:4px;padding:0;border:0;border-radius:2px;background:#d4d9d2;position:relative;overflow:hidden}
+.seg i{position:absolute;inset:0;background:var(--sea);transform-origin:left;transform:scaleX(0)}
+.seg.done i{transform:scaleX(1)} .seg.run i{animation:fill 8s linear forwards}
+@keyframes fill{to{transform:scaleX(1)}}
+.sc{opacity:0;transition:opacity .6s}.sc.on{opacity:1}
+.ln{stroke-dasharray:1;stroke-dashoffset:1}.on .ln{animation:draw 1.4s cubic-bezier(.4,0,.2,1) forwards}
+.fi{opacity:0}.on .fi{animation:fade .8s ease forwards}
+.on .t1{animation-delay:.5s}.on .t2{animation-delay:1.2s}.on .t3{animation-delay:1.9s}.on .t4{animation-delay:2.6s}
+.on .drop{animation:drop 1s .4s cubic-bezier(.5,0,.6,1.25) both}
+.on .squash{animation:squash .6s 1.25s both;transform-box:fill-box;transform-origin:bottom}
+@keyframes draw{to{stroke-dashoffset:0}} @keyframes fade{to{opacity:1}}
+@keyframes drop{from{transform:translateY(-240px)}to{transform:none}}
+@keyframes squash{50%{transform:scaleY(.9)}to{transform:scaleY(.95)}}
+.blink{animation:blink 5s infinite;transform-box:fill-box;transform-origin:center}
+.arm{transform-origin:28px 72px;animation:present 4s ease-in-out infinite}
+.kite1{animation:sway 6s ease-in-out infinite;transform-origin:720px 300px}
+.kite2{animation:sway 7s ease-in-out infinite reverse;transform-origin:470px 300px}
+.foam{animation:tide 8s ease-in-out infinite}
+@keyframes blink{0%,95%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
+@keyframes present{50%{transform:rotate(-5deg)}}
+@keyframes sway{50%{transform:rotate(3deg)}}
+@keyframes tide{50%{transform:translateX(-12px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.ln{stroke-dashoffset:0}.fi{opacity:1}}
+@media (max-width:560px){.cap{grid-template-columns:1fr}.num{font-size:2rem}.bar{margin-left:0;width:100%}.brand img{height:48px}}
+</style>
+
+<style>
+.brand a{display:block}
+.cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;background:var(--navy);color:#efe6d6;padding:22px 26px;border-radius:3px}
+.cta p{margin:0;font-family:var(--serif);font-size:1.35rem;max-width:40ch}
+.cta a{font:600 1rem var(--sans);background:var(--gold);color:var(--navy);text-decoration:none;padding:12px 20px;border-radius:999px}
+.cta a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.note{margin:0;color:var(--ink2);font-size:.9rem;line-height:1.5}
+.back{color:var(--sea);font-weight:600;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><a href="/" aria-label="Terra Ventos — página inicial"><img src="/terra-segura/logo.png" alt="Terra Ventos" width="440" height="230"></a><p>Terra Segura · série educativa</p></div>
+  <h1>O papel do terreno, <em>explicado com calma</em></h1>
+
+  <div class="plate">
+    <svg id="stage" viewBox="0 0 1000 560" role="img" aria-labelledby="t-term">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e4eeee"/><stop offset="1" stop-color="#f7f2e6"/></linearGradient>
+        <pattern id="grain" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><line x1="0" y1="0" x2="0" y2="9" stroke="#9c7f4c" stroke-width="1" opacity=".18"/></pattern>
+        <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#1c2a33" flood-opacity=".18"/></filter>
+      </defs>
+
+      <!-- landscape -->
+      <rect width="1000" height="560" fill="url(#sky)"/>
+      <circle cx="905" cy="80" r="38" fill="#f1c983"/>
+      <g transform="translate(-420 40)"><g class="kite2" fill="none" stroke="#1c2a33" stroke-width=".8" opacity=".7"><path d="M470 300 L440 70 M470 300 L478 64"/></g>
+      <g class="kite2"><path d="M418 72 Q458 34 500 66 Q460 54 418 72Z" fill="#23435a" stroke="#1c2a33" stroke-width="1.5"/></g></g>
+      <path d="M0 262 Q140 214 300 244 Q470 274 620 232 Q800 196 1000 246 V290 H0Z" fill="#ead7ad"/>
+      <path d="M300 244 Q470 274 620 232 Q560 262 470 266 Q380 262 300 244Z" fill="#d9c08e"/>
+      <path d="M0 282 Q500 270 1000 284 V336 H0Z" fill="#7fb4b3"/>
+      <path d="M0 300 Q500 292 1000 302 V336 H0Z" fill="#5f9da1"/>
+      <g class="foam" fill="none" stroke="#fff" stroke-width="2" opacity=".85" stroke-linecap="round"><path d="M40 314 q16 -6 32 0 t32 0 M330 318 q16 -6 32 0 t32 0 M640 310 q16 -6 32 0 t32 0 M880 320 q16 -6 32 0"/></g>
+      <path d="M0 330 Q500 316 1000 334 V560 H0Z" fill="#e7d0a1"/>
+      <path d="M0 330 Q500 316 1000 334 V560 H0Z" fill="url(#grain)"/>
+      <path d="M0 470 Q260 440 520 486 Q760 520 1000 478 V560 H0Z" fill="#dcc08b"/>
+      <!-- palms -->
+      <g stroke="#1c2a33" stroke-width="1.6" stroke-linejoin="round">
+        <path d="M978 470 Q972 380 950 300 L958 298 Q982 380 988 470Z" fill="#8a6a44"/>
+        <path d="M954 300 Q910 286 880 316 Q920 300 954 304Z M954 300 Q922 260 880 262 Q924 278 954 302Z M954 300 Q972 256 1000 252 V266 Q976 276 956 302Z" fill="#6f8f52"/>
+      </g>
+      <g transform="translate(-500 70)"><g class="kite1" fill="none" stroke="#1c2a33" stroke-width=".8" opacity=".7"><path d="M720 300 L690 50 M720 300 L748 44"/></g>
+      <g class="kite1"><path d="M664 54 Q708 8 756 46 Q708 32 664 54Z" fill="#e07a3f" stroke="#1c2a33" stroke-width="1.5"/><path d="M690 34 Q708 30 724 30" fill="none" stroke="#fff" stroke-width="1.5" opacity=".7"/></g></g>
+
+      <!-- notebook card -->
+      <g filter="url(#shadow)"><rect x="300" y="26" width="676" height="410" rx="6" fill="#fbf8f0"/></g>
+      <rect x="300" y="26" width="676" height="410" rx="6" fill="none" stroke="#d8d2c2"/>
+      <text id="cardlabel" x="326" y="56" font-family="var(--sans)" font-size="13" font-weight="700" letter-spacing="2" fill="#8a9a9c"></text>
+
+      <!-- S1 MATRÍCULA -->
+      <g class="sc" fill="none" stroke="#1c2a33" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="rotate(-2 510 250)">
+          <rect x="350" y="78" width="320" height="336" fill="#fffdf8" stroke="#1c2a33"/>
+          <text class="fi" x="372" y="106" font-family="var(--sans)" font-size="12" font-weight="700" letter-spacing="1.6" fill="#55666c">OFÍCIO DE REGISTRO DE IMÓVEIS</text>
+          <text class="fi" x="372" y="132" font-family="var(--serif)" font-size="20" font-weight="600" fill="#1c2a33">Matrícula nº 1.234</text>
+          <path d="M372 144 H648" stroke-width="1"/>
+          <text class="fi t1" x="372" y="166" font-family="var(--sans)" font-size="12" font-weight="700" fill="#55666c">IMÓVEL</text>
+          <path class="ln t1" pathLength="1" d="M372 178 H648 M372 190 H630 M372 202 H600" stroke="#9aa5a8" stroke-width="1.4"/>
+          <rect x="372" y="216" width="128" height="96" fill="#f1ebd9" stroke-width="1.2"/>
+          <path class="ln t2" pathLength="1" d="M392 296 L410 232 L478 228 L486 290Z" stroke="#c0643c" stroke-width="2"/>
+          <g class="fi t2" fill="#c0643c" stroke="none"><circle cx="392" cy="296" r="3.5"/><circle cx="410" cy="232" r="3.5"/><circle cx="478" cy="228" r="3.5"/><circle cx="486" cy="290" r="3.5"/></g>
+          <path class="ln t2" pathLength="1" d="M514 226 H648 M514 240 H640 M514 254 H648 M514 268 H620 M514 282 H648 M514 296 H600" stroke="#9aa5a8" stroke-width="1.4"/>
+          <text class="fi t3" x="372" y="336" font-family="var(--sans)" font-size="12" font-weight="700" fill="#55666c">PROPRIETÁRIO</text>
+          <path class="ln t3" pathLength="1" d="M372 348 H560 M372 360 H520" stroke="#9aa5a8" stroke-width="1.4"/>
+          <path class="ln t4" pathLength="1" d="M380 394 q10 -16 20 -2 t18 -4 q8 -10 16 2 t22 -6" stroke-width="1.4"/>
+          <circle class="ln t4" pathLength="1" cx="616" cy="380" r="22" stroke="#4f8a8f" stroke-width="2"/>
+          <text class="fi t4" x="616" y="385" text-anchor="middle" font-family="var(--sans)" font-size="12" font-weight="700" fill="#4f8a8f">CRI</text>
+        </g>
+        <text class="fi t2" x="708" y="252" font-family="var(--serif)" font-size="40" fill="#8a9a9c">=</text>
+        <g class="fi t3">
+          <rect x="752" y="118" width="170" height="226" rx="10" fill="#23435a" stroke="#1c2a33" stroke-width="2"/>
+          <rect x="764" y="130" width="146" height="202" rx="6" fill="none" stroke="#c9a46a" stroke-width="1.2"/>
+          <path d="M790 206 q14 -14 28 0 t28 0 t28 0 M790 226 q14 -14 28 0 t28 0 t28 0" stroke="#c9a46a" stroke-width="3"/>
+          <text x="837" y="282" text-anchor="middle" font-family="var(--sans)" font-size="14" font-weight="700" letter-spacing="3" fill="#c9a46a">PASSAPORTE</text>
+          <text x="837" y="304" text-anchor="middle" font-family="var(--serif)" font-style="italic" font-size="14" fill="#c9a46a">do terreno</text>
+        </g>
+        <text class="fi t4" x="837" y="382" text-anchor="middle" font-family="var(--serif)" font-style="italic" font-size="20" fill="#4f8a8f">o RG do terreno</text>
+      </g>
+
+      <!-- S2 ATUALIZADA -->
+      <g class="sc" fill="none" stroke="#1c2a33" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="rotate(-6 470 240)" opacity=".85">
+          <path d="M360 100 H580 V350 L550 380 H360Z" fill="#ecdcb6"/>
+          <path d="M580 350 L550 352 L550 380" fill="#d9c597"/>
+          <path d="M380 130 H560 M380 146 H540 M380 176 H560 M380 192 H520 M380 208 H560 M380 238 H500 M380 254 H560 M380 270 H530" stroke="#b9a57b" stroke-width="1.4" stroke-dasharray="6 5"/>
+          <text x="470" y="320" text-anchor="middle" font-family="var(--serif)" font-size="30" fill="#b9a57b">2019</text>
+        </g>
+        <text x="460" y="414" text-anchor="middle" font-family="var(--serif)" font-style="italic" font-size="19" fill="#8a9a9c">cópia antiga</text>
+        <path class="ln t1" pathLength="1" d="M604 240 H660 M646 228 L660 240 L646 252" stroke="#4f8a8f" stroke-width="2.4"/>
+        <g class="fi t1">
+          <rect x="680" y="80" width="260" height="300" fill="#fffdf8"/>
+          <text x="700" y="110" font-family="var(--sans)" font-size="12" font-weight="700" letter-spacing="1.6" fill="#55666c">CERTIDÃO DE INTEIRO TEOR</text>
+          <text x="920" y="132" text-anchor="end" font-family="var(--sans)" font-size="13" font-weight="600" fill="#c0643c">26/10/2026</text>
+        </g>
+        <path class="ln t1" pathLength="1" d="M680 80 H940 V380 H680Z"/>
+        <path class="ln t2" pathLength="1" d="M700 150 H920 M700 166 H900 M700 194 H920 M700 210 H880 M700 226 H920 M700 254 H860 M700 270 H920" stroke="#5d6b70" stroke-width="1.4"/>
+        <circle class="ln t3" pathLength="1" cx="870" cy="330" r="32" stroke="#4f8a8f" stroke-width="2.4"/>
+        <g class="fi t3" font-family="var(--sans)" font-size="12" font-weight="700" letter-spacing="1" fill="#4f8a8f" text-anchor="middle"><text x="870" y="327">EMITIDA</text><text x="870" y="342">HOJE</text></g>
+        <text class="fi t3" x="810" y="414" text-anchor="middle" font-family="var(--serif)" font-style="italic" font-size="19" fill="#4f8a8f">a foto de hoje</text>
+      </g>
+
+      <!-- S3 AVERBAÇÕES -->
+      <g class="sc" fill="none" stroke="#1c2a33" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="340" y="74" width="604" height="340" fill="#fffdf8"/>
+        <text x="364" y="104" font-family="var(--sans)" font-size="12" font-weight="700" letter-spacing="1.6" fill="#55666c">MATRÍCULA · O DIÁRIO DO TERRENO</text>
+        <path class="ln" pathLength="1" d="M400 136 V388" stroke="#c9a46a" stroke-width="3"/>
+        <g class="fi t1">
+          <circle cx="400" cy="160" r="10" fill="#c9a46a"/>
+          <g transform="translate(446 160)"><circle cx="-8" cy="0" r="9"/><path d="M1 0 H22 M16 0 V7 M10 0 V6"/></g>
+          <text x="500" y="156" font-family="var(--serif)" font-size="21" font-weight="600" fill="#1c2a33">R.1 · Compra e venda</text>
+          <text x="500" y="178" font-family="var(--sans)" font-size="15" fill="#55666c">o terreno muda de dono</text>
+        </g>
+        <g class="fi t2">
+          <circle cx="400" cy="250" r="10" fill="#c9a46a"/>
+          <g transform="translate(448 250)"><path d="M-16 2 L0 -14 L16 2 M-11 -2 V14 H11 V-2" fill="#f1ebd9"/><path d="M-3 14 V5 H3 V14"/></g>
+          <text x="500" y="246" font-family="var(--serif)" font-size="21" font-weight="600" fill="#1c2a33">Av.2 · Construção averbada</text>
+          <text x="500" y="268" font-family="var(--sans)" font-size="15" fill="#55666c">a casa passa a existir no papel</text>
+        </g>
+        <g class="fi t3">
+          <circle cx="400" cy="340" r="10" fill="#c9a46a"/>
+          <g transform="translate(448 340)"><path d="M-18 12 L-12 -12 L16 -12 L18 12Z" fill="#f1ebd9"/><path d="M0 -12 L2 12" stroke="#c0643c" stroke-dasharray="3 3"/></g>
+          <text x="500" y="336" font-family="var(--serif)" font-size="21" font-weight="600" fill="#1c2a33">Av.3 · Desmembramento</text>
+          <text x="500" y="358" font-family="var(--sans)" font-size="15" fill="#55666c">uma parte ganha matrícula própria</text>
+        </g>
+      </g>
+
+      <!-- S4 ÔNUS -->
+      <g class="sc" fill="none" stroke="#1c2a33" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <g class="fi">
+          <rect x="336" y="80" width="140" height="132" fill="#fffdf8" transform="rotate(-4 406 146)"/>
+          <g transform="rotate(-4 406 146)"><text x="350" y="104" font-family="var(--sans)" font-size="12" font-weight="700" letter-spacing="1.2" fill="#55666c">MATRÍCULA</text>
+          <path d="M350 120 H460 M350 134 H450 M350 148 H460" stroke="#9aa5a8" stroke-width="1.3"/>
+          <text x="350" y="178" font-family="var(--serif)" font-size="17" font-weight="600" fill="#c0643c">Av.4 · penhora</text>
+          <path d="M350 186 H458" stroke="#c0643c" stroke-width="1.5"/></g>
+        </g>
+        <g class="squash">
+          <path d="M400 410 L760 410 L820 346 L460 346Z" fill="#dcc08b"/>
+          <path d="M412 404 L470 352 M480 404 L536 352 M548 404 L604 352 M616 404 L672 352 M684 404 L740 352" stroke="#b39561" stroke-width="1.2"/>
+          <path d="M400 410 v-20 M760 410 v-20 M820 346 v-20 M460 346 v-20" stroke-width="3"/>
+          <path d="M400 392 L760 392 L820 328 L460 328Z" stroke-dasharray="6 6" stroke-width="1.2"/>
+        </g>
+        <g class="drop">
+          <path d="M540 372 Q526 214 610 206 Q694 214 680 372Z" fill="#c0643c"/>
+          <path d="M650 214 Q694 222 680 372 L652 372 Q662 250 640 214Z" fill="#9c4c2c" stroke="none"/>
+          <path d="M540 372 Q526 214 610 206 Q694 214 680 372Z"/>
+          <path d="M576 210 Q610 160 644 210" stroke-width="5"/>
+          <path d="M548 262 Q610 246 672 262 L668 296 Q610 284 552 296Z" fill="#a8532f"/>
+          <rect x="574" y="306" width="72" height="44" rx="8" fill="#a8532f"/>
+          <rect x="602" y="290" width="16" height="22" rx="3" fill="#c9a46a"/>
+          <path d="M680 258 L716 189 M682 300 L716 246 M678 338 L716 303" stroke-width="1.2"/>
+        </g>
+        <g class="fi t2" font-family="var(--sans)" font-size="14" font-weight="700" letter-spacing="1.4" fill="#1c2a33">
+          <rect x="716" y="172" width="156" height="34" rx="5" fill="#fffdf8" stroke-width="1.4"/><circle cx="730" cy="189" r="4"/><text x="744" y="194">PENHORA</text>
+          <rect x="716" y="229" width="156" height="34" rx="5" fill="#fffdf8" stroke-width="1.4"/><circle cx="730" cy="246" r="4"/><text x="744" y="251">HIPOTECA</text>
+          <rect x="716" y="286" width="200" height="34" rx="5" fill="#fffdf8" stroke-width="1.4"/><circle cx="730" cy="303" r="4"/><text x="744" y="308">AÇÃO JUDICIAL</text>
+        </g>
+        <text class="fi t3" x="846" y="106" text-anchor="middle" font-family="var(--serif)" font-style="italic" font-size="20" fill="#c0643c">um peso que</text>
+        <text class="fi t3" x="846" y="130" text-anchor="middle" font-family="var(--serif)" font-style="italic" font-size="20" fill="#c0643c">vem junto</text>
+      </g>
+
+      <!-- S5 CERTIDÕES NEGATIVAS -->
+      <g class="sc" transform="translate(-14 0)" fill="none" stroke="#1c2a33" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <g class="fi t1" transform="rotate(-5 405 230)"><rect x="340" y="110" width="140" height="210" fill="#fffdf8"/><text x="410" y="140" text-anchor="middle" font-family="var(--sans)" font-size="13" font-weight="700" letter-spacing="1.2" fill="#1c2a33">CÍVEL</text><path d="M358 160 H462 M358 174 H450 M358 188 H462 M358 202 H440" stroke="#9aa5a8" stroke-width="1.3"/><g transform="rotate(-8 410 270)"><rect x="356" y="252" width="108" height="34" rx="4" stroke="#4f8a8f" stroke-width="2"/><text x="410" y="274" text-anchor="middle" font-family="var(--sans)" font-size="12" font-weight="700" fill="#4f8a8f">NADA CONSTA</text></g></g>
+        <g class="fi t2" transform="rotate(-1.5 565 230)"><rect x="500" y="110" width="140" height="210" fill="#fffdf8"/><text x="570" y="140" text-anchor="middle" font-family="var(--sans)" font-size="13" font-weight="700" letter-spacing="1.2" fill="#1c2a33">TRABALHISTA</text><path d="M518 160 H622 M518 174 H610 M518 188 H622 M518 202 H600" stroke="#9aa5a8" stroke-width="1.3"/><g transform="rotate(-8 570 270)"><rect x="516" y="252" width="108" height="34" rx="4" stroke="#4f8a8f" stroke-width="2"/><text x="570" y="274" text-anchor="middle" font-family="var(--sans)" font-size="12" font-weight="700" fill="#4f8a8f">NADA CONSTA</text></g></g>
+        <g class="fi t3" transform="rotate(2 725 230)"><rect x="660" y="110" width="140" height="210" fill="#fffdf8"/><text x="730" y="140" text-anchor="middle" font-family="var(--sans)" font-size="13" font-weight="700" letter-spacing="1.2" fill="#1c2a33">FISCAL</text><path d="M678 160 H782 M678 174 H770 M678 188 H782 M678 202 H760" stroke="#9aa5a8" stroke-width="1.3"/><g transform="rotate(-8 730 270)"><rect x="676" y="252" width="108" height="34" rx="4" stroke="#4f8a8f" stroke-width="2"/><text x="730" y="274" text-anchor="middle" font-family="var(--sans)" font-size="12" font-weight="700" fill="#4f8a8f">NADA CONSTA</text></g></g>
+        <g class="fi t4" transform="rotate(5 885 230)"><rect x="820" y="110" width="140" height="210" fill="#fffdf8"/><text x="890" y="140" text-anchor="middle" font-family="var(--sans)" font-size="13" font-weight="700" letter-spacing="1.2" fill="#1c2a33">FEDERAL</text><path d="M838 160 H942 M838 174 H930 M838 188 H942 M838 202 H920" stroke="#9aa5a8" stroke-width="1.3"/><g transform="rotate(-8 890 270)"><rect x="836" y="252" width="108" height="34" rx="4" stroke="#4f8a8f" stroke-width="2"/><text x="890" y="274" text-anchor="middle" font-family="var(--sans)" font-size="12" font-weight="700" fill="#4f8a8f">NADA CONSTA</text></g></g>
+        <text class="fi t4" x="650" y="392" text-anchor="middle" font-family="var(--serif)" font-style="italic" font-size="21" fill="#4f8a8f">ficha limpa do terreno e de quem vende</text>
+      </g>
+
+      <!-- kitesurfer, comic style -->
+      <ellipse cx="150" cy="544" rx="78" ry="8" fill="#1c2a33" opacity=".18"/>
+      <g transform="translate(150 298)" stroke="#1c2a33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="rotate(-9 -62 140)">
+          <rect x="-84" y="34" width="42" height="210" rx="21" fill="#e07a3f"/>
+          <path d="M-78 52 Q-63 44 -48 52" fill="none" stroke="#fff" stroke-width="1.5" opacity=".7"/>
+          <rect x="-84" y="126" width="42" height="16" fill="#23435a"/>
+          <path d="M-76 76 q13 -10 26 0 M-76 206 q13 -10 26 0" fill="none" stroke-width="3"/>
+        </g>
+        <path d="M-17 172 L-18 234 M15 172 L16 234" fill="none" stroke-width="15"/>
+        <path d="M-17 172 L-18 234 M15 172 L16 234" fill="none" stroke="#c98b5e" stroke-width="10.5"/>
+        <path d="M21 176 L22 232" fill="none" stroke="#a86f48" stroke-width="3" opacity=".8"/>
+        <ellipse cx="-22" cy="240" rx="14" ry="5.5" fill="#c98b5e"/><ellipse cx="20" cy="240" rx="14" ry="5.5" fill="#c98b5e"/>
+        <path d="M-34 138 L34 138 L36 192 L5 194 L0 172 L-5 194 L-36 192Z" fill="#23435a"/>
+        <path d="M31 141 L34 190" fill="none" stroke="#e07a3f" stroke-width="5"/>
+        <path d="M-28 70 Q-44 100 -52 132" fill="none" stroke-width="15"/>
+        <path d="M-28 70 Q-44 100 -52 132" fill="none" stroke="#c98b5e" stroke-width="10.5"/>
+        <circle cx="-53" cy="136" r="7" fill="#c98b5e"/>
+        <g class="arm">
+          <path d="M28 72 Q48 100 66 102 Q82 100 94 84" fill="none" stroke-width="15"/>
+          <path d="M28 72 Q48 100 66 102 Q82 100 94 84" fill="none" stroke="#c98b5e" stroke-width="10.5"/>
+          <path d="M92 86 Q96 70 108 70 Q116 72 110 78 L102 84 Q104 90 96 92Z" fill="#c98b5e"/>
+          <path d="M100 76 l8 -1" fill="none" stroke-width="1.4"/>
+        </g>
+        <path d="M-31 66 Q0 56 31 66 L35 140 L-35 140Z" fill="#3f8a8f"/>
+        <path d="M14 63 Q24 64 31 66 L35 140 L20 140Z" fill="#2f6d73" stroke="none"/>
+        <path d="M-31 66 Q0 56 31 66 L35 140 L-35 140Z" fill="none"/>
+        <path d="M-12 62 Q0 74 12 62" fill="#c98b5e"/>
+        <path d="M0 76 V118" fill="none" stroke-width="1.2" opacity=".5"/>
+        <circle cx="-30" cy="74" r="11" fill="#3f8a8f"/><circle cx="30" cy="74" r="11" fill="#2f6d73"/>
+        <rect x="-38" y="114" width="76" height="24" rx="7" fill="#1d2f3d"/>
+        <path d="M-10 126 H10" stroke="#c9d1d4" stroke-width="5"/>
+        <path d="M-7 44 L-7 62 L7 62 L7 44Z" fill="#c98b5e"/>
+        <ellipse cx="-21" cy="24" rx="5.5" ry="8" fill="#c98b5e"/>
+        <ellipse cx="0" cy="22" rx="21" ry="26" fill="#c98b5e"/>
+        <path d="M12 2 Q22 12 20 30 Q16 44 4 48 Q16 34 14 14Z" fill="#a86f48" stroke="none" opacity=".7"/>
+        <ellipse cx="0" cy="22" rx="21" ry="26" fill="none"/>
+        <path d="M-24 18 Q-30 -8 -8 -10 Q2 -22 14 -12 Q32 -10 26 16 Q22 4 16 2 L14 10 L8 -1 L2 8 L-4 -2 L-10 8 L-14 0 L-20 14Z" fill="#d3a35d"/>
+        <path d="M-12 -6 q6 -4 12 -2 M6 -10 q8 0 12 6" fill="none" stroke="#f0d394" stroke-width="2"/>
+        <path d="M-15 -3 h11 M5 -3 h11 M-4 -3 h9" fill="none" stroke="#1c2a33" stroke-width="3"/>
+        <path d="M-15 12 q6 -4 11 -1 M5 11 q6 -3 11 1" fill="none" stroke-width="2"/>
+        <g class="blink"><ellipse cx="-8" cy="21" rx="4.6" ry="4.2" fill="#fff" stroke-width="1.5"/><ellipse cx="9" cy="21" rx="4.6" ry="4.2" fill="#fff" stroke-width="1.5"/><circle cx="-7" cy="21.5" r="2.4" fill="#1c2a33" stroke="none"/><circle cx="10" cy="21.5" r="2.4" fill="#1c2a33" stroke="none"/></g>
+        <path d="M2 25 q4 6 -1 9" fill="none" stroke-width="1.6"/>
+        <path d="M-10 35 Q1 48 12 35 Z" fill="#8a3b2c" stroke-width="1.8"/>
+        <path d="M-8 36 Q1 40 10 36 L9 38 Q1 42 -7 38Z" fill="#fff" stroke="none"/>
+        <ellipse cx="-13" cy="31" rx="5" ry="3" fill="#d26e50" stroke="none" opacity=".45"/><ellipse cx="15" cy="30" rx="5" ry="3" fill="#d26e50" stroke="none" opacity=".45"/>
+        <g fill="#8a5a3a" stroke="none" opacity=".6"><circle cx="-4" cy="29" r=".9"/><circle cx="5" cy="29" r=".9"/><circle cx="1" cy="27" r=".9"/></g>
+      </g>
+    </svg>
+
+    <div class="cap" aria-live="polite">
+      <div class="num" id="t-num">1</div>
+      <div class="txt"><p class="term" id="t-term"></p><p class="pt" id="t-pt"></p><p class="en" id="t-en"></p></div>
+    </div>
+    <div class="ctrl">
+      <button id="prev">Anterior</button><button id="play">Pausar</button><button id="next">Próximo</button>
+      <div class="bar" id="bar"></div>
+    </div>
+  </div>
+  <div class="cta"><p>Quer comprar um terreno na Costa dos Ventos com o papel em ordem? A gente te ajuda a checar.</p><a href="https://wa.me/5585985572807?text=Ol%C3%A1!%20Vi%20a%20s%C3%A9rie%20Terra%20Segura%20e%20quero%20saber%20mais." target="_blank" rel="noopener">Falar no WhatsApp</a></div>
+  <p class="note">Conteúdo educativo. Cada imóvel tem sua situação: consulte um advogado antes de comprar. <a class="back" href="/">← Voltar para terraventos.com</a></p>
+</div>
+
+<script>
+const S=[
+ {t:"Matrícula",pt:"É o registro oficial do imóvel no Cartório de Registro de Imóveis. Diz quem é o dono, onde fica, quanto mede e tudo o que já aconteceu com ele.",en:"The land's birth certificate and passport."},
+ {t:"Matrícula atualizada",pt:"Peça sempre uma certidão recente, com todos os registros até hoje. Uma cópia antiga pode esconder o que mudou.",en:"Ask for a current photo, not an old one."},
+ {t:"Averbações e registros",pt:"Cada mudança fica anotada na matrícula: a compra, a construção, a divisão. Ler essas linhas é conhecer a história do terreno.",en:"The land's diary: every change is written down."},
+ {t:"Ônus — penhora, hipoteca",pt:"São dívidas ou garantias presas ao imóvel. Quem compra sem olhar pode levar esse peso junto com o terreno.",en:"A backpack of debt that can come with the land."},
+ {t:"Certidões negativas",pt:"Provam que não há dívidas nem processos contra o imóvel e contra quem vende: cível, trabalhista, fiscal e federal.",en:"A clean background check for the land and the seller."}
+];
+const $=id=>document.getElementById(id), sc=[...document.querySelectorAll(".sc")];
+let i=0, playing=true, timer;
+S.forEach((s,k)=>{const b=document.createElement("button");b.className="seg";b.setAttribute("aria-label",(k+1)+". "+s.t);b.innerHTML="<i></i>";b.onclick=()=>go(k);$("bar").appendChild(b)});
+function go(k){
+  i=(k+S.length)%S.length;
+  sc.forEach(g=>g.classList.remove("on")); void $("stage").getBoundingClientRect(); sc[i].classList.add("on");
+  $("cardlabel").textContent=(i+1)+" / 5 · "+S[i].t.toUpperCase();
+  $("t-num").textContent=i+1; $("t-term").textContent=S[i].t; $("t-pt").textContent=S[i].pt; $("t-en").textContent=S[i].en;
+  [...$("bar").children].forEach((b,n)=>{b.classList.toggle("done",n<i);b.classList.remove("run");if(n===i&&playing){void b.offsetWidth;b.classList.add("run")}});
+  clearTimeout(timer); if(playing) timer=setTimeout(()=>go(i+1),8000);
+}
+$("next").onclick=()=>go(i+1); $("prev").onclick=()=>go(i-1);
+$("play").onclick=()=>{playing=!playing;$("play").textContent=playing?"Pausar":"Tocar";go(i)};
+go(0);
+</script>
+
+</body>
+</html>

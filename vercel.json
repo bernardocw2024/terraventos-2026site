@@ -35,7 +35,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!assets|favicon\\.ico|api|bitupita|advogados|parceiros|founders|llms\\.txt|robots\\.txt)[^.]*)",
+      "source": "/((?!assets|favicon\\.ico|api|bitupita|advogados|parceiros|founders|terra-segura|llms\\.txt|robots\\.txt)[^.]*)",
       "destination": "/index.html"
     }
   ],
