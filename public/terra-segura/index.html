@@ -24,27 +24,28 @@
   --sea:#4f8a8f; --gold:#c9a46a; --rust:#9a6a43;
   --serif:"Newsreader",Georgia,serif; --sans:"Figtree",system-ui,sans-serif; color-scheme:light;
 }
-html,body{background:var(--ground);color:var(--ink)}
-body{font-family:var(--sans);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px}
-.wrap{max-width:1000px;margin:0 auto;display:grid;gap:28px}
-.brand{background:var(--navy);display:grid;justify-items:center;gap:22px;padding:64px 24px 56px;border-radius:2px;text-align:center;position:relative;box-shadow:inset 0 0 0 1px rgba(201,164,106,.35),inset 0 0 0 10px var(--navy),inset 0 0 0 11px rgba(201,164,106,.22)}
-.brand::after{content:"";width:56px;height:1px;background:var(--gold);order:1}
-.brand img{height:150px;width:auto;display:block;max-width:100%}
-.brand p{margin:0;color:var(--gold);font-size:.78rem;letter-spacing:.38em;text-transform:uppercase;order:2}
-h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.12;margin:8px auto 4px;text-align:center;text-wrap:balance;letter-spacing:-.01em}
-h1 em{color:#a8874f}
+html,body{background:var(--ground);color:var(--ink)} :root{--ground:#f1efe8}
+body{font-family:var(--sans);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px}
+.wrap{max-width:1040px;margin:0 auto;display:grid;gap:36px}
+.brand{background:radial-gradient(120% 90% at 50% 0%,#1d3446 0%,var(--navy) 62%);display:grid;justify-items:center;gap:26px;padding:96px 28px 88px;border-radius:2px;text-align:center;position:relative;box-shadow:inset 0 0 0 1px rgba(201,164,106,.4),inset 0 0 0 14px transparent,0 30px 60px -36px rgba(20,36,49,.6)}
+.brand::before{content:"";position:absolute;inset:14px;border:1px solid rgba(201,164,106,.22);pointer-events:none}
+.brand .rule{width:72px;height:1px;background:var(--gold)}
+.brand img{height:170px;width:auto;display:block;max-width:100%}
+.brand p{margin:0;color:var(--gold);font-size:.74rem;letter-spacing:.42em;text-transform:uppercase}
+.brand h1{font-family:var(--serif);font-weight:300;font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.1;margin:0;color:#f3ecdf;text-wrap:balance;letter-spacing:-.015em;max-width:18ch}
+.brand h1 em{color:var(--gold);font-weight:300}
 .plate{background:var(--plate);border:1px solid #e0d8c4;border-radius:2px;overflow:hidden;box-shadow:0 18px 40px -24px rgba(20,36,49,.35)}
 svg{display:block;width:100%;height:auto}
 svg text{stroke:none}
-.cap{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;padding:20px 26px 6px;border-top:1px solid #e3e5de;min-height:140px}
-.num{font-family:var(--serif);font-size:3.2rem;line-height:1;color:var(--gold);font-variant-numeric:tabular-nums}
+.cap{display:grid;grid-template-columns:auto 1fr;gap:8px 28px;padding:30px 36px 10px;border-top:1px solid #e6dfcd;min-height:150px}
+.num{font-family:var(--serif);font-weight:300;font-size:3.6rem;line-height:.9;color:var(--gold);font-variant-numeric:tabular-nums}
 .txt{display:grid;gap:6px;min-width:0}
-.term{font-family:var(--serif);font-size:2.2rem;margin:0;font-weight:400;letter-spacing:-.01em}
-.pt{margin:0;line-height:1.55;max-width:64ch;font-size:1.25rem}
-.en{margin:0;font-family:var(--serif);font-style:italic;color:var(--ink2);font-size:1.2rem}
-.ctrl{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 26px 20px}
-button{font:600 1rem var(--sans);background:transparent;color:var(--ink);border:1px solid var(--ink);border-radius:999px;padding:7px 16px;cursor:pointer}
-button:hover{background:var(--navy);color:#efe6d6;border-color:var(--navy)}
+.term{font-family:var(--serif);font-size:2.3rem;margin:0;font-weight:300;letter-spacing:-.01em}
+.pt{margin:0;line-height:1.6;max-width:62ch;font-size:1.2rem;color:#2a3a42}
+.en{margin:0;font-family:var(--serif);font-style:italic;color:#9a7f52;font-size:1.15rem}
+.ctrl{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:14px 36px 30px}
+button{font:600 .78rem var(--sans);letter-spacing:.2em;text-transform:uppercase;background:transparent;color:var(--navy);border:1px solid #c9a46a;border-radius:999px;padding:10px 20px;cursor:pointer;transition:background .3s,color .3s}
+button:hover{background:var(--navy);color:#f3ecdf;border-color:var(--navy)}
 button:focus-visible{outline:2px solid var(--sea);outline-offset:3px}
 .bar{display:flex;gap:6px;margin-left:auto}
 .seg{width:36px;height:4px;padding:0;border:0;border-radius:2px;background:#d4d9d2;position:relative;overflow:hidden}
@@ -70,9 +71,8 @@ button:focus-visible{outline:2px solid var(--sea);outline-offset:3px}
 @keyframes sway{50%{transform:rotate(3deg)}}
 @keyframes tide{50%{transform:translateX(-12px)}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.ln{stroke-dashoffset:0}.fi{opacity:1}}
-@media (max-width:560px){.cap{grid-template-columns:1fr}.num{font-size:2rem}.bar{margin-left:0;width:100%}.brand img{height:104px}.brand{padding:44px 16px 40px}}
+@media (max-width:560px){.cap{grid-template-columns:1fr;padding:22px 20px 8px}.ctrl{padding:12px 20px 24px}.num{font-size:2.2rem}.bar{margin-left:0;width:100%}.brand img{height:110px}.brand{padding:60px 18px 54px;gap:20px}}
 </style>
-
 <style>
 .brand a{display:block}
 .cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;background:var(--navy);color:#efe6d6;padding:22px 26px;border-radius:3px}
@@ -85,20 +85,20 @@ button:focus-visible{outline:2px solid var(--sea);outline-offset:3px}
 </head>
 <body>
 <div class="wrap">
-  <div class="brand"><a href="/" aria-label="Terra Ventos — página inicial"><img src="/terra-segura/logo.png" alt="Terra Ventos" width="440" height="230"></a><p>Terra Segura · série educativa</p></div>
-  <h1>O papel do terreno, <em>explicado com calma</em></h1>
+  <header class="brand"><a href="/" aria-label="Terra Ventos, página inicial"><img src="/terra-segura/logo.png" alt="Terra Ventos" width="440" height="230"></a><span class="rule"></span><p>Terra Segura · série educativa</p><h1>O papel do terreno, <em>explicado com calma</em></h1></header>
+
 
   <div class="plate">
     <svg id="stage" viewBox="0 0 1000 560" role="img" aria-labelledby="t-term">
       <defs>
-        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e4eeee"/><stop offset="1" stop-color="#f7f2e6"/></linearGradient>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe7e8"/><stop offset=".55" stop-color="#efe6d4"/><stop offset="1" stop-color="#f4dfbd"/></linearGradient>
         <pattern id="grain" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><line x1="0" y1="0" x2="0" y2="9" stroke="#9c7f4c" stroke-width="1" opacity=".18"/></pattern>
         <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#1c2a33" flood-opacity=".18"/></filter>
       </defs>
 
       <!-- landscape -->
       <rect width="1000" height="560" fill="url(#sky)"/>
-      <circle cx="905" cy="80" r="38" fill="#ead8b0"/><circle cx="905" cy="80" r="52" fill="none" stroke="#c9a46a" stroke-width=".8" opacity=".5"/>
+      <circle cx="150" cy="150" r="70" fill="#f3d9a6" opacity=".35"/><circle cx="150" cy="150" r="34" fill="#efd3a0"/><circle cx="150" cy="150" r="48" fill="none" stroke="#c9a46a" stroke-width=".8" opacity=".55"/>
       <g transform="translate(-420 40)"><g class="kite2" fill="none" stroke="#1c2a33" stroke-width=".8" opacity=".7"><path d="M470 300 L440 70 M470 300 L478 64"/></g>
       <g class="kite2"><path d="M418 72 Q458 34 500 66 Q460 54 418 72Z" fill="#23435a" stroke="#1c2a33" stroke-width="1.5"/></g></g>
       <path d="M0 262 Q140 214 300 244 Q470 274 620 232 Q800 196 1000 246 V290 H0Z" fill="#ead7ad"/>
@@ -242,53 +242,51 @@ button:focus-visible{outline:2px solid var(--sea);outline-offset:3px}
         <text class="fi t4" x="650" y="392" text-anchor="middle" font-family="var(--serif)" font-style="italic" font-size="21" fill="#4f8a8f">ficha limpa do terreno e de quem vende</text>
       </g>
 
-      <!-- kitesurfer, comic style -->
-      <ellipse cx="150" cy="544" rx="78" ry="8" fill="#1c2a33" opacity=".18"/>
-      <g transform="translate(150 298)" stroke="#1c2a33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <g transform="rotate(-9 -62 140)">
-          <rect x="-84" y="34" width="42" height="210" rx="21" fill="#f3ecdc"/>
-          <path d="M-78 52 Q-63 44 -48 52" fill="none" stroke="#c9a46a" stroke-width="1.5" opacity=".7"/>
-          <rect x="-84" y="126" width="42" height="12" fill="#c9a46a"/>
-          <path d="M-76 76 q13 -10 26 0 M-76 206 q13 -10 26 0" fill="none" stroke-width="3"/>
+      <!-- kitesurfer, refined lifestyle figure -->
+      <defs>
+        <linearGradient id="skinG" x1="0" x2="1"><stop offset="0" stop-color="#c99268"/><stop offset="1" stop-color="#a87650"/></linearGradient>
+        <linearGradient id="navyG" x1="0" x2="1"><stop offset="0" stop-color="#24435a"/><stop offset="1" stop-color="#152a38"/></linearGradient>
+        <linearGradient id="boardG" x1="0" x2="1"><stop offset="0" stop-color="#26455c"/><stop offset=".5" stop-color="#1a3242"/><stop offset="1" stop-color="#10212d"/></linearGradient>
+      </defs>
+      <ellipse cx="150" cy="546" rx="64" ry="6" fill="#1c2a33" opacity=".16"/>
+      <g transform="translate(150 250) scale(1.08)" stroke="#1c2a33" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="rotate(-7 -48 170)">
+          <rect x="-64" y="70" width="28" height="206" rx="14" fill="url(#boardG)"/>
+          <rect x="-61" y="74" width="22" height="198" rx="11" fill="none" stroke="#c9a46a" stroke-width=".8"/>
+          <path d="M-58 168 q4 -4 8 0 t8 0 M-58 176 q4 -4 8 0 t8 0" fill="none" stroke="#c9a46a" stroke-width="1.4"/>
+          <path d="M-58 100 q8 -6 16 0 M-58 240 q8 -6 16 0" fill="none" stroke="#e9dfcf" stroke-width="2.2"/>
         </g>
-        <path d="M-17 172 L-18 234 M15 172 L16 234" fill="none" stroke-width="15"/>
-        <path d="M-17 172 L-18 234 M15 172 L16 234" fill="none" stroke="#c98b5e" stroke-width="10.5"/>
-        <path d="M21 176 L22 232" fill="none" stroke="#a86f48" stroke-width="3" opacity=".8"/>
-        <ellipse cx="-22" cy="240" rx="14" ry="5.5" fill="#c98b5e"/><ellipse cx="20" cy="240" rx="14" ry="5.5" fill="#c98b5e"/>
-        <path d="M-34 138 L34 138 L36 192 L5 194 L0 172 L-5 194 L-36 192Z" fill="#d8c6a6"/>
-        <path d="M31 141 L34 190" fill="none" stroke="#1f3a4d" stroke-width="3"/>
-        <path d="M-28 70 Q-44 100 -52 132" fill="none" stroke-width="15"/>
-        <path d="M-28 70 Q-44 100 -52 132" fill="none" stroke="#c98b5e" stroke-width="10.5"/>
-        <circle cx="-53" cy="136" r="7" fill="#c98b5e"/>
-        <g class="arm">
-          <path d="M28 72 Q48 100 66 102 Q82 100 94 84" fill="none" stroke-width="15"/>
-          <path d="M28 72 Q48 100 66 102 Q82 100 94 84" fill="none" stroke="#c98b5e" stroke-width="10.5"/>
-          <path d="M92 86 Q96 70 108 70 Q116 72 110 78 L102 84 Q104 90 96 92Z" fill="#c98b5e"/>
-          <path d="M100 76 l8 -1" fill="none" stroke-width="1.4"/>
+        <path d="M-10 168 L-11 268 M10 168 L12 268" fill="none" stroke-width="10"/>
+        <path d="M-10 168 L-11 268 M10 168 L12 268" fill="none" stroke="url(#skinG)" stroke-width="7.6"/>
+        <path d="M-20 271 q9 -6 18 0Z M4 271 q9 -6 18 0Z" fill="#b8835a"/>
+        <path d="M-20 118 L20 118 L23 172 L4 174 L0 152 L-4 174 L-23 172Z" fill="#dccbab"/>
+        <path d="M8 120 L20 118 L23 172 L12 173Z" fill="#c9b591" stroke="none"/>
+        <path d="M-20 118 L20 118 L23 172 L4 174 L0 152 L-4 174 L-23 172Z" fill="none"/>
+        <path d="M-21 58 Q-31 92 -34 128" fill="none" stroke-width="10"/>
+        <path d="M-21 58 Q-31 92 -34 128" fill="none" stroke="#1d384c" stroke-width="7.6"/>
+        <circle cx="-35" cy="132" r="4.6" fill="url(#skinG)"/>
+        <g class="arm" style="transform-origin:21px 58px">
+          <path d="M21 58 Q34 88 50 94 Q62 94 72 80" fill="none" stroke-width="10"/>
+          <path d="M21 58 Q34 88 50 94 Q62 94 72 80" fill="none" stroke="#1d384c" stroke-width="7.6"/>
+          <path d="M70 82 Q73 70 82 69 Q89 70 85 75 L79 79 Q80 84 74 85Z" fill="url(#skinG)"/>
         </g>
-        <path d="M-31 66 Q0 56 31 66 L35 140 L-35 140Z" fill="#1f3a4d"/>
-        <path d="M14 63 Q24 64 31 66 L35 140 L20 140Z" fill="#152a38" stroke="none"/>
-        <path d="M-31 66 Q0 56 31 66 L35 140 L-35 140Z" fill="none"/>
-        <path d="M-12 62 Q0 74 12 62" fill="#c98b5e"/>
-        <path d="M0 76 V118" fill="none" stroke-width="1.2" opacity=".5"/>
-        <circle cx="-30" cy="74" r="11" fill="#1f3a4d"/><circle cx="30" cy="74" r="11" fill="#152a38"/>
-        <rect x="-38" y="114" width="76" height="24" rx="7" fill="#2b2620"/>
-        <path d="M-10 126 H10" stroke="#c9d1d4" stroke-width="5"/>
-        <path d="M-7 44 L-7 62 L7 62 L7 44Z" fill="#c98b5e"/>
-        <ellipse cx="-21" cy="24" rx="5.5" ry="8" fill="#c98b5e"/>
-        <ellipse cx="0" cy="22" rx="21" ry="26" fill="#c98b5e"/>
-        <path d="M12 2 Q22 12 20 30 Q16 44 4 48 Q16 34 14 14Z" fill="#a86f48" stroke="none" opacity=".7"/>
-        <ellipse cx="0" cy="22" rx="21" ry="26" fill="none"/>
-        <path d="M-24 18 Q-30 -8 -8 -10 Q2 -22 14 -12 Q32 -10 26 16 Q22 4 16 2 L14 10 L8 -1 L2 8 L-4 -2 L-10 8 L-14 0 L-20 14Z" fill="#d3a35d"/>
-        <path d="M-12 -6 q6 -4 12 -2 M6 -10 q8 0 12 6" fill="none" stroke="#f0d394" stroke-width="2"/>
-        <path d="M-15 -3 h11 M5 -3 h11 M-4 -3 h9" fill="none" stroke="#1c2a33" stroke-width="3"/>
-        <path d="M-15 12 q6 -4 11 -1 M5 11 q6 -3 11 1" fill="none" stroke-width="2"/>
-        <g class="blink"><ellipse cx="-8" cy="21" rx="4.6" ry="4.2" fill="#fff" stroke-width="1.5"/><ellipse cx="9" cy="21" rx="4.6" ry="4.2" fill="#fff" stroke-width="1.5"/><circle cx="-7" cy="21.5" r="2.4" fill="#1c2a33" stroke="none"/><circle cx="10" cy="21.5" r="2.4" fill="#1c2a33" stroke="none"/></g>
-        <path d="M2 25 q4 6 -1 9" fill="none" stroke-width="1.6"/>
-        <path d="M-10 35 Q1 48 12 35 Z" fill="#8a3b2c" stroke-width="1.8"/>
-        <path d="M-8 36 Q1 40 10 36 L9 38 Q1 42 -7 38Z" fill="#fff" stroke="none"/>
-        <ellipse cx="-13" cy="31" rx="5" ry="3" fill="#d26e50" stroke="none" opacity=".45"/><ellipse cx="15" cy="30" rx="5" ry="3" fill="#d26e50" stroke="none" opacity=".45"/>
-        <g fill="#8a5a3a" stroke="none" opacity=".6"><circle cx="-4" cy="29" r=".9"/><circle cx="5" cy="29" r=".9"/><circle cx="1" cy="27" r=".9"/></g>
+        <path d="M-22 52 Q0 44 22 52 L19 120 L-19 120Z" fill="url(#navyG)"/>
+        <path d="M-22 52 L-19 120 M22 52 L19 120" fill="none" stroke="#c9a46a" stroke-width=".9"/>
+        <path d="M-6 47 L0 58 L6 47" fill="url(#skinG)" stroke-width="1.1"/>
+        <rect x="-21" y="104" width="42" height="15" rx="4" fill="#7a5638"/>
+        <path d="M-21 108 H21" stroke="#5e412a" stroke-width=".8"/>
+        <rect x="-6" y="106" width="12" height="11" rx="2" fill="none" stroke="#c9a46a" stroke-width="1.6"/>
+        <path d="M-4.5 36 V48 H4.5 V36" fill="url(#skinG)"/>
+        <ellipse cx="-13" cy="20" rx="3" ry="4.6" fill="#b8835a"/>
+        <ellipse cx="0" cy="18" rx="12.5" ry="16.5" fill="url(#skinG)"/>
+        <path d="M-13.5 14 Q-15 -1 0 -2.5 Q15 -2 14 12 Q10 5 4 4.6 Q-4 3 -9 6 Q-12 9 -13.5 14Z" fill="#7d5b3c"/>
+        <path d="M-8 2 Q0 -1 8 1.5 M-4 4 Q3 2 9 5" fill="none" stroke="#c9a46a" stroke-width="1" opacity=".85"/>
+        <path d="M-10 3.2 h7 M3 3.2 h7 M-3 3.2 h6" stroke="#1c2a33" stroke-width="2.2"/>
+        <path d="M-8.5 11.6 q3 -2 6 -.6 M2.8 11 q3 -1.4 6 .6" fill="none" stroke-width="1.1"/>
+        <g class="blink"><path d="M-8 16 q2.6 -2.2 5.2 0" fill="none" stroke-width="1.5"/><path d="M3 16 q2.6 -2.2 5.2 0" fill="none" stroke-width="1.5"/></g>
+        <path d="M1.2 18 q2 4 -.6 5.6" fill="none" stroke-width="1"/>
+        <path d="M-5 26 Q0.5 31.5 6 26" fill="#fff" stroke-width="1.2"/>
+        <ellipse cx="-7" cy="23" rx="2.8" ry="1.6" fill="#c76f52" stroke="none" opacity=".35"/><ellipse cx="8" cy="22.6" rx="2.8" ry="1.6" fill="#c76f52" stroke="none" opacity=".35"/>
       </g>
     </svg>
 
@@ -301,7 +299,6 @@ button:focus-visible{outline:2px solid var(--sea);outline-offset:3px}
       <div class="bar" id="bar"></div>
     </div>
   </div>
-
   <div class="cta"><p>Quer comprar um terreno na Costa dos Ventos com o papel em ordem? A gente te ajuda a checar.</p><a href="https://wa.me/5585985572807?text=Ol%C3%A1!%20Vi%20a%20s%C3%A9rie%20Terra%20Segura%20e%20quero%20saber%20mais." target="_blank" rel="noopener">Falar no WhatsApp</a></div>
   <p class="note">Conteúdo educativo. Cada imóvel tem sua situação: consulte um advogado antes de comprar. <a class="back" href="/">← Voltar para terraventos.com</a></p>
 </div>
